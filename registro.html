@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Demo Gratuita — CalculAI</title>
+  <meta name="description" content="Solicita tu demo gratuita de 7 días de CalculAI, el ERP contable con Inteligencia Artificial para empresas dominicanas.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://rinintelligence.com/registro.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/home-v2.css">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563eb'/%3E%3Cstop offset='1' stop-color='%2310b981'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-weight='800' font-size='30' fill='%23fff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-text">Calcul<span class="v2-grad-text">AI</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#inicio">Inicio</a></li>
+      <li><a href="index.html#modulos">Módulos</a></li>
+      <li><a href="index.html#agente-ia">Agente de IA</a></li>
+      <li><a href="index.html#beneficios">Beneficios</a></li>
+      <li><a href="index.html#precios">Precios</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cotizacion.html" class="btn btn-secondary" data-track="cotizar_clicked" data-track-loc="navbar_registro">
+        <i class="fas fa-calculator"></i> Cotizar
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+<section class="form-page">
+  <div class="container">
+    <div class="form-container fade-in">
+      <div class="form-header">
+        <div class="badge"><i class="fas fa-rocket"></i> Demo gratuita de 7 días</div>
+        <h1>Solicita tu demostración de CalculAI</h1>
+        <p>Completa el formulario y un especialista te contactará para activar tu prueba gratuita — sin tarjeta de crédito.</p>
+      </div>
+
+      <form id="formRegistro" novalidate>
+        <div class="form-grid">
+          <div class="form-group full">
+            <label>Nombre completo <span class="required">*</span></label>
+            <input type="text" name="nombre_completo" required autocomplete="name">
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Empresa <span class="required">*</span></label>
+            <input type="text" name="empresa" required autocomplete="organization">
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Cargo</label>
+            <input type="text" name="cargo" autocomplete="organization-title">
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Correo electrónico <span class="required">*</span></label>
+            <input type="email" name="email" required autocomplete="email">
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Teléfono <span class="required">*</span></label>
+            <input type="tel" name="telefono" id="telefono" placeholder="809-123-4567" required autocomplete="tel">
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Cantidad de empleados</label>
+            <select name="num_empleados">
+              <option value="1-10">1 a 10</option>
+              <option value="11-50">11 a 50</option>
+              <option value="51-200">51 a 200</option>
+              <option value="200+">Más de 200</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>¿Usas actualmente un software de contabilidad?</label>
+            <select name="usa_software" id="usa_software">
+              <option value="no">No</option>
+              <option value="si">Sí</option>
+            </select>
+          </div>
+
+          <div class="form-group conditional-field" id="cual_software_group">
+            <label>¿Cuál software usas?</label>
+            <input type="text" name="cual_software">
+          </div>
+
+          <div class="form-group full">
+            <label>¿Qué módulos te interesan más?</label>
+            <div style="display:flex; flex-wrap:wrap; gap:0.6rem 1.5rem; margin-top:0.4rem;">
+              <label style="display:flex;align-items:center;gap:0.4rem;font-weight:400;"><input type="checkbox" name="modulos[]" value="Contabilidad"> Contabilidad</label>
+              <label style="display:flex;align-items:center;gap:0.4rem;font-weight:400;"><input type="checkbox" name="modulos[]" value="Facturación"> Facturación</label>
+              <label style="display:flex;align-items:center;gap:0.4rem;font-weight:400;"><input type="checkbox" name="modulos[]" value="Inventario"> Inventario</label>
+              <label style="display:flex;align-items:center;gap:0.4rem;font-weight:400;"><input type="checkbox" name="modulos[]" value="Nómina"> Nómina / RRHH</label>
+              <label style="display:flex;align-items:center;gap:0.4rem;font-weight:400;"><input type="checkbox" name="modulos[]" value="Reportes"> Reportes financieros</label>
+              <label style="display:flex;align-items:center;gap:0.4rem;font-weight:400;"><input type="checkbox" name="modulos[]" value="Agente IA"> Agente de IA</label>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Cuéntanos brevemente qué necesitas</label>
+            <textarea name="mensaje" placeholder="Ej: Necesitamos automatizar la conciliación bancaria y la facturación electrónica."></textarea>
+          </div>
+
+          <div class="form-group full">
+            <div class="checkbox-group">
+              <input type="checkbox" id="acepto" name="acepto" required>
+              <label for="acepto">Acepto ser contactado por el equipo de CalculAI para coordinar mi demo. <span class="required">*</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary btn-lg" data-track="cta_demo_clicked" data-track-loc="formulario_registro">
+            <i class="fas fa-paper-plane"></i> Solicitar demo gratuita
+          </button>
+          <p class="form-note">7 días de demo completa · Sin tarjeta de crédito · Sujeto a evaluación del equipo de soporte</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer-v2">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <span class="footer-logo-text">Calcul<span style="color:#60a5fa">AI</span></span>
+        </a>
+        <p>El sistema ERP de contabilidad con Inteligencia Artificial más avanzado de República Dominicana. Automatiza, simplifica y crece.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#modulos">Módulos</a></li>
+          <li><a href="index.html#precios">Precios</a></li>
+          <li><a href="cotizacion.html">Cotizador</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@rinintelligence.com"><i class="fas fa-envelope" style="margin-right:0.4rem;"></i> info@rinintelligence.com</a></li>
+          <li><a href="tel:+18091234567"><i class="fas fa-phone" style="margin-right:0.4rem;"></i> (809) 123-4567</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 CalculAI · RinIntelligence. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/home-v2.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1159 @@
+{
+    "services": [
+        {
+            "id": 1,
+            "slug": "consultoria-tecnologica",
+            "icon": "🔍",
+            "title": "Consultoría Tecnológica",
+            "desc": "Evaluación estratégica de tu infraestructura tecnológica.",
+            "items": [
+                "Evaluación de infraestructura tecnológica",
+                "Planificación estratégica para adopción de nuevas tecnologías",
+                "Asesoría en seguridad de la información y cumplimiento normativo"
+            ],
+            "fabricantes": []
+        },
+        {
+            "id": 2,
+            "slug": "infraestructura-it",
+            "icon": "🖥️",
+            "title": "Infraestructura IT",
+            "desc": "Implementación y administración de servidores físicos y en la nube.",
+            "items": [
+                "Implementación y administración de servidores",
+                "Gestión de redes y conectividad segura",
+                "Soluciones de virtualización y almacenamiento"
+            ],
+            "fabricantes": [
+                "microsoft",
+                "veeam"
+            ]
+        },
+        {
+            "id": 3,
+            "slug": "gestion-de-la-nube",
+            "icon": "☁️",
+            "title": "Gestión de la Nube",
+            "desc": "Microsoft Azure, AWS y Google Cloud.",
+            "items": [
+                "Servicios en Microsoft Azure, AWS y Google Cloud",
+                "Migración y optimización de entornos híbridos"
+            ],
+            "fabricantes": [
+                "microsoft"
+            ]
+        },
+        {
+            "id": 4,
+            "slug": "ciberseguridad",
+            "icon": "🛡️",
+            "title": "Ciberseguridad",
+            "desc": "Protección total de tu empresa con tecnología de vanguardia.",
+            "items": [
+                "Concienciación en ciberseguridad",
+                "Implementación de firewalls, EDR y SIEM",
+                "Seguridad en dispositivos móviles (MDM)",
+                "Evaluaciones de vulnerabilidades y ataques éticos"
+            ],
+            "fabricantes": [
+                "xcitium",
+                "fortinet",
+                "kaspersky"
+            ]
+        },
+        {
+            "id": 5,
+            "slug": "sistemas-integrados",
+            "icon": "⚙️",
+            "title": "Sistemas Integrados de Gestión",
+            "desc": "ERP, CRM y plataformas de colaboración empresarial.",
+            "items": [
+                "Implementación y soporte de ERP y CRM",
+                "Microsoft 365 y plataformas de colaboración",
+                "Correos electrónicos corporativos"
+            ],
+            "fabricantes": [
+                "microsoft",
+                "odoo"
+            ]
+        },
+        {
+            "id": 6,
+            "slug": "capacitacion-concienciacion",
+            "icon": "🎓",
+            "title": "Capacitación y Concienciación",
+            "desc": "Formación en ciberseguridad para tu equipo.",
+            "items": [
+                "Programas de formación en ciberseguridad para empleados",
+                "Cursos de certificación tecnológica para profesionales"
+            ],
+            "fabricantes": []
+        },
+        {
+            "id": 7,
+            "slug": "transformacion-digital",
+            "icon": "🔄",
+            "title": "Transformación Digital",
+            "desc": "Automatización y modernización de procesos empresariales.",
+            "items": [
+                "Automatización de procesos empresariales",
+                "Migración y optimización de aplicaciones en la nube",
+                "Desarrollo de aplicaciones personalizadas"
+            ],
+            "fabricantes": []
+        },
+        {
+            "id": 8,
+            "slug": "redes-cableado",
+            "icon": "🌐",
+            "title": "Redes y Cableado Estructurado",
+            "desc": "Infraestructura de red completa para tu empresa.",
+            "items": [
+                "Diseño e implementación de redes LAN y WAN",
+                "Cableado estructurado para voz, datos y video",
+                "Redes Wi-Fi empresariales, centrales telefónicas y conectividad entre sucursales"
+            ],
+            "fabricantes": [
+                "fortinet"
+            ]
+        },
+        {
+            "id": 9,
+            "slug": "seguridad-fisica",
+            "icon": "📷",
+            "title": "Seguridad Física",
+            "desc": "Videovigilancia, control de acceso y soporte técnico.",
+            "items": [
+                "Sistemas de videovigilancia CCTV con monitoreo remoto",
+                "Control de acceso físico con biometría y tarjetas de proximidad",
+                "Soporte técnico remoto y en sitio",
+                "Cotización de equipos: PC, Laptops, Impresoras, Cámaras, Access Points"
+            ],
+            "fabricantes": []
+        }
+    ],
+    "clients": [
+        {
+            "id": 1,
+            "initials": "DR",
+            "name": "DR&R Abogados y Consultores Fiscales",
+            "sector": "Legal",
+            "logo": "assets/logos/clients/drr-abogados.png"
+        },
+        {
+            "id": 2,
+            "initials": "ST",
+            "name": "Solutrust Dominicana",
+            "sector": "Tecnologia",
+            "logo": "assets/logos/clients/solutrust-dominicana.png"
+        },
+        {
+            "id": 3,
+            "initials": "AP",
+            "name": "Asociacion Peravia de Ahorros y Prestamos",
+            "sector": "Finanzas",
+            "logo": "assets/logos/clients/asociacion-peravia.png"
+        },
+        {
+            "id": 4,
+            "initials": "CA",
+            "name": "ConfeAuditores Dominicana",
+            "sector": "Auditoria",
+            "logo": "assets/logos/clients/confeauditores-dominicana.png"
+        },
+        {
+            "id": 5,
+            "initials": "DRA",
+            "name": "DR&R Almanzar - Punta Cana",
+            "sector": "Legal",
+            "logo": "assets/logos/clients/drr-almanzar-punta-cana.png"
+        },
+        {
+            "id": 6,
+            "initials": "T&P",
+            "name": "T&P Cobros",
+            "sector": "Cobranzas",
+            "logo": "assets/logos/clients/tp-cobros.png"
+        },
+        {
+            "id": 7,
+            "initials": "IM",
+            "name": "IMEX Marmol",
+            "sector": "Construccion",
+            "logo": "assets/logos/clients/imex-marmol.png"
+        }
+    ],
+    "blog": [
+        {
+            "id": 1,
+            "type": "noticia",
+            "tag": "Ciberseguridad",
+            "emoji": "🛡️",
+            "mediaUrl": "",
+            "title": "¿Qué es ZeroDwell™ y por qué cambia las reglas del juego?",
+            "desc": "Exploramos cómo la tecnología de contención de Xcitium protege contra ransomware y amenazas desconocidas antes de que puedan ejecutarse.",
+            "content": "ZeroDwell™ cambia el enfoque tradicional de la seguridad: en vez de esperar a detectar una amenaza después de que actúe, contiene los archivos desconocidos desde el primer momento.\n\nPara las organizaciones, esto reduce la ventana de exposición ante ransomware, ataques zero-day y amenazas que todavía no tienen firma conocida. La clave está en permitir la operación sin conceder acceso real al sistema hasta que exista un veredicto confiable.\n\nAxentia acompaña la evaluación, implementación y operación de Xcitium para que la protección se adapte al entorno tecnológico y al nivel de madurez de cada cliente.",
+            "date": "Enero 2025"
+        },
+        {
+            "id": 2,
+            "type": "noticia",
+            "tag": "Cloud",
+            "emoji": "☁️",
+            "mediaUrl": "",
+            "title": "Migración a la nube para empresas dominicanas: guía práctica",
+            "desc": "Todo lo que necesitas saber antes de migrar tu empresa a Azure, AWS o Google Cloud con soporte local.",
+            "content": "Migrar a la nube no es solo mover servidores: implica revisar costos, seguridad, disponibilidad, respaldo, identidad y continuidad operativa.\n\nUn proceso ordenado comienza con inventario, clasificación de cargas, análisis de riesgos y una arquitectura objetivo. Desde ahí se definen fases de migración, pruebas, monitoreo y optimización.\n\nAxentia ayuda a las empresas a elegir el modelo correcto, ya sea nube pública, híbrida o privada, manteniendo control operativo y soporte cercano.",
+            "date": "Enero 2025"
+        },
+        {
+            "id": 3,
+            "type": "noticia",
+            "tag": "Infraestructura",
+            "emoji": "🔐",
+            "mediaUrl": "",
+            "title": "5 señales de que tu infraestructura IT necesita una actualización urgente",
+            "desc": "Identifica los síntomas que indican que es hora de modernizar la tecnología de tu empresa dominicana.",
+            "content": "La infraestructura tecnológica suele avisar antes de fallar: lentitud recurrente, equipos sin soporte, respaldos inconsistentes, incidentes frecuentes y poca visibilidad operativa son señales claras de riesgo.\n\nActualizar no siempre significa reemplazarlo todo. En muchos casos basta con priorizar componentes críticos, mejorar seguridad, documentar activos, fortalecer monitoreo y establecer mantenimiento preventivo.\n\nUna evaluación técnica permite definir qué debe modernizarse primero para reducir interrupciones y mejorar la experiencia de usuarios y clientes.",
+            "date": "Enero 2025"
+        }
+    ],
+    "partners": [
+        {
+            "id": 1,
+            "name": "Microsoft Partner",
+            "logo": "assets/logos/partners/microsoft-partner.png"
+        },
+        {
+            "id": 2,
+            "name": "Fortinet Authorized Partner",
+            "logo": "assets/logos/partners/fortinet-authorized-partner.png"
+        },
+        {
+            "id": 3,
+            "name": "MikroTik Reseller",
+            "logo": "assets/logos/partners/mikrotik-reseller.png"
+        },
+        {
+            "id": 4,
+            "name": "Kaspersky Partner",
+            "logo": "assets/logos/partners/kaspersky.png"
+        },
+        {
+            "id": 5,
+            "name": "Veeam ProPartner",
+            "logo": "assets/logos/partners/veeam-propartner.png"
+        },
+        {
+            "id": 6,
+            "name": "Google Partner",
+            "logo": "assets/logos/partners/google-partner.png"
+        },
+        {
+            "id": 7,
+            "name": "MikroTik Certified Consultant",
+            "logo": "assets/logos/partners/mikrotik-certified-consultant.png"
+        },
+        {
+            "id": 8,
+            "name": "Zabbix Partner",
+            "logo": "assets/logos/partners/zabbix.png"
+        },
+        {
+            "id": 9,
+            "name": "Odoo Ready Partner",
+            "logo": "assets/logos/partners/odoo-ready-partner.png"
+        },
+        {
+            "id": 10,
+            "name": "HikVision Partner",
+            "logo": "assets/logos/partners/hikvision.png"
+        },
+        {
+            "id": 11,
+            "name": "TP-Link Partner",
+            "logo": "assets/logos/partners/tp-link.png"
+        },
+        {
+            "id": 12,
+            "name": "Ubiquiti Networks",
+            "logo": "assets/logos/partners/ubiquiti.png"
+        },
+        {
+            "id": 13,
+            "name": "Huawei Partner",
+            "logo": "assets/logos/partners/huawei.png"
+        },
+        {
+            "id": 14,
+            "name": "Nexxt Solutions",
+            "logo": "assets/logos/partners/nexxt-solutions.png"
+        },
+        {
+            "id": 15,
+            "name": "Dell Partner",
+            "logo": "assets/logos/partners/dell.png"
+        },
+        {
+            "id": 16,
+            "name": "HP Partner",
+            "logo": "assets/logos/partners/hp.png"
+        },
+        {
+            "id": 17,
+            "name": "Lenovo Partner",
+            "logo": "assets/logos/partners/lenovo.png"
+        },
+        {
+            "id": 18,
+            "name": "EZVIZ Partner",
+            "logo": "assets/logos/partners/ezviz.png"
+        },
+        {
+            "id": 19,
+            "name": "Vicarius Partner",
+            "logo": "assets/logos/partners/vicarius.png"
+        },
+        {
+            "id": 20,
+            "name": "Xcitium Partner",
+            "logo": "assets/logos/partners/xcitium.png"
+        }
+    ],
+    "faq": [
+        {
+            "id": 1,
+            "q": "¿Qué hace diferente a Xcitium de otros EDR?",
+            "a": "Xcitium introduce el concepto de ZeroDwell™ Containment: los archivos desconocidos no se bloquean ni se permiten libremente, sino que se ejecutan en un entorno virtual aislado a nivel kernel. Esto significa que incluso si un archivo es malicioso, no puede causar daño real. Los EDR tradicionales dependen de la detección y actúan después del daño."
+        },
+        {
+            "id": 2,
+            "q": "¿Puede detectar ataques fileless y Zero-Day?",
+            "a": "Sí. ZeroDwell™ no depende de firmas ni del conocimiento previo del malware. Al contener cualquier proceso desconocido en un entorno virtual, incluso los ataques fileless y Zero-Day quedan neutralizados antes de que puedan ejecutar código dañino en el sistema real."
+        },
+        {
+            "id": 3,
+            "q": "¿Es adecuado para empresas de diferentes tamaños?",
+            "a": "Absolutamente. Xcitium ofrece planes escalables desde protección básica EPP+EDR hasta XDR completo con SOC 24/7. Axentia adapta la implementación al nivel de madurez, operación y presupuesto de cada organización, con soporte local incluido."
+        },
+        {
+            "id": 4,
+            "q": "¿Cumple con estándares de compliance?",
+            "a": "Sí, Xcitium cumple con múltiples estándares de compliance incluyendo ISO 27001, PCI DSS, HIPAA y GDPR. Cuenta con certificaciones de AV-TEST, MRG Effitas, y reconocimientos de Frost & Sullivan como líder en estrategia competitiva."
+        },
+        {
+            "id": 5,
+            "q": "¿Cómo afecta el rendimiento del equipo del usuario?",
+            "a": "El impacto es mínimo. El agente de Xcitium está diseñado para ser ligero y eficiente. La contención virtual ocurre a nivel kernel de forma transparente para el usuario, sin demoras perceptibles en el rendimiento del sistema."
+        },
+        {
+            "id": 6,
+            "q": "¿Qué pasa si el archivo contenido resulta ser legítimo?",
+            "a": "El archivo se ejecuta normalmente dentro del contenedor virtual, permitiendo al usuario seguir trabajando sin interrupciones. Una vez analizado y verificado como legítimo por la IA + analistas humanos, se aprueba permanentemente."
+        }
+    ],
+    "hero": {
+        "badge": "Axentia SRL · Tecnología para toda organización",
+        "t1": "CONECTANDO",
+        "t2": "IDEAS,",
+        "t3": "INNOVANDO",
+        "t4": "EL FUTURO",
+        "desc": "Soluciones tecnológicas y de ciberseguridad para organizaciones de cualquier tamaño — pequeñas, medianas, grandes empresas y entidades de gobierno — que necesitan operar con seguridad, continuidad y eficiencia."
+    },
+    "fabricantesInfo": [
+        {
+            "id": 1,
+            "slug": "dell",
+            "name": "Dell",
+            "logo": "assets/logos/partners/dell.png",
+            "categoria": "Equipos e infraestructura",
+            "descripcion": "Equipos empresariales, servidores, estaciones de trabajo y soluciones de infraestructura.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Diagnóstico del parque de equipos actual y necesidades de renovación tecnológica."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Selección de modelos, configuración y licenciamiento según el perfil de cada usuario o carga de trabajo."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Aprovisionamiento, migración de datos y puesta en marcha de equipos y servidores Dell."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Garantía, mantenimiento preventivo y reemplazo coordinado para minimizar tiempo de inactividad."
+                }
+            ],
+            "productos": [
+                "Laptops",
+                "Servidores",
+                "Workstations",
+                "Storage",
+                "Soporte"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 2,
+            "slug": "ezviz",
+            "name": "EZVIZ",
+            "logo": "assets/logos/partners/ezviz.png",
+            "categoria": "Videovigilancia",
+            "descripcion": "Cámaras inteligentes, monitoreo remoto y soluciones de seguridad para espacios físicos.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Levantamiento de puntos críticos, cobertura necesaria y objetivos de vigilancia del espacio."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Selección de cámaras, almacenamiento y conectividad según el tamaño y necesidades del sitio."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Instalación, configuración de grabación y acceso remoto desde la app EZVIZ."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Mantenimiento y acompañamiento ante fallas o crecimiento del sitio."
+                }
+            ],
+            "productos": [
+                "Cámaras",
+                "Monitoreo",
+                "Seguridad física",
+                "Grabación",
+                "Acceso remoto"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 3,
+            "slug": "fortinet",
+            "name": "Fortinet",
+            "logo": "assets/logos/partners/fortinet-authorized-partner.png",
+            "categoria": "Seguridad perimetral y redes",
+            "descripcion": "Seguridad de red, firewall, VPN, protección perimetral y conectividad segura para organizaciones.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Análisis de la postura de seguridad perimetral y los riesgos de la red actual."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Arquitectura de firewall, VPN y segmentación alineada a las políticas de seguridad de la empresa."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Despliegue de FortiGate, reglas de firewall, VPN y SD-WAN con pruebas de conectividad."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Monitoreo, actualización de firmas y ajuste continuo de políticas de seguridad."
+                }
+            ],
+            "productos": [
+                "Firewall",
+                "VPN",
+                "SD-WAN",
+                "Seguridad perimetral",
+                "Protección de red"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 4,
+            "slug": "google",
+            "name": "Google Cloud",
+            "logo": "assets/logos/partners/google-partner.png",
+            "categoria": "Nube y colaboración",
+            "descripcion": "Servicios de nube, colaboración y productividad para modernizar operaciones y datos.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Revisión de correo, almacenamiento y colaboración actual para identificar oportunidades de mejora."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Plan de adopción de Google Workspace o Google Cloud según el tamaño y estructura de la organización."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Migración de correos, dominios y datos, con configuración de cuentas y permisos."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Acompañamiento en administración, seguridad de cuentas y resolución de incidencias."
+                }
+            ],
+            "productos": [
+                "Google Cloud",
+                "Workspace",
+                "Migración cloud",
+                "Infraestructura",
+                "Datos"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 5,
+            "slug": "hikvision",
+            "name": "Hikvision",
+            "logo": "assets/logos/partners/hikvision.png",
+            "categoria": "Seguridad física",
+            "descripcion": "Videovigilancia, cámaras, NVR, control de acceso y soluciones de seguridad física.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Levantamiento de puntos ciegos, riesgos y necesidades de control de acceso del sitio."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Selección de cámaras, NVR, almacenamiento y control de acceso según el nivel de seguridad requerido."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Instalación de cámaras, cableado, configuración de grabación y pruebas de cobertura."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Mantenimiento preventivo, respaldo de grabaciones y ajustes ante cambios en el sitio."
+                }
+            ],
+            "productos": [
+                "CCTV",
+                "NVR",
+                "Control de acceso",
+                "Analítica",
+                "Videovigilancia"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 6,
+            "slug": "hp",
+            "name": "HP",
+            "logo": "assets/logos/partners/hp.png",
+            "categoria": "Equipos empresariales",
+            "descripcion": "Equipos, impresión, estaciones de trabajo y soluciones para productividad empresarial.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Revisión del parque de equipos actual y necesidades de renovación o ampliación."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Selección de equipos, impresión y workstations según el perfil de cada área de trabajo."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Configuración, instalación de software base y puesta en marcha de los equipos."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Garantía, mantenimiento preventivo y reemplazo coordinado de equipos."
+                }
+            ],
+            "productos": [
+                "PCs",
+                "Laptops",
+                "Impresión",
+                "Workstations",
+                "Accesorios"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 7,
+            "slug": "huawei",
+            "name": "Huawei",
+            "logo": "assets/logos/partners/huawei.png",
+            "categoria": "Infraestructura y nube",
+            "descripcion": "Infraestructura tecnológica, redes, servidores, almacenamiento y soluciones cloud.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Diagnóstico de la infraestructura de red, servidores y almacenamiento existente."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Arquitectura de red, servidores o almacenamiento alineada al crecimiento de la operación."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Instalación, configuración y puesta en producción de equipos Huawei."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Monitoreo, mantenimiento y optimización continua de la infraestructura."
+                }
+            ],
+            "productos": [
+                "Redes",
+                "Servidores",
+                "Cloud",
+                "Almacenamiento",
+                "Infraestructura"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 8,
+            "slug": "kaspersky",
+            "name": "Kaspersky",
+            "logo": "assets/logos/partners/kaspersky.png",
+            "categoria": "Ciberseguridad",
+            "descripcion": "Protección contra malware, seguridad de endpoints y soluciones de ciberseguridad empresarial.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Diagnóstico de la postura de seguridad de endpoints actual."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Selección del nivel Kaspersky Next adecuado para la organización."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Despliegue de agentes, políticas y consola de administración."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Monitoreo, actualización y acompañamiento por personal certificado."
+                }
+            ],
+            "productos": [
+                "Endpoint Security",
+                "EDR",
+                "XDR",
+                "Concienciación"
+            ],
+            "brochureUrl": "assets/docs/kaspersky-next-product-line-es-mx.pdf",
+            "videoUrl": "",
+            "customPage": "kaspersky.php",
+            "destacado": false
+        },
+        {
+            "id": 9,
+            "slug": "lenovo",
+            "name": "Lenovo",
+            "logo": "assets/logos/partners/lenovo.png",
+            "categoria": "Equipos y productividad",
+            "descripcion": "Equipos corporativos, laptops, desktops, estaciones de trabajo y accesorios empresariales.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Revisión del parque de equipos y necesidades de renovación tecnológica."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Selección de modelos y configuración según el perfil de cada usuario o equipo de trabajo."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Aprovisionamiento, configuración e instalación de equipos Lenovo."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Garantía, mantenimiento y reemplazo coordinado para minimizar tiempo de inactividad."
+                }
+            ],
+            "productos": [
+                "ThinkPad",
+                "Desktops",
+                "Workstations",
+                "Accesorios",
+                "Soporte"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 10,
+            "slug": "microsoft",
+            "name": "Microsoft",
+            "logo": "assets/logos/partners/microsoft-partner.png",
+            "categoria": "Nube, productividad y seguridad",
+            "descripcion": "Soluciones Microsoft para productividad, nube, identidad, seguridad y colaboración empresarial.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Revisión de licenciamiento, identidad y seguridad actual de la organización."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Plan de adopción de Microsoft 365, Azure o Windows Server según las necesidades del negocio."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Migración, configuración de identidad, correo, nube y políticas de seguridad."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Administración, monitoreo y acompañamiento continuo del entorno Microsoft."
+                }
+            ],
+            "productos": [
+                "Microsoft 365",
+                "Azure",
+                "Windows Server",
+                "Microsoft Sentinel",
+                "Defender"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 11,
+            "slug": "mikrotik",
+            "name": "MikroTik",
+            "logo": "assets/logos/partners/mikrotik-reseller.png",
+            "categoria": "Routing y redes",
+            "descripcion": "Routing, switching, wireless y conectividad avanzada para redes empresariales.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Diagnóstico de la red actual, cuellos de botella y necesidades de conectividad."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Arquitectura de routing, switching y wireless según el tamaño de la red."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Configuración de RouterOS, switches y equipos wireless, con pruebas de conectividad."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Monitoreo, ajustes de red y resolución de incidencias de conectividad."
+                }
+            ],
+            "productos": [
+                "Routers",
+                "Switching",
+                "Wireless",
+                "VPN",
+                "Conectividad"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 12,
+            "slug": "nexxt",
+            "name": "Nexxt Solutions",
+            "logo": "assets/logos/partners/nexxt-solutions.png",
+            "categoria": "Conectividad",
+            "descripcion": "Soluciones de conectividad, redes, energía y accesorios para operaciones empresariales.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Revisión de la infraestructura de conectividad y energía actual."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Selección de equipos de red, UPS y accesorios según las necesidades del sitio."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Instalación y configuración de equipos de conectividad y respaldo de energía."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Mantenimiento y reemplazo coordinado de equipos y accesorios."
+                }
+            ],
+            "productos": [
+                "Redes",
+                "UPS",
+                "Accesorios",
+                "Conectividad",
+                "Infraestructura"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 13,
+            "slug": "odoo",
+            "name": "Odoo",
+            "logo": "assets/logos/partners/odoo-ready-partner.png",
+            "categoria": "Gestión empresarial",
+            "descripcion": "ERP modular para ventas, inventario, contabilidad, CRM, operaciones y automatización.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Levantamiento de procesos de ventas, inventario, contabilidad y operaciones actuales."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Selección de módulos Odoo y configuración según los procesos de la empresa."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Configuración, migración de datos y capacitación del equipo en Odoo."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Acompañamiento en la operación diaria y nuevos módulos según crece la empresa."
+                }
+            ],
+            "productos": [
+                "ERP",
+                "CRM",
+                "Inventario",
+                "Contabilidad",
+                "Automatización"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 14,
+            "slug": "tplink",
+            "name": "TP-Link",
+            "logo": "assets/logos/partners/tp-link.png",
+            "categoria": "Redes y conectividad",
+            "descripcion": "Equipos de conectividad, switching, Wi-Fi empresarial y redes para oficinas y sucursales.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Diagnóstico de cobertura Wi-Fi, switching y conectividad actual."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Arquitectura de red y Wi-Fi empresarial según el tamaño de la oficina o sucursal."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Instalación y configuración de switches, routers y puntos de acceso TP-Link."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Monitoreo, ajustes de cobertura y resolución de incidencias de red."
+                }
+            ],
+            "productos": [
+                "Wi-Fi",
+                "Switching",
+                "Routers",
+                "Redes empresariales",
+                "Conectividad"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 15,
+            "slug": "ubiquiti",
+            "name": "Ubiquiti",
+            "logo": "assets/logos/partners/ubiquiti.png",
+            "categoria": "Redes empresariales",
+            "descripcion": "Soluciones UniFi para redes, Wi-Fi, switching, seguridad y administración centralizada.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Revisión de cobertura Wi-Fi, switching y videovigilancia actual."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Arquitectura UniFi de red, Wi-Fi y cámaras con administración centralizada."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Instalación, configuración del controlador UniFi y puesta en marcha de equipos."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Monitoreo centralizado, actualizaciones y ajustes continuos de la red."
+                }
+            ],
+            "productos": [
+                "UniFi",
+                "Wi-Fi",
+                "Switching",
+                "Cámaras",
+                "Administración centralizada"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 16,
+            "slug": "veeam",
+            "name": "Veeam",
+            "logo": "assets/logos/partners/veeam-propartner.png",
+            "categoria": "Respaldo y continuidad",
+            "descripcion": "Protección de datos, respaldos, recuperación ante desastres y continuidad operativa.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Revisión de la estrategia de respaldo actual y los riesgos de pérdida de datos."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Plan de respaldo, replicación y recuperación ante desastres según la criticidad de los datos."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Configuración de trabajos de respaldo, replicación y pruebas de recuperación."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Monitoreo de respaldos, pruebas periódicas y ajustes ante cambios en la infraestructura."
+                }
+            ],
+            "productos": [
+                "Backup",
+                "Disaster Recovery",
+                "Protección de datos",
+                "Replicación",
+                "Continuidad"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 17,
+            "slug": "vicarius",
+            "name": "Vicarius",
+            "logo": "assets/logos/partners/vicarius.png",
+            "categoria": "Gestión de vulnerabilidades",
+            "descripcion": "Gestión de vulnerabilidades, priorización, remediación y reducción de exposición.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Escaneo y priorización de vulnerabilidades según el riesgo real para la operación."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Plan de remediación y protección para los sistemas más expuestos."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Configuración de escaneo continuo y despliegue de protección o parches."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Seguimiento continuo de vulnerabilidades y ajuste del plan de remediación."
+                }
+            ],
+            "productos": [
+                "Vulnerabilidades",
+                "Remediación",
+                "Patchless protection",
+                "Riesgo",
+                "Exposición"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 18,
+            "slug": "xcitium",
+            "name": "Xcitium",
+            "logo": "assets/logos/partners/xcitium.png",
+            "categoria": "Zero Trust Endpoint Security",
+            "descripcion": "Plataforma Zero Trust con contención ZeroDwell para proteger endpoints, nube y operaciones críticas.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Revisión de la exposición de endpoints y la postura de seguridad Zero Trust actual."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Arquitectura de contención ZeroDwell y protección EDR/XDR según el entorno."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Despliegue de agentes, políticas de contención y validación en los endpoints."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Monitoreo de amenazas, ajuste de políticas y respuesta ante incidentes."
+                }
+            ],
+            "productos": [
+                "ZeroDwell",
+                "EDR",
+                "MDR",
+                "XDR",
+                "Cloud Security"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 19,
+            "slug": "zabbix",
+            "name": "Zabbix",
+            "logo": "assets/logos/partners/zabbix.png",
+            "categoria": "Monitoreo IT",
+            "descripcion": "Monitoreo de infraestructura, servicios, redes, servidores y disponibilidad operativa.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Levantamiento de los sistemas, redes y servicios críticos a monitorear."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Arquitectura de monitoreo y alertas según la criticidad de cada sistema."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Configuración de monitoreo, alertas y paneles de disponibilidad."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Ajuste continuo de umbrales, alertas y ampliación del monitoreo."
+                }
+            ],
+            "productos": [
+                "Monitoreo",
+                "Alertas",
+                "Disponibilidad",
+                "Infraestructura",
+                "Observabilidad"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "",
+            "customPage": "",
+            "destacado": false
+        },
+        {
+            "id": 20,
+            "slug": "calculai",
+            "name": "CalculAI",
+            "logo": "assets/logos/calculai.png",
+            "categoria": "Aliado tecnológico · RinIntelligence",
+            "descripcion": "ERP de contabilidad autónomo desarrollado por RinIntelligence, con un agente de inteligencia artificial que ejecuta cierres contables, concilia bancos, factura y genera reportes financieros de forma automática.",
+            "capacidades": [
+                {
+                    "titulo": "Evaluación",
+                    "texto": "Diagnóstico de los procesos contables, facturación e inventario actuales de tu empresa."
+                },
+                {
+                    "titulo": "Diseño",
+                    "texto": "Configuración del plan de cuentas, usuarios y módulos de CalculAI según tu operación."
+                },
+                {
+                    "titulo": "Implementación",
+                    "texto": "Migración de datos, capacitación del equipo y puesta en marcha del agente de IA."
+                },
+                {
+                    "titulo": "Soporte",
+                    "texto": "Acompañamiento continuo, nuevos módulos y ajustes según crece tu empresa."
+                }
+            ],
+            "productos": [
+                "Contabilidad automatizada",
+                "Facturación electrónica",
+                "Agente de IA",
+                "Control por voz",
+                "Reportes financieros",
+                "Modo multiempresa"
+            ],
+            "brochureUrl": "",
+            "videoUrl": "assets/logos/Video.mp4",
+            "customPage": "",
+            "destacado": true
+        }
+    ],
+    "testimonials": [
+        {
+            "id": 1,
+            "quote": "Reemplaza esta cita con un testimonio real de un cliente satisfecho con el trabajo de Axentia.",
+            "author": "Nombre del cliente",
+            "role": "Cargo, Empresa",
+            "client": ""
+        },
+        {
+            "id": 2,
+            "quote": "Segundo testimonio de ejemplo — reemplázalo desde el panel admin cuando tengas la cita real.",
+            "author": "Nombre del cliente",
+            "role": "Cargo, Empresa",
+            "client": ""
+        }
+    ],
+    "resources": [
+        {
+            "id": 1,
+            "title": "Kaspersky Next — Línea de productos",
+            "desc": "Brochure con el detalle de la línea de productos Kaspersky Next.",
+            "type": "brochure",
+            "fileUrl": "assets/docs/kaspersky-next-product-line-es-mx.pdf"
+        }
+    ],
+    "contacto": {
+        "email": "contacto@axentia.com.do",
+        "ubicacion": "Santo Domingo & Santiago, RD",
+        "personas": [
+            {
+                "nombre": "Juvenal Mena",
+                "telefono": "+1 (829) 407-5537"
+            },
+            {
+                "nombre": "Pascualito Mateo",
+                "telefono": "+1 (809) 432-4778"
+            }
+        ]
+    },
+    "nosotros": {
+        "descripcion": "En Axentia SRL diseñamos, implementamos y acompañamos soluciones tecnológicas para organizaciones que necesitan operar con seguridad, continuidad y eficiencia. Nuestro equipo combina experiencia en infraestructura, ciberseguridad, nube, soporte gestionado y desarrollo de soluciones a medida, con presencia en Santo Domingo y Santiago, RD.",
+        "mision": "Brindar soluciones tecnológicas innovadoras y personalizadas que ayuden a las organizaciones a optimizar sus operaciones, proteger su infraestructura y alcanzar sus objetivos estratégicos. Acompañamos a nuestros clientes con excelencia, confianza y una visión orientada al crecimiento sostenible.",
+        "vision": "Ser un aliado tecnológico de referencia en República Dominicana y la región, reconocido por entregar soluciones integrales, seguras y escalables. Aspiramos a impulsar la transformación digital de nuestros clientes con innovación, confiabilidad y compromiso."
+    },
+    "nextId": {
+        "services": 10,
+        "clients": 8,
+        "blog": 4,
+        "partners": 21,
+        "faq": 7,
+        "fabricantesInfo": 21,
+        "testimonials": 3,
+        "resources": 2
+    }
+}

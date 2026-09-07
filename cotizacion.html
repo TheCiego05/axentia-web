@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador en línea — CalculAI</title>
+  <meta name="description" content="Cotiza tu plan de CalculAI en segundos: selecciona los módulos que necesitas y ve el precio exacto en pesos dominicanos.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rinintelligence.com/cotizacion.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/home-v2.css">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563eb'/%3E%3Cstop offset='1' stop-color='%2310b981'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-weight='800' font-size='30' fill='%23fff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-text">Calcul<span class="v2-grad-text">AI</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#inicio">Inicio</a></li>
+      <li><a href="index.html#modulos">Módulos</a></li>
+      <li><a href="index.html#precios">Precios</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="registro.html" class="btn btn-primary" data-track="cta_demo_clicked" data-track-loc="navbar_cotizacion">
+        <i class="fas fa-rocket"></i> Solicitar Demo
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+<section class="section quote-section" style="padding-top:130px;">
+  <div class="container">
+    <div class="section-header text-center fade-in">
+      <div class="badge"><i class="fas fa-calculator"></i> Cotizador en línea</div>
+      <h1 style="font-size:clamp(1.9rem,4vw,2.6rem);">¿Cuánto cuesta CalculAI para tu empresa?</h1>
+      <p>Selecciona lo que necesitas y ve el precio exacto en tiempo real, en pesos dominicanos.</p>
+    </div>
+
+    <div class="quote-grid fade-in">
+      <div class="quote-options">
+
+        <div class="quote-card">
+          <h3><i class="fas fa-user-group"></i> Licencia base</h3>
+          <p class="quote-card-sub">RD$ 1,000 por usuario al mes — acceso completo al ERP.</p>
+          <label class="quote-field">
+            Cantidad de usuarios
+            <input type="number" id="q-usuarios" min="1" max="500" value="1">
+          </label>
+        </div>
+
+        <div class="quote-card">
+          <h3><i class="fas fa-robot"></i> Agente de IA</h3>
+          <p class="quote-card-sub">RD$ 2,000 al mes — incluye 5,000 tokens compartidos de IA, control por voz y reportes por comando.</p>
+          <label class="quote-toggle">
+            <input type="checkbox" id="q-agente" checked>
+            Incluir Agente de IA
+          </label>
+        </div>
+
+        <div class="quote-card">
+          <h3><i class="fas fa-coins"></i> Paquete adicional de tokens IA</h3>
+          <p class="quote-card-sub">Opcional. Los tokens son compartidos entre todos los usuarios de tu empresa.</p>
+          <div class="quote-radio-group">
+            <label class="quote-radio"><input type="radio" name="q-tokens" value="0" checked> Ninguno</label>
+            <label class="quote-radio"><input type="radio" name="q-tokens" value="2000"> RD$ 2,000 — 5,000 tokens/mes</label>
+            <label class="quote-radio"><input type="radio" name="q-tokens" value="5000"> RD$ 5,000 — 20,000 tokens/mes</label>
+            <label class="quote-radio"><input type="radio" name="q-tokens" value="10000"> RD$ 10,000 — 50,000 tokens/mes</label>
+            <label class="quote-radio"><input type="radio" name="q-tokens" value="50000"> RD$ 50,000 — Tokens ilimitados/mes</label>
+          </div>
+        </div>
+
+        <div class="quote-card">
+          <h3><i class="fas fa-building-columns"></i> Modo Iguala (multiempresa)</h3>
+          <p class="quote-card-sub">Para contadores que gestionan varias empresas. Implementación única de RD$ 20,000 + RD$ 1,000/mes por empresa en iguala.</p>
+          <label class="quote-toggle">
+            <input type="checkbox" id="q-iguala">
+            Incluir Modo Iguala
+          </label>
+          <label class="quote-field conditional-field" id="q-iguala-group">
+            Cantidad de empresas en iguala
+            <input type="number" id="q-empresas" min="1" max="100" value="1">
+          </label>
+        </div>
+
+        <div class="quote-card">
+          <h3><i class="fas fa-puzzle-piece"></i> Módulos especializados</h3>
+          <p class="quote-card-sub">Se integran directamente con el agente de IA de CalculAI.</p>
+          <label class="quote-toggle"><input type="checkbox" id="q-medico"> Módulo Médico — RD$ 2,000/mes</label>
+          <label class="quote-toggle"><input type="checkbox" id="q-marketing"> Módulo de Marketing — RD$ 2,000/mes</label>
+        </div>
+
+      </div>
+
+      <aside class="quote-summary">
+        <h3><i class="fas fa-file-invoice-dollar"></i> Resumen de tu cotización</h3>
+        <div class="quote-lines" id="q-lines"></div>
+        <div class="quote-line quote-total">
+          <span>Total mensual</span>
+          <span id="q-total-mes">RD$ 0</span>
+        </div>
+        <div class="quote-line quote-total-once" id="q-total-once-row" style="display:none;">
+          <span>Pago único (implementación)</span>
+          <span id="q-total-once">RD$ 0</span>
+        </div>
+        <button class="btn btn-primary btn-lg" id="q-print-btn" style="width:100%;margin-top:1.25rem;">
+          <i class="fas fa-file-pdf"></i> Descargar cotización (PDF)
+        </button>
+        <a href="registro.html" class="btn btn-secondary" style="width:100%;margin-top:0.75rem;" data-track="cta_demo_clicked" data-track-loc="cotizador_resumen">
+          <i class="fas fa-rocket"></i> Solicitar esta demo
+        </a>
+        <p class="form-note">7 días de demo completa · Sin tarjeta de crédito</p>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Resumen imprimible: solo visible al imprimir/exportar a PDF -->
+<div id="q-print-sheet" class="quote-print-sheet">
+  <div class="quote-print-header">
+    <span class="nav-logo-text">Calcul<span style="color:#2563eb">AI</span></span>
+    <span>Cotización — <span id="q-print-date"></span></span>
+  </div>
+  <h1>Resumen de cotización</h1>
+  <div id="q-print-lines"></div>
+  <div class="quote-print-total">
+    <span>Total mensual</span><span id="q-print-total-mes"></span>
+  </div>
+  <div class="quote-print-total" id="q-print-total-once-row">
+    <span>Pago único (implementación)</span><span id="q-print-total-once"></span>
+  </div>
+  <p class="quote-print-note">Cotización generada automáticamente en rinintelligence.com/cotizacion.html · Sujeta a evaluación del equipo de soporte de CalculAI.</p>
+</div>
+
+<footer class="footer-v2">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <span class="footer-logo-text">Calcul<span style="color:#60a5fa">AI</span></span>
+        </a>
+        <p>El sistema ERP de contabilidad con Inteligencia Artificial más avanzado de República Dominicana. Automatiza, simplifica y crece.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#modulos">Módulos</a></li>
+          <li><a href="index.html#precios">Precios</a></li>
+          <li><a href="registro.html">Demo Gratuita</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@rinintelligence.com"><i class="fas fa-envelope" style="margin-right:0.4rem;"></i> info@rinintelligence.com</a></li>
+          <li><a href="tel:+18091234567"><i class="fas fa-phone" style="margin-right:0.4rem;"></i> (809) 123-4567</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 CalculAI · RinIntelligence. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/cotizacion.js" defer></script>
+</body>
+</html>
