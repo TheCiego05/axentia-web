@@ -5,7 +5,7 @@
 // y pega el resultado en ADMIN_PASS_HASH (nunca guardes la contraseña en texto plano).
 
 define('ADMIN_USER', 'admin');
-define('ADMIN_PASS_HASH', '$2y$12$stloiNG22lLVoy3nHT.BqOWL5KCuUUoRJsYdzI8G7gTcHagzhZfNe');
+define('ADMIN_PASS_HASH', '$2b$12$WnN/D7I79Oe/ZI4v8IuSH.I9mZpM50dXoKEgsuDzV1d/nbld4TqKW');
 
 define('CONTACT_TO_EMAIL', 'contacto@axentia.com.do');
 define('CONTACT_FROM_EMAIL', 'noreply@axentia.com.do');
