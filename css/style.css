@@ -1569,6 +1569,8 @@ body {
 }
 
 .manufacturer-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   min-height: 250px;
   flex-direction: column;
@@ -1582,10 +1584,30 @@ body {
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+.manufacturer-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #5B9BE0 0%, #1F497D 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.manufacturer-card:nth-child(6n+2)::before { background: linear-gradient(90deg, #6FC3E8 0%, #0F2E7A 100%); }
+.manufacturer-card:nth-child(6n+3)::before { background: linear-gradient(90deg, #7FB8F0 0%, #163B6B 100%); }
+.manufacturer-card:nth-child(6n+4)::before { background: linear-gradient(90deg, #57C2D6 0%, #1B4C8C 100%); }
+.manufacturer-card:nth-child(6n+5)::before { background: linear-gradient(90deg, #4F81BD 0%, #10233F 100%); }
+.manufacturer-card:nth-child(6n+6)::before { background: linear-gradient(90deg, #6AA9E8 0%, #1D4ED8 100%); }
+
 .manufacturer-card:hover {
   border-color: rgba(79, 129, 189, 0.42);
   box-shadow: 0 22px 50px rgba(31, 73, 125, 0.13);
   transform: translateY(-4px);
+}
+.manufacturer-card:hover::before { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) {
+  .manufacturer-card::before { transition: none; }
 }
 
 .manufacturer-card-logo {
