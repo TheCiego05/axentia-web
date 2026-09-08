@@ -22,6 +22,12 @@ if (!$fabricante) {
 $capacidades = $fabricante['capacidades'] ?? [];
 $productos = $fabricante['productos'] ?? [];
 $tieneRecursos = !empty($fabricante['brochureUrl']) || !empty($fabricante['videoUrl']);
+$stats = $fabricante['stats'] ?? [];
+$plataforma = $fabricante['plataforma'] ?? [];
+$planes = $fabricante['planes'] ?? [];
+$comparativa = $fabricante['comparativa'] ?? [];
+$premios = $fabricante['premios'] ?? [];
+$faqs = $fabricante['faqs'] ?? [];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -30,7 +36,7 @@ $tieneRecursos = !empty($fabricante['brochureUrl']) || !empty($fabricante['video
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($fabricante['name']) ?> – Axentia SRL</title>
   <meta name="description" content="<?= htmlspecialchars($fabricante['descripcion']) ?>">
-  <link rel="stylesheet" href="../../css/style.css?v=10">
+  <link rel="stylesheet" href="../../css/style.css?v=11">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -77,6 +83,110 @@ $tieneRecursos = !empty($fabricante['brochureUrl']) || !empty($fabricante['video
       </div>
     </div>
   </section>
+
+  <?php if (!empty($stats)): ?>
+  <section class="section-blue">
+    <div class="container">
+      <div class="stats-row">
+        <?php foreach ($stats as $st): ?>
+        <div class="stat-item"><span class="stat-num"><?= htmlspecialchars($st['num']) ?></span><span class="stat-label"><?= htmlspecialchars($st['label']) ?></span></div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
+  <?php if (!empty($plataforma)): ?>
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label">Plataforma</div>
+      <h2 class="section-title">Capacidades de <?= htmlspecialchars($fabricante['name']) ?></h2>
+      <div class="manufacturer-platform-grid">
+        <?php foreach ($plataforma as $pl): ?>
+        <article><span aria-hidden="true"><?= htmlspecialchars($pl['icono'] ?? '') ?></span><h3><?= htmlspecialchars($pl['titulo']) ?></h3><p><?= htmlspecialchars($pl['texto']) ?></p></article>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
+  <?php if (!empty($planes)): ?>
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label">Planes</div>
+      <h2 class="section-title">Elige tu plan de <?= htmlspecialchars($fabricante['name']) ?></h2>
+      <div class="support-plans">
+        <?php foreach ($planes as $pln): ?>
+        <div class="support-card<?= !empty($pln['popular']) ? ' popular' : '' ?>">
+          <h3><?= htmlspecialchars($pln['nombre']) ?></h3>
+          <div class="support-range"><?= htmlspecialchars($pln['tier']) ?></div>
+          <p style="color:var(--white-70);font-size:.85rem;margin-bottom:14px"><?= htmlspecialchars($pln['desc']) ?></p>
+          <ul><?php foreach (($pln['features'] ?? []) as $feat): ?><li><?= htmlspecialchars($feat) ?></li><?php endforeach; ?></ul>
+          <a href="../contacto.php" class="<?= !empty($pln['popular']) ? 'btn-primary' : 'btn-outline' ?>" style="justify-content:center">Solicitar Cotización</a>
+        </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
+  <?php if (!empty($comparativa['filas'])): ?>
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label">Análisis comparativo</div>
+      <h2 class="section-title"><?= htmlspecialchars($fabricante['name']) ?> vs. seguridad tradicional</h2>
+      <div style="overflow-x:auto">
+        <table class="sla-table manufacturer-compare-table">
+          <thead><tr><?php foreach (($comparativa['headers'] ?? []) as $h): ?><th><?= htmlspecialchars($h) ?></th><?php endforeach; ?></tr></thead>
+          <tbody>
+            <?php foreach ($comparativa['filas'] as $fila): ?>
+            <tr>
+              <td><strong><?= htmlspecialchars($fila[0]) ?></strong></td>
+              <td class="cell-bad"><?= htmlspecialchars($fila[1]) ?></td>
+              <td class="cell-good"><?= htmlspecialchars($fila[2]) ?></td>
+            </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
+  <?php if (!empty($premios)): ?>
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label" style="justify-content:center">Reconocimientos</div>
+      <h2 class="section-title" style="text-align:center">Premios y certificaciones</h2>
+      <div class="manufacturer-awards-grid">
+        <?php foreach ($premios as $pr): ?>
+        <div class="manufacturer-award-card">
+          <div class="award-icon" aria-hidden="true"><?= htmlspecialchars($pr['icono'] ?? '🏆') ?></div>
+          <h4><?= htmlspecialchars($pr['titulo']) ?></h4>
+          <p><?= htmlspecialchars($pr['org']) ?></p>
+        </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
+  <?php if (!empty($faqs)): ?>
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label" style="justify-content:center">Preguntas frecuentes</div>
+      <h2 class="section-title" style="text-align:center">FAQ — <?= htmlspecialchars($fabricante['name']) ?></h2>
+      <div class="faq-list">
+        <?php foreach ($faqs as $fq): ?>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><?= htmlspecialchars($fq['q']) ?></div>
+          <div class="faq-a"><?= htmlspecialchars($fq['a']) ?></div>
+        </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
 
   <?php if ($tieneRecursos): ?>
   <section class="section-dark manufacturer-resources-section">

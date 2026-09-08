@@ -1759,6 +1759,70 @@ body {
   background: #4F81BD;
 }
 
+/* ===== Fabricante: secciones "portal" opcionales (plataforma, planes, comparativa, premios, faq) ===== */
+.manufacturer-platform-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+.manufacturer-platform-grid article {
+  background: #FBFDFF;
+  border: 1px solid rgba(31, 73, 125, 0.14);
+  border-radius: 8px;
+  padding: 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.manufacturer-platform-grid article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(31, 73, 125, 0.1);
+  border-color: rgba(79, 129, 189, 0.4);
+}
+.manufacturer-platform-grid article span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  color: #FFFFFF;
+  box-shadow: 0 8px 18px rgba(31, 73, 125, 0.18);
+}
+.manufacturer-platform-grid article:nth-child(6n+1) span { background: linear-gradient(155deg, #5B9BE0 0%, #1F497D 100%); }
+.manufacturer-platform-grid article:nth-child(6n+2) span { background: linear-gradient(155deg, #6FC3E8 0%, #0F2E7A 100%); }
+.manufacturer-platform-grid article:nth-child(6n+3) span { background: linear-gradient(155deg, #7FB8F0 0%, #163B6B 100%); }
+.manufacturer-platform-grid article:nth-child(6n+4) span { background: linear-gradient(155deg, #57C2D6 0%, #1B4C8C 100%); }
+.manufacturer-platform-grid article:nth-child(6n+5) span { background: linear-gradient(155deg, #4F81BD 0%, #10233F 100%); }
+.manufacturer-platform-grid article:nth-child(6n+6) span { background: linear-gradient(155deg, #6AA9E8 0%, #1D4ED8 100%); }
+.manufacturer-platform-grid article h3 { color: #182334; font-size: 1.02rem; margin-bottom: 8px; }
+.manufacturer-platform-grid article p { color: #637083; font-size: 0.87rem; line-height: 1.55; }
+@media (max-width: 900px) { .manufacturer-platform-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .manufacturer-platform-grid { grid-template-columns: 1fr; } }
+
+.manufacturer-compare-table td.cell-bad { color: #B3261E; }
+.manufacturer-compare-table td.cell-good { color: #1B7F4C; font-weight: 600; }
+
+.manufacturer-awards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.manufacturer-award-card {
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 73, 125, 0.14);
+  border-radius: 8px;
+  padding: 26px 18px;
+  box-shadow: 0 14px 34px rgba(31, 73, 125, 0.07);
+}
+.manufacturer-award-card .award-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.manufacturer-award-card h4 { color: #182334; font-size: 0.96rem; margin-bottom: 4px; }
+.manufacturer-award-card p { color: #637083; font-size: 0.82rem; }
+@media (max-width: 768px) { .manufacturer-awards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .manufacturer-awards-grid { grid-template-columns: 1fr; } }
+
 /* ===== Kaspersky manufacturer page ===== */
 .kaspersky-page {
   background: #FFFFFF;

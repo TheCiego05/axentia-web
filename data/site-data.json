@@ -995,7 +995,7 @@
             "name": "Xcitium",
             "logo": "assets/logos/partners/xcitium.png",
             "categoria": "Zero Trust Endpoint Security",
-            "descripcion": "Plataforma Zero Trust con contención ZeroDwell para proteger endpoints, nube y operaciones críticas.",
+            "descripcion": "Plataforma Zero Trust #1 con tecnología patentada ZeroDwell, que contiene el ransomware antes de que se ejecute. Más de 85 millones de endpoints protegidos globalmente.",
             "capacidades": [
                 {
                     "titulo": "Evaluación",
@@ -1024,7 +1024,234 @@
             "brochureUrl": "",
             "videoUrl": "",
             "customPage": "",
-            "destacado": false
+            "destacado": false,
+            "stats": [
+                {
+                    "num": "85M+",
+                    "label": "Endpoints protegidos globalmente"
+                },
+                {
+                    "num": "0%",
+                    "label": "Dispositivos con infección o brecha"
+                },
+                {
+                    "num": "88%",
+                    "label": "Estado conocido bueno"
+                },
+                {
+                    "num": "10%",
+                    "label": "En contención (monitoreados)"
+                },
+                {
+                    "num": "3%",
+                    "label": "Desconocidos = malware"
+                }
+            ],
+            "plataforma": [
+                {
+                    "icono": "🔒",
+                    "titulo": "ZeroDwell™ Containment",
+                    "texto": "Aísla automáticamente archivos desconocidos en contenedores virtuales a nivel kernel sin dañar recursos reales."
+                },
+                {
+                    "icono": "🕵️",
+                    "titulo": "MDR — SOC 24/7",
+                    "texto": "Monitoreo continuo por analistas expertos. Hunting de amenazas, investigación de incidentes y respuesta activa."
+                },
+                {
+                    "icono": "🛡️",
+                    "titulo": "Plataforma EPP Unificada",
+                    "texto": "Antivirus, firewall, HIPS, control de aplicaciones y análisis estático en un solo agente ligero."
+                },
+                {
+                    "icono": "🌐",
+                    "titulo": "Inteligencia de Amenazas Global",
+                    "texto": "Base de datos actualizada continuamente con datos de millones de endpoints para detección proactiva."
+                },
+                {
+                    "icono": "🔭",
+                    "titulo": "EDR de Siguiente Generación",
+                    "texto": "Telemetría continua, árboles de procesos, conexiones de red y análisis forense completo."
+                },
+                {
+                    "icono": "☁️",
+                    "titulo": "Consola Cloud Unificada",
+                    "texto": "Panel único de visibilidad para endpoints, redes y workloads. Gestión centralizada sin complejidad."
+                },
+                {
+                    "icono": "🚫",
+                    "titulo": "Zero Trust Endpoint",
+                    "texto": "Ningún archivo se confía por defecto. Todo lo desconocido es contenido y analizado antes de ser permitido."
+                },
+                {
+                    "icono": "🏗️",
+                    "titulo": "CNAPP — Protección Cloud",
+                    "texto": "Cloud Native Application Protection Platform para workloads en nube, DevOps e infraestructura como código."
+                },
+                {
+                    "icono": "🏢",
+                    "titulo": "Multi-tenant para MSSPs",
+                    "texto": "Arquitectura escalable con aislamiento multi-tenant y monitoreo centralizado para proveedores de servicios."
+                },
+                {
+                    "icono": "📱",
+                    "titulo": "RMM + Patch Management",
+                    "texto": "Remote Monitoring & Management con gestión de parches para mantener sistemas seguros y actualizados."
+                },
+                {
+                    "icono": "📧",
+                    "titulo": "Email & Web Protection",
+                    "texto": "Protección multicapa de correo electrónico y bloqueo de sitios dañinos para tus empleados."
+                },
+                {
+                    "icono": "🔍",
+                    "titulo": "XDR — Detección Extendida",
+                    "texto": "Extended Detection and Response desde endpoints hasta redes y cloud bajo un solo panel de control."
+                }
+            ],
+            "planes": [
+                {
+                    "tier": "EDR",
+                    "nombre": "Essential EDR",
+                    "desc": "Protección Zero Trust esencial con contención ZeroDwell para endpoints.",
+                    "features": [
+                        "ZeroDwell™ Containment",
+                        "Protección de endpoints (EPP)",
+                        "Host Firewall & HIPS",
+                        "Control de aplicaciones",
+                        "Visibilidad básica del endpoint"
+                    ],
+                    "popular": false
+                },
+                {
+                    "tier": "EDR + ITSM",
+                    "nombre": "Pro EDR",
+                    "desc": "Protección avanzada de endpoints con gestión de TI integrada (RMM y parches).",
+                    "features": [
+                        "Todo lo de Essential",
+                        "EDR de siguiente generación",
+                        "RMM + Patch Management",
+                        "VirusScope análisis estático",
+                        "Gestión de dispositivos móviles"
+                    ],
+                    "popular": true
+                },
+                {
+                    "tier": "EXDR",
+                    "nombre": "Enterprise EDR",
+                    "desc": "Detección y respuesta extendida de nivel empresarial, con opción de SOC gestionado 24/7.",
+                    "features": [
+                        "Todo lo de Pro",
+                        "XDR — endpoints, red y nube",
+                        "Managed SOC opcional (24/7)",
+                        "Seguridad de cloud (CNAPP)",
+                        "Panel único de visibilidad"
+                    ],
+                    "popular": false
+                }
+            ],
+            "comparativa": {
+                "headers": [
+                    "Aspecto",
+                    "Seguridad tradicional",
+                    "Xcitium ZeroDwell™"
+                ],
+                "filas": [
+                    [
+                        "Enfoque",
+                        "Detección basada en firmas",
+                        "Contención activa ZeroDwell™"
+                    ],
+                    [
+                        "Amenazas Zero-Day",
+                        "Vulnerable durante el lag",
+                        "Contenidas antes de causar daño"
+                    ],
+                    [
+                        "Ransomware",
+                        "Detectado después del cifrado",
+                        "Bloqueado antes de ejecutarse"
+                    ],
+                    [
+                        "Archivos desconocidos",
+                        "Permitidos por defecto (riesgo)",
+                        "Contenidos por defecto (Zero Trust)"
+                    ],
+                    [
+                        "Falsos positivos",
+                        "Alto impacto en productividad",
+                        "Mínimo impacto, ejecución virtual"
+                    ],
+                    [
+                        "Ataques fileless",
+                        "Difícil detectar sin firma",
+                        "Neutralizados en contenedor virtual"
+                    ],
+                    [
+                        "Tiempo de respuesta",
+                        "Horas o días",
+                        "Instantáneo — pre-ejecución"
+                    ]
+                ]
+            },
+            "premios": [
+                {
+                    "icono": "🏆",
+                    "titulo": "Product of the Year 2025",
+                    "org": "AVLAB"
+                },
+                {
+                    "icono": "✅",
+                    "titulo": "Approved Endpoint Protection",
+                    "org": "AV-TEST"
+                },
+                {
+                    "icono": "🥇",
+                    "titulo": "Tech Innovators Award 2022",
+                    "org": "CRN"
+                },
+                {
+                    "icono": "📊",
+                    "titulo": "Competitive Strategy Leader 2022",
+                    "org": "Frost & Sullivan"
+                },
+                {
+                    "icono": "🛡️",
+                    "titulo": "Top Infosec Innovator 2022",
+                    "org": "Cyber Defense Magazine"
+                },
+                {
+                    "icono": "🔬",
+                    "titulo": "MRG Effitas Certified Q1-2024",
+                    "org": "MRG Effitas"
+                }
+            ],
+            "faqs": [
+                {
+                    "q": "¿Qué hace diferente a Xcitium de otros EDR?",
+                    "a": "Xcitium introduce el concepto de ZeroDwell™ Containment: los archivos desconocidos no se bloquean ni se permiten libremente, sino que se ejecutan en un entorno virtual aislado a nivel kernel. Esto significa que incluso si un archivo es malicioso, no puede causar daño real. Los EDR tradicionales dependen de la detección y actúan después del daño."
+                },
+                {
+                    "q": "¿Puede detectar ataques fileless y Zero-Day?",
+                    "a": "Sí. ZeroDwell™ no depende de firmas ni del conocimiento previo del malware. Al contener cualquier proceso desconocido en un entorno virtual, incluso los ataques fileless y Zero-Day quedan neutralizados antes de ejecutar código dañino en el sistema real."
+                },
+                {
+                    "q": "¿Es adecuado para organizaciones de cualquier tamaño?",
+                    "a": "Absolutamente. Xcitium ofrece planes escalables desde protección básica EPP+EDR hasta XDR completo con SOC 24/7. Axentia adapta la implementación al tamaño, presupuesto y sector de cada organización, con soporte local incluido."
+                },
+                {
+                    "q": "¿Cumple con estándares de compliance?",
+                    "a": "Sí, Xcitium cumple con ISO 27001, PCI DSS, HIPAA y GDPR. Cuenta con certificaciones de AV-TEST, MRG Effitas, y reconocimientos de Frost & Sullivan como líder en estrategia competitiva."
+                },
+                {
+                    "q": "¿Cómo afecta el rendimiento del equipo del usuario?",
+                    "a": "El impacto es mínimo. El agente de Xcitium está diseñado para ser ligero y eficiente. La contención virtual ocurre a nivel kernel de forma transparente para el usuario, sin demoras perceptibles."
+                },
+                {
+                    "q": "¿Qué pasa si el archivo contenido resulta ser legítimo?",
+                    "a": "El archivo se ejecuta normalmente dentro del contenedor virtual. Una vez analizado y verificado como legítimo por IA y analistas humanos, se aprueba permanentemente. El proceso es transparente para el usuario final."
+                }
+            ]
         },
         {
             "id": 19,
