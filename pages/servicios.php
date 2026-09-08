@@ -28,23 +28,22 @@
         <div>
           <div class="section-label">Explora por necesidad</div>
           <h2>Servicios con rutas claras de implementación</h2>
-        </div>
-        <p>Selecciona un servicio para ver cómo lo abordamos, qué entregables puedes esperar y cómo se conecta con fabricantes, soporte y continuidad operativa.</p>
-      </div>
-      <div class="service-values-panel">
-        <div>
-          <div class="section-label">Valores en cada servicio</div>
-          <h2>Cómo trabajamos cada solución</h2>
-          <p>Más que vender tecnología, acompañamos decisiones técnicas con criterio, claridad y responsabilidad operativa.</p>
+          <p>Selecciona un servicio para ver cómo lo abordamos, qué entregables puedes esperar y cómo se conecta con fabricantes, soporte y continuidad operativa. Más que vender tecnología, acompañamos cada decisión técnica con criterio, claridad y responsabilidad operativa.</p>
         </div>
         <div class="service-values-grid">
-          <article><span>01</span><h3>Seguridad</h3><p>Diseñamos pensando en prevención, continuidad y control del riesgo.</p></article>
-          <article><span>02</span><h3>Claridad</h3><p>Traducimos complejidad técnica en decisiones accionables.</p></article>
-          <article><span>03</span><h3>Compromiso</h3><p>Acompañamos desde el diagnóstico hasta la operación diaria.</p></article>
-          <article><span>04</span><h3>Innovación</h3><p>Integramos fabricantes y soluciones que aportan valor real.</p></article>
+          <article class="value-seguridad"><span>01</span><h3>Seguridad</h3><p>Diseñamos pensando en prevención, continuidad y control del riesgo.</p></article>
+          <article class="value-claridad"><span>02</span><h3>Claridad</h3><p>Traducimos complejidad técnica en decisiones accionables.</p></article>
+          <article class="value-compromiso"><span>03</span><h3>Compromiso</h3><p>Acompañamos desde el diagnóstico hasta la operación diaria.</p></article>
+          <article class="value-innovacion"><span>04</span><h3>Innovación</h3><p>Integramos fabricantes y soluciones que aportan valor real.</p></article>
         </div>
       </div>
-      <div class="services-grid" id="services-grid"></div>
+      <div class="stats-row services-stats-row">
+        <div class="stat-item"><span class="stat-num" id="services-count">–</span><span class="stat-label">Servicios activos</span></div>
+        <div class="stat-item"><span class="stat-num">20+</span><span class="stat-label">Fabricantes integrados</span></div>
+        <div class="stat-item"><span class="stat-num">Gold</span><span class="stat-label">Partner Kaspersky</span></div>
+        <div class="stat-item"><span class="stat-num">RD</span><span class="stat-label">Soporte local</span></div>
+      </div>
+      <div class="services-grid service-grid-enhanced" id="services-grid"></div>
     </div>
   </section>
 
@@ -69,6 +68,8 @@
   <script src="../js/main.js?v=8"></script>
   <script>
     document.getElementById('services-grid').innerHTML = DATA.services.map(renderServiceCard).join('');
+    var servicesCountEl = document.getElementById('services-count');
+    if (servicesCountEl) servicesCountEl.textContent = DATA.services.length;
     renderFooter();
   </script>
 </body>

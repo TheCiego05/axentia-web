@@ -1,4 +1,8 @@
-/* ═══════════════════════════════════════════
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>/* ═══════════════════════════════════════════
    AXENTIA SRL — Global Styles
    css/style.css
 ═══════════════════════════════════════════ */
@@ -2173,67 +2177,8 @@ body {
 }
 
 .service-card-link::after {
-  content: " \2192";
+  content: " ->";
 }
-
-/* ---- Servicios: mejoras puntuales a las tarjetas (grilla /pages/servicios.php) ---- */
-.service-grid-enhanced { counter-reset: service-index; }
-
-.service-grid-enhanced .service-card {
-  position: relative;
-  overflow: hidden;
-  padding-top: 36px;
-}
-
-.service-grid-enhanced .service-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #5B9BE0 0%, #1F497D 100%);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.35s ease;
-}
-.service-grid-enhanced .service-card:hover::before { transform: scaleX(1); }
-
-.service-grid-enhanced .service-card:nth-child(6n+2)::before { background: linear-gradient(90deg, #6FC3E8 0%, #0F2E7A 100%); }
-.service-grid-enhanced .service-card:nth-child(6n+3)::before { background: linear-gradient(90deg, #7FB8F0 0%, #163B6B 100%); }
-.service-grid-enhanced .service-card:nth-child(6n+4)::before { background: linear-gradient(90deg, #57C2D6 0%, #1B4C8C 100%); }
-.service-grid-enhanced .service-card:nth-child(6n+5)::before { background: linear-gradient(90deg, #4F81BD 0%, #10233F 100%); }
-.service-grid-enhanced .service-card:nth-child(6n+6)::before { background: linear-gradient(90deg, #6AA9E8 0%, #1D4ED8 100%); }
-
-.service-grid-enhanced .service-card {
-  counter-increment: service-index;
-}
-.service-grid-enhanced .service-card::after {
-  content: counter(service-index, decimal-leading-zero);
-  position: absolute;
-  top: 14px;
-  right: 20px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: rgba(31, 73, 125, 0.28);
-}
-
-.service-grid-enhanced .service-card-link {
-  display: inline-flex;
-  align-items: center;
-}
-.service-grid-enhanced .service-card-link::after {
-  display: inline-block;
-  transition: transform 0.25s ease;
-}
-.service-grid-enhanced .service-card:hover .service-card-link::after {
-  transform: translateX(4px);
-}
-@media (prefers-reduced-motion: reduce) {
-  .service-grid-enhanced .service-card::before,
-  .service-grid-enhanced .service-card-link::after { transition: none; }
-}
-
 
 .service-detail-page {
   background: #FFFFFF;
@@ -3120,3 +3065,32 @@ html.dark-mode .contact-modern-section .form-group input::placeholder,
 html.dark-mode .contact-modern-section .form-group textarea::placeholder {
   color: rgba(255,255,255,0.4) !important;
 }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="interactive-site services-interactive-page">
+  <section class="section-dark">
+    <div class="container">
+      <div class="services-intro-panel">
+        <div>
+          <div class="section-label">Explora por necesidad</div>
+          <h2>Servicios con rutas claras de implementación</h2>
+          <p>Selecciona un servicio para ver cómo lo abordamos, qué entregables puedes esperar y cómo se conecta con fabricantes, soporte y continuidad operativa. Más que vender tecnología, acompañamos cada decisión técnica con criterio, claridad y responsabilidad operativa.</p>
+        </div>
+        <div class="service-values-grid">
+          <article class="value-seguridad"><span>01</span><h3>Seguridad</h3><p>Diseñamos pensando en prevención, continuidad y control del riesgo.</p></article>
+          <article class="value-claridad"><span>02</span><h3>Claridad</h3><p>Traducimos complejidad técnica en decisiones accionables.</p></article>
+          <article class="value-compromiso"><span>03</span><h3>Compromiso</h3><p>Acompañamos desde el diagnóstico hasta la operación diaria.</p></article>
+          <article class="value-innovacion"><span>04</span><h3>Innovación</h3><p>Integramos fabricantes y soluciones que aportan valor real.</p></article>
+        </div>
+      </div>
+      <div class="stats-row services-stats-row">
+        <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Servicios activos</span></div>
+        <div class="stat-item"><span class="stat-num">20+</span><span class="stat-label">Fabricantes integrados</span></div>
+        <div class="stat-item"><span class="stat-num">Gold</span><span class="stat-label">Partner Kaspersky</span></div>
+        <div class="stat-item"><span class="stat-num">RD</span><span class="stat-label">Soporte local</span></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

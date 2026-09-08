@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Planes de soporte IT gestionado para empresas dominicanas: monitoreo, respuesta y visitas presenciales según el nivel de tu operación.">
   <title>Soporte – Axentia SRL</title>
   <link rel="stylesheet" href="../css/style.css?v=8">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="interactive-site">
   <?php $base = '../'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
 <div class="page-header">
     <div class="container">

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../../css/style.css?v=8">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="kaspersky-page kaspersky-readable">
+<body class="kaspersky-page kaspersky-readable interactive-site">
   <?php $base = '../../'; $navVariant = 'full'; include __DIR__ . '/../../includes/nav.php'; ?>
 <header class="kaspersky-hero kaspersky-readable-hero">
     <div class="container kaspersky-hero-grid">
@@ -30,6 +30,10 @@
         <h2>Equipo certificado</h2>
         <p>Especialistas preparados para orientar, dimensionar e implementar soluciones Kaspersky en ambientes empresariales.</p>
         <div class="kaspersky-gold-badge">
+          <span class="kaspersky-gold-badge-shine" aria-hidden="true"></span>
+          <svg class="kaspersky-gold-badge-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.5l2.47 5.13 5.66.63-4.2 3.87 1.12 5.6L12 14.9l-4.05 2.83 1.12-5.6-4.2-3.87 5.66-.63L12 2.5z"/>
+          </svg>
           <strong>Gold</strong>
           <small>Partner</small>
         </div>

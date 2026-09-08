@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos para una asesoría tecnológica: diagnóstico, propuesta e implementación con el respaldo de Axentia SRL en Santo Domingo y Santiago.">
   <title>Contacto – Axentia SRL</title>
   <link rel="stylesheet" href="../css/style.css?v=8">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="interactive-site">
   <?php $base = '../'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
 <div class="page-header">
     <div class="container">
@@ -37,21 +38,21 @@
         <div class="contact-form">
           <h3>Envíanos un mensaje</h3>
           <div class="form-group">
-            <label>Nombre</label>
-            <input type="text" id="f-name" placeholder="Tu nombre completo">
+            <label for="f-name">Nombre</label>
+            <input type="text" id="f-name" name="name" placeholder="Tu nombre completo" autocomplete="name">
           </div>
           <div class="form-group">
-            <label>Correo Electrónico</label>
-            <input type="email" id="f-email" placeholder="tu@correo.com">
+            <label for="f-email">Correo Electrónico</label>
+            <input type="email" id="f-email" name="email" placeholder="tu@correo.com" autocomplete="email">
           </div>
           <div class="form-group">
-            <label>Teléfono</label>
-            <input type="tel" id="f-phone" placeholder="+1 (809) 000-0000">
+            <label for="f-phone">Teléfono</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="+1 (809) 000-0000" autocomplete="tel">
           </div>
           <div class="form-group">
-            <label>Servicio de interés</label>
-            <select id="f-service">
-              <option value="">Seleccionar servicio...</option>
+            <label for="f-service">Servicio de interés</label>
+            <select id="f-service" name="service" autocomplete="off">
+              <option value="">Seleccionar servicio…</option>
               <option>Ciberseguridad / Xcitium</option>
               <option>Infraestructura IT</option>
               <option>Gestión de la Nube</option>
@@ -63,13 +64,14 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Mensaje</label>
-            <textarea id="f-msg" placeholder="Cuéntanos sobre tu proyecto o consulta..."></textarea>
+            <label for="f-msg">Mensaje</label>
+            <textarea id="f-msg" name="message" placeholder="Cuéntanos sobre tu proyecto o consulta…"></textarea>
           </div>
+          <p id="form-error" role="alert" aria-live="assertive" style="display:none;margin-bottom:14px;color:#ff6b6b;font-size:.88rem"></p>
           <button class="btn-primary" style="width:100%;justify-content:center" onclick="submitForm()">
-            Enviar Mensaje
+            <span id="form-btn-label">Enviar Mensaje</span>
           </button>
-          <p id="form-note" style="display:none;margin-top:16px;text-align:center;color:#5eff9b;font-size:.9rem">
+          <p id="form-note" role="status" aria-live="polite" style="display:none;margin-top:16px;text-align:center;color:#5eff9b;font-size:.9rem">
             ✓ Mensaje enviado. Te contactaremos pronto.
           </p>
         </div>
@@ -80,13 +82,31 @@
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
   <script src="../js/main.js?v=8"></script>
   <script>
+    function showFormError(msg) {
+      const errEl = document.getElementById('form-error');
+      errEl.textContent = msg;
+      errEl.style.display = 'block';
+    }
+
     function submitForm() {
-      const name = document.getElementById('f-name').value.trim();
-      const email = document.getElementById('f-email').value.trim();
-      if (!name || !email) { alert('Por favor completa nombre y correo.'); return; }
+      const errEl = document.getElementById('form-error');
+      errEl.style.display = 'none';
+      document.getElementById('form-note').style.display = 'none';
+
+      const nameEl = document.getElementById('f-name');
+      const emailEl = document.getElementById('f-email');
+      const name = nameEl.value.trim();
+      const email = emailEl.value.trim();
+      if (!name || !email) {
+        showFormError('Por favor completa nombre y correo.');
+        (name ? emailEl : nameEl).focus();
+        return;
+      }
 
       const btn = document.querySelector('.contact-form .btn-primary');
+      const btnLabel = document.getElementById('form-btn-label');
       btn.disabled = true;
+      btnLabel.textContent = 'Enviando…';
 
       fetch('contacto-enviar.php', {
         method: 'POST',
@@ -101,16 +121,16 @@
       })
         .then(r => r.json())
         .then(res => {
-          if (!res.ok) { alert(res.error || 'No se pudo enviar el mensaje. Intenta de nuevo.'); return; }
+          if (!res.ok) { showFormError(res.error || 'No se pudo enviar el mensaje. Intenta de nuevo.'); return; }
           document.getElementById('form-note').style.display = 'block';
-          document.getElementById('f-name').value = '';
-          document.getElementById('f-email').value = '';
+          nameEl.value = '';
+          emailEl.value = '';
           document.getElementById('f-phone').value = '';
           document.getElementById('f-service').value = '';
           document.getElementById('f-msg').value = '';
         })
-        .catch(() => alert('No se pudo enviar el mensaje. Intenta de nuevo.'))
-        .finally(() => { btn.disabled = false; });
+        .catch(() => showFormError('No se pudo enviar el mensaje. Intenta de nuevo.'))
+        .finally(() => { btn.disabled = false; btnLabel.textContent = 'Enviar Mensaje'; });
     }
 
     // Render contact items

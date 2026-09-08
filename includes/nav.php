@@ -47,7 +47,7 @@ $logo = $navVariant === 'simple' ? 'AXENTIA' : 'A<span>X</span>ENTIA';
       </ul>
       <div class="nav-actions">
         <div class="header-search">
-          <input type="text" id="header-search-input" placeholder="Buscar servicios o fabricantes…" autocomplete="off">
+          <input type="text" id="header-search-input" placeholder="Buscar servicios o fabricantes…" autocomplete="off" aria-label="Buscar servicios o fabricantes">
           <div id="header-search-results" class="header-search-results"></div>
         </div>
         <button id="theme-toggle" class="theme-toggle" onclick="toggleDarkMode()" aria-label="Cambiar a modo oscuro">🌙</button>

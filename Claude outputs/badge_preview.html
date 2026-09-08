@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body{background:#10241F;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;font-family:sans-serif;}
+.kaspersky-gold-badge {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 132px;
+  height: 132px;
+  margin-top: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 24%, #FFF4A6, #E8B94A 45%, #B9812A 78%, #8C650E);
+  color: #3A2A05;
+  text-transform: uppercase;
+  box-shadow:
+    0 18px 38px rgba(140, 101, 14, 0.35),
+    inset 0 2px 4px rgba(255, 255, 255, 0.65),
+    inset 0 -6px 12px rgba(90, 62, 8, 0.35);
+  border: 3px solid #F6DFA0;
+  animation: kaspersky-badge-float 4.5s ease-in-out infinite;
+}
+
+.kaspersky-gold-badge-shine {
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  width: 45%;
+  height: 220%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.85), transparent);
+  transform: rotate(20deg);
+  animation: kaspersky-badge-shine 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.kaspersky-gold-badge-icon {
+  width: 26px;
+  height: 26px;
+  fill: #3A2A05;
+  margin-bottom: 2px;
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.4));
+}
+
+.kaspersky-gold-badge strong {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.kaspersky-gold-badge small {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+@keyframes kaspersky-badge-shine {
+  0% { left: -70%; }
+  55% { left: 130%; }
+  100% { left: 130%; }
+}
+
+@keyframes kaspersky-badge-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+</style></head><body>
+<div class="kaspersky-gold-badge">
+  <span class="kaspersky-gold-badge-shine" aria-hidden="true"></span>
+  <svg class="kaspersky-gold-badge-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2.5l2.47 5.13 5.66.63-4.2 3.87 1.12 5.6L12 14.9l-4.05 2.83 1.12-5.6-4.2-3.87 5.66-.63L12 2.5z"/>
+  </svg>
+  <strong>Gold</strong>
+  <small>Partner</small>
+</div>
+</body></html>
