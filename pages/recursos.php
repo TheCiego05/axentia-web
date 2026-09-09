@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recursos – Axentia SRL</title>
   <meta name="description" content="Brochures, whitepapers y casos de estudio de las soluciones que integra Axentia SRL.">
-  <link rel="stylesheet" href="../css/style.css?v=30">
+  <link rel="stylesheet" href="../css/style.css?v=31">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">

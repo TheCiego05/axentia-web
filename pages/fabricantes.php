@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fabricantes – Axentia SRL</title>
   <meta name="description" content="Fabricantes y socios tecnológicos certificados de Axentia SRL: Microsoft, Fortinet, Kaspersky, Xcitium, Veeam y más.">
-  <link rel="stylesheet" href="../css/style.css?v=30">
+  <link rel="stylesheet" href="../css/style.css?v=31">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -51,9 +51,15 @@
           $isExternal = $cp !== '' && (strpos($cp, 'http://') === 0 || strpos($cp, 'https://') === 0);
           $cardHref = $cp !== '' ? ($isExternal ? $cp : 'fabricantes/' . $cp) : 'fabricantes/ver.php?slug=' . urlencode($f['slug']);
         ?>
-        <a class="manufacturer-card" href="<?= htmlspecialchars($cardHref) ?>"<?= $isExternal ? ' target="_blank" rel="noopener"' : '' ?>>
-          <div class="manufacturer-card-logo"><img src="../<?= htmlspecialchars($f['logo']) ?>" alt="<?= htmlspecialchars($f['name']) ?>" loading="lazy"></div>
-          <span><?= htmlspecialchars($f['categoria'] ?? '') ?></span>
+        <?php $isOwnProduct = stripos($f['categoria'] ?? '', 'producto propio') !== false; ?>
+        <a class="manufacturer-card<?= $isOwnProduct ? ' manufacturer-card-own' : '' ?>" href="<?= htmlspecialchars($cardHref) ?>"<?= $isExternal ? ' target="_blank" rel="noopener"' : '' ?>>
+          <div class="manufacturer-card-logo">
+            <img src="../<?= htmlspecialchars($f['logo']) ?>" alt="<?= htmlspecialchars($f['name']) ?>" loading="lazy">
+            <?php if ($isOwnProduct): ?>
+            <span class="own-product-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.6 5 .7-3.6 3.6.8 5.1-4.4-2.4-4.4 2.4.8-5.1L4.8 8.3l5-.7z"/></svg></span>
+            <?php endif; ?>
+          </div>
+          <span<?= $isOwnProduct ? ' class="own-product-badge"' : '' ?>><?= htmlspecialchars($f['categoria'] ?? '') ?></span>
           <h3><?= htmlspecialchars($f['name']) ?></h3>
           <p><?= htmlspecialchars($f['descripcion'] ?? '') ?></p>
         </a>
