@@ -1907,7 +1907,7 @@ body {
 .mp-hero {
   position: relative;
   overflow: hidden;
-  padding: 150px 0 90px;
+  padding: 205px 0 150px;
   background: linear-gradient(135deg, #FFFFFF 0%, color-mix(in srgb, var(--mp-accent) 6%, white) 58%, color-mix(in srgb, var(--mp-accent) 10%, white) 100%);
 }
 .mp-hero::before {
