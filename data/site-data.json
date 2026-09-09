@@ -1049,64 +1049,104 @@
             ],
             "plataforma": [
                 {
-                    "icono": "🔒",
-                    "titulo": "ZeroDwell™ Containment",
-                    "texto": "Aísla automáticamente archivos desconocidos en contenedores virtuales a nivel kernel sin dañar recursos reales."
+                    "categoria": "Seguridad de Endpoint",
+                    "items": [
+                        {
+                            "icono": "assets/logos/xcitium/icon-containment.webp",
+                            "titulo": "ZeroDwell™ Containment",
+                            "texto": "Aísla automáticamente archivos desconocidos en contenedores virtuales a nivel kernel sin dañar recursos reales."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-edr.webp",
+                            "titulo": "EDR de Siguiente Generación",
+                            "texto": "Telemetría continua, árboles de procesos, conexiones de red y análisis forense completo."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-mdr.webp",
+                            "titulo": "MDR — SOC 24/7",
+                            "texto": "Monitoreo continuo por analistas expertos. Hunting de amenazas, investigación de incidentes y respuesta activa."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-verdict-cloud.webp",
+                            "titulo": "Verdict Cloud",
+                            "texto": "Análisis en la nube de archivos desconocidos con IA para emitir un veredicto rápido: seguro, malicioso o en observación."
+                        }
+                    ]
                 },
                 {
-                    "icono": "🕵️",
-                    "titulo": "MDR — SOC 24/7",
-                    "texto": "Monitoreo continuo por analistas expertos. Hunting de amenazas, investigación de incidentes y respuesta activa."
+                    "categoria": "Seguridad de Red",
+                    "items": [
+                        {
+                            "icono": "assets/logos/xcitium/icon-xdr.webp",
+                            "titulo": "XDR — Detección Extendida",
+                            "texto": "Extended Detection and Response desde endpoints hasta redes y cloud bajo un solo panel de control."
+                        },
+                        {
+                            "icono": "🌐",
+                            "titulo": "Protección Web",
+                            "texto": "Bloqueo de sitios maliciosos y control de navegación para reducir la superficie de ataque de tus empleados."
+                        },
+                        {
+                            "icono": "📧",
+                            "titulo": "Protección de Correo",
+                            "texto": "Filtrado multicapa de phishing, malware y correo no deseado antes de que llegue a la bandeja de entrada."
+                        }
+                    ]
                 },
                 {
-                    "icono": "🛡️",
-                    "titulo": "Plataforma EPP Unificada",
-                    "texto": "Antivirus, firewall, HIPS, control de aplicaciones y análisis estático en un solo agente ligero."
+                    "categoria": "Seguridad Cloud",
+                    "items": [
+                        {
+                            "icono": "assets/logos/xcitium/icon-cnapp.webp",
+                            "titulo": "CNAPP",
+                            "texto": "Cloud Native Application Protection Platform para workloads en nube, DevOps e infraestructura como código."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-cwpp.webp",
+                            "titulo": "CWPP",
+                            "texto": "Protección de cargas de trabajo en la nube: contenedores, máquinas virtuales y servidores."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-cspm.webp",
+                            "titulo": "CSPM",
+                            "texto": "Monitoreo continuo y remediación automatizada de la postura de seguridad en tu infraestructura cloud."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-kspm.webp",
+                            "titulo": "KSPM",
+                            "texto": "Control granular y visibilidad de la seguridad de clústeres de Kubernetes."
+                        }
+                    ]
                 },
                 {
-                    "icono": "🌐",
-                    "titulo": "Inteligencia de Amenazas Global",
-                    "texto": "Base de datos actualizada continuamente con datos de millones de endpoints para detección proactiva."
-                },
-                {
-                    "icono": "🔭",
-                    "titulo": "EDR de Siguiente Generación",
-                    "texto": "Telemetría continua, árboles de procesos, conexiones de red y análisis forense completo."
-                },
-                {
-                    "icono": "☁️",
-                    "titulo": "Consola Cloud Unificada",
-                    "texto": "Panel único de visibilidad para endpoints, redes y workloads. Gestión centralizada sin complejidad."
-                },
-                {
-                    "icono": "🚫",
-                    "titulo": "Zero Trust Endpoint",
-                    "texto": "Ningún archivo se confía por defecto. Todo lo desconocido es contenido y analizado antes de ser permitido."
-                },
-                {
-                    "icono": "🏗️",
-                    "titulo": "CNAPP — Protección Cloud",
-                    "texto": "Cloud Native Application Protection Platform para workloads en nube, DevOps e infraestructura como código."
-                },
-                {
-                    "icono": "🏢",
-                    "titulo": "Multi-tenant para MSSPs",
-                    "texto": "Arquitectura escalable con aislamiento multi-tenant y monitoreo centralizado para proveedores de servicios."
-                },
-                {
-                    "icono": "📱",
-                    "titulo": "RMM + Patch Management",
-                    "texto": "Remote Monitoring & Management con gestión de parches para mantener sistemas seguros y actualizados."
-                },
-                {
-                    "icono": "📧",
-                    "titulo": "Email & Web Protection",
-                    "texto": "Protección multicapa de correo electrónico y bloqueo de sitios dañinos para tus empleados."
-                },
-                {
-                    "icono": "🔍",
-                    "titulo": "XDR — Detección Extendida",
-                    "texto": "Extended Detection and Response desde endpoints hasta redes y cloud bajo un solo panel de control."
+                    "categoria": "Gestión de TI (ITSM)",
+                    "items": [
+                        {
+                            "icono": "assets/logos/xcitium/icon-cnapp.webp",
+                            "titulo": "RMM",
+                            "texto": "Monitoreo y gestión remota de equipos, con alertas automatizadas para todo el parque tecnológico."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-patch-management.webp",
+                            "titulo": "Patch Management",
+                            "texto": "Automatiza la identificación, despliegue y verificación de parches de seguridad en todos los endpoints."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-remote-access.webp",
+                            "titulo": "Acceso Remoto Seguro",
+                            "texto": "Conexiones remotas protegidas con cifrado avanzado para soporte técnico sin exponer la red."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-helpdesk-ticketing.webp",
+                            "titulo": "Helpdesk & Ticketing",
+                            "texto": "Plataforma para gestionar tickets, automatizar flujos de trabajo y mejorar los tiempos de respuesta."
+                        },
+                        {
+                            "icono": "assets/logos/xcitium/icon-mdm.webp",
+                            "titulo": "MDM",
+                            "texto": "Control centralizado de todos los dispositivos móviles de la organización, incluyendo políticas y borrado remoto."
+                        }
+                    ]
                 }
             ],
             "planes": [
@@ -1196,32 +1236,32 @@
             },
             "premios": [
                 {
-                    "icono": "🏆",
+                    "icono": "assets/logos/xcitium/award-product-of-the-year.svg",
                     "titulo": "Product of the Year 2025",
                     "org": "AVLAB"
                 },
                 {
-                    "icono": "✅",
+                    "icono": "assets/logos/xcitium/award-av-test.webp",
                     "titulo": "Approved Endpoint Protection",
                     "org": "AV-TEST"
                 },
                 {
-                    "icono": "🥇",
+                    "icono": "assets/logos/xcitium/award-crn-tech.webp",
                     "titulo": "Tech Innovators Award 2022",
                     "org": "CRN"
                 },
                 {
-                    "icono": "📊",
+                    "icono": "assets/logos/xcitium/award-competitive-strategy.webp",
                     "titulo": "Competitive Strategy Leader 2022",
                     "org": "Frost & Sullivan"
                 },
                 {
-                    "icono": "🛡️",
+                    "icono": "assets/logos/xcitium/award-top-infosec.webp",
                     "titulo": "Top Infosec Innovator 2022",
                     "org": "Cyber Defense Magazine"
                 },
                 {
-                    "icono": "🔬",
+                    "icono": "assets/logos/xcitium/award-mrg-effitas.webp",
                     "titulo": "MRG Effitas Certified Q1-2024",
                     "org": "MRG Effitas"
                 }

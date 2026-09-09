@@ -28,6 +28,11 @@ $planes = $fabricante['planes'] ?? [];
 $comparativa = $fabricante['comparativa'] ?? [];
 $premios = $fabricante['premios'] ?? [];
 $faqs = $fabricante['faqs'] ?? [];
+
+function xcIconIsImage($icono) {
+    return is_string($icono) && preg_match('/\.(webp|png|svg|jpg|jpeg)$/i', $icono);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,7 +41,7 @@ $faqs = $fabricante['faqs'] ?? [];
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($fabricante['name']) ?> – Axentia SRL</title>
   <meta name="description" content="<?= htmlspecialchars($fabricante['descripcion']) ?>">
-  <link rel="stylesheet" href="../../css/style.css?v=11">
+  <link rel="stylesheet" href="../../css/style.css?v=13">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -101,11 +106,25 @@ $faqs = $fabricante['faqs'] ?? [];
     <div class="container">
       <div class="section-label">Plataforma</div>
       <h2 class="section-title">Capacidades de <?= htmlspecialchars($fabricante['name']) ?></h2>
+      <?php $plataformaAgrupada = isset($plataforma[0]['categoria']); ?>
+      <?php if ($plataformaAgrupada): ?>
+        <?php foreach ($plataforma as $grupo): ?>
+        <div class="manufacturer-platform-category">
+          <h3 class="manufacturer-platform-category-title"><?= htmlspecialchars($grupo['categoria']) ?></h3>
+          <div class="manufacturer-platform-grid">
+            <?php foreach (($grupo['items'] ?? []) as $pl): ?>
+            <article><span class="<?= xcIconIsImage($pl['icono'] ?? '') ? 'icon-img' : '' ?>" aria-hidden="true"><?php if (xcIconIsImage($pl['icono'] ?? '')): ?><img src="../../<?= htmlspecialchars($pl['icono']) ?>" alt="" loading="lazy"><?php else: ?><?= htmlspecialchars($pl['icono'] ?? '') ?><?php endif; ?></span><h3><?= htmlspecialchars($pl['titulo']) ?></h3><p><?= htmlspecialchars($pl['texto']) ?></p></article>
+            <?php endforeach; ?>
+          </div>
+        </div>
+        <?php endforeach; ?>
+      <?php else: ?>
       <div class="manufacturer-platform-grid">
         <?php foreach ($plataforma as $pl): ?>
-        <article><span aria-hidden="true"><?= htmlspecialchars($pl['icono'] ?? '') ?></span><h3><?= htmlspecialchars($pl['titulo']) ?></h3><p><?= htmlspecialchars($pl['texto']) ?></p></article>
+        <article><span class="<?= xcIconIsImage($pl['icono'] ?? '') ? 'icon-img' : '' ?>" aria-hidden="true"><?php if (xcIconIsImage($pl['icono'] ?? '')): ?><img src="../../<?= htmlspecialchars($pl['icono']) ?>" alt="" loading="lazy"><?php else: ?><?= htmlspecialchars($pl['icono'] ?? '') ?><?php endif; ?></span><h3><?= htmlspecialchars($pl['titulo']) ?></h3><p><?= htmlspecialchars($pl['texto']) ?></p></article>
         <?php endforeach; ?>
       </div>
+      <?php endif; ?>
     </div>
   </section>
   <?php endif; ?>
@@ -161,7 +180,7 @@ $faqs = $fabricante['faqs'] ?? [];
       <div class="manufacturer-awards-grid">
         <?php foreach ($premios as $pr): ?>
         <div class="manufacturer-award-card">
-          <div class="award-icon" aria-hidden="true"><?= htmlspecialchars($pr['icono'] ?? '🏆') ?></div>
+          <div class="award-icon" aria-hidden="true"><?php if (xcIconIsImage($pr['icono'] ?? '')): ?><img src="../../<?= htmlspecialchars($pr['icono']) ?>" alt="" loading="lazy"><?php else: ?><?= htmlspecialchars($pr['icono'] ?? '🏆') ?><?php endif; ?></div>
           <h4><?= htmlspecialchars($pr['titulo']) ?></h4>
           <p><?= htmlspecialchars($pr['org']) ?></p>
         </div>

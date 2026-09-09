@@ -1800,6 +1800,18 @@ body {
 @media (max-width: 900px) { .manufacturer-platform-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .manufacturer-platform-grid { grid-template-columns: 1fr; } }
 
+.manufacturer-platform-category { margin-bottom: 34px; }
+.manufacturer-platform-category:last-child { margin-bottom: 0; }
+.manufacturer-platform-category-title {
+  color: #EAF2FF;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  margin-bottom: 16px;
+  padding-left: 14px;
+  border-left: 3px solid #5B9BE0;
+}
+
 .manufacturer-compare-table td.cell-bad { color: #B3261E; }
 .manufacturer-compare-table td.cell-good { color: #1B7F4C; font-weight: 600; }
 
@@ -1818,6 +1830,26 @@ body {
   box-shadow: 0 14px 34px rgba(31, 73, 125, 0.07);
 }
 .manufacturer-award-card .award-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.manufacturer-platform-grid article span.icon-img {
+  background: none;
+  box-shadow: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.manufacturer-platform-grid article span.icon-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.manufacturer-award-card .award-icon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin: 0 auto;
+}
 .manufacturer-award-card h4 { color: #182334; font-size: 0.96rem; margin-bottom: 4px; }
 .manufacturer-award-card p { color: #637083; font-size: 0.82rem; }
 @media (max-width: 768px) { .manufacturer-awards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
