@@ -1855,6 +1855,54 @@ body {
 @media (max-width: 768px) { .manufacturer-awards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .manufacturer-awards-grid { grid-template-columns: 1fr; } }
 
+/* ===== Marca Fortinet: colores oficiales aplicados solo a nuestros propios elementos (iconos/acentos), sin alterar su logo ===== */
+.fabricante-fortinet .manufacturer-platform-grid article span {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  font-size: 1.9rem;
+  background: linear-gradient(155deg, #EE2E24 0%, #8E0E12 100%) !important;
+  box-shadow: 0 10px 22px rgba(238, 46, 36, 0.25);
+}
+.fabricante-fortinet .manufacturer-platform-category-title {
+  border-left-color: #EE2E24;
+  color: #FFD9D6;
+}
+.fabricante-fortinet .manufacturer-award-card .award-icon {
+  font-size: 2.3rem;
+  color: #EE2E24;
+}
+.fabricante-fortinet .manufacturer-award-card {
+  border-top: 3px solid #EE2E24;
+}
+.fabricante-fortinet .stat-num {
+  color: #EE2E24 !important;
+}
+.fabricante-fortinet .manufacturer-actions .btn-primary,
+.fabricante-fortinet .manufacturer-products .btn-primary,
+.fabricante-fortinet .support-card .btn-primary {
+  background: #EE2E24 !important;
+  border-color: #EE2E24 !important;
+}
+.fabricante-fortinet .manufacturer-actions .btn-primary:hover,
+.fabricante-fortinet .manufacturer-products .btn-primary:hover,
+.fabricante-fortinet .support-card .btn-primary:hover {
+  background: #C8221A !important;
+  border-color: #C8221A !important;
+}
+.fabricante-fortinet .support-card.popular {
+  border-color: #EE2E24 !important;
+}
+.fabricante-fortinet .manufacturer-actions .btn-outline:hover {
+  border-color: #EE2E24 !important;
+  color: #EE2E24 !important;
+}
+.manufacturer-platform-intro {
+  max-width: 900px;
+  margin: 10px 0 26px;
+}
+
+
 /* ===== Kaspersky manufacturer page ===== */
 .kaspersky-page {
   background: #FFFFFF;

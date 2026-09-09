@@ -41,10 +41,10 @@ function xcIconIsImage($icono) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($fabricante['name']) ?> – Axentia SRL</title>
   <meta name="description" content="<?= htmlspecialchars($fabricante['descripcion']) ?>">
-  <link rel="stylesheet" href="../../css/style.css?v=16">
+  <link rel="stylesheet" href="../../css/style.css?v=17">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="interactive-site">
+<body class="interactive-site fabricante-<?= htmlspecialchars($fabricante['slug']) ?>">
   <?php $base = '../../'; $navVariant = 'full'; include __DIR__ . '/../../includes/nav.php'; ?>
 <div class="page-header manufacturer-header">
     <canvas id="ax-particles-text" aria-hidden="true"></canvas>
@@ -109,6 +109,9 @@ function xcIconIsImage($icono) {
     <div class="container">
       <div class="section-label">Plataforma</div>
       <h2 class="section-title">Capacidades de <?= htmlspecialchars($fabricante['name']) ?></h2>
+      <?php if (!empty($fabricante['plataformaIntro'])): ?>
+      <p class="section-sub manufacturer-platform-intro"><?= htmlspecialchars($fabricante['plataformaIntro']) ?></p>
+      <?php endif; ?>
       <?php $plataformaAgrupada = isset($plataforma[0]['categoria']); ?>
       <?php if ($plataformaAgrupada): ?>
         <?php foreach ($plataforma as $grupo): ?>
