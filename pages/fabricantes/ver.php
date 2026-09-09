@@ -41,7 +41,7 @@ function xcIconIsImage($icono) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($fabricante['name']) ?> – Axentia SRL</title>
   <meta name="description" content="<?= htmlspecialchars($fabricante['descripcion']) ?>">
-  <link rel="stylesheet" href="../../css/style.css?v=15">
+  <link rel="stylesheet" href="../../css/style.css?v=16">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -61,6 +61,9 @@ function xcIconIsImage($icono) {
           <div class="manufacturer-actions">
             <a href="../contacto.php" class="btn-primary">Solicitar asesoría</a>
             <a href="../fabricantes.php" class="btn-outline">Ver fabricantes</a>
+            <?php if (!empty($fabricante['sitioOficial'])): ?>
+            <a href="<?= htmlspecialchars($fabricante['sitioOficial']) ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">Sitio oficial de <?= htmlspecialchars($fabricante['name']) ?> ↗</a>
+            <?php endif; ?>
           </div>
         </div>
       </div>

@@ -181,6 +181,13 @@
             "name": "IMEX Marmol",
             "sector": "Construccion",
             "logo": "assets/logos/clients/imex-marmol.png"
+        },
+        {
+            "id": 8,
+            "initials": "NL",
+            "name": "Novalogiq",
+            "sector": "Tecnologia",
+            "logo": "assets/logos/clients/novalogiq.png"
         }
     ],
     "blog": [
@@ -441,7 +448,7 @@
             "name": "Fortinet",
             "logo": "assets/logos/partners/fortinet-authorized-partner.png",
             "categoria": "Seguridad perimetral y redes",
-            "descripcion": "Seguridad de red, firewall, VPN, protección perimetral y conectividad segura para organizaciones.",
+            "descripcion": "Fabricante líder en ciberseguridad de red, creador de FortiOS: el sistema operativo unificado detrás del Security Fabric, que integra firewall, SD-WAN, SASE, endpoint y seguridad cloud en una sola plataforma. Protege a más de 700,000 organizaciones en el mundo.",
             "capacidades": [
                 {
                     "titulo": "Evaluación",
@@ -470,7 +477,228 @@
             "brochureUrl": "",
             "videoUrl": "",
             "customPage": "",
-            "destacado": false
+            "destacado": false,
+            "sitioOficial": "https://www.fortinet.com/",
+            "stats": [
+                {
+                    "num": "700K+",
+                    "label": "Organizaciones protegidas globalmente"
+                },
+                {
+                    "num": "1",
+                    "label": "Sistema operativo unificado (FortiOS)"
+                },
+                {
+                    "num": "5°",
+                    "label": "Año consecutivo Líder Gartner en SD-WAN"
+                },
+                {
+                    "num": "40+",
+                    "label": "Productos integrados en el Security Fabric"
+                },
+                {
+                    "num": "24/7",
+                    "label": "Inteligencia de amenazas (FortiGuard Labs)"
+                }
+            ],
+            "plataforma": [
+                {
+                    "categoria": "Seguridad de Red",
+                    "items": [
+                        {
+                            "icono": "🧱",
+                            "titulo": "FortiGate NGFW",
+                            "texto": "Firewalls de próxima generación con aceleración por hardware (SPU) para inspeccionar tráfico cifrado sin sacrificar rendimiento."
+                        },
+                        {
+                            "icono": "🔀",
+                            "titulo": "Secure SD-WAN",
+                            "texto": "Conectividad WAN segura e inteligente entre sucursales, con enrutamiento dinámico según la calidad del enlace."
+                        },
+                        {
+                            "icono": "🛰️",
+                            "titulo": "SASE",
+                            "texto": "Secure Access Service Edge: acceso seguro a aplicaciones y datos para usuarios remotos, sin importar dónde se conecten."
+                        }
+                    ]
+                },
+                {
+                    "categoria": "Endpoint y Operaciones de Seguridad",
+                    "items": [
+                        {
+                            "icono": "💻",
+                            "titulo": "FortiEDR",
+                            "texto": "Detección y respuesta en endpoints con contención automática de amenazas antes de que se propaguen."
+                        },
+                        {
+                            "icono": "🕵️",
+                            "titulo": "SOC / SIEM / SOAR",
+                            "texto": "Correlación de eventos, gestión centralizada de incidentes y automatización de la respuesta a amenazas."
+                        },
+                        {
+                            "icono": "📡",
+                            "titulo": "NDR",
+                            "texto": "Detección de amenazas en la red mediante análisis de tráfico y comportamiento, sin depender solo de firmas."
+                        }
+                    ]
+                },
+                {
+                    "categoria": "Seguridad Cloud",
+                    "items": [
+                        {
+                            "icono": "☁️",
+                            "titulo": "CNAPP",
+                            "texto": "Protección nativa de aplicaciones en la nube: postura de seguridad, cargas de trabajo e infraestructura como código."
+                        },
+                        {
+                            "icono": "🧰",
+                            "titulo": "WAF",
+                            "texto": "Firewall de aplicaciones web que filtra tráfico malicioso antes de que llegue a tus aplicaciones."
+                        },
+                        {
+                            "icono": "🔥",
+                            "titulo": "Cloud Firewall",
+                            "texto": "Firewalls virtuales para entornos multicloud, con las mismas políticas que la red física."
+                        }
+                    ]
+                },
+                {
+                    "categoria": "Redes Empresariales y OT",
+                    "items": [
+                        {
+                            "icono": "🔌",
+                            "titulo": "Switches y Wi-Fi seguros",
+                            "texto": "Switches y puntos de acceso inalámbrico administrados desde la misma consola que la seguridad, con NAC integrado."
+                        },
+                        {
+                            "icono": "🏭",
+                            "titulo": "Seguridad OT",
+                            "texto": "Protección especializada para entornos industriales y de tecnología operativa, separando IT de OT de forma segura."
+                        }
+                    ]
+                }
+            ],
+            "planes": [
+                {
+                    "tier": "PYME",
+                    "nombre": "Small & Midsize Business",
+                    "desc": "Firewalls FortiGate de entrada con protección esencial, pensados para presupuestos y equipos de TI más pequeños.",
+                    "features": [
+                        "FortiGate NGFW",
+                        "VPN y firewall básico",
+                        "Gestión simplificada",
+                        "Soporte y actualizaciones FortiGuard"
+                    ],
+                    "popular": false
+                },
+                {
+                    "tier": "Enterprise",
+                    "nombre": "Empresarial",
+                    "desc": "El Security Fabric completo: red, endpoint, cloud y operaciones de seguridad integradas bajo una sola consola.",
+                    "features": [
+                        "Todo lo de PYME",
+                        "SD-WAN y SASE",
+                        "FortiEDR + NDR",
+                        "SOC/SIEM/SOAR",
+                        "Seguridad cloud (CNAPP/WAF)"
+                    ],
+                    "popular": true
+                },
+                {
+                    "tier": "Service Provider / OT",
+                    "nombre": "Proveedores de Servicio & OT",
+                    "desc": "Arquitecturas de alto rendimiento para operadores de telecomunicaciones y entornos industriales críticos.",
+                    "features": [
+                        "Todo lo de Enterprise",
+                        "Alta capacidad y multi-tenant",
+                        "Seguridad OT/ICS especializada",
+                        "Cumplimiento para infraestructura crítica"
+                    ],
+                    "popular": false
+                }
+            ],
+            "comparativa": {
+                "headers": [
+                    "Aspecto",
+                    "Seguridad fragmentada (multi-vendor)",
+                    "Fortinet Security Fabric"
+                ],
+                "filas": [
+                    [
+                        "Arquitectura",
+                        "Herramientas de distintos fabricantes sin integrar",
+                        "Un solo sistema operativo (FortiOS) para toda la red"
+                    ],
+                    [
+                        "Visibilidad",
+                        "Paneles separados por producto",
+                        "Consola única para red, endpoint y cloud"
+                    ],
+                    [
+                        "Rendimiento",
+                        "Inspección de tráfico cifrado limita el desempeño",
+                        "Aceleración por hardware (SPU) sin perder velocidad"
+                    ],
+                    [
+                        "Respuesta a incidentes",
+                        "Correlación manual entre herramientas",
+                        "Automatización SOC/SIEM/SOAR integrada"
+                    ],
+                    [
+                        "Escalabilidad",
+                        "Licenciamiento y gestión por producto",
+                        "Mismo Security Fabric desde PYME hasta operador de telecom"
+                    ]
+                ]
+            },
+            "premios": [
+                {
+                    "icono": "🏆",
+                    "titulo": "Líder Gartner® Magic Quadrant™ SD-WAN",
+                    "org": "5° año consecutivo"
+                },
+                {
+                    "icono": "🛡️",
+                    "titulo": "Líder Gartner® Magic Quadrant™ Hybrid Mesh Firewall",
+                    "org": "2025"
+                },
+                {
+                    "icono": "📶",
+                    "titulo": "Líder Gartner® Magic Quadrant™ LAN Cableada e Inalámbrica Empresarial",
+                    "org": "2° año consecutivo"
+                },
+                {
+                    "icono": "🛰️",
+                    "titulo": "Reconocido en Gartner® Magic Quadrant™ SASE",
+                    "org": "2026"
+                }
+            ],
+            "faqs": [
+                {
+                    "q": "¿Qué hace diferente a Fortinet de otros fabricantes de seguridad?",
+                    "a": "Fortinet construye la mayoría de sus productos sobre un mismo sistema operativo, FortiOS, y chips propios de aceleración (SPU). Esto permite que firewall, SD-WAN, SASE, endpoint y seguridad cloud trabajen integrados bajo una sola consola, en vez de sumar herramientas separadas de distintos fabricantes."
+                },
+                {
+                    "q": "¿Qué es el Security Fabric?",
+                    "a": "Es la arquitectura de Fortinet que conecta más de 40 productos propios (red, endpoint, cloud, OT) para compartir inteligencia de amenazas y aplicar políticas de forma centralizada, reduciendo puntos ciegos entre herramientas."
+                },
+                {
+                    "q": "¿Fortinet es solo para empresas grandes?",
+                    "a": "No. Fortinet ofrece FortiGate en distintos tamaños, desde modelos de entrada para PYMES hasta equipos de alto rendimiento para operadores de telecomunicaciones y grandes corporativos."
+                },
+                {
+                    "q": "¿Qué es FortiGuard Labs?",
+                    "a": "Es el equipo y la infraestructura de inteligencia de amenazas de Fortinet, que analiza tráfico y amenazas de forma continua para actualizar automáticamente las protecciones de todos los productos del Security Fabric."
+                },
+                {
+                    "q": "¿Fortinet cubre entornos industriales (OT)?",
+                    "a": "Sí. Fortinet tiene una línea específica de seguridad OT para separar de forma segura las redes de tecnología operativa (plantas, sistemas industriales) de la red corporativa tradicional."
+                },
+                {
+                    "q": "¿Cómo empiezo a trabajar con Fortinet a través de Axentia?",
+                    "a": "Axentia es partner autorizado de Fortinet en República Dominicana. Evaluamos tu infraestructura actual, diseñamos la arquitectura de FortiGate/SD-WAN/SASE adecuada y nos encargamos de la implementación y el soporte continuo."
+                }
+            ]
         },
         {
             "id": 4,
