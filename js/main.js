@@ -494,7 +494,8 @@ const AX_SERVICE_ICONS = {
   'capacitacion-concienciacion': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5"/><path d="M22 9.5v6"/></svg>',
   'transformacion-digital': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.4-6.4L21 8"/><path d="M21 4v4h-4"/><path d="M21 12a9 9 0 0 1-15.4 6.4L3 16"/><path d="M3 20v-4h4"/></svg>',
   'redes-cableado': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg>',
-  'seguridad-fisica': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l3-3h10l3 3v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8z"/><circle cx="12" cy="13" r="3.2"/><path d="M9 8h.01"/></svg>'
+  'seguridad-fisica': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l3-3h10l3 3v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8z"/><circle cx="12" cy="13" r="3.2"/><path d="M9 8h.01"/></svg>',
+  'pruebas-software-qa': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2h6V3"/><path d="M8.5 12l2 2 4-4"/></svg>'
 };
 function svcIcon(slug, fallback) { return AX_SERVICE_ICONS[slug] || fallback || ''; }
 
@@ -594,6 +595,11 @@ const SERVICE_DETAIL_COPY = {
     outcome: 'Integramos videovigilancia, control de acceso y monitoreo para proteger espacios físicos y activos críticos.',
     process: ['Levantamiento del sitio y puntos críticos', 'Diseño de cámaras, NVR y accesos', 'Instalación, configuración y pruebas', 'Capacitación y soporte'],
     deliverables: ['Diseño de cobertura', 'Cotización de equipos', 'Configuración y pruebas', 'Manual de operación']
+  },
+  'pruebas-software-qa': {
+    outcome: 'Garantizamos que tu software funcione de forma confiable antes de llegar a producción, combinando pruebas rigurosas con desarrollo a medida cuando lo necesitas.',
+    process: ['Definición de plan y casos de prueba', 'Ejecución de pruebas manuales y automatizadas', 'Pruebas de carga y rendimiento', 'Desarrollo o ajuste de funcionalidades', 'Reporte de defectos y validación de correcciones'],
+    deliverables: ['Plan de pruebas', 'Reporte de defectos', 'Scripts de automatización', 'Software desarrollado o ajustado', 'Informe de rendimiento']
   }
 };
 
@@ -675,15 +681,21 @@ const CIBER_PARTICLE_ICONS = [
 
 function renderCiberParticles() {
   const positions = [
-    { top: '8%', left: '4%' }, { top: '18%', left: '92%' }, { top: '68%', left: '2%' },
-    { top: '80%', left: '88%' }, { top: '40%', left: '96%' }, { top: '55%', left: '8%' },
-    { top: '4%', left: '48%' }, { top: '90%', left: '52%' }
+    { top: '8%',  left: '4%'  }, { top: '18%', left: '92%' }, { top: '68%', left: '2%'  },
+    { top: '80%', left: '88%' }, { top: '40%', left: '96%' }, { top: '55%', left: '8%'  },
+    { top: '4%',  left: '48%' }, { top: '90%', left: '52%' }, { top: '28%', left: '18%' },
+    { top: '62%', left: '82%' }, { top: '12%', left: '68%' }, { top: '85%', left: '22%' },
+    { top: '48%', left: '38%' }, { top: '6%',  left: '84%' }, { top: '72%', left: '46%' },
+    { top: '34%', left: '6%'  }
   ];
-  const items = CIBER_PARTICLE_ICONS.map((icon, i) => {
-    const pos = positions[i % positions.length];
-    const delay = (i * 0.6).toFixed(1);
-    const duration = (7 + (i % 4)).toFixed(1);
-    return `<span class="ciber-particle" style="top:${pos.top};left:${pos.left};animation-delay:-${delay}s;animation-duration:${duration}s;">${icon}</span>`;
+  const items = positions.map((pos, i) => {
+    const icon = CIBER_PARTICLE_ICONS[i % CIBER_PARTICLE_ICONS.length];
+    const floatDelay = (i * 0.55).toFixed(2);
+    const floatDuration = (7 + (i % 4)).toFixed(1);
+    const colorDelay = (i * 0.9).toFixed(2);
+    const colorDuration = (8 + (i % 5)).toFixed(1);
+    const scale = (0.82 + (i % 3) * 0.12).toFixed(2);
+    return `<span class="ciber-particle" style="top:${pos.top};left:${pos.left};--ciber-scale:${scale};animation-delay:-${floatDelay}s,-${colorDelay}s;animation-duration:${floatDuration}s,${colorDuration}s;">${icon}</span>`;
   }).join('');
   return `<div class="ciber-particles" aria-hidden="true">${items}</div>`;
 }

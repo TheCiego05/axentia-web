@@ -2628,28 +2628,39 @@ body {
 .service-detail-hero.has-ciber-particles { position: relative; overflow: hidden; }
 .ciber-particles { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .ciber-particle {
+  --ciber-scale: 1;
   position: absolute; width: 34px; height: 34px; padding: 7px;
-  border-radius: 10px; background: rgba(79, 129, 189, 0.10);
+  border-radius: 10px;
+  background: rgba(79, 129, 189, 0.10);
   border: 1px solid rgba(31, 73, 125, 0.14);
   color: var(--brand-blue, #4F81BD);
   display: flex; align-items: center; justify-content: center;
-  opacity: 0; animation-name: ciber-spark-float; animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  opacity: 0;
+  animation-name: ciber-spark-float, ciber-spark-color;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
 }
 .ciber-particle svg { width: 100%; height: 100%; }
 @keyframes ciber-spark-float {
-  0%   { opacity: 0; transform: translate(0, 12px) scale(0.85); }
+  0%   { opacity: 0; transform: translate(0, 12px) scale(calc(var(--ciber-scale) * 0.85)); }
   12%  { opacity: 0.9; }
-  50%  { opacity: 0.55; transform: translate(6px, -14px) scale(1); }
+  50%  { opacity: 0.55; transform: translate(6px, -14px) scale(var(--ciber-scale)); }
   88%  { opacity: 0.9; }
-  100% { opacity: 0; transform: translate(-4px, -26px) scale(0.85); }
+  100% { opacity: 0; transform: translate(-4px, -26px) scale(calc(var(--ciber-scale) * 0.85)); }
+}
+@keyframes ciber-spark-color {
+  0%   { color: #4F81BD; background: rgba(79, 129, 189, 0.10); border-color: rgba(31, 73, 125, 0.16); }
+  25%  { color: #178A4C; background: rgba(23, 138, 76, 0.10); border-color: rgba(23, 138, 76, 0.24); }
+  50%  { color: #B9812A; background: rgba(232, 185, 74, 0.14); border-color: rgba(232, 185, 74, 0.32); }
+  75%  { color: #B3392C; background: rgba(179, 57, 44, 0.10); border-color: rgba(179, 57, 44, 0.26); }
+  100% { color: #4F81BD; background: rgba(79, 129, 189, 0.10); border-color: rgba(31, 73, 125, 0.16); }
 }
 .service-detail-hero.has-ciber-particles .container.service-detail-hero-grid { position: relative; z-index: 1; }
 @media (max-width: 900px) {
   .ciber-particle { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .ciber-particle { animation: none; opacity: 0.45; }
+  .ciber-particle { animation: none; opacity: 0.45; color: #4F81BD; background: rgba(79, 129, 189, 0.10); border-color: rgba(31, 73, 125, 0.16); }
 }
 
 .service-detail-hero-grid,

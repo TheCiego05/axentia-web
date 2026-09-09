@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . '/../../includes/data-loader.php'; ?>
 <?php
-  $svcSlug = 'transformacion-digital';
+  $svcSlug = 'pruebas-software-qa';
   $svcInfo = null;
   foreach (($DATA['services'] ?? []) as $s) { if ($s['slug'] === $svcSlug) { $svcInfo = $s; break; } }
   $svcTitle = $svcInfo ? $svcInfo['title'] : 'Servicio';
@@ -18,9 +18,9 @@
 </head>
 <body class="service-detail-page interactive-site">
   <?php $base = '../../'; $navVariant = 'simple'; include __DIR__ . '/../../includes/nav.php'; ?>
-<main id="service-detail-shell" data-service-slug="transformacion-digital"></main>
+<main id="service-detail-shell" data-service-slug="pruebas-software-qa"></main>
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
   <script src="../../js/main.js?v=10"></script>
-  <script>renderServiceDetailPage('transformacion-digital'); renderFooter();</script>
+  <script>renderServiceDetailPage('pruebas-software-qa'); renderFooter();</script>
 </body>
 </html>

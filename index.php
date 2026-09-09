@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Axentia SRL – Conectando Ideas, Innovando el Futuro</title>
   <meta name="description" content="Soluciones tecnológicas y de ciberseguridad para cualquier tipo de organización en República Dominicana — pequeña, mediana, grande o gobierno.">
-  <link rel="stylesheet" href="css/style.css?v=31">
+  <link rel="stylesheet" href="css/style.css?v=32">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">

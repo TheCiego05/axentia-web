@@ -134,6 +134,21 @@
         "Cotización de equipos: PC, Laptops, Impresoras, Cámaras, Access Points"
       ],
       "fabricantes": []
+    },
+    {
+      "id": 10,
+      "slug": "pruebas-software-qa",
+      "icon": "",
+      "title": "Pruebas de Software y QA",
+      "desc": "Garantizamos la calidad de tu software con pruebas rigurosas y desarrollo a medida, desde el testing manual hasta la automatización.",
+      "items": [
+        "Pruebas funcionales manuales y diseño de casos de prueba",
+        "Automatización de pruebas de regresión",
+        "Pruebas de carga y rendimiento",
+        "Desarrollo de software a medida",
+        "Reporte y seguimiento de defectos",
+        "Integración de QA en el ciclo de desarrollo (CI/CD)"
+      ]
     }
   ],
   "clients": [
@@ -4804,7 +4819,7 @@
     "vision": "Ser un aliado tecnológico de referencia en República Dominicana y la región, reconocido por entregar soluciones integrales, seguras y escalables. Aspiramos a impulsar la transformación digital de nuestros clientes con innovación, confiabilidad y compromiso."
   },
   "nextId": {
-    "services": 10,
+    "services": 11,
     "clients": 8,
     "blog": 4,
     "partners": 21,
