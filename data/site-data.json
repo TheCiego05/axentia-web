@@ -706,7 +706,8 @@
                     "a": "Axentia es partner autorizado de Fortinet en República Dominicana. Evaluamos tu infraestructura actual, diseñamos la arquitectura de FortiGate/SD-WAN/SASE adecuada y nos encargamos de la implementación y el soporte continuo."
                 }
             ],
-            "plataformaIntro": "Todo el portafolio de Fortinet corre sobre FortiOS, el mismo sistema operativo y los mismos chips de aceleración (SPU) en cada capa. Esto significa que, al integrar cualquiera de estas soluciones a través de Axentia, tu equipo no suma consolas ni licencias sueltas: suma piezas de un mismo Security Fabric que ya comparte inteligencia de amenazas y políticas entre sí."
+            "plataformaIntro": "Todo el portafolio de Fortinet corre sobre FortiOS, el mismo sistema operativo y los mismos chips de aceleración (SPU) en cada capa. Esto significa que, al integrar cualquiera de estas soluciones a través de Axentia, tu equipo no suma consolas ni licencias sueltas: suma piezas de un mismo Security Fabric que ya comparte inteligencia de amenazas y políticas entre sí.",
+            "colorAccent": "#EE2E24"
         },
         {
             "id": 4,
@@ -1527,7 +1528,8 @@
                     "q": "¿Qué pasa si el archivo contenido resulta ser legítimo?",
                     "a": "El archivo se ejecuta normalmente dentro del contenedor virtual. Una vez analizado y verificado como legítimo por IA y analistas humanos, se aprueba permanentemente. El proceso es transparente para el usuario final."
                 }
-            ]
+            ],
+            "colorAccent": "#1F6FEB"
         },
         {
             "id": 19,

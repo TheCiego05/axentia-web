@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kaspersky Next | Partner Gold - Axentia SRL</title>
   <meta name="description" content="Axentia SRL integra Kaspersky Next para proteger endpoints, reducir riesgos y fortalecer la respuesta ante amenazas. Partner Kaspersky Nivel Gold.">
-  <link rel="stylesheet" href="../../css/style.css?v=17">
+  <link rel="stylesheet" href="../../css/style.css?v=19">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="kaspersky-page kaspersky-readable interactive-site">

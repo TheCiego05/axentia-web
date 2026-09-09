@@ -28,9 +28,19 @@ $planes = $fabricante['planes'] ?? [];
 $comparativa = $fabricante['comparativa'] ?? [];
 $premios = $fabricante['premios'] ?? [];
 $faqs = $fabricante['faqs'] ?? [];
+$mpAccent = $fabricante['colorAccent'] ?? '#4F81BD';
 
 function xcIconIsImage($icono) {
     return is_string($icono) && preg_match('/\.(webp|png|svg|jpg|jpeg)$/i', $icono);
+}
+
+function renderPlataformaItem($pl) {
+    $esImagen = xcIconIsImage($pl['icono'] ?? '');
+    if ($esImagen) {
+        echo '<article><span class="icon-img" aria-hidden="true"><img src="../../' . htmlspecialchars($pl['icono']) . '" alt="" loading="lazy"></span><h3>' . htmlspecialchars($pl['titulo']) . '</h3><p>' . htmlspecialchars($pl['texto']) . '</p></article>';
+    } else {
+        echo '<div class="mp-tier-card"><h3>' . htmlspecialchars($pl['titulo']) . '</h3><p>' . htmlspecialchars($pl['texto']) . '</p></div>';
+    }
 }
 
 ?>
@@ -41,55 +51,60 @@ function xcIconIsImage($icono) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($fabricante['name']) ?> – Axentia SRL</title>
   <meta name="description" content="<?= htmlspecialchars($fabricante['descripcion']) ?>">
-  <link rel="stylesheet" href="../../css/style.css?v=17">
+  <link rel="stylesheet" href="../../css/style.css?v=19">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="interactive-site fabricante-<?= htmlspecialchars($fabricante['slug']) ?>">
+<body class="interactive-site fabricante-<?= htmlspecialchars($fabricante['slug']) ?>" style="--mp-accent: <?= htmlspecialchars($mpAccent) ?>;">
   <?php $base = '../../'; $navVariant = 'full'; include __DIR__ . '/../../includes/nav.php'; ?>
-<div class="page-header manufacturer-header">
+<header class="mp-hero">
     <canvas id="ax-particles-text" aria-hidden="true"></canvas>
-    <div class="container">
-      <div class="breadcrumb"><a href="../../index.php">Inicio</a> / <a href="../fabricantes.php">Fabricantes</a> / <?= htmlspecialchars($fabricante['name']) ?></div>
-      <div class="manufacturer-hero-card reveal-on-scroll">
-        <div class="manufacturer-logo-frame">
-          <img src="../../<?= htmlspecialchars($fabricante['logo']) ?>" alt="<?= htmlspecialchars($fabricante['name']) ?>">
-        </div>
-        <div>
-          <div class="section-label"><?= htmlspecialchars($fabricante['categoria']) ?></div>
-          <h1><?= htmlspecialchars($fabricante['name']) ?></h1>
-          <p><?= htmlspecialchars($fabricante['descripcion']) ?></p>
-          <div class="manufacturer-actions">
-            <a href="../contacto.php" class="btn-primary">Solicitar asesoría</a>
-            <a href="../fabricantes.php" class="btn-outline">Ver fabricantes</a>
-            <?php if (!empty($fabricante['sitioOficial'])): ?>
-            <a href="<?= htmlspecialchars($fabricante['sitioOficial']) ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">Sitio oficial de <?= htmlspecialchars($fabricante['name']) ?> ↗</a>
-            <?php endif; ?>
-          </div>
+    <div class="container mp-hero-grid">
+      <div class="mp-copy">
+        <div class="breadcrumb"><a href="../../index.php">Inicio</a> / <a href="../fabricantes.php">Fabricantes</a> / <?= htmlspecialchars($fabricante['name']) ?></div>
+        <div class="mp-eyebrow">Distribuidor autorizado <?= htmlspecialchars($fabricante['name']) ?></div>
+        <img src="../../<?= htmlspecialchars($fabricante['logo']) ?>" alt="<?= htmlspecialchars($fabricante['name']) ?>" class="mp-logo">
+        <h1><?= htmlspecialchars($fabricante['name']) ?></h1>
+        <p><?= htmlspecialchars($fabricante['descripcion']) ?></p>
+        <div class="manufacturer-actions">
+          <a href="../contacto.php" class="btn-primary mp-primary">Solicitar asesoría</a>
+          <a href="../fabricantes.php" class="btn-outline mp-outline">Ver fabricantes</a>
+          <?php if (!empty($fabricante['sitioOficial'])): ?>
+          <a href="<?= htmlspecialchars($fabricante['sitioOficial']) ?>" class="btn-outline mp-outline" target="_blank" rel="noopener noreferrer">Sitio oficial de <?= htmlspecialchars($fabricante['name']) ?> ↗</a>
+          <?php endif; ?>
         </div>
       </div>
+      <aside class="mp-status-card">
+        <span>Axentia SRL</span>
+        <h2>Equipo certificado</h2>
+        <p>Especialistas de Axentia preparados para evaluar, dimensionar e implementar soluciones <?= htmlspecialchars($fabricante['name']) ?> en ambientes empresariales, con soporte local en República Dominicana.</p>
+      </aside>
     </div>
-  </div>
+  </header>
 
-  <section class="section-dark">
-    <div class="container">
-      <div class="manufacturer-detail-grid">
-        <div>
-          <div class="section-label">Cómo te ayudamos</div>
-          <h2 class="section-title">Implementación, soporte y acompañamiento</h2>
-          <p class="section-sub">Axentia ayuda a evaluar, cotizar, implementar y operar soluciones <?= htmlspecialchars($fabricante['name']) ?>, alineando tecnología, seguridad y continuidad con las necesidades reales de cada organización.</p>
-          <div class="manufacturer-capabilities">
-            <?php foreach ($capacidades as $cap): ?>
-            <div><h3><?= htmlspecialchars($cap['titulo']) ?></h3><p><?= htmlspecialchars($cap['texto']) ?></p></div>
-            <?php endforeach; ?>
-          </div>
-        </div>
-        <aside class="manufacturer-products">
-          <h3>Soluciones relacionadas</h3>
-          <ul><?php foreach ($productos as $p): ?><li><?= htmlspecialchars($p) ?></li><?php endforeach; ?></ul>
-          <a href="../contacto.php" class="btn-primary">Cotizar solución</a>
-        </aside>
+  <section class="mp-section mp-dark-band">
+    <div class="container mp-two-col">
+      <div>
+        <div class="section-label">Cómo te ayudamos</div>
+        <h2 class="section-title">Implementación, soporte y acompañamiento</h2>
+        <p class="section-sub">Axentia ayuda a evaluar, cotizar, implementar y operar soluciones <?= htmlspecialchars($fabricante['name']) ?>, alineando tecnología, seguridad y continuidad con las necesidades reales de cada organización.</p>
+        <a href="../contacto.php" class="btn-primary mp-primary" style="margin-top:10px">Cotizar solución</a>
+      </div>
+      <div class="mp-textcard-grid two">
+        <?php foreach ($capacidades as $cap): ?>
+        <div class="mp-textcard"><h3><?= htmlspecialchars($cap['titulo']) ?></h3><p><?= htmlspecialchars($cap['texto']) ?></p></div>
+        <?php endforeach; ?>
       </div>
     </div>
+    <?php if (!empty($productos)): ?>
+    <div class="container" style="margin-top:34px">
+      <div class="section-label">Soluciones relacionadas</div>
+      <div class="mp-textcard-grid" style="margin-top:14px">
+        <?php foreach ($productos as $p): ?>
+        <div class="mp-textcard" style="padding:16px 16px 16px 22px"><h3 style="margin:0;font-size:.95rem"><?= htmlspecialchars($p) ?></h3></div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+    <?php endif; ?>
   </section>
 
   <?php if (!empty($stats)): ?>
@@ -105,29 +120,27 @@ function xcIconIsImage($icono) {
   <?php endif; ?>
 
   <?php if (!empty($plataforma)): ?>
-  <section class="section-dark">
+  <section class="mp-section">
     <div class="container">
       <div class="section-label">Plataforma</div>
       <h2 class="section-title">Capacidades de <?= htmlspecialchars($fabricante['name']) ?></h2>
       <?php if (!empty($fabricante['plataformaIntro'])): ?>
-      <p class="section-sub manufacturer-platform-intro"><?= htmlspecialchars($fabricante['plataformaIntro']) ?></p>
+      <p class="section-sub mp-section-intro"><?= htmlspecialchars($fabricante['plataformaIntro']) ?></p>
       <?php endif; ?>
       <?php $plataformaAgrupada = isset($plataforma[0]['categoria']); ?>
       <?php if ($plataformaAgrupada): ?>
         <?php foreach ($plataforma as $grupo): ?>
-        <div class="manufacturer-platform-category">
-          <h3 class="manufacturer-platform-category-title"><?= htmlspecialchars($grupo['categoria']) ?></h3>
-          <div class="manufacturer-platform-grid">
-            <?php foreach (($grupo['items'] ?? []) as $pl): ?>
-            <article><span class="<?= xcIconIsImage($pl['icono'] ?? '') ? 'icon-img' : '' ?>" aria-hidden="true"><?php if (xcIconIsImage($pl['icono'] ?? '')): ?><img src="../../<?= htmlspecialchars($pl['icono']) ?>" alt="" loading="lazy"><?php else: ?><?= htmlspecialchars($pl['icono'] ?? '') ?><?php endif; ?></span><h3><?= htmlspecialchars($pl['titulo']) ?></h3><p><?= htmlspecialchars($pl['texto']) ?></p></article>
+        <div class="mp-platform-category">
+          <h3 class="mp-platform-category-title"><?= htmlspecialchars($grupo['categoria']) ?></h3>
+          <div class="manufacturer-platform-grid mp-textcard-grid">
+            <?php foreach (($grupo['items'] ?? []) as $pl): renderPlataformaItem($pl); ?>
             <?php endforeach; ?>
           </div>
         </div>
         <?php endforeach; ?>
       <?php else: ?>
-      <div class="manufacturer-platform-grid">
-        <?php foreach ($plataforma as $pl): ?>
-        <article><span class="<?= xcIconIsImage($pl['icono'] ?? '') ? 'icon-img' : '' ?>" aria-hidden="true"><?php if (xcIconIsImage($pl['icono'] ?? '')): ?><img src="../../<?= htmlspecialchars($pl['icono']) ?>" alt="" loading="lazy"><?php else: ?><?= htmlspecialchars($pl['icono'] ?? '') ?><?php endif; ?></span><h3><?= htmlspecialchars($pl['titulo']) ?></h3><p><?= htmlspecialchars($pl['texto']) ?></p></article>
+      <div class="manufacturer-platform-grid mp-textcard-grid">
+        <?php foreach ($plataforma as $pl): renderPlataformaItem($pl); ?>
         <?php endforeach; ?>
       </div>
       <?php endif; ?>
@@ -229,7 +242,7 @@ function xcIconIsImage($icono) {
     <?php if ($tieneRecursos): ?>
     document.getElementById('fabricante-recursos').innerHTML = renderFabricanteRecursosHtml('<?= htmlspecialchars($fabricante['slug'], ENT_QUOTES) ?>');
     <?php endif; ?>
-    initAxParticlesText('ax-particles-text', <?= json_encode($fabricante['name'], JSON_UNESCAPED_UNICODE) ?>, '.manufacturer-hero-card');
+    initAxParticlesText('ax-particles-text', <?= json_encode($fabricante['name'], JSON_UNESCAPED_UNICODE) ?>, '.mp-hero-grid');
     renderFooter();
   </script>
 </body>
