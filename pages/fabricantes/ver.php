@@ -51,7 +51,7 @@ function renderPlataformaItem($pl) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($fabricante['name']) ?> – Axentia SRL</title>
   <meta name="description" content="<?= htmlspecialchars($fabricante['descripcion']) ?>">
-  <link rel="stylesheet" href="../../css/style.css?v=32">
+  <link rel="stylesheet" href="../../css/style.css?v=33">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site fabricante-<?= htmlspecialchars($fabricante['slug']) ?>" style="--mp-accent: <?= htmlspecialchars($mpAccent) ?>;">
@@ -61,7 +61,7 @@ function renderPlataformaItem($pl) {
     <div class="container mp-hero-grid">
       <div class="mp-copy">
         <div class="breadcrumb"><a href="../../index.php">Inicio</a> / <a href="../fabricantes.php">Fabricantes</a> / <?= htmlspecialchars($fabricante['name']) ?></div>
-        <div class="mp-eyebrow">Distribuidor autorizado <?= htmlspecialchars($fabricante['name']) ?></div>
+        <div class="mp-eyebrow"><?= htmlspecialchars($fabricante['etiquetaRelacion'] ?? 'Distribuidor autorizado') ?> <?= htmlspecialchars($fabricante['name']) ?></div>
         <img src="../../<?= htmlspecialchars($fabricante['logo']) ?>" alt="<?= htmlspecialchars($fabricante['name']) ?>" class="mp-logo">
         <h1><?= htmlspecialchars($fabricante['name']) ?></h1>
         <p><?= htmlspecialchars($fabricante['descripcion']) ?></p>

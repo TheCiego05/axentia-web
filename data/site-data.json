@@ -440,24 +440,24 @@
       "colorAccent": "#0076CE",
       "stats": [
         {
-          "valor": "USD 95.6B",
-          "etiqueta": "Ingresos año fiscal 2025"
+          "num": "USD 95.6B",
+          "label": "Ingresos año fiscal 2025"
         },
         {
-          "valor": "18ª gen.",
-          "etiqueta": "PowerEdge, generación más reciente anunciada en Dell Tech World 2026"
+          "num": "18ª gen.",
+          "label": "PowerEdge, generación más reciente anunciada en Dell Tech World 2026"
         },
         {
-          "valor": "5.8 PB",
-          "etiqueta": "Capacidad máxima por nodo en PowerStore Elite"
+          "num": "5.8 PB",
+          "label": "Capacidad máxima por nodo en PowerStore Elite"
         },
         {
-          "valor": "+50 países",
-          "etiqueta": "Operación global directa y con partners"
+          "num": "+50 países",
+          "label": "Operación global directa y con partners"
         },
         {
-          "valor": "1984",
-          "etiqueta": "Año de fundación de la compañía"
+          "num": "1984",
+          "label": "Año de fundación de la compañía"
         }
       ],
       "plataformaIntro": "El portafolio empresarial de Dell se organiza en tres grandes líneas: servidores PowerEdge para cómputo tradicional y acelerado por GPU, almacenamiento PowerStore para consolidación de datos, y equipos Latitude/Precision para la fuerza laboral corporativa, todos con soporte y garantías ProSupport disponibles a través de integradores certificados.",
@@ -466,23 +466,23 @@
           "categoria": "Servidores PowerEdge",
           "items": [
             {
-              "nombre": "PowerEdge R760/R770",
-              "descripcion": "Servidores rack 2U de propósito general basados en procesadores Intel Xeon Scalable, para virtualización y bases de datos empresariales.",
+              "titulo": "PowerEdge R760/R770",
+              "texto": "Servidores rack 2U de propósito general basados en procesadores Intel Xeon Scalable, para virtualización y bases de datos empresariales.",
               "icono": ""
             },
             {
-              "nombre": "PowerEdge R7715/R7725",
-              "descripcion": "Servidores rack con procesadores AMD EPYC optimizados para cargas de trabajo intensivas en cómputo.",
+              "titulo": "PowerEdge R7715/R7725",
+              "texto": "Servidores rack con procesadores AMD EPYC optimizados para cargas de trabajo intensivas en cómputo.",
               "icono": ""
             },
             {
-              "nombre": "PowerEdge XE9680",
-              "descripcion": "Servidor diseñado para entrenamiento de IA con soporte para hasta 8 GPUs NVIDIA de alto rendimiento.",
+              "titulo": "PowerEdge XE9680",
+              "texto": "Servidor diseñado para entrenamiento de IA con soporte para hasta 8 GPUs NVIDIA de alto rendimiento.",
               "icono": ""
             },
             {
-              "nombre": "PowerEdge MX",
-              "descripcion": "Infraestructura modular convergente para consolidar cómputo, almacenamiento y redes en un solo chasis.",
+              "titulo": "PowerEdge MX",
+              "texto": "Infraestructura modular convergente para consolidar cómputo, almacenamiento y redes en un solo chasis.",
               "icono": ""
             }
           ]
@@ -491,18 +491,18 @@
           "categoria": "Almacenamiento",
           "items": [
             {
-              "nombre": "PowerStore 500T/1200T/3200T",
-              "descripcion": "Arreglos de almacenamiento todo flash de arquitectura unificada para bloque y archivo, con reducción de datos inline.",
+              "titulo": "PowerStore 500T/1200T/3200T",
+              "texto": "Arreglos de almacenamiento todo flash de arquitectura unificada para bloque y archivo, con reducción de datos inline.",
               "icono": ""
             },
             {
-              "nombre": "PowerStore Elite",
-              "descripcion": "Plataforma de almacenamiento anunciada en Dell Technologies World 2026, orientada a cargas de trabajo de IA con capacidad de hasta 5.8 PB.",
+              "titulo": "PowerStore Elite",
+              "texto": "Plataforma de almacenamiento anunciada en Dell Technologies World 2026, orientada a cargas de trabajo de IA con capacidad de hasta 5.8 PB.",
               "icono": ""
             },
             {
-              "nombre": "PowerVault ME5",
-              "descripcion": "Almacenamiento SAN de entrada para pymes con necesidades de expansión de capacidad económica.",
+              "titulo": "PowerVault ME5",
+              "texto": "Almacenamiento SAN de entrada para pymes con necesidades de expansión de capacidad económica.",
               "icono": ""
             }
           ]
@@ -511,13 +511,13 @@
           "categoria": "Laptops y estaciones de trabajo empresariales",
           "items": [
             {
-              "nombre": "Latitude 5000/7000 Series",
-              "descripcion": "Laptops empresariales robustas con gestión remota vía Dell Optimizer y opciones de seguridad biométrica.",
+              "titulo": "Latitude 5000/7000 Series",
+              "texto": "Laptops empresariales robustas con gestión remota vía Dell Optimizer y opciones de seguridad biométrica.",
               "icono": ""
             },
             {
-              "nombre": "Precision 3000/5000/7000 Series",
-              "descripcion": "Estaciones de trabajo móviles y de escritorio certificadas ISV para diseño, ingeniería y ciencia de datos.",
+              "titulo": "Precision 3000/5000/7000 Series",
+              "texto": "Estaciones de trabajo móviles y de escritorio certificadas ISV para diseño, ingeniería y ciencia de datos.",
               "icono": ""
             }
           ]
@@ -525,34 +525,40 @@
       ],
       "planes": [
         {
+          "tier": "INFRAESTRUCTURA DE C",
           "nombre": "Infraestructura de cómputo (PowerEdge)",
-          "descripcion": "Solución de servidores para consolidar cargas de trabajo tradicionales y acelerar proyectos de IA generativa.",
-          "caracteristicas": [
+          "desc": "Solución de servidores para consolidar cargas de trabajo tradicionales y acelerar proyectos de IA generativa.",
+          "features": [
             "Procesadores Intel Xeon o AMD EPYC a elección",
             "Opciones GPU NVIDIA para IA/ML",
             "Gestión remota con iDRAC9",
             "Garantía ProSupport Plus disponible"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "ALMACENAMIENTO UNIFI",
           "nombre": "Almacenamiento unificado (PowerStore)",
-          "descripcion": "Consolidación de datos de bloque y archivo con reducción de datos y replicación integrada.",
-          "caracteristicas": [
+          "desc": "Consolidación de datos de bloque y archivo con reducción de datos y replicación integrada.",
+          "features": [
             "Arquitectura 100% NVMe",
             "Snapshots y replicación nativa",
             "Escalabilidad por nodos",
             "Integración con VMware y contenedores"
-          ]
+          ],
+          "popular": true
         },
         {
+          "tier": "MOVILIDAD EMPRESARIA",
           "nombre": "Movilidad empresarial (Latitude/Precision)",
-          "descripcion": "Equipos portátiles diseñados para productividad corporativa y cargas de trabajo técnicas.",
-          "caracteristicas": [
+          "desc": "Equipos portátiles diseñados para productividad corporativa y cargas de trabajo técnicas.",
+          "features": [
             "Gestión centralizada con Dell Optimizer",
             "Certificaciones MIL-STD-810H en modelos rugerizados",
             "Opciones de estación de trabajo móvil certificada ISV",
             "Ciclo de refresco empresarial de 3-5 años"
-          ]
+          ],
+          "popular": false
         }
       ],
       "comparativa": {
@@ -591,28 +597,28 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Qué diferencia a la línea PowerEdge de un servidor genérico?",
-          "respuesta": "PowerEdge integra gestión remota iDRAC9, opciones de GPU certificadas para IA y soporte ProSupport con SLA, algo que la mayoría de servidores de marca blanca no ofrece."
+          "q": "¿Qué diferencia a la línea PowerEdge de un servidor genérico?",
+          "a": "PowerEdge integra gestión remota iDRAC9, opciones de GPU certificadas para IA y soporte ProSupport con SLA, algo que la mayoría de servidores de marca blanca no ofrece."
         },
         {
-          "pregunta": "¿PowerStore sirve para empresas medianas en República Dominicana?",
-          "respuesta": "Sí, los modelos de entrada como PowerStore 500T están dimensionados para consolidar cargas de trabajo de empresas medianas sin sobredimensionar la inversión inicial."
+          "q": "¿PowerStore sirve para empresas medianas en República Dominicana?",
+          "a": "Sí, los modelos de entrada como PowerStore 500T están dimensionados para consolidar cargas de trabajo de empresas medianas sin sobredimensionar la inversión inicial."
         },
         {
-          "pregunta": "¿Las laptops Latitude son diferentes a las líneas de consumo de Dell?",
-          "respuesta": "Sí, Latitude está diseñada específicamente para entornos corporativos con gestión remota, mayor durabilidad y opciones de seguridad biométrica que no están en las líneas Inspiron."
+          "q": "¿Las laptops Latitude son diferentes a las líneas de consumo de Dell?",
+          "a": "Sí, Latitude está diseñada específicamente para entornos corporativos con gestión remota, mayor durabilidad y opciones de seguridad biométrica que no están en las líneas Inspiron."
         },
         {
-          "pregunta": "¿Qué es PowerEdge XE9680?",
-          "respuesta": "Es el servidor de Dell diseñado para entrenamiento de modelos de IA, con soporte para hasta 8 GPUs de alto rendimiento en un solo chasis."
+          "q": "¿Qué es PowerEdge XE9680?",
+          "a": "Es el servidor de Dell diseñado para entrenamiento de modelos de IA, con soporte para hasta 8 GPUs de alto rendimiento en un solo chasis."
         },
         {
-          "pregunta": "¿Axentia SRL puede dar soporte local sobre productos Dell?",
-          "respuesta": "Sí, como integrador autorizado, Axentia SRL gestiona la cotización, implementación y coordinación de soporte ProSupport para clientes en República Dominicana."
+          "q": "¿Axentia SRL puede dar soporte local sobre productos Dell?",
+          "a": "Sí, como integrador autorizado, Axentia SRL gestiona la cotización, implementación y coordinación de soporte ProSupport para clientes en República Dominicana."
         },
         {
-          "pregunta": "¿Qué anunció Dell en 2026 para almacenamiento?",
-          "respuesta": "En Dell Technologies World 2026 se presentó PowerStore Elite, una plataforma orientada a cargas de trabajo de IA con capacidad de hasta 5.8 PB por sistema."
+          "q": "¿Qué anunció Dell en 2026 para almacenamiento?",
+          "a": "En Dell Technologies World 2026 se presentó PowerStore Elite, una plataforma orientada a cargas de trabajo de IA con capacidad de hasta 5.8 PB por sistema."
         }
       ],
       "sitioOficial": "https://www.dell.com"
@@ -669,27 +675,27 @@
       "colorAccent": "#2F80ED",
       "stats": [
         {
-          "valor": "15+",
-          "etiqueta": "Modelos EZVIZ en catálogo Axentia"
+          "num": "15+",
+          "label": "Modelos EZVIZ en catálogo Axentia"
         },
         {
-          "valor": "4K",
-          "etiqueta": "Resolución máxima (EB5, BC1c)"
+          "num": "4K",
+          "label": "Resolución máxima (EB5, BC1c)"
         },
         {
-          "valor": "512 GB",
-          "etiqueta": "Almacenamiento microSD soportado"
+          "num": "512 GB",
+          "label": "Almacenamiento microSD soportado"
         },
         {
-          "valor": "180 días",
-          "etiqueta": "Autonomía de batería (EB5 con panel solar)"
+          "num": "180 días",
+          "label": "Autonomía de batería (EB5 con panel solar)"
         },
         {
-          "valor": "IP67",
-          "etiqueta": "Resistencia climática en toda la línea outdoor"
+          "num": "IP67",
+          "label": "Resistencia climática en toda la línea outdoor"
         }
       ],
-      "plataformaIntro": "Axentia es distribuidor autorizado de EZVIZ Dominicana. El catálogo cubre cámaras Wi-Fi fijas, cámaras con batería para zonas sin cableado eléctrico, videoporteros inteligentes y cerraduras con huella digital — todo controlable desde una sola app.",
+      "plataformaIntro": "Axentia comercializa e instala productos EZVIZ en República Dominicana. El catálogo cubre cámaras Wi-Fi fijas, cámaras con batería para zonas sin cableado eléctrico, videoporteros inteligentes y cerraduras con huella digital — todo controlable desde una sola app.",
       "plataforma": [
         {
           "categoria": "Cámaras Wi-Fi para interior y exterior",
@@ -804,34 +810,25 @@
       ],
       "planes": [
         {
+          "tier": "HOGAR ESENCIAL",
           "nombre": "Hogar Esencial",
-          "descripcion": "Monitoreo básico para vivienda con cámaras Wi-Fi y videoportero.",
-          "items": [
-            "Cámara H3c o H4 2K",
-            "Videoportero HP5",
-            "App EZVIZ con notificaciones",
-            "Instalación y configuración por Axentia"
-          ]
+          "desc": "Monitoreo básico para vivienda con cámaras Wi-Fi y videoportero.",
+          "features": [],
+          "popular": false
         },
         {
+          "tier": "EXTERIOR SIN CABLES",
           "nombre": "Exterior sin cables",
-          "descripcion": "Cobertura de patios, entradas y zonas sin acceso eléctrico o de red.",
-          "items": [
-            "Cámaras con batería CB2 4G o EB3",
-            "Panel solar EZVIZ Green (EB5)",
-            "Pan & tilt 360° (CB8 o EB8 4G)",
-            "Conectividad 4G para zonas remotas"
-          ]
+          "desc": "Cobertura de patios, entradas y zonas sin acceso eléctrico o de red.",
+          "features": [],
+          "popular": true
         },
         {
+          "tier": "CONTROL DE ACCESO TO",
           "nombre": "Control de acceso total",
-          "descripcion": "Videoportero y cerradura inteligente integrados en una sola experiencia.",
-          "items": [
-            "Cerradura DL04 Pro o DL05",
-            "Videoportero solar EP7 o HP7",
-            "Integración cerradura + cámaras EZVIZ",
-            "Códigos temporales para visitas"
-          ]
+          "desc": "Videoportero y cerradura inteligente integrados en una sola experiencia.",
+          "features": [],
+          "popular": false
         }
       ],
       "comparativa": {
@@ -870,31 +867,32 @@
       },
       "faqs": [
         {
-          "pregunta": "¿EZVIZ funciona sin conexión Wi-Fi?",
-          "respuesta": "Sí. Modelos como el CB2 4G y el EB8 4G operan por red móvil 4G, ideales para zonas sin cobertura Wi-Fi ni electricidad."
+          "q": "¿EZVIZ funciona sin conexión Wi-Fi?",
+          "a": "Sí. Modelos como el CB2 4G y el EB8 4G operan por red móvil 4G, ideales para zonas sin cobertura Wi-Fi ni electricidad."
         },
         {
-          "pregunta": "¿Necesito comprar un DVR o servidor aparte?",
-          "respuesta": "No. Todo el catálogo EZVIZ funciona a través de la app EZVIZ, con grabación en tarjeta microSD (hasta 512 GB) o almacenamiento en la nube EZVIZ CloudPlay."
+          "q": "¿Necesito comprar un DVR o servidor aparte?",
+          "a": "No. Todo el catálogo EZVIZ funciona a través de la app EZVIZ, con grabación en tarjeta microSD (hasta 512 GB) o almacenamiento en la nube EZVIZ CloudPlay."
         },
         {
-          "pregunta": "¿Cuánto duran las cámaras con batería?",
-          "respuesta": "Entre 50 y 180 días según el modelo, y con el panel solar EZVIZ Green pueden operar de forma prácticamente indefinida."
+          "q": "¿Cuánto duran las cámaras con batería?",
+          "a": "Entre 50 y 180 días según el modelo, y con el panel solar EZVIZ Green pueden operar de forma prácticamente indefinida."
         },
         {
-          "pregunta": "¿Se integran con Alexa o Google Assistant?",
-          "respuesta": "Sí, la mayoría de los modelos EZVIZ son compatibles con Google Assistant y Amazon Alexa."
+          "q": "¿Se integran con Alexa o Google Assistant?",
+          "a": "Sí, la mayoría de los modelos EZVIZ son compatibles con Google Assistant y Amazon Alexa."
         },
         {
-          "pregunta": "¿Axentia se encarga de la instalación?",
-          "respuesta": "Sí. Axentia realiza el levantamiento del sitio, la instalación, configuración de la app y da soporte post-instalación."
+          "q": "¿Axentia se encarga de la instalación?",
+          "a": "Sí. Axentia realiza el levantamiento del sitio, la instalación, configuración de la app y da soporte post-instalación."
         },
         {
-          "pregunta": "¿EZVIZ sirve para negocios o solo para el hogar?",
-          "respuesta": "Sirve para ambos. Modelos como el CB8 (pan & tilt 360°) y el videoportero HP7 se usan también en oficinas, comercios y condominios."
+          "q": "¿EZVIZ sirve para negocios o solo para el hogar?",
+          "a": "Sirve para ambos. Modelos como el CB8 (pan & tilt 360°) y el videoportero HP7 se usan también en oficinas, comercios y condominios."
         }
       ],
-      "sitioOficial": "https://www.ezviz.com"
+      "sitioOficial": "https://www.ezviz.com",
+      "etiquetaRelacion": "Vendedores de productos"
     },
     {
       "id": 3,
@@ -1207,24 +1205,24 @@
       "colorAccent": "#4285F4",
       "stats": [
         {
-          "valor": "30GB–5TB",
-          "etiqueta": "Almacenamiento en Drive por usuario según plan"
+          "num": "30GB–5TB",
+          "label": "Almacenamiento en Drive por usuario según plan"
         },
         {
-          "valor": "500",
-          "etiqueta": "Participantes por videollamada en Meet (Enterprise)"
+          "num": "500",
+          "label": "Participantes por videollamada en Meet (Enterprise)"
         },
         {
-          "valor": "99.9%",
-          "etiqueta": "SLA de disponibilidad garantizado"
+          "num": "99.9%",
+          "label": "SLA de disponibilidad garantizado"
         },
         {
-          "valor": "40+",
-          "etiqueta": "Regiones de Google Cloud a nivel mundial"
+          "num": "40+",
+          "label": "Regiones de Google Cloud a nivel mundial"
         },
         {
-          "valor": "150",
-          "etiqueta": "Destinatarios por correo saliente (límite estándar Gmail)"
+          "num": "150",
+          "label": "Destinatarios por correo saliente (límite estándar Gmail)"
         }
       ],
       "plataformaIntro": "Google organiza su oferta empresarial en dos grandes plataformas complementarias: Google Workspace para productividad y colaboración diaria, y Google Cloud Platform para infraestructura, datos e inteligencia artificial. Ambas comparten el mismo modelo de identidad (Cloud Identity) y consola de administración centralizada.",
@@ -1233,38 +1231,38 @@
           "categoria": "Google Workspace",
           "items": [
             {
-              "nombre": "Gmail",
-              "descripcion": "Correo corporativo con dominio propio y filtros antiphishing avanzados",
+              "titulo": "Gmail",
+              "texto": "Correo corporativo con dominio propio y filtros antiphishing avanzados",
               "icono": ""
             },
             {
-              "nombre": "Drive",
-              "descripcion": "Almacenamiento y compartición de archivos con controles de acceso granulares",
+              "titulo": "Drive",
+              "texto": "Almacenamiento y compartición de archivos con controles de acceso granulares",
               "icono": ""
             },
             {
-              "nombre": "Docs, Sheets y Slides",
-              "descripcion": "Suite ofimática colaborativa en tiempo real",
+              "titulo": "Docs, Sheets y Slides",
+              "texto": "Suite ofimática colaborativa en tiempo real",
               "icono": ""
             },
             {
-              "nombre": "Meet",
-              "descripcion": "Videoconferencias con transcripción y traducción con IA",
+              "titulo": "Meet",
+              "texto": "Videoconferencias con transcripción y traducción con IA",
               "icono": ""
             },
             {
-              "nombre": "Chat",
-              "descripcion": "Mensajería y espacios de trabajo por equipo",
+              "titulo": "Chat",
+              "texto": "Mensajería y espacios de trabajo por equipo",
               "icono": ""
             },
             {
-              "nombre": "AppSheet",
-              "descripcion": "Plataforma no-code para crear aplicaciones internas",
+              "titulo": "AppSheet",
+              "texto": "Plataforma no-code para crear aplicaciones internas",
               "icono": ""
             },
             {
-              "nombre": "Vault",
-              "descripcion": "Retención y eDiscovery para cumplimiento legal",
+              "titulo": "Vault",
+              "texto": "Retención y eDiscovery para cumplimiento legal",
               "icono": ""
             }
           ]
@@ -1273,33 +1271,33 @@
           "categoria": "Google Cloud Platform",
           "items": [
             {
-              "nombre": "Compute Engine",
-              "descripcion": "Máquinas virtuales escalables bajo demanda",
+              "titulo": "Compute Engine",
+              "texto": "Máquinas virtuales escalables bajo demanda",
               "icono": ""
             },
             {
-              "nombre": "Google Kubernetes Engine (GKE)",
-              "descripcion": "Orquestación de contenedores administrada",
+              "titulo": "Google Kubernetes Engine (GKE)",
+              "texto": "Orquestación de contenedores administrada",
               "icono": ""
             },
             {
-              "nombre": "BigQuery",
-              "descripcion": "Data warehouse serverless para analítica a gran escala",
+              "titulo": "BigQuery",
+              "texto": "Data warehouse serverless para analítica a gran escala",
               "icono": ""
             },
             {
-              "nombre": "Cloud Storage",
-              "descripcion": "Almacenamiento de objetos con niveles por frecuencia de acceso",
+              "titulo": "Cloud Storage",
+              "texto": "Almacenamiento de objetos con niveles por frecuencia de acceso",
               "icono": ""
             },
             {
-              "nombre": "Vertex AI",
-              "descripcion": "Plataforma unificada de machine learning e IA generativa (Gemini)",
+              "titulo": "Vertex AI",
+              "texto": "Plataforma unificada de machine learning e IA generativa (Gemini)",
               "icono": ""
             },
             {
-              "nombre": "Cloud Identity",
-              "descripcion": "Gestión de identidad y acceso (IAM) empresarial",
+              "titulo": "Cloud Identity",
+              "texto": "Gestión de identidad y acceso (IAM) empresarial",
               "icono": ""
             }
           ]
@@ -1307,35 +1305,41 @@
       ],
       "planes": [
         {
+          "tier": "GOOGLE WORKSPACE BUS",
           "nombre": "Google Workspace Business Plus",
-          "descripcion": "Plan orientado a pymes en crecimiento con seguridad y almacenamiento ampliados",
-          "caracteristicas": [
+          "desc": "Plan orientado a pymes en crecimiento con seguridad y almacenamiento ampliados",
+          "features": [
             "5TB de almacenamiento en pool por usuario",
             "Videollamadas Meet hasta 500 participantes",
             "Grabación de reuniones en Drive",
             "Controles de seguridad y gestión de dispositivos avanzados"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "GOOGLE WORKSPACE ENT",
           "nombre": "Google Workspace Enterprise",
-          "descripcion": "Plan para grandes organizaciones con máxima seguridad, cumplimiento y soporte",
-          "caracteristicas": [
+          "desc": "Plan para grandes organizaciones con máxima seguridad, cumplimiento y soporte",
+          "features": [
             "Almacenamiento personalizable/ilimitado",
             "Prevención de pérdida de datos (DLP)",
             "Cifrado del lado del cliente",
             "S/MIME, Vault y controles de retención avanzados",
             "Soporte prioritario 24/7"
-          ]
+          ],
+          "popular": true
         },
         {
+          "tier": "GOOGLE CLOUD (PAGO P",
           "nombre": "Google Cloud (pago por uso)",
-          "descripcion": "Infraestructura y servicios de datos/IA facturados según consumo real",
-          "caracteristicas": [
+          "desc": "Infraestructura y servicios de datos/IA facturados según consumo real",
+          "features": [
             "Compute Engine, GKE y Cloud Run para cargas variables",
             "BigQuery para analítica sin gestión de servidores",
             "Vertex AI para modelos de IA generativa y predictiva",
             "Descuentos por compromiso de uso sostenido"
-          ]
+          ],
+          "popular": false
         }
       ],
       "comparativa": {
@@ -1374,28 +1378,28 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Google Workspace incluye dominio de correo propio?",
-          "respuesta": "Sí, se configura con el dominio de la empresa (por ejemplo, usuario@empresa.com.do) mediante verificación DNS."
+          "q": "¿Google Workspace incluye dominio de correo propio?",
+          "a": "Sí, se configura con el dominio de la empresa (por ejemplo, usuario@empresa.com.do) mediante verificación DNS."
         },
         {
-          "pregunta": "¿Qué diferencia hay entre Google Workspace y Google Cloud?",
-          "respuesta": "Workspace es la suite de productividad (correo, documentos, videollamadas); Google Cloud es la infraestructura para alojar aplicaciones, bases de datos y modelos de IA."
+          "q": "¿Qué diferencia hay entre Google Workspace y Google Cloud?",
+          "a": "Workspace es la suite de productividad (correo, documentos, videollamadas); Google Cloud es la infraestructura para alojar aplicaciones, bases de datos y modelos de IA."
         },
         {
-          "pregunta": "¿Se puede migrar desde Microsoft Exchange u otro proveedor?",
-          "respuesta": "Sí, Google ofrece herramientas de migración de correo, contactos y calendario, y Axentia acompaña el proceso técnico."
+          "q": "¿Se puede migrar desde Microsoft Exchange u otro proveedor?",
+          "a": "Sí, Google ofrece herramientas de migración de correo, contactos y calendario, y Axentia acompaña el proceso técnico."
         },
         {
-          "pregunta": "¿Cumple con regulaciones de protección de datos?",
-          "respuesta": "Google Workspace y Cloud cuentan con certificaciones ISO 27001, ISO 27018 y SOC 2/3, y ofrecen controles de residencia de datos."
+          "q": "¿Cumple con regulaciones de protección de datos?",
+          "a": "Google Workspace y Cloud cuentan con certificaciones ISO 27001, ISO 27018 y SOC 2/3, y ofrecen controles de residencia de datos."
         },
         {
-          "pregunta": "¿Qué pasa si un empleado deja la empresa?",
-          "respuesta": "El administrador puede suspender la cuenta y transferir sus archivos de Drive a otro usuario desde la consola de administración."
+          "q": "¿Qué pasa si un empleado deja la empresa?",
+          "a": "El administrador puede suspender la cuenta y transferir sus archivos de Drive a otro usuario desde la consola de administración."
         },
         {
-          "pregunta": "¿Necesito conocimientos técnicos para administrar Google Cloud?",
-          "respuesta": "No necesariamente; Axentia como partner puede gestionar la configuración, seguridad y optimización de costos por usted."
+          "q": "¿Necesito conocimientos técnicos para administrar Google Cloud?",
+          "a": "No necesariamente; Axentia como partner puede gestionar la configuración, seguridad y optimización de costos por usted."
         }
       ],
       "sitioOficial": "https://workspace.google.com"
@@ -1449,24 +1453,24 @@
       "colorAccent": "#D0021B",
       "stats": [
         {
-          "valor": "2001",
-          "etiqueta": "Año de fundación en Hangzhou, China"
+          "num": "2001",
+          "label": "Año de fundación en Hangzhou, China"
         },
         {
-          "valor": "#1",
-          "etiqueta": "Fabricante líder mundial en videovigilancia por ventas"
+          "num": "#1",
+          "label": "Fabricante líder mundial en videovigilancia por ventas"
         },
         {
-          "valor": "180+",
-          "etiqueta": "Países con presencia y distribución"
+          "num": "180+",
+          "label": "Países con presencia y distribución"
         },
         {
-          "valor": "AcuSense",
-          "etiqueta": "Tecnología de IA para detección de personas/vehículos"
+          "num": "AcuSense",
+          "label": "Tecnología de IA para detección de personas/vehículos"
         },
         {
-          "valor": "ColorVu",
-          "etiqueta": "Imagen a color 24/7 incluso con poca luz"
+          "num": "ColorVu",
+          "label": "Imagen a color 24/7 incluso con poca luz"
         }
       ],
       "plataformaIntro": "El ecosistema Hikvision se organiza en líneas Turbo HD (analógicas de alta definición) e IP, complementadas por grabadores inteligentes y tecnologías propias como AcuSense (detección basada en IA) y ColorVu (captura a color en condiciones de baja iluminación), ideales para proyectos que Axentia SRL implementa en el mercado dominicano.",
@@ -1475,13 +1479,13 @@
           "categoria": "Cámaras Turbo HD",
           "items": [
             {
-              "nombre": "Turbo HD ColorVu Series",
-              "descripcion": "Cámaras analógicas HD con imagen a color permanente en baja luz",
+              "titulo": "Turbo HD ColorVu Series",
+              "texto": "Cámaras analógicas HD con imagen a color permanente en baja luz",
               "icono": ""
             },
             {
-              "nombre": "Turbo HD AcuSense DVR Cameras",
-              "descripcion": "Cámaras compatibles con DVR AcuSense para reducción de falsas alarmas",
+              "titulo": "Turbo HD AcuSense DVR Cameras",
+              "texto": "Cámaras compatibles con DVR AcuSense para reducción de falsas alarmas",
               "icono": ""
             }
           ]
@@ -1490,13 +1494,13 @@
           "categoria": "Cámaras IP",
           "items": [
             {
-              "nombre": "Network Camera Pro Series con ColorVu",
-              "descripcion": "Cámaras IP profesionales con visión a color nocturna",
+              "titulo": "Network Camera Pro Series con ColorVu",
+              "texto": "Cámaras IP profesionales con visión a color nocturna",
               "icono": ""
             },
             {
-              "nombre": "EasyIP / DeepinView Series",
-              "descripcion": "Cámaras IP con analítica de video basada en deep learning",
+              "titulo": "EasyIP / DeepinView Series",
+              "texto": "Cámaras IP con analítica de video basada en deep learning",
               "icono": ""
             }
           ]
@@ -1505,13 +1509,13 @@
           "categoria": "Grabadores (NVR/DVR)",
           "items": [
             {
-              "nombre": "Serie Pro DVR con AcuSense",
-              "descripcion": "Grabador de video digital con detección inteligente de personas y vehículos",
+              "titulo": "Serie Pro DVR con AcuSense",
+              "texto": "Grabador de video digital con detección inteligente de personas y vehículos",
               "icono": ""
             },
             {
-              "nombre": "Serie Pro NVR con AcuSense",
-              "descripcion": "Grabador de red para cámaras IP con analítica AcuSense integrada",
+              "titulo": "Serie Pro NVR con AcuSense",
+              "texto": "Grabador de red para cámaras IP con analítica AcuSense integrada",
               "icono": ""
             }
           ]
@@ -1519,22 +1523,26 @@
       ],
       "planes": [
         {
+          "tier": "SOLUCIÓN TURBO HD",
           "nombre": "Solución Turbo HD",
-          "descripcion": "Videovigilancia analógica HD sobre cableado coaxial existente, ideal para actualizar sistemas antiguos",
-          "caracteristicas": [
+          "desc": "Videovigilancia analógica HD sobre cableado coaxial existente, ideal para actualizar sistemas antiguos",
+          "features": [
             "Cámaras ColorVu para imagen a color 24/7",
             "DVR con AcuSense para reducir falsas alarmas",
             "Compatible con infraestructura coaxial preexistente"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "SOLUCIÓN IP EMPRESAR",
           "nombre": "Solución IP Empresarial",
-          "descripcion": "Sistema de videovigilancia en red para negocios y proyectos de mayor escala",
-          "caracteristicas": [
+          "desc": "Sistema de videovigilancia en red para negocios y proyectos de mayor escala",
+          "features": [
             "Cámaras IP con analítica basada en deep learning",
             "NVR con AcuSense para detección inteligente",
             "Escalable e integrable a sistemas de control de acceso"
-          ]
+          ],
+          "popular": true
         }
       ],
       "comparativa": {
@@ -1573,24 +1581,24 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Qué es la tecnología ColorVu de Hikvision?",
-          "respuesta": "Es una tecnología que permite a las cámaras capturar video a color de manera continua, incluso en condiciones de muy baja iluminación, sin depender exclusivamente de infrarrojos."
+          "q": "¿Qué es la tecnología ColorVu de Hikvision?",
+          "a": "Es una tecnología que permite a las cámaras capturar video a color de manera continua, incluso en condiciones de muy baja iluminación, sin depender exclusivamente de infrarrojos."
         },
         {
-          "pregunta": "¿Qué es AcuSense?",
-          "respuesta": "Es la tecnología de inteligencia artificial de Hikvision que distingue entre personas, vehículos y otros objetos, reduciendo las falsas alarmas por movimiento irrelevante."
+          "q": "¿Qué es AcuSense?",
+          "a": "Es la tecnología de inteligencia artificial de Hikvision que distingue entre personas, vehículos y otros objetos, reduciendo las falsas alarmas por movimiento irrelevante."
         },
         {
-          "pregunta": "¿Puedo actualizar mi sistema analógico a Hikvision sin cambiar el cableado?",
-          "respuesta": "Sí, la línea Turbo HD está diseñada para funcionar sobre cableado coaxial existente, facilitando la migración."
+          "q": "¿Puedo actualizar mi sistema analógico a Hikvision sin cambiar el cableado?",
+          "a": "Sí, la línea Turbo HD está diseñada para funcionar sobre cableado coaxial existente, facilitando la migración."
         },
         {
-          "pregunta": "¿Hikvision ofrece cámaras IP además de analógicas?",
-          "respuesta": "Sí, cuenta con líneas IP completas como Network Camera Pro Series y EasyIP, con soporte para analítica avanzada."
+          "q": "¿Hikvision ofrece cámaras IP además de analógicas?",
+          "a": "Sí, cuenta con líneas IP completas como Network Camera Pro Series y EasyIP, con soporte para analítica avanzada."
         },
         {
-          "pregunta": "¿Axentia SRL da soporte e instalación de Hikvision en República Dominicana?",
-          "respuesta": "Sí, Axentia SRL integra y distribuye soluciones Hikvision, brindando diseño, instalación y soporte técnico local."
+          "q": "¿Axentia SRL da soporte e instalación de Hikvision en República Dominicana?",
+          "a": "Sí, Axentia SRL integra y distribuye soluciones Hikvision, brindando diseño, instalación y soporte técnico local."
         }
       ],
       "sitioOficial": "https://www.hikvision.com/es-la/"
@@ -1644,24 +1652,24 @@
       "colorAccent": "#0096D6",
       "stats": [
         {
-          "valor": "USD 53.4B",
-          "etiqueta": "Ingresos año fiscal 2025"
+          "num": "USD 53.4B",
+          "label": "Ingresos año fiscal 2025"
         },
         {
-          "valor": "#2 mundial",
-          "etiqueta": "Posición en el mercado global de PCs por unidades"
+          "num": "#2 mundial",
+          "label": "Posición en el mercado global de PCs por unidades"
         },
         {
-          "valor": "1939",
-          "etiqueta": "Año de fundación de la compañía"
+          "num": "1939",
+          "label": "Año de fundación de la compañía"
         },
         {
-          "valor": "EliteBook X G2",
-          "etiqueta": "Rediseño insignia presentado en el lineup empresarial 2026"
+          "num": "EliteBook X G2",
+          "label": "Rediseño insignia presentado en el lineup empresarial 2026"
         },
         {
-          "valor": "+160 países",
-          "etiqueta": "Presencia comercial de HP Inc"
+          "num": "+160 países",
+          "label": "Presencia comercial de HP Inc"
         }
       ],
       "plataformaIntro": "La oferta empresarial de HP se apoya en tres pilares: laptops de negocio EliteBook y ProBook, estaciones de trabajo profesionales Z, e impresión gestionada LaserJet, todos con opciones de gestión de flota vía HP Wolf Security y HP Wolf Pro Security para entornos corporativos.",
@@ -1670,18 +1678,18 @@
           "categoria": "Laptops empresariales",
           "items": [
             {
-              "nombre": "EliteBook X G2",
-              "descripcion": "Laptop insignia rediseñada para 2026, con procesadores de última generación y enfoque en IA en el dispositivo.",
+              "titulo": "EliteBook X G2",
+              "texto": "Laptop insignia rediseñada para 2026, con procesadores de última generación y enfoque en IA en el dispositivo.",
               "icono": ""
             },
             {
-              "nombre": "EliteBook 800/600 Series",
-              "descripcion": "Línea premium para ejecutivos y movilidad intensiva, con chasis de aleación de magnesio y seguridad HP Wolf.",
+              "titulo": "EliteBook 800/600 Series",
+              "texto": "Línea premium para ejecutivos y movilidad intensiva, con chasis de aleación de magnesio y seguridad HP Wolf.",
               "icono": ""
             },
             {
-              "nombre": "ProBook 400/600 Series",
-              "descripcion": "Laptops de negocio de gama media orientadas a pymes con buena relación costo-funcionalidad.",
+              "titulo": "ProBook 400/600 Series",
+              "texto": "Laptops de negocio de gama media orientadas a pymes con buena relación costo-funcionalidad.",
               "icono": ""
             }
           ]
@@ -1690,13 +1698,13 @@
           "categoria": "Estaciones de trabajo",
           "items": [
             {
-              "nombre": "HP Z2/Z4/Z8 Workstations",
-              "descripcion": "Estaciones de trabajo de escritorio certificadas ISV para CAD, renderizado y análisis de datos.",
+              "titulo": "HP Z2/Z4/Z8 Workstations",
+              "texto": "Estaciones de trabajo de escritorio certificadas ISV para CAD, renderizado y análisis de datos.",
               "icono": ""
             },
             {
-              "nombre": "ZBook Firefly/Fury/Power",
-              "descripcion": "Estaciones de trabajo móviles para diseño e ingeniería fuera de la oficina.",
+              "titulo": "ZBook Firefly/Fury/Power",
+              "texto": "Estaciones de trabajo móviles para diseño e ingeniería fuera de la oficina.",
               "icono": ""
             }
           ]
@@ -1705,13 +1713,13 @@
           "categoria": "Impresión empresarial",
           "items": [
             {
-              "nombre": "HP LaserJet Enterprise",
-              "descripcion": "Impresoras y multifuncionales láser para volúmenes altos de impresión departamental.",
+              "titulo": "HP LaserJet Enterprise",
+              "texto": "Impresoras y multifuncionales láser para volúmenes altos de impresión departamental.",
               "icono": ""
             },
             {
-              "nombre": "HP Managed Print Services",
-              "descripcion": "Servicio de impresión gestionada con monitoreo proactivo de consumibles y seguridad.",
+              "titulo": "HP Managed Print Services",
+              "texto": "Servicio de impresión gestionada con monitoreo proactivo de consumibles y seguridad.",
               "icono": ""
             }
           ]
@@ -1719,34 +1727,40 @@
       ],
       "planes": [
         {
+          "tier": "MOVILIDAD CORPORATIV",
           "nombre": "Movilidad corporativa (EliteBook/ProBook)",
-          "descripcion": "Flota de laptops empresariales con seguridad de firmware integrada y gestión remota.",
-          "caracteristicas": [
+          "desc": "Flota de laptops empresariales con seguridad de firmware integrada y gestión remota.",
+          "features": [
             "HP Wolf Security integrado",
             "Gestión de flota con HP Wolf Pro Security Controller",
             "Opciones con conectividad 5G/LTE",
             "Certificación MIL-STD-810H"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "ESTACIONES DE TRABAJ",
           "nombre": "Estaciones de trabajo profesionales (Z Series)",
-          "descripcion": "Equipos certificados para software de diseño, ingeniería y análisis de datos intensivo.",
-          "caracteristicas": [
+          "desc": "Equipos certificados para software de diseño, ingeniería y análisis de datos intensivo.",
+          "features": [
             "Certificación ISV para AutoCAD, SolidWorks, Adobe",
             "Opciones GPU NVIDIA RTX profesional",
             "Configuraciones de escritorio y móviles",
             "Garantía empresarial con soporte in situ"
-          ]
+          ],
+          "popular": true
         },
         {
+          "tier": "IMPRESIÓN GESTIONADA",
           "nombre": "Impresión gestionada (LaserJet + MPS)",
-          "descripcion": "Solución integral de impresión departamental con monitoreo y reposición de consumibles.",
-          "caracteristicas": [
+          "desc": "Solución integral de impresión departamental con monitoreo y reposición de consumibles.",
+          "features": [
             "Monitoreo remoto de niveles de tóner",
             "Seguridad de impresión HP Wolf Security for Printers",
             "Multifuncionales de alto volumen",
             "Reportes de costo por página"
-          ]
+          ],
+          "popular": false
         }
       ],
       "comparativa": {
@@ -1785,28 +1799,28 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Qué es HP Wolf Security?",
-          "respuesta": "Es la plataforma de seguridad de HP que protege el hardware y firmware de los equipos EliteBook y ProBook contra ataques por debajo del sistema operativo."
+          "q": "¿Qué es HP Wolf Security?",
+          "a": "Es la plataforma de seguridad de HP que protege el hardware y firmware de los equipos EliteBook y ProBook contra ataques por debajo del sistema operativo."
         },
         {
-          "pregunta": "¿Las estaciones de trabajo Z sirven para diseño en República Dominicana?",
-          "respuesta": "Sí, las Z Workstations están certificadas para software como AutoCAD y SolidWorks, comunes en estudios de arquitectura e ingeniería locales."
+          "q": "¿Las estaciones de trabajo Z sirven para diseño en República Dominicana?",
+          "a": "Sí, las Z Workstations están certificadas para software como AutoCAD y SolidWorks, comunes en estudios de arquitectura e ingeniería locales."
         },
         {
-          "pregunta": "¿Qué diferencia a EliteBook de ProBook?",
-          "respuesta": "EliteBook es la línea premium con materiales de mayor calidad y funciones avanzadas de seguridad, mientras ProBook está orientada a pymes con presupuesto más ajustado."
+          "q": "¿Qué diferencia a EliteBook de ProBook?",
+          "a": "EliteBook es la línea premium con materiales de mayor calidad y funciones avanzadas de seguridad, mientras ProBook está orientada a pymes con presupuesto más ajustado."
         },
         {
-          "pregunta": "¿HP ofrece impresión gestionada para empresas medianas?",
-          "respuesta": "Sí, HP Managed Print Services permite monitorear consumibles y costos de impresión sin necesidad de personal de TI dedicado."
+          "q": "¿HP ofrece impresión gestionada para empresas medianas?",
+          "a": "Sí, HP Managed Print Services permite monitorear consumibles y costos de impresión sin necesidad de personal de TI dedicado."
         },
         {
-          "pregunta": "¿Qué se presentó en el lineup 2026 de HP?",
-          "respuesta": "El rediseño del EliteBook X G2 y nuevos modelos con procesadores Snapdragon para movilidad empresarial con IA en el dispositivo."
+          "q": "¿Qué se presentó en el lineup 2026 de HP?",
+          "a": "El rediseño del EliteBook X G2 y nuevos modelos con procesadores Snapdragon para movilidad empresarial con IA en el dispositivo."
         },
         {
-          "pregunta": "¿Axentia SRL distribuye equipos HP en el país?",
-          "respuesta": "Sí, Axentia SRL actúa como integrador para la cotización e implementación de soluciones HP empresariales en República Dominicana."
+          "q": "¿Axentia SRL distribuye equipos HP en el país?",
+          "a": "Sí, Axentia SRL actúa como integrador para la cotización e implementación de soluciones HP empresariales en República Dominicana."
         }
       ],
       "sitioOficial": "https://www.hp.com"
@@ -1860,24 +1874,24 @@
       "colorAccent": "#C7000B",
       "stats": [
         {
-          "valor": "170+",
-          "etiqueta": "Países donde opera la red comercial de Huawei"
+          "num": "170+",
+          "label": "Países donde opera la red comercial de Huawei"
         },
         {
-          "valor": "25.5B",
-          "etiqueta": "USD invertidos en I+D reportados por Huawei en 2023"
+          "num": "25.5B",
+          "label": "USD invertidos en I+D reportados por Huawei en 2023"
         },
         {
-          "valor": "100GE",
-          "etiqueta": "Velocidad de puertos soportada en switches CloudEngine de core"
+          "num": "100GE",
+          "label": "Velocidad de puertos soportada en switches CloudEngine de core"
         },
         {
-          "valor": "20+",
-          "etiqueta": "Años de trayectoria de la línea de storage OceanStor"
+          "num": "20+",
+          "label": "Años de trayectoria de la línea de storage OceanStor"
         },
         {
-          "valor": "2,700+",
-          "etiqueta": "Patentes activas relacionadas a tecnología de almacenamiento"
+          "num": "2,700+",
+          "label": "Patentes activas relacionadas a tecnología de almacenamiento"
         }
       ],
       "plataformaIntro": "El portafolio enterprise de Huawei se organiza en tres pilares: redes empresariales (campus, WAN y WLAN), infraestructura de centro de datos (cómputo y almacenamiento) y ciberseguridad, todos administrables desde la plataforma de gestión inteligente iMaster NCE.",
@@ -1886,28 +1900,28 @@
           "categoria": "Redes empresariales",
           "items": [
             {
-              "nombre": "Switches CloudEngine y S series",
-              "descripcion": "Switches de campus y data center, desde acceso S5735 hasta core CloudEngine 100GE",
+              "titulo": "Switches CloudEngine y S series",
+              "texto": "Switches de campus y data center, desde acceso S5735 hasta core CloudEngine 100GE",
               "icono": ""
             },
             {
-              "nombre": "Routers AR series",
-              "descripcion": "Routers empresariales para sucursales y conectividad SD-WAN",
+              "titulo": "Routers AR series",
+              "texto": "Routers empresariales para sucursales y conectividad SD-WAN",
               "icono": ""
             },
             {
-              "nombre": "NetEngine",
-              "descripcion": "Routers de core para proveedores de servicio y grandes redes WAN",
+              "titulo": "NetEngine",
+              "texto": "Routers de core para proveedores de servicio y grandes redes WAN",
               "icono": ""
             },
             {
-              "nombre": "AirEngine WLAN",
-              "descripcion": "Puntos de acceso Wi-Fi 6/6E para campus empresarial",
+              "titulo": "AirEngine WLAN",
+              "texto": "Puntos de acceso Wi-Fi 6/6E para campus empresarial",
               "icono": ""
             },
             {
-              "nombre": "iMaster NCE",
-              "descripcion": "Plataforma de gestión y automatización de red basada en IA",
+              "titulo": "iMaster NCE",
+              "texto": "Plataforma de gestión y automatización de red basada en IA",
               "icono": ""
             }
           ]
@@ -1916,28 +1930,28 @@
           "categoria": "Centro de datos",
           "items": [
             {
-              "nombre": "FusionServer Pro",
-              "descripcion": "Servidores rack y blade basados en procesadores Intel Xeon/Kunpeng",
+              "titulo": "FusionServer Pro",
+              "texto": "Servidores rack y blade basados en procesadores Intel Xeon/Kunpeng",
               "icono": ""
             },
             {
-              "nombre": "OceanStor Dorado",
-              "descripcion": "Almacenamiento all-flash de alto rendimiento para cargas críticas",
+              "titulo": "OceanStor Dorado",
+              "texto": "Almacenamiento all-flash de alto rendimiento para cargas críticas",
               "icono": ""
             },
             {
-              "nombre": "OceanStor Pacific",
-              "descripcion": "Almacenamiento escalable para big data y datos no estructurados",
+              "titulo": "OceanStor Pacific",
+              "texto": "Almacenamiento escalable para big data y datos no estructurados",
               "icono": ""
             },
             {
-              "nombre": "FusionCube",
-              "descripcion": "Infraestructura hiperconvergente (cómputo + storage + red)",
+              "titulo": "FusionCube",
+              "texto": "Infraestructura hiperconvergente (cómputo + storage + red)",
               "icono": ""
             },
             {
-              "nombre": "FusionModule",
-              "descripcion": "Centro de datos modular prefabricado",
+              "titulo": "FusionModule",
+              "texto": "Centro de datos modular prefabricado",
               "icono": ""
             }
           ]
@@ -1946,13 +1960,13 @@
           "categoria": "Seguridad",
           "items": [
             {
-              "nombre": "HiSecEngine USG series",
-              "descripcion": "Firewalls de nueva generación para protección perimetral",
+              "titulo": "HiSecEngine USG series",
+              "texto": "Firewalls de nueva generación para protección perimetral",
               "icono": ""
             },
             {
-              "nombre": "HiSecEngine anti-DDoS",
-              "descripcion": "Mitigación de ataques de denegación de servicio distribuido",
+              "titulo": "HiSecEngine anti-DDoS",
+              "texto": "Mitigación de ataques de denegación de servicio distribuido",
               "icono": ""
             }
           ]
@@ -1960,33 +1974,39 @@
       ],
       "planes": [
         {
+          "tier": "SOLUCIÓN DE RED DE C",
           "nombre": "Solución de Red de Campus",
-          "descripcion": "Conectividad cableada e inalámbrica para oficinas y sucursales",
-          "caracteristicas": [
+          "desc": "Conectividad cableada e inalámbrica para oficinas y sucursales",
+          "features": [
             "Switches S series de acceso y agregación",
             "Puntos de acceso AirEngine Wi-Fi 6",
             "Gestión centralizada vía iMaster NCE-Campus",
             "Segmentación y control de acceso por usuario"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "SOLUCIÓN DE CENTRO D",
           "nombre": "Solución de Centro de Datos",
-          "descripcion": "Infraestructura de cómputo y almacenamiento para cargas empresariales",
-          "caracteristicas": [
+          "desc": "Infraestructura de cómputo y almacenamiento para cargas empresariales",
+          "features": [
             "Servidores FusionServer Pro",
             "Almacenamiento OceanStor Dorado/Pacific",
             "Opción hiperconvergente FusionCube",
             "Alta disponibilidad y replicación de datos"
-          ]
+          ],
+          "popular": true
         },
         {
+          "tier": "SOLUCIÓN DE SEGURIDA",
           "nombre": "Solución de Seguridad Perimetral",
-          "descripcion": "Protección de red y mitigación de amenazas",
-          "caracteristicas": [
+          "desc": "Protección de red y mitigación de amenazas",
+          "features": [
             "Firewalls HiSecEngine USG",
             "Protección anti-DDoS",
             "VPN site-to-site para conectividad segura entre sedes"
-          ]
+          ],
+          "popular": false
         }
       ],
       "comparativa": {
@@ -2025,28 +2045,28 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Huawei Enterprise incluye teléfonos móviles?",
-          "respuesta": "No; la división Enterprise se enfoca en redes, centros de datos y seguridad para empresas, separada del negocio de dispositivos de consumo."
+          "q": "¿Huawei Enterprise incluye teléfonos móviles?",
+          "a": "No; la división Enterprise se enfoca en redes, centros de datos y seguridad para empresas, separada del negocio de dispositivos de consumo."
         },
         {
-          "pregunta": "¿Qué diferencia hay entre OceanStor Dorado y OceanStor Pacific?",
-          "respuesta": "Dorado es almacenamiento all-flash orientado a rendimiento y baja latencia; Pacific está diseñado para grandes volúmenes de datos no estructurados y big data."
+          "q": "¿Qué diferencia hay entre OceanStor Dorado y OceanStor Pacific?",
+          "a": "Dorado es almacenamiento all-flash orientado a rendimiento y baja latencia; Pacific está diseñado para grandes volúmenes de datos no estructurados y big data."
         },
         {
-          "pregunta": "¿Los switches Huawei son compatibles con equipos de otras marcas?",
-          "respuesta": "Sí, soportan estándares abiertos (IEEE, IETF) que permiten interoperabilidad en redes multivendor."
+          "q": "¿Los switches Huawei son compatibles con equipos de otras marcas?",
+          "a": "Sí, soportan estándares abiertos (IEEE, IETF) que permiten interoperabilidad en redes multivendor."
         },
         {
-          "pregunta": "¿Qué es iMaster NCE?",
-          "respuesta": "Es la plataforma de gestión y automatización de red de Huawei que centraliza el monitoreo, la configuración y el análisis con IA."
+          "q": "¿Qué es iMaster NCE?",
+          "a": "Es la plataforma de gestión y automatización de red de Huawei que centraliza el monitoreo, la configuración y el análisis con IA."
         },
         {
-          "pregunta": "¿Ofrecen soluciones para pymes o solo grandes empresas?",
-          "respuesta": "Huawei tiene líneas eKit orientadas a pymes además de su portafolio enterprise para grandes organizaciones."
+          "q": "¿Ofrecen soluciones para pymes o solo grandes empresas?",
+          "a": "Huawei tiene líneas eKit orientadas a pymes además de su portafolio enterprise para grandes organizaciones."
         },
         {
-          "pregunta": "¿Axentia da soporte y garantía local sobre equipos Huawei?",
-          "respuesta": "Sí, como integrador/partner, Axentia SRL gestiona la implementación, soporte técnico y garantía de los productos Huawei en República Dominicana."
+          "q": "¿Axentia da soporte y garantía local sobre equipos Huawei?",
+          "a": "Sí, como integrador/partner, Axentia SRL gestiona la implementación, soporte técnico y garantía de los productos Huawei en República Dominicana."
         }
       ],
       "sitioOficial": "https://e.huawei.com"
@@ -2136,24 +2156,24 @@
       "colorAccent": "#E2231A",
       "stats": [
         {
-          "valor": "~24%",
-          "etiqueta": "Participación global en el mercado de PCs (Statista, 2025)"
+          "num": "~24%",
+          "label": "Participación global en el mercado de PCs (Statista, 2025)"
         },
         {
-          "valor": "#1 mundial",
-          "etiqueta": "Fabricante de PCs por unidades vendidas"
+          "num": "#1 mundial",
+          "label": "Fabricante de PCs por unidades vendidas"
         },
         {
-          "valor": "1984",
-          "etiqueta": "Año de fundación (como Legend, renombrada Lenovo en 2004)"
+          "num": "1984",
+          "label": "Año de fundación (como Legend, renombrada Lenovo en 2004)"
         },
         {
-          "valor": "+180 países",
-          "etiqueta": "Mercados donde opera Lenovo"
+          "num": "+180 países",
+          "label": "Mercados donde opera Lenovo"
         },
         {
-          "valor": "ThinkSystem",
-          "etiqueta": "Línea de servidores ampliada en 2026 para inferencia de IA"
+          "num": "ThinkSystem",
+          "label": "Línea de servidores ampliada en 2026 para inferencia de IA"
         }
       ],
       "plataformaIntro": "El portafolio empresarial de Lenovo combina la reconocida línea de laptops ThinkPad, los equipos de escritorio ThinkCentre y la infraestructura de centro de datos ThinkSystem, con foco reciente en servidores optimizados para cargas de trabajo de inferencia de inteligencia artificial.",
@@ -2162,18 +2182,18 @@
           "categoria": "Laptops empresariales",
           "items": [
             {
-              "nombre": "ThinkPad X1 Carbon",
-              "descripcion": "Laptop ultraliviana insignia para ejecutivos, con chasis de fibra de carbono y certificación militar de durabilidad.",
+              "titulo": "ThinkPad X1 Carbon",
+              "texto": "Laptop ultraliviana insignia para ejecutivos, con chasis de fibra de carbono y certificación militar de durabilidad.",
               "icono": ""
             },
             {
-              "nombre": "ThinkPad T Series",
-              "descripcion": "Línea balanceada de negocio, la más vendida históricamente en el segmento corporativo.",
+              "titulo": "ThinkPad T Series",
+              "texto": "Línea balanceada de negocio, la más vendida históricamente en el segmento corporativo.",
               "icono": ""
             },
             {
-              "nombre": "ThinkPad L Series",
-              "descripcion": "Equipos de negocio de entrada con buena relación costo-beneficio para flotas grandes.",
+              "titulo": "ThinkPad L Series",
+              "texto": "Equipos de negocio de entrada con buena relación costo-beneficio para flotas grandes.",
               "icono": ""
             }
           ]
@@ -2182,13 +2202,13 @@
           "categoria": "Equipos de escritorio",
           "items": [
             {
-              "nombre": "ThinkCentre M Series",
-              "descripcion": "Desktops compactos y torres para oficina, con opciones de gestión remota vía Lenovo Commercial Vantage.",
+              "titulo": "ThinkCentre M Series",
+              "texto": "Desktops compactos y torres para oficina, con opciones de gestión remota vía Lenovo Commercial Vantage.",
               "icono": ""
             },
             {
-              "nombre": "ThinkStation P Series",
-              "descripcion": "Estaciones de trabajo de escritorio certificadas ISV para cargas de diseño e ingeniería.",
+              "titulo": "ThinkStation P Series",
+              "texto": "Estaciones de trabajo de escritorio certificadas ISV para cargas de diseño e ingeniería.",
               "icono": ""
             }
           ]
@@ -2197,18 +2217,18 @@
           "categoria": "Infraestructura de centro de datos",
           "items": [
             {
-              "nombre": "ThinkSystem SR Series",
-              "descripcion": "Servidores rack para virtualización y cargas de trabajo empresariales tradicionales.",
+              "titulo": "ThinkSystem SR Series",
+              "texto": "Servidores rack para virtualización y cargas de trabajo empresariales tradicionales.",
               "icono": ""
             },
             {
-              "nombre": "ThinkSystem SR675/SR680",
-              "descripcion": "Servidores optimizados con GPU para entrenamiento e inferencia de modelos de IA.",
+              "titulo": "ThinkSystem SR675/SR680",
+              "texto": "Servidores optimizados con GPU para entrenamiento e inferencia de modelos de IA.",
               "icono": ""
             },
             {
-              "nombre": "ThinkAgile",
-              "descripcion": "Infraestructura hiperconvergente preconfigurada para simplificar el despliegue de nube privada.",
+              "titulo": "ThinkAgile",
+              "texto": "Infraestructura hiperconvergente preconfigurada para simplificar el despliegue de nube privada.",
               "icono": ""
             }
           ]
@@ -2216,34 +2236,40 @@
       ],
       "planes": [
         {
+          "tier": "MOVILIDAD EJECUTIVA ",
           "nombre": "Movilidad ejecutiva (ThinkPad)",
-          "descripcion": "Laptops de negocio con foco en durabilidad, teclado reconocido en la industria y seguridad integrada.",
-          "caracteristicas": [
+          "desc": "Laptops de negocio con foco en durabilidad, teclado reconocido en la industria y seguridad integrada.",
+          "features": [
             "Certificación MIL-STD-810H",
             "Teclado ThinkPad de referencia en la industria",
             "Gestión de flota con Lenovo Commercial Vantage",
             "Opciones vPro y ThinkShield"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "INFRAESTRUCTURA PARA",
           "nombre": "Infraestructura para IA (ThinkSystem)",
-          "descripcion": "Servidores diseñados para cargas de trabajo de inferencia y entrenamiento de modelos de inteligencia artificial.",
-          "caracteristicas": [
+          "desc": "Servidores diseñados para cargas de trabajo de inferencia y entrenamiento de modelos de inteligencia artificial.",
+          "features": [
             "Configuraciones con GPU NVIDIA",
             "Refrigeración líquida en modelos de alta densidad",
             "Gestión remota con Lenovo XClarity",
             "Diseño para eficiencia energética en centros de datos"
-          ]
+          ],
+          "popular": true
         },
         {
+          "tier": "ESTACIONES DE TRABAJ",
           "nombre": "Estaciones de trabajo (ThinkStation)",
-          "descripcion": "Equipos certificados para software profesional de diseño, ingeniería y ciencia de datos.",
-          "caracteristicas": [
+          "desc": "Equipos certificados para software profesional de diseño, ingeniería y ciencia de datos.",
+          "features": [
             "Certificación ISV multi-aplicación",
             "Opciones GPU profesional NVIDIA RTX",
             "Chasis de fácil mantenimiento",
             "Garantía empresarial extendida disponible"
-          ]
+          ],
+          "popular": false
         }
       ],
       "comparativa": {
@@ -2282,28 +2308,28 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Por qué el ThinkPad es reconocido en el mercado empresarial?",
-          "respuesta": "Por su durabilidad probada bajo estándares militares, su teclado considerado referencia en la industria y décadas de continuidad de diseño desde la era IBM."
+          "q": "¿Por qué el ThinkPad es reconocido en el mercado empresarial?",
+          "a": "Por su durabilidad probada bajo estándares militares, su teclado considerado referencia en la industria y décadas de continuidad de diseño desde la era IBM."
         },
         {
-          "pregunta": "¿Lenovo fabrica servidores para inteligencia artificial?",
-          "respuesta": "Sí, la línea ThinkSystem incluye modelos como el SR675 y SR680 optimizados con GPU para entrenamiento e inferencia de IA."
+          "q": "¿Lenovo fabrica servidores para inteligencia artificial?",
+          "a": "Sí, la línea ThinkSystem incluye modelos como el SR675 y SR680 optimizados con GPU para entrenamiento e inferencia de IA."
         },
         {
-          "pregunta": "¿Cuál es la diferencia entre ThinkCentre y ThinkStation?",
-          "respuesta": "ThinkCentre son desktops de oficina para uso general, mientras ThinkStation son estaciones de trabajo certificadas para software profesional de diseño e ingeniería."
+          "q": "¿Cuál es la diferencia entre ThinkCentre y ThinkStation?",
+          "a": "ThinkCentre son desktops de oficina para uso general, mientras ThinkStation son estaciones de trabajo certificadas para software profesional de diseño e ingeniería."
         },
         {
-          "pregunta": "¿Qué participación de mercado tiene Lenovo en PCs?",
-          "respuesta": "Según datos de Statista, Lenovo ha mantenido consistentemente cerca del 24% de participación global en el mercado de computadoras personales, siendo el líder mundial."
+          "q": "¿Qué participación de mercado tiene Lenovo en PCs?",
+          "a": "Según datos de Statista, Lenovo ha mantenido consistentemente cerca del 24% de participación global en el mercado de computadoras personales, siendo el líder mundial."
         },
         {
-          "pregunta": "¿Qué es Lenovo XClarity?",
-          "respuesta": "Es la plataforma de gestión remota de Lenovo para administrar y monitorear servidores ThinkSystem desde una consola centralizada."
+          "q": "¿Qué es Lenovo XClarity?",
+          "a": "Es la plataforma de gestión remota de Lenovo para administrar y monitorear servidores ThinkSystem desde una consola centralizada."
         },
         {
-          "pregunta": "¿Axentia SRL puede implementar infraestructura Lenovo en República Dominicana?",
-          "respuesta": "Sí, Axentia SRL gestiona la cotización e implementación de equipos ThinkPad, ThinkCentre y servidores ThinkSystem para clientes locales."
+          "q": "¿Axentia SRL puede implementar infraestructura Lenovo en República Dominicana?",
+          "a": "Sí, Axentia SRL gestiona la cotización e implementación de equipos ThinkPad, ThinkCentre y servidores ThinkSystem para clientes locales."
         }
       ],
       "sitioOficial": "https://www.lenovo.com"
@@ -2878,20 +2904,20 @@
       "colorAccent": "#00A6E0",
       "stats": [
         {
-          "valor": "Multiregional",
-          "etiqueta": "Presencia comercial en Panamá, Costa Rica, Venezuela y RD"
+          "num": "Multiregional",
+          "label": "Presencia comercial en Panamá, Costa Rica, Venezuela y RD"
         },
         {
-          "valor": "2",
-          "etiqueta": "Divisiones principales: Infraestructura y Conectividad/Home"
+          "num": "2",
+          "label": "Divisiones principales: Infraestructura y Conectividad/Home"
         },
         {
-          "valor": "Nexxt Home",
-          "etiqueta": "Línea de automatización y cámaras inteligentes para el hogar"
+          "num": "Nexxt Home",
+          "label": "Línea de automatización y cámaras inteligentes para el hogar"
         },
         {
-          "valor": "Cableado estructurado",
-          "etiqueta": "Categoría de producto insignia de la marca en la región"
+          "num": "Cableado estructurado",
+          "label": "Categoría de producto insignia de la marca en la región"
         }
       ],
       "plataformaIntro": "Nexxt Solutions divide su oferta en dos grandes áreas: Infraestructura (cableado estructurado, gabinetes y racks) y Conectividad/Home (redes, Wi-Fi y automatización del hogar, incluyendo cámaras inteligentes), cubriendo tanto proyectos de cableado para negocios como soluciones de hogar inteligente para el consumidor final en República Dominicana.",
@@ -2900,13 +2926,13 @@
           "categoria": "Infraestructura y cableado",
           "items": [
             {
-              "nombre": "Cableado estructurado UTP",
-              "descripcion": "Cables y patch cords para redes de datos",
+              "titulo": "Cableado estructurado UTP",
+              "texto": "Cables y patch cords para redes de datos",
               "icono": ""
             },
             {
-              "nombre": "Gabinetes y racks",
-              "descripcion": "Gabinetes de pared y piso para equipos de red y centros de datos",
+              "titulo": "Gabinetes y racks",
+              "texto": "Gabinetes de pared y piso para equipos de red y centros de datos",
               "icono": ""
             }
           ]
@@ -2915,13 +2941,13 @@
           "categoria": "Conectividad",
           "items": [
             {
-              "nombre": "Routers y access points Nexxt",
-              "descripcion": "Equipos de conectividad Wi-Fi para hogar y oficina",
+              "titulo": "Routers y access points Nexxt",
+              "texto": "Equipos de conectividad Wi-Fi para hogar y oficina",
               "icono": ""
             },
             {
-              "nombre": "Switches Nexxt",
-              "descripcion": "Switches de red para entornos domésticos y pequeñas oficinas",
+              "titulo": "Switches Nexxt",
+              "texto": "Switches de red para entornos domésticos y pequeñas oficinas",
               "icono": ""
             }
           ]
@@ -2930,18 +2956,18 @@
           "categoria": "Automatización del hogar (Nexxt Home)",
           "items": [
             {
-              "nombre": "Cámaras inteligentes Wi-Fi",
-              "descripcion": "Cámaras interiores y exteriores con monitoreo remoto vía app",
+              "titulo": "Cámaras inteligentes Wi-Fi",
+              "texto": "Cámaras interiores y exteriores con monitoreo remoto vía app",
               "icono": ""
             },
             {
-              "nombre": "Cámara motorizada para interior (AHIMPFI4U2)",
-              "descripcion": "Cámara con seguimiento motorizado y visión nocturna",
+              "titulo": "Cámara motorizada para interior (AHIMPFI4U2)",
+              "texto": "Cámara con seguimiento motorizado y visión nocturna",
               "icono": ""
             },
             {
-              "nombre": "Cámara solar con Wi-Fi",
-              "descripcion": "Cámara de seguridad exterior alimentada por panel solar",
+              "titulo": "Cámara solar con Wi-Fi",
+              "texto": "Cámara de seguridad exterior alimentada por panel solar",
               "icono": ""
             }
           ]
@@ -2949,22 +2975,26 @@
       ],
       "planes": [
         {
+          "tier": "SOLUCIÓN DE INFRAEST",
           "nombre": "Solución de Infraestructura",
-          "descripcion": "Cableado estructurado, gabinetes y racks para oficinas y centros de datos",
-          "caracteristicas": [
+          "desc": "Cableado estructurado, gabinetes y racks para oficinas y centros de datos",
+          "features": [
             "Cableado UTP categoría estándar de mercado",
             "Gabinetes de pared y piso en distintos tamaños",
             "Componentes complementarios de patch panels"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "SOLUCIÓN NEXXT HOME",
           "nombre": "Solución Nexxt Home",
-          "descripcion": "Automatización y seguridad para el hogar con cámaras y dispositivos conectados",
-          "caracteristicas": [
+          "desc": "Automatización y seguridad para el hogar con cámaras y dispositivos conectados",
+          "features": [
             "Cámaras Wi-Fi con monitoreo desde app móvil",
             "Opciones con panel solar para exteriores",
             "Cámaras motorizadas con seguimiento de movimiento"
-          ]
+          ],
+          "popular": true
         }
       ],
       "comparativa": {
@@ -3003,24 +3033,24 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Qué tipos de productos ofrece Nexxt Solutions?",
-          "respuesta": "Ofrece dos líneas principales: infraestructura (cableado estructurado, gabinetes y racks) y conectividad/hogar inteligente (routers, switches y cámaras bajo la marca Nexxt Home)."
+          "q": "¿Qué tipos de productos ofrece Nexxt Solutions?",
+          "a": "Ofrece dos líneas principales: infraestructura (cableado estructurado, gabinetes y racks) y conectividad/hogar inteligente (routers, switches y cámaras bajo la marca Nexxt Home)."
         },
         {
-          "pregunta": "¿Qué es Nexxt Home?",
-          "respuesta": "Es la línea de automatización del hogar de Nexxt Solutions, que incluye cámaras inteligentes Wi-Fi, algunas con panel solar y seguimiento motorizado."
+          "q": "¿Qué es Nexxt Home?",
+          "a": "Es la línea de automatización del hogar de Nexxt Solutions, que incluye cámaras inteligentes Wi-Fi, algunas con panel solar y seguimiento motorizado."
         },
         {
-          "pregunta": "¿Nexxt Solutions tiene presencia comercial confirmada en República Dominicana?",
-          "respuesta": "Sí, medios locales han reportado que Nexxt Solutions comercializa productos como cableado estructurado en el mercado dominicano."
+          "q": "¿Nexxt Solutions tiene presencia comercial confirmada en República Dominicana?",
+          "a": "Sí, medios locales han reportado que Nexxt Solutions comercializa productos como cableado estructurado en el mercado dominicano."
         },
         {
-          "pregunta": "¿Las cámaras Nexxt Home funcionan sin cableado eléctrico?",
-          "respuesta": "Existen modelos con panel solar integrado pensados para instalación en exteriores sin depender de una toma eléctrica fija."
+          "q": "¿Las cámaras Nexxt Home funcionan sin cableado eléctrico?",
+          "a": "Existen modelos con panel solar integrado pensados para instalación en exteriores sin depender de una toma eléctrica fija."
         },
         {
-          "pregunta": "¿Axentia SRL distribuye Nexxt Solutions en RD?",
-          "respuesta": "Sí, Axentia SRL integra y distribuye productos Nexxt Solutions, tanto de infraestructura como de conectividad y hogar inteligente, en el mercado dominicano."
+          "q": "¿Axentia SRL distribuye Nexxt Solutions en RD?",
+          "a": "Sí, Axentia SRL integra y distribuye productos Nexxt Solutions, tanto de infraestructura como de conectividad y hogar inteligente, en el mercado dominicano."
         }
       ],
       "sitioOficial": "https://www.nexxtsolutions.com/"
@@ -3079,24 +3109,24 @@
       "colorAccent": "#714B67",
       "stats": [
         {
-          "valor": "30+",
-          "etiqueta": "Aplicaciones integradas en la suite Odoo"
+          "num": "30+",
+          "label": "Aplicaciones integradas en la suite Odoo"
         },
         {
-          "valor": "12M+",
-          "etiqueta": "Usuarios reportados a nivel mundial"
+          "num": "12M+",
+          "label": "Usuarios reportados a nivel mundial"
         },
         {
-          "valor": "2005",
-          "etiqueta": "Año de fundación de la compañía (originalmente TinyERP)"
+          "num": "2005",
+          "label": "Año de fundación de la compañía (originalmente TinyERP)"
         },
         {
-          "valor": "120+",
-          "etiqueta": "Países con localización fiscal/contable disponible"
+          "num": "120+",
+          "label": "Países con localización fiscal/contable disponible"
         },
         {
-          "valor": "1",
-          "etiqueta": "Base de datos única para todos los módulos, sin integraciones externas"
+          "num": "1",
+          "label": "Base de datos única para todos los módulos, sin integraciones externas"
         }
       ],
       "plataformaIntro": "Odoo organiza su ecosistema en apps modulares que se activan según la necesidad del negocio, todas compartiendo una misma base de datos: desde la primera línea de ventas hasta la contabilidad y el inventario quedan conectados sin duplicar información.",
@@ -3105,23 +3135,23 @@
           "categoria": "Ventas y relación con el cliente",
           "items": [
             {
-              "nombre": "CRM",
-              "descripcion": "Gestión de oportunidades y embudo de ventas",
+              "titulo": "CRM",
+              "texto": "Gestión de oportunidades y embudo de ventas",
               "icono": ""
             },
             {
-              "nombre": "Ventas",
-              "descripcion": "Cotizaciones, órdenes de venta y facturación",
+              "titulo": "Ventas",
+              "texto": "Cotizaciones, órdenes de venta y facturación",
               "icono": ""
             },
             {
-              "nombre": "Punto de Venta (POS)",
-              "descripcion": "Ventas presenciales conectadas al inventario y contabilidad",
+              "titulo": "Punto de Venta (POS)",
+              "texto": "Ventas presenciales conectadas al inventario y contabilidad",
               "icono": ""
             },
             {
-              "nombre": "Marketing por Email y SMS",
-              "descripcion": "Campañas automatizadas segmentadas por audiencia",
+              "titulo": "Marketing por Email y SMS",
+              "texto": "Campañas automatizadas segmentadas por audiencia",
               "icono": ""
             }
           ]
@@ -3130,23 +3160,23 @@
           "categoria": "Operaciones",
           "items": [
             {
-              "nombre": "Inventario",
-              "descripcion": "Control de existencias multi-almacén con trazabilidad",
+              "titulo": "Inventario",
+              "texto": "Control de existencias multi-almacén con trazabilidad",
               "icono": ""
             },
             {
-              "nombre": "Fabricación (MRP)",
-              "descripcion": "Órdenes de producción, listas de materiales y control de calidad",
+              "titulo": "Fabricación (MRP)",
+              "texto": "Órdenes de producción, listas de materiales y control de calidad",
               "icono": ""
             },
             {
-              "nombre": "Compras",
-              "descripcion": "Solicitudes de cotización y gestión de proveedores",
+              "titulo": "Compras",
+              "texto": "Solicitudes de cotización y gestión de proveedores",
               "icono": ""
             },
             {
-              "nombre": "Servicio de Campo",
-              "descripcion": "Planificación de técnicos y órdenes de servicio en sitio",
+              "titulo": "Servicio de Campo",
+              "texto": "Planificación de técnicos y órdenes de servicio en sitio",
               "icono": ""
             }
           ]
@@ -3155,23 +3185,23 @@
           "categoria": "Administración y finanzas",
           "items": [
             {
-              "nombre": "Contabilidad",
-              "descripcion": "Facturación electrónica, conciliación bancaria y reportes fiscales",
+              "titulo": "Contabilidad",
+              "texto": "Facturación electrónica, conciliación bancaria y reportes fiscales",
               "icono": ""
             },
             {
-              "nombre": "Empleados (HR)",
-              "descripcion": "Expedientes, ausencias y evaluaciones de desempeño",
+              "titulo": "Empleados (HR)",
+              "texto": "Expedientes, ausencias y evaluaciones de desempeño",
               "icono": ""
             },
             {
-              "nombre": "Nómina",
-              "descripcion": "Cálculo de nómina y prestaciones según normativa local",
+              "titulo": "Nómina",
+              "texto": "Cálculo de nómina y prestaciones según normativa local",
               "icono": ""
             },
             {
-              "nombre": "Proyectos",
-              "descripcion": "Planificación de tareas, hitos y hojas de horas",
+              "titulo": "Proyectos",
+              "texto": "Planificación de tareas, hitos y hojas de horas",
               "icono": ""
             }
           ]
@@ -3180,18 +3210,18 @@
           "categoria": "Presencia digital",
           "items": [
             {
-              "nombre": "Website Builder",
-              "descripcion": "Constructor de sitios web sin código",
+              "titulo": "Website Builder",
+              "texto": "Constructor de sitios web sin código",
               "icono": ""
             },
             {
-              "nombre": "eCommerce",
-              "descripcion": "Tienda en línea integrada con inventario y pagos",
+              "titulo": "eCommerce",
+              "texto": "Tienda en línea integrada con inventario y pagos",
               "icono": ""
             },
             {
-              "nombre": "Helpdesk",
-              "descripcion": "Gestión de tickets de soporte al cliente",
+              "titulo": "Helpdesk",
+              "texto": "Gestión de tickets de soporte al cliente",
               "icono": ""
             }
           ]
@@ -3199,32 +3229,38 @@
       ],
       "planes": [
         {
+          "tier": "ODOO ONE APP FREE",
           "nombre": "Odoo One App Free",
-          "descripcion": "Uso gratuito de una sola aplicación de Odoo Enterprise, sin límite de usuarios",
-          "caracteristicas": [
+          "desc": "Uso gratuito de una sola aplicación de Odoo Enterprise, sin límite de usuarios",
+          "features": [
             "Una app a elección (CRM, Inventario, Facturación, etc.)",
             "Hosting en la nube de Odoo incluido",
             "Actualizaciones automáticas"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "ODOO STANDARD",
           "nombre": "Odoo Standard",
-          "descripcion": "Acceso a todas las aplicaciones Enterprise para una sola empresa",
-          "caracteristicas": [
+          "desc": "Acceso a todas las aplicaciones Enterprise para una sola empresa",
+          "features": [
             "Todas las apps de Odoo Enterprise",
             "Soporte oficial de Odoo",
             "Facturación electrónica y localización fiscal"
-          ]
+          ],
+          "popular": true
         },
         {
+          "tier": "ODOO CUSTOM",
           "nombre": "Odoo Custom",
-          "descripcion": "Plan para empresas con múltiples compañías o necesidades de personalización avanzada",
-          "caracteristicas": [
+          "desc": "Plan para empresas con múltiples compañías o necesidades de personalización avanzada",
+          "features": [
             "Multi-compañía y multi-sitio",
             "Acceso a Odoo Studio para personalizar sin código",
             "API externa para integraciones",
             "Soporte prioritario"
-          ]
+          ],
+          "popular": false
         }
       ],
       "comparativa": {
@@ -3263,28 +3299,28 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Cuál es la diferencia entre Odoo Community y Enterprise?",
-          "respuesta": "Community es de código abierto y gratuita mientras que Enterprise agrega funcionalidades avanzadas, soporte oficial, hosting en la nube y actualizaciones garantizadas."
+          "q": "¿Cuál es la diferencia entre Odoo Community y Enterprise?",
+          "a": "Community es de código abierto y gratuita mientras que Enterprise agrega funcionalidades avanzadas, soporte oficial, hosting en la nube y actualizaciones garantizadas."
         },
         {
-          "pregunta": "¿Odoo cumple con los requisitos fiscales de la DGII en República Dominicana?",
-          "respuesta": "Sí, mediante la localización dominicana que soporta comprobantes fiscales (NCF/e-CF) y reportes contables acorde a la normativa local."
+          "q": "¿Odoo cumple con los requisitos fiscales de la DGII en República Dominicana?",
+          "a": "Sí, mediante la localización dominicana que soporta comprobantes fiscales (NCF/e-CF) y reportes contables acorde a la normativa local."
         },
         {
-          "pregunta": "¿Puedo empezar con un solo módulo y luego agregar más?",
-          "respuesta": "Sí, Odoo permite activar apps de forma incremental sin perder los datos ya cargados en el sistema."
+          "q": "¿Puedo empezar con un solo módulo y luego agregar más?",
+          "a": "Sí, Odoo permite activar apps de forma incremental sin perder los datos ya cargados en el sistema."
         },
         {
-          "pregunta": "¿Odoo se puede instalar en servidores propios o solo en la nube?",
-          "respuesta": "Ambas opciones existen: alojamiento propio (on-premise), Odoo.sh (nube gestionada por Odoo) o hosting a través de un partner como Axentia."
+          "q": "¿Odoo se puede instalar en servidores propios o solo en la nube?",
+          "a": "Ambas opciones existen: alojamiento propio (on-premise), Odoo.sh (nube gestionada por Odoo) o hosting a través de un partner como Axentia."
         },
         {
-          "pregunta": "¿Cuántos usuarios se necesitan para justificar Odoo?",
-          "respuesta": "No hay un mínimo estricto; empresas desde unos pocos usuarios hasta cientos lo utilizan, ya que el costo escala por usuario y por apps activadas."
+          "q": "¿Cuántos usuarios se necesitan para justificar Odoo?",
+          "a": "No hay un mínimo estricto; empresas desde unos pocos usuarios hasta cientos lo utilizan, ya que el costo escala por usuario y por apps activadas."
         },
         {
-          "pregunta": "¿Se puede personalizar Odoo para procesos específicos del negocio?",
-          "respuesta": "Sí, mediante Odoo Studio (sin código) o desarrollo con su framework Python/XML para necesidades más complejas."
+          "q": "¿Se puede personalizar Odoo para procesos específicos del negocio?",
+          "a": "Sí, mediante Odoo Studio (sin código) o desarrollo con su framework Python/XML para necesidades más complejas."
         }
       ],
       "sitioOficial": "https://www.odoo.com"
@@ -3338,20 +3374,20 @@
       "colorAccent": "#4ACBD6",
       "stats": [
         {
-          "valor": "1996",
-          "etiqueta": "Año de fundación en Shenzhen, China"
+          "num": "1996",
+          "label": "Año de fundación en Shenzhen, China"
         },
         {
-          "valor": "#1",
-          "etiqueta": "Marca líder mundial en productos Wi-Fi por más de 12 años consecutivos"
+          "num": "#1",
+          "label": "Marca líder mundial en productos Wi-Fi por más de 12 años consecutivos"
         },
         {
-          "valor": "170+",
-          "etiqueta": "Países donde tiene presencia"
+          "num": "170+",
+          "label": "Países donde tiene presencia"
         },
         {
-          "valor": "29",
-          "etiqueta": "Trimestres consecutivos como #1 en mercado WLAN"
+          "num": "29",
+          "label": "Trimestres consecutivos como #1 en mercado WLAN"
         }
       ],
       "plataformaIntro": "TP-Link organiza su oferta en ecosistemas diferenciados: Omada para redes empresariales gestionadas en la nube, Deco para sistemas mesh de hogar, Archer para routers de alto desempeño, y Tapo para cámaras y dispositivos de hogar inteligente, cubriendo desde el hogar hasta redes corporativas de mayor escala.",
@@ -3360,18 +3396,18 @@
           "categoria": "Redes empresariales (Omada)",
           "items": [
             {
-              "nombre": "Omada SDN Controller",
-              "descripcion": "Plataforma de gestión centralizada para redes empresariales definidas por software",
+              "titulo": "Omada SDN Controller",
+              "texto": "Plataforma de gestión centralizada para redes empresariales definidas por software",
               "icono": ""
             },
             {
-              "nombre": "Switches Omada gestionados",
-              "descripcion": "Switches administrables para redes corporativas y PYMEs",
+              "titulo": "Switches Omada gestionados",
+              "texto": "Switches administrables para redes corporativas y PYMEs",
               "icono": ""
             },
             {
-              "nombre": "Access Points Omada",
-              "descripcion": "Puntos de acceso Wi-Fi empresariales gestionables en la nube",
+              "titulo": "Access Points Omada",
+              "texto": "Puntos de acceso Wi-Fi empresariales gestionables en la nube",
               "icono": ""
             }
           ]
@@ -3380,13 +3416,13 @@
           "categoria": "Redes de hogar (Deco / Archer)",
           "items": [
             {
-              "nombre": "Deco Mesh Wi-Fi Series",
-              "descripcion": "Sistemas de Wi-Fi en malla para cobertura total del hogar",
+              "titulo": "Deco Mesh Wi-Fi Series",
+              "texto": "Sistemas de Wi-Fi en malla para cobertura total del hogar",
               "icono": ""
             },
             {
-              "nombre": "Archer Routers",
-              "descripcion": "Routers Wi-Fi de alto rendimiento para hogar y oficina",
+              "titulo": "Archer Routers",
+              "texto": "Routers Wi-Fi de alto rendimiento para hogar y oficina",
               "icono": ""
             }
           ]
@@ -3395,13 +3431,13 @@
           "categoria": "Hogar inteligente (Tapo)",
           "items": [
             {
-              "nombre": "Tapo Cámaras IP",
-              "descripcion": "Cámaras de seguridad Wi-Fi para interior y exterior",
+              "titulo": "Tapo Cámaras IP",
+              "texto": "Cámaras de seguridad Wi-Fi para interior y exterior",
               "icono": ""
             },
             {
-              "nombre": "Tapo Enchufes y Bombillas inteligentes",
-              "descripcion": "Dispositivos IoT para automatización del hogar",
+              "titulo": "Tapo Enchufes y Bombillas inteligentes",
+              "texto": "Dispositivos IoT para automatización del hogar",
               "icono": ""
             }
           ]
@@ -3409,31 +3445,37 @@
       ],
       "planes": [
         {
+          "tier": "SOLUCIÓN OMADA EMPRE",
           "nombre": "Solución Omada Empresarial",
-          "descripcion": "Red gestionada centralizadamente para negocios, hoteles y oficinas con múltiples puntos de acceso",
-          "caracteristicas": [
+          "desc": "Red gestionada centralizadamente para negocios, hoteles y oficinas con múltiples puntos de acceso",
+          "features": [
             "Controlador SDN en la nube o local",
             "Switches y APs administrables desde una sola interfaz",
             "Escalable para múltiples ubicaciones"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "SOLUCIÓN DECO PARA H",
           "nombre": "Solución Deco para Hogar",
-          "descripcion": "Cobertura Wi-Fi uniforme en toda la vivienda mediante sistema mesh",
-          "caracteristicas": [
+          "desc": "Cobertura Wi-Fi uniforme en toda la vivienda mediante sistema mesh",
+          "features": [
             "Configuración simple vía app",
             "Roaming sin cortes entre nodos",
             "Control parental y de red integrado"
-          ]
+          ],
+          "popular": true
         },
         {
+          "tier": "SOLUCIÓN TAPO HOGAR ",
           "nombre": "Solución Tapo Hogar Inteligente",
-          "descripcion": "Cámaras y dispositivos IoT para seguridad y automatización doméstica",
-          "caracteristicas": [
+          "desc": "Cámaras y dispositivos IoT para seguridad y automatización doméstica",
+          "features": [
             "Cámaras con detección de movimiento y visión nocturna",
             "Integración con asistentes de voz",
             "App centralizada Tapo"
-          ]
+          ],
+          "popular": false
         }
       ],
       "comparativa": {
@@ -3472,24 +3514,24 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Qué es Omada de TP-Link?",
-          "respuesta": "Es la plataforma de redes definidas por software (SDN) de TP-Link para gestionar de forma centralizada switches, access points y gateways en entornos empresariales."
+          "q": "¿Qué es Omada de TP-Link?",
+          "a": "Es la plataforma de redes definidas por software (SDN) de TP-Link para gestionar de forma centralizada switches, access points y gateways en entornos empresariales."
         },
         {
-          "pregunta": "¿Qué diferencia hay entre Deco y Archer?",
-          "respuesta": "Deco es un sistema mesh de múltiples nodos para eliminar zonas muertas de Wi-Fi en el hogar, mientras que Archer es la línea de routers individuales de alto rendimiento."
+          "q": "¿Qué diferencia hay entre Deco y Archer?",
+          "a": "Deco es un sistema mesh de múltiples nodos para eliminar zonas muertas de Wi-Fi en el hogar, mientras que Archer es la línea de routers individuales de alto rendimiento."
         },
         {
-          "pregunta": "¿Qué es Tapo?",
-          "respuesta": "Es la línea de TP-Link para hogar inteligente, que incluye cámaras de seguridad Wi-Fi, enchufes inteligentes y bombillas conectadas."
+          "q": "¿Qué es Tapo?",
+          "a": "Es la línea de TP-Link para hogar inteligente, que incluye cámaras de seguridad Wi-Fi, enchufes inteligentes y bombillas conectadas."
         },
         {
-          "pregunta": "¿TP-Link es realmente líder mundial en Wi-Fi?",
-          "respuesta": "Sí, TP-Link ha mantenido la posición número uno en el mercado global de WLAN durante más de una década, según reportes de la propia compañía."
+          "q": "¿TP-Link es realmente líder mundial en Wi-Fi?",
+          "a": "Sí, TP-Link ha mantenido la posición número uno en el mercado global de WLAN durante más de una década, según reportes de la propia compañía."
         },
         {
-          "pregunta": "¿Axentia SRL distribuye equipos TP-Link en República Dominicana?",
-          "respuesta": "Sí, Axentia SRL integra y distribuye soluciones TP-Link para redes domésticas y empresariales en el mercado dominicano."
+          "q": "¿Axentia SRL distribuye equipos TP-Link en República Dominicana?",
+          "a": "Sí, Axentia SRL integra y distribuye soluciones TP-Link para redes domésticas y empresariales en el mercado dominicano."
         }
       ],
       "sitioOficial": "https://www.tp-link.com/"
@@ -4052,24 +4094,24 @@
       "colorAccent": "#6C3EE8",
       "stats": [
         {
-          "valor": "2016",
-          "etiqueta": "Año de fundación"
+          "num": "2016",
+          "label": "Año de fundación"
         },
         {
-          "valor": "Israel",
-          "etiqueta": "Sede central"
+          "num": "Israel",
+          "label": "Sede central"
         },
         {
-          "valor": "vRx",
-          "etiqueta": "Producto insignia"
+          "num": "vRx",
+          "label": "Producto insignia"
         },
         {
-          "valor": "SOC 2",
-          "etiqueta": "Cumplimiento reportado"
+          "num": "SOC 2",
+          "label": "Cumplimiento reportado"
         },
         {
-          "valor": "AWS Marketplace",
-          "etiqueta": "Disponible también vía"
+          "num": "AWS Marketplace",
+          "label": "Disponible también vía"
         }
       ],
       "plataformaIntro": "vRx se organiza en módulos que cubren todo el ciclo de vida de la vulnerabilidad: desde el descubrimiento de activos hasta la remediación activa, incluyendo mitigaciones cuando no existe un parche oficial.",
@@ -4078,13 +4120,13 @@
           "categoria": "Descubrimiento y evaluación",
           "items": [
             {
-              "nombre": "Inventario de activos",
-              "descripcion": "Descubre software, sistemas operativos y configuraciones instaladas en los endpoints monitoreados.",
+              "titulo": "Inventario de activos",
+              "texto": "Descubre software, sistemas operativos y configuraciones instaladas en los endpoints monitoreados.",
               "icono": ""
             },
             {
-              "nombre": "Gestión de vulnerabilidades (basada en CVE)",
-              "descripcion": "Identifica y prioriza vulnerabilidades conocidas cruzando el inventario con bases de datos de CVE.",
+              "titulo": "Gestión de vulnerabilidades (basada en CVE)",
+              "texto": "Identifica y prioriza vulnerabilidades conocidas cruzando el inventario con bases de datos de CVE.",
               "icono": ""
             }
           ]
@@ -4093,13 +4135,13 @@
           "categoria": "Remediación",
           "items": [
             {
-              "nombre": "Patch Management",
-              "descripcion": "Despliega parches de Microsoft y de terceros (aplicaciones no cubiertas por el fabricante) desde una sola consola.",
+              "titulo": "Patch Management",
+              "texto": "Despliega parches de Microsoft y de terceros (aplicaciones no cubiertas por el fabricante) desde una sola consola.",
               "icono": ""
             },
             {
-              "nombre": "vScript (motor de scripting)",
-              "descripcion": "Biblioteca de scripts para aplicar mitigaciones y configuraciones cuando no hay un parche oficial disponible.",
+              "titulo": "vScript (motor de scripting)",
+              "texto": "Biblioteca de scripts para aplicar mitigaciones y configuraciones cuando no hay un parche oficial disponible.",
               "icono": ""
             }
           ]
@@ -4108,8 +4150,8 @@
           "categoria": "Automatización",
           "items": [
             {
-              "nombre": "Reglas de automatización",
-              "descripcion": "Permite definir políticas para que el parchado y las mitigaciones ocurran sin intervención manual constante.",
+              "titulo": "Reglas de automatización",
+              "texto": "Permite definir políticas para que el parchado y las mitigaciones ocurran sin intervención manual constante.",
               "icono": ""
             }
           ]
@@ -4117,22 +4159,26 @@
       ],
       "planes": [
         {
+          "tier": "VRX VULNERABILITY MA",
           "nombre": "vRx Vulnerability Management",
-          "descripcion": "Enfocado en descubrimiento y priorización de vulnerabilidades.",
-          "caracteristicas": [
+          "desc": "Enfocado en descubrimiento y priorización de vulnerabilidades.",
+          "features": [
             "Escaneo de activos",
             "Priorización por riesgo",
             "Reportes de exposición"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "VRX VULNERABILITY RE",
           "nombre": "vRx Vulnerability Remediation",
-          "descripcion": "Suma capacidades de parchado y scripting para cerrar el ciclo completo.",
-          "caracteristicas": [
+          "desc": "Suma capacidades de parchado y scripting para cerrar el ciclo completo.",
+          "features": [
             "Patch management multiplataforma",
             "vScript para mitigaciones sin parche",
             "Automatización de remediación"
-          ]
+          ],
+          "popular": true
         }
       ],
       "comparativa": {
@@ -4171,24 +4217,24 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Qué es vRx?",
-          "respuesta": "Es la plataforma de Vicarius para gestión de vulnerabilidades y remediación, que combina descubrimiento de activos, priorización de riesgo, parchado y scripts de mitigación."
+          "q": "¿Qué es vRx?",
+          "a": "Es la plataforma de Vicarius para gestión de vulnerabilidades y remediación, que combina descubrimiento de activos, priorización de riesgo, parchado y scripts de mitigación."
         },
         {
-          "pregunta": "¿vRx solo aplica parches de Microsoft?",
-          "respuesta": "No, también soporta parches de aplicaciones de terceros no cubiertas por el mecanismo de actualización del fabricante."
+          "q": "¿vRx solo aplica parches de Microsoft?",
+          "a": "No, también soporta parches de aplicaciones de terceros no cubiertas por el mecanismo de actualización del fabricante."
         },
         {
-          "pregunta": "¿Qué pasa si una vulnerabilidad no tiene parche oficial?",
-          "respuesta": "vRx ofrece vScript, un motor de scripting con una biblioteca de mitigaciones para reducir el riesgo mientras no exista un parche."
+          "q": "¿Qué pasa si una vulnerabilidad no tiene parche oficial?",
+          "a": "vRx ofrece vScript, un motor de scripting con una biblioteca de mitigaciones para reducir el riesgo mientras no exista un parche."
         },
         {
-          "pregunta": "¿Es adecuado para empresas medianas en República Dominicana?",
-          "respuesta": "Sí, especialmente para organizaciones con entornos mixtos de software que necesitan reducir su superficie de ataque sin un equipo grande de seguridad."
+          "q": "¿Es adecuado para empresas medianas en República Dominicana?",
+          "a": "Sí, especialmente para organizaciones con entornos mixtos de software que necesitan reducir su superficie de ataque sin un equipo grande de seguridad."
         },
         {
-          "pregunta": "¿Vicarius ofrece cumplimiento normativo?",
-          "respuesta": "La empresa reporta cumplimiento SOC 2, relevante para procesos de auditoría de seguridad."
+          "q": "¿Vicarius ofrece cumplimiento normativo?",
+          "a": "La empresa reporta cumplimiento SOC 2, relevante para procesos de auditoría de seguridad."
         }
       ],
       "sitioOficial": "https://www.vicarius.io/"
@@ -4543,24 +4589,24 @@
       "colorAccent": "#D40000",
       "stats": [
         {
-          "valor": "2001",
-          "etiqueta": "Año de creación"
+          "num": "2001",
+          "label": "Año de creación"
         },
         {
-          "valor": "Letonia",
-          "etiqueta": "Sede de Zabbix SIA"
+          "num": "Letonia",
+          "label": "Sede de Zabbix SIA"
         },
         {
-          "valor": "GPL",
-          "etiqueta": "Licencia open source"
+          "num": "GPL",
+          "label": "Licencia open source"
         },
         {
-          "valor": "7.x",
-          "etiqueta": "Serie de versión actual"
+          "num": "7.x",
+          "label": "Serie de versión actual"
         },
         {
-          "valor": "Sin costo por nodo",
-          "etiqueta": "Modelo de licenciamiento del software"
+          "num": "Sin costo por nodo",
+          "label": "Modelo de licenciamiento del software"
         }
       ],
       "plataformaIntro": "Zabbix cubre monitoreo de infraestructura de extremo a extremo mediante recolección de métricas, plantillas predefinidas, motor de alertas y visualización, todo administrable desde una interfaz web centralizada.",
@@ -4569,13 +4615,13 @@
           "categoria": "Recolección de datos",
           "items": [
             {
-              "nombre": "Monitoreo con y sin agente",
-              "descripcion": "Soporta agentes Zabbix (activos/pasivos) y monitoreo sin agente vía SNMP, IPMI, JMX y otros protocolos.",
+              "titulo": "Monitoreo con y sin agente",
+              "texto": "Soporta agentes Zabbix (activos/pasivos) y monitoreo sin agente vía SNMP, IPMI, JMX y otros protocolos.",
               "icono": ""
             },
             {
-              "nombre": "Zabbix Proxy",
-              "descripcion": "Permite monitoreo distribuido y descentralizado en redes segmentadas o ubicaciones remotas.",
+              "titulo": "Zabbix Proxy",
+              "texto": "Permite monitoreo distribuido y descentralizado en redes segmentadas o ubicaciones remotas.",
               "icono": ""
             }
           ]
@@ -4584,8 +4630,8 @@
           "categoria": "Plantillas y configuración",
           "items": [
             {
-              "nombre": "Plantillas out-of-the-box",
-              "descripcion": "Plantillas predefinidas para dispositivos de red, sistemas operativos, bases de datos y servicios en la nube.",
+              "titulo": "Plantillas out-of-the-box",
+              "texto": "Plantillas predefinidas para dispositivos de red, sistemas operativos, bases de datos y servicios en la nube.",
               "icono": ""
             }
           ]
@@ -4594,13 +4640,13 @@
           "categoria": "Alertas y visualización",
           "items": [
             {
-              "nombre": "Triggers y acciones",
-              "descripcion": "Define condiciones de alerta y respuestas automáticas (notificaciones, scripts remotos).",
+              "titulo": "Triggers y acciones",
+              "texto": "Define condiciones de alerta y respuestas automáticas (notificaciones, scripts remotos).",
               "icono": ""
             },
             {
-              "nombre": "Dashboards",
-              "descripcion": "Paneles visuales configurables con widgets de estado, gráficos e historial.",
+              "titulo": "Dashboards",
+              "texto": "Paneles visuales configurables con widgets de estado, gráficos e historial.",
               "icono": ""
             }
           ]
@@ -4608,22 +4654,26 @@
       ],
       "planes": [
         {
+          "tier": "ZABBIX COMMUNITY (SO",
           "nombre": "Zabbix Community (software libre)",
-          "descripcion": "Descarga y uso gratuito del software bajo licencia GPL, sin límite de nodos monitoreados.",
-          "caracteristicas": [
+          "desc": "Descarga y uso gratuito del software bajo licencia GPL, sin límite de nodos monitoreados.",
+          "features": [
             "Instalación autogestionada",
             "Acceso a documentación y comunidad",
             "Sin costo de licencia de software"
-          ]
+          ],
+          "popular": false
         },
         {
+          "tier": "SERVICIOS Y SOPORTE ",
           "nombre": "Servicios y soporte comercial de Zabbix SIA / partners",
-          "descripcion": "Soporte técnico, capacitación y servicios profesionales ofrecidos por Zabbix SIA o integradores certificados.",
-          "caracteristicas": [
+          "desc": "Soporte técnico, capacitación y servicios profesionales ofrecidos por Zabbix SIA o integradores certificados.",
+          "features": [
             "Soporte técnico con SLA",
             "Capacitación y certificación",
             "Consultoría de implementación"
-          ]
+          ],
+          "popular": true
         }
       ],
       "comparativa": {
@@ -4662,24 +4712,24 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Zabbix es realmente gratuito?",
-          "respuesta": "El software es de código abierto bajo licencia GPL y se puede usar sin costo de licencia; empresas como Zabbix SIA y partners cobran por soporte y servicios."
+          "q": "¿Zabbix es realmente gratuito?",
+          "a": "El software es de código abierto bajo licencia GPL y se puede usar sin costo de licencia; empresas como Zabbix SIA y partners cobran por soporte y servicios."
         },
         {
-          "pregunta": "¿Zabbix requiere agentes instalados?",
-          "respuesta": "No es obligatorio; soporta monitoreo sin agente vía SNMP, IPMI, JMX, entre otros, además del agente propio."
+          "q": "¿Zabbix requiere agentes instalados?",
+          "a": "No es obligatorio; soporta monitoreo sin agente vía SNMP, IPMI, JMX, entre otros, además del agente propio."
         },
         {
-          "pregunta": "¿Sirve para monitorear la nube?",
-          "respuesta": "Sí, Zabbix incluye plantillas e integraciones para monitorear servicios en la nube junto con infraestructura on-premise."
+          "q": "¿Sirve para monitorear la nube?",
+          "a": "Sí, Zabbix incluye plantillas e integraciones para monitorear servicios en la nube junto con infraestructura on-premise."
         },
         {
-          "pregunta": "¿Qué es un Zabbix Proxy?",
-          "respuesta": "Un componente que permite distribuir la recolección de datos en ubicaciones remotas o redes segmentadas, reduciendo carga en el servidor central."
+          "q": "¿Qué es un Zabbix Proxy?",
+          "a": "Un componente que permite distribuir la recolección de datos en ubicaciones remotas o redes segmentadas, reduciendo carga en el servidor central."
         },
         {
-          "pregunta": "¿Quién desarrolla Zabbix?",
-          "respuesta": "Fue creado por Alexei Vladishev en 2001 y actualmente es desarrollado y mantenido por la empresa Zabbix SIA, con sede en Letonia."
+          "q": "¿Quién desarrolla Zabbix?",
+          "a": "Fue creado por Alexei Vladishev en 2001 y actualmente es desarrollado y mantenido por la empresa Zabbix SIA, con sede en Letonia."
         }
       ],
       "sitioOficial": "https://www.zabbix.com/"
@@ -4711,18 +4761,18 @@
       ],
       "productos": [],
       "brochureUrl": "",
-      "videoUrl": "assets/logos/Video.mp4",
+      "videoUrl": "",
       "customPage": "",
       "destacado": true,
       "colorAccent": "#4F81BD",
       "stats": [
         {
-          "valor": "IA aplicada",
-          "etiqueta": "Enfoque en automatización de cálculos y análisis"
+          "num": "IA aplicada",
+          "label": "Enfoque en automatización de cálculos y análisis"
         },
         {
-          "valor": "En validación",
-          "etiqueta": "Ficha pendiente de confirmación directa con el proveedor"
+          "num": "En validación",
+          "label": "Ficha pendiente de confirmación directa con el proveedor"
         }
       ],
       "plataformaIntro": "La información pública detallada sobre los módulos de CalculAI es limitada; se recomienda completar esta sección con material oficial del proveedor antes de publicarla ampliamente.",
@@ -4749,12 +4799,12 @@
       },
       "faqs": [
         {
-          "pregunta": "¿Qué es CalculAI?",
-          "respuesta": "Es una herramienta que utiliza inteligencia artificial para asistir en cálculos y análisis de negocio. Axentia recomienda confirmar el alcance exacto directamente con el proveedor antes de tomar decisiones basadas en esta ficha."
+          "q": "¿Qué es CalculAI?",
+          "a": "Es una herramienta que utiliza inteligencia artificial para asistir en cálculos y análisis de negocio. Axentia recomienda confirmar el alcance exacto directamente con el proveedor antes de tomar decisiones basadas en esta ficha."
         },
         {
-          "pregunta": "¿Por qué esta ficha tiene menos detalle que otras marcas?",
-          "respuesta": "Para evitar publicar especificaciones no verificadas. Preferimos ser transparentes y completar la información con material oficial en cuanto esté disponible."
+          "q": "¿Por qué esta ficha tiene menos detalle que otras marcas?",
+          "a": "Para evitar publicar especificaciones no verificadas. Preferimos ser transparentes y completar la información con material oficial en cuanto esté disponible."
         }
       ]
     },

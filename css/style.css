@@ -3308,13 +3308,14 @@ html.dark-mode .contact-item-icon {
 .featured-products-section { padding: 70px 60px; }
 .featured-products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-top: 8px;
+  align-items: stretch;
 }
 .featured-product-card {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 0;
   background: var(--card-bg, #fff);
   border: 1px solid var(--border, rgba(31,73,125,0.14));
@@ -3325,15 +3326,18 @@ html.dark-mode .contact-item-icon {
 .featured-product-card:hover { border-color: var(--brand-blue, #4F81BD); transform: translateY(-3px); }
 .featured-product-media {
   position: relative;
-  background: #0a1f3d;
-  min-height: 160px;
-  max-height: 220px;
+  background: var(--soft, #F5F8FC);
+  min-height: 180px;
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
+  padding: 20px;
 }
-.featured-product-media video,
-.featured-product-media img {
+.featured-product-media video {
   width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.featured-product-media img {
+  max-width: 100%; max-height: 100%; width: auto; height: auto;
+  object-fit: contain; display: block;
 }
 .featured-product-info {
   padding: 20px 24px;
@@ -3345,9 +3349,12 @@ html.dark-mode .contact-item-icon {
 }
 .featured-product-info p {
   font-size: .88rem; color: var(--muted, var(--white-70)); line-height: 1.6; margin-bottom: 16px;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+}
+@media (max-width: 900px) {
+  .featured-products-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
-  .featured-products-grid { grid-template-columns: 1fr; }
   .featured-product-card { grid-template-columns: 1fr; }
   .featured-product-media { max-height: 200px; }
 }
