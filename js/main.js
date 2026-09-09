@@ -477,12 +477,75 @@ function renderServiceCard(s) {
   const href = `${sitePrefix()}pages/servicios/${slug}.php`;
   return `
     <article class="service-card">
-      <div class="service-icon">${s.icon}</div>
+      <div class="service-icon">${svcIcon(s.slug, s.icon)}</div>
       <h3>${s.title}</h3>
       <p>${s.desc}</p>
       <ul>${items}</ul>
       <a class="service-card-link" href="${href}">Ver detalle</a>
     </article>`;
+}
+
+const AX_SERVICE_ICONS = {
+  'consultoria-tecnologica': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M8 11h6"/></svg>',
+  'infraestructura-it': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><circle cx="7" cy="7.5" r=".6" fill="currentColor" stroke="none"/><circle cx="7" cy="16.5" r=".6" fill="currentColor" stroke="none"/></svg>',
+  'gestion-de-la-nube': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.5-8.97A5.5 5.5 0 0 1 17.2 8.1 4 4 0 0 1 17 18H7z"/></svg>',
+  'ciberseguridad': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10.2"/></svg>',
+  'sistemas-integrados': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V19a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H4a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.5V4a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.5 1H20a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>',
+  'capacitacion-concienciacion': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5"/><path d="M22 9.5v6"/></svg>',
+  'transformacion-digital': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.4-6.4L21 8"/><path d="M21 4v4h-4"/><path d="M21 12a9 9 0 0 1-15.4 6.4L3 16"/><path d="M3 20v-4h4"/></svg>',
+  'redes-cableado': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg>',
+  'seguridad-fisica': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l3-3h10l3 3v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8z"/><circle cx="12" cy="13" r="3.2"/><path d="M9 8h.01"/></svg>'
+};
+function svcIcon(slug, fallback) { return AX_SERVICE_ICONS[slug] || fallback || ''; }
+
+const AX_SVC_ICONS = {
+  edr: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10.2"/></svg>',
+  pentest: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v3l2 2"/></svg>',
+  soc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 9 9"/><circle cx="12" cy="12" r="2.5"/></svg>',
+  assessment: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16l1.7 1.7L14 14.4"/></svg>',
+  ad: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="8" r="2.5"/><circle cx="17" cy="8" r="2.5"/><path d="M3 20c0-3 2-5 4-5s4 2 4 5M13 20c0-3 2-5 4-5s4 2 4 5"/></svg>',
+  hardening: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><circle cx="8" cy="7" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="17" r=".6" fill="currentColor" stroke="none"/></svg>',
+  incident: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3L12 3z"/><path d="M12 10v4"/><circle cx="12" cy="17" r=".6" fill="currentColor" stroke="none"/></svg>',
+  identity: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="4"/><path d="M2 21c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="15.5" r="3.2"/><path d="M17.5 13.6V15l1 1"/></svg>'
+};
+
+const SERVICE_CARDS = {
+  ciberseguridad: {
+    label: 'Servicios',
+    title: 'Servicios',
+    sub: 'Soluciones de ciberseguridad adaptadas a las necesidades de tu negocio',
+    items: [
+      { icon: 'edr', titulo: 'EDR y Gestión de Endpoints', texto: 'Detección y respuesta en tiempo real con tecnología Xcitium.' },
+      { icon: 'pentest', titulo: 'Pentesting', texto: 'Simulamos ataques reales para encontrar vulnerabilidades antes que un atacante.' },
+      { icon: 'soc', titulo: 'SOC como Servicio', texto: 'Monitoreo continuo 24/7 con respuesta coordinada ante amenazas.' },
+      { icon: 'assessment', titulo: 'Assessment de Ciberseguridad', texto: 'Evaluamos tu postura de seguridad actual e identificamos brechas críticas.' },
+      { icon: 'ad', titulo: 'Auditoría de Active Directory', texto: 'Revisamos configuraciones, políticas y permisos de tu dominio para cerrar vectores de ataque.' },
+      { icon: 'hardening', titulo: 'Hardening de Infraestructura', texto: 'Fortalecemos servidores, redes y sistemas según mejores prácticas.' },
+      { icon: 'incident', titulo: 'Respuesta a Incidentes', texto: 'Investigación, contención y remediación ante brechas activas.' },
+      { icon: 'identity', titulo: 'Gestión de Identidad y Accesos', texto: 'Conditional Access y Defender for Cloud en entornos Microsoft/Azure.' }
+    ]
+  }
+};
+
+function renderServiceCardsSection(slug) {
+  const cfg = SERVICE_CARDS[slug];
+  if (!cfg) return '';
+  return `
+    <section class="service-detail-section service-cards-section">
+      <div class="container">
+        <div class="section-label">${cfg.label}</div>
+        <h2 class="section-title">${cfg.title}</h2>
+        <p class="section-sub">${cfg.sub}</p>
+        <div class="service-cards-grid">
+          ${cfg.items.map(it => `
+            <article class="svc-tile">
+              <span class="service-card-icon" aria-hidden="true">${AX_SVC_ICONS[it.icon] || ''}</span>
+              <h3>${it.titulo}</h3>
+              <p>${it.texto}</p>
+            </article>`).join('')}
+        </div>
+      </div>
+    </section>`;
 }
 
 const SERVICE_DETAIL_COPY = {
@@ -545,7 +608,7 @@ function renderServiceDetail(slug) {
   const outcome = document.getElementById('service-outcome');
   if (title) title.textContent = service.title;
   if (desc) desc.textContent = service.desc;
-  if (icon) icon.textContent = service.icon;
+  if (icon) icon.innerHTML = svcIcon(service.slug, service.icon);
   if (outcome) outcome.textContent = detail.outcome;
 
   const items = document.getElementById('service-items');
@@ -631,12 +694,13 @@ function renderServiceDetailPage(slug) {
           </div>
         </div>
         <aside class="service-detail-card">
-          <div class="service-icon">${service.icon}</div>
+          <div class="service-icon">${svcIcon(service.slug, service.icon)}</div>
           <h2>Alcance principal</h2>
           <ul>${service.items.map(i => `<li>${i}</li>`).join('')}</ul>
         </aside>
       </div>
     </header>
+    ${renderServiceCardsSection(slug)}
 
     <section class="service-detail-section">
       <div class="container service-detail-grid">

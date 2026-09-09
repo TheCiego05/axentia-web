@@ -51,7 +51,7 @@ function renderPlataformaItem($pl) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($fabricante['name']) ?> – Axentia SRL</title>
   <meta name="description" content="<?= htmlspecialchars($fabricante['descripcion']) ?>">
-  <link rel="stylesheet" href="../../css/style.css?v=20">
+  <link rel="stylesheet" href="../../css/style.css?v=26">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site fabricante-<?= htmlspecialchars($fabricante['slug']) ?>" style="--mp-accent: <?= htmlspecialchars($mpAccent) ?>;">
@@ -198,8 +198,10 @@ function renderPlataformaItem($pl) {
       <h2 class="section-title" style="text-align:center">Premios y certificaciones</h2>
       <div class="manufacturer-awards-grid">
         <?php foreach ($premios as $pr): ?>
-        <div class="manufacturer-award-card">
-          <div class="award-icon" aria-hidden="true"><?php if (xcIconIsImage($pr['icono'] ?? '')): ?><img src="../../<?= htmlspecialchars($pr['icono']) ?>" alt="" loading="lazy"><?php else: ?><?= htmlspecialchars($pr['icono'] ?? '🏆') ?><?php endif; ?></div>
+        <div class="manufacturer-award-card<?= xcIconIsImage($pr['icono'] ?? '') ? '' : ' no-icon' ?>">
+          <?php if (xcIconIsImage($pr['icono'] ?? '')): ?>
+          <div class="award-icon" aria-hidden="true"><img src="../../<?= htmlspecialchars($pr['icono']) ?>" alt="" loading="lazy"></div>
+          <?php endif; ?>
           <h4><?= htmlspecialchars($pr['titulo']) ?></h4>
           <p><?= htmlspecialchars($pr['org']) ?></p>
         </div>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Axentia SRL – Conectando Ideas, Innovando el Futuro</title>
   <meta name="description" content="Soluciones tecnológicas y de ciberseguridad para cualquier tipo de organización en República Dominicana — pequeña, mediana, grande o gobierno.">
-  <link rel="stylesheet" href="css/style.css?v=20">
+  <link rel="stylesheet" href="css/style.css?v=26">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -71,10 +71,10 @@
         </div>
       </div>
 
-      <div class="hero-notif-wrap n1 reveal-on-scroll"><div class="hero-notif">✅ Amenaza bloqueada en tiempo real</div></div>
-      <div class="hero-notif-wrap n2 reveal-on-scroll"><div class="hero-notif">💾 Backup verificado</div></div>
-      <div class="hero-notif-wrap n3 reveal-on-scroll"><div class="hero-notif">🔒 Certificado SSL renovado</div></div>
-      <div class="hero-notif-wrap n4 reveal-on-scroll"><div class="hero-notif">🛠️ Parche crítico aplicado</div></div>
+      <div class="hero-notif-wrap n1 reveal-on-scroll"><div class="hero-notif"><span class="hero-notif-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10.2"/></svg></span> Amenaza bloqueada en tiempo real</div></div>
+      <div class="hero-notif-wrap n2 reveal-on-scroll"><div class="hero-notif"><span class="hero-notif-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="7" ry="2.5"/><path d="M5 5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5"/><path d="M5 11v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6"/></svg></span> Backup verificado</div></div>
+      <div class="hero-notif-wrap n3 reveal-on-scroll"><div class="hero-notif"><span class="hero-notif-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span> Certificado SSL renovado</div></div>
+      <div class="hero-notif-wrap n4 reveal-on-scroll"><div class="hero-notif"><span class="hero-notif-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.5-2.5z"/></svg></span> Parche crítico aplicado</div></div>
     </div>
   </section>
 

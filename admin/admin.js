@@ -155,7 +155,7 @@ function blogAdminRow(b) {
 
 function partnerAdminRow(p) {
   return `<div class="list-item">
-    <div class="list-item-info"><h4>🤝 ${p.name}</h4></div>
+    <div class="list-item-info"><h4>${p.name}</h4></div>
     <div class="list-item-actions">
       <button class="btn-danger" onclick="deleteItem('partners',${p.id})">Eliminar</button>
     </div>
@@ -166,7 +166,7 @@ function faqAdminRow(f) {
   const preview = f.a.length > 80 ? f.a.substring(0,80) + '…' : f.a;
   return `<div class="list-item">
     <div class="list-item-info">
-      <h4>❓ ${f.q}</h4>
+      <h4>${f.q}</h4>
       <p>${preview}</p>
     </div>
     <div class="list-item-actions">
@@ -248,7 +248,7 @@ function openModal(type, id = null) {
     case 'service':
       c.innerHTML = `<h3>${title} Servicio</h3>
         <div class="admin-form-grid">
-          <div class="admin-field"><label>Emoji / Icono</label><input id="m-icon" value="${item ? item.icon : '🔧'}"></div>
+          <div class="admin-field"><label>Icono (opcional, ya no se usa en Ciberseguridad/Servicios rediseñados)</label><input id="m-icon" value="${item ? (item.icon || '') : ''}" placeholder="vacío = usa el ícono de línea por defecto"></div>
           <div class="admin-field"><label>Título</label><input id="m-title" value="${item ? esc(item.title) : ''}"></div>
         </div>
         <div class="admin-field" style="margin-top:12px"><label>Descripción corta</label>
