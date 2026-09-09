@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fabricantes – Axentia SRL</title>
   <meta name="description" content="Fabricantes y socios tecnológicos certificados de Axentia SRL: Microsoft, Fortinet, Kaspersky, Xcitium, Veeam y más.">
-  <link rel="stylesheet" href="../css/style.css?v=29">
+  <link rel="stylesheet" href="../css/style.css?v=30">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -46,7 +46,12 @@
     <div class="container">
       <div class="manufacturer-grid">
         <?php foreach (($DATA['fabricantesInfo'] ?? []) as $f): ?>
-        <a class="manufacturer-card" href="fabricantes/<?= !empty($f['customPage']) ? htmlspecialchars($f['customPage']) : 'ver.php?slug=' . urlencode($f['slug']) ?>">
+        <?php
+          $cp = $f['customPage'] ?? '';
+          $isExternal = $cp !== '' && (strpos($cp, 'http://') === 0 || strpos($cp, 'https://') === 0);
+          $cardHref = $cp !== '' ? ($isExternal ? $cp : 'fabricantes/' . $cp) : 'fabricantes/ver.php?slug=' . urlencode($f['slug']);
+        ?>
+        <a class="manufacturer-card" href="<?= htmlspecialchars($cardHref) ?>"<?= $isExternal ? ' target="_blank" rel="noopener"' : '' ?>>
           <div class="manufacturer-card-logo"><img src="../<?= htmlspecialchars($f['logo']) ?>" alt="<?= htmlspecialchars($f['name']) ?>" loading="lazy"></div>
           <span><?= htmlspecialchars($f['categoria'] ?? '') ?></span>
           <h3><?= htmlspecialchars($f['name']) ?></h3>
