@@ -662,6 +662,32 @@ function renderFabricanteMiniCard(slug) {
     </a>`;
 }
 
+const CIBER_PARTICLE_ICONS = [
+  AX_SVC_ICONS.edr,
+  AX_SVC_ICONS.pentest,
+  AX_SVC_ICONS.soc,
+  AX_SVC_ICONS.hardening,
+  AX_SVC_ICONS.incident,
+  AX_SVC_ICONS.identity,
+  AX_SVC_ICONS.ad,
+  AX_SVC_ICONS.assessment
+];
+
+function renderCiberParticles() {
+  const positions = [
+    { top: '8%', left: '4%' }, { top: '18%', left: '92%' }, { top: '68%', left: '2%' },
+    { top: '80%', left: '88%' }, { top: '40%', left: '96%' }, { top: '55%', left: '8%' },
+    { top: '4%', left: '48%' }, { top: '90%', left: '52%' }
+  ];
+  const items = CIBER_PARTICLE_ICONS.map((icon, i) => {
+    const pos = positions[i % positions.length];
+    const delay = (i * 0.6).toFixed(1);
+    const duration = (7 + (i % 4)).toFixed(1);
+    return `<span class="ciber-particle" style="top:${pos.top};left:${pos.left};animation-delay:-${delay}s;animation-duration:${duration}s;">${icon}</span>`;
+  }).join('');
+  return `<div class="ciber-particles" aria-hidden="true">${items}</div>`;
+}
+
 function renderServiceDetailPage(slug) {
   const service = DATA.services.find(s => s.slug === slug);
   const detail = SERVICE_DETAIL_COPY[slug];
@@ -681,8 +707,10 @@ function renderServiceDetailPage(slug) {
     </section>` : '';
 
   document.title = `${service.title} - Axentia SRL`;
+  const ciberParticles = slug === 'ciberseguridad' ? renderCiberParticles() : '';
   shell.innerHTML = `
-    <header class="service-detail-hero">
+    <header class="service-detail-hero${slug === 'ciberseguridad' ? ' has-ciber-particles' : ''}">
+      ${ciberParticles}
       <div class="container service-detail-hero-grid">
         <div>
           <div class="breadcrumb"><a href="../../index.php">Inicio</a> / <a href="../servicios.php">Servicios</a> / ${service.title}</div>
