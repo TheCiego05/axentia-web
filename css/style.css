@@ -404,7 +404,7 @@ section, .section-block { padding:100px 60px; }
 
 /* ══════════════════ CONTACT ══════════════════ */
 .contact-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:80px; align-items:start; }
-.contact-info h2 { font-family:'Rajdhani',sans-serif; font-size:2.5rem; font-weight:700; margin-bottom:20px; }
+.contact-info h2 { font-family:'Rajdhani',sans-serif; font-size:var(--fs-h2, 2.5rem); font-weight:700; margin-bottom:20px; }
 .contact-info > p { color:var(--white-70); line-height:1.7; margin-bottom:36px; }
 .contact-items { display:flex; flex-direction:column; gap:20px; }
 .contact-item { display:flex; align-items:flex-start; gap:14px; }
@@ -567,6 +567,18 @@ section, .section-block { padding:100px 60px; }
   --white-04: rgba(31, 73, 125, 0.04);
   --border: rgba(31, 73, 125, 0.16);
   --card-bg: #FFFFFF;
+
+  /* Alert/urgency accent — reserved exclusively for live threat/urgency states, never for decoration or generic CTAs */
+  --alert: #B3392C;
+  --alert-bg: #FBEAE7;
+  --alert-line: rgba(179, 57, 44, 0.28);
+
+  /* Type scale — reference these instead of inventing new font-size values per page */
+  --fs-h1: clamp(2.6rem, 5.2vw, 4.2rem);
+  --fs-h2: clamp(2rem, 4vw, 3.2rem);
+  --fs-h3: 1.3rem;
+  --fs-body: 1.05rem;
+  --fs-small: 0.85rem;
 }
 
 html,
@@ -3511,4 +3523,28 @@ html.dark-mode .contact-modern-section .form-group select {
 html.dark-mode .contact-modern-section .form-group input::placeholder,
 html.dark-mode .contact-modern-section .form-group textarea::placeholder {
   color: rgba(255,255,255,0.4) !important;
+}
+
+/* Live/urgency status badge — reserved alert color, used only for live threat/monitoring states */
+.live-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--alert-bg); color: var(--alert);
+  border: 1px solid var(--alert-line);
+  padding: 6px 14px; border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+  letter-spacing: 0.6px; text-transform: uppercase; font-weight: 700;
+  margin-bottom: 16px;
+}
+.live-badge .dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--alert);
+  box-shadow: 0 0 0 0 rgba(179, 57, 44, 0.5);
+  animation: live-badge-pulse 1.8s infinite;
+}
+@keyframes live-badge-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(179, 57, 44, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(179, 57, 44, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(179, 57, 44, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .live-badge .dot { animation: none; }
 }

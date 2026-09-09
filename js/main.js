@@ -533,6 +533,7 @@ function renderServiceCardsSection(slug) {
   return `
     <section class="service-detail-section service-cards-section">
       <div class="container">
+        ${slug === 'ciberseguridad' ? '<div class="live-badge"><span class="dot" aria-hidden="true"></span>Monitoreo de amenazas activo 24/7</div>' : ''}
         <div class="section-label">${cfg.label}</div>
         <h2 class="section-title">${cfg.title}</h2>
         <p class="section-sub">${cfg.sub}</p>
