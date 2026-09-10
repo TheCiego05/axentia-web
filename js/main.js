@@ -470,6 +470,12 @@ function assetUrl(path) {
   return sitePrefix() + path;
 }
 
+function resolveMediaUrl(url) {
+  if (!url) return '';
+  if (/^(data:|https?:\/\/)/i.test(url)) return url;
+  return assetUrl(url);
+}
+
 
 function renderServiceCard(s) {
   const items = s.items.map(i => `<li>${i}</li>`).join('');
@@ -798,9 +804,9 @@ function renderBlogCard(b) {
   const type = b.type || 'noticia';
   const label = { noticia: 'Noticia', articulo: 'Artículo', video: 'Video', webinar: 'Webinar' }[type] || 'Noticia';
   const action = type === 'video' ? 'Ver video' : type === 'webinar' ? 'Ver webinar' : 'Leer artículo';
-  const hasImage = b.mediaUrl && /^(data:image\/|https?:\/\/.*\.(png|jpe?g|webp|gif)(\?.*)?$)/i.test(b.mediaUrl);
+  const hasImage = !!b.mediaUrl && (/^data:image\//i.test(b.mediaUrl) || /\.(png|jpe?g|webp|gif)(\?.*)?$/i.test(b.mediaUrl));
   const mediaPreview = hasImage
-    ? `<img class="blog-cover-img" src="${b.mediaUrl}" alt="${b.title}" loading="lazy">`
+    ? `<img class="blog-cover-img" src="${resolveMediaUrl(b.mediaUrl)}" alt="${b.title}" loading="lazy">`
     : `<span class="blog-media-mark" aria-hidden="true"></span>`;
   return `
     <article class="blog-card blog-type-${type}" data-type="${type}" onclick="openBlogArticle(${b.id})" tabindex="0" onkeydown="if(event.key==='Enter')openBlogArticle(${b.id})">
@@ -880,7 +886,7 @@ function closeBlogArticle() {
 }
 
 function embedMedia(url, title) {
-  const clean = String(url || '').trim();
+  const clean = resolveMediaUrl(String(url || '').trim());
   if (!clean) return '';
   const youtube = clean.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]+)/);
   if (youtube) {

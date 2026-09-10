@@ -233,7 +233,7 @@ $adminLoggedIn = !empty($_SESSION['admin_logged_in']);
 
 <?php render_data_script($DATA, $NEXT_ID); ?>
 <script>const ADMIN_LOGGED_IN = <?= $adminLoggedIn ? 'true' : 'false' ?>;</script>
-<script src="../js/main.js?v=12"></script>
+<script src="../js/main.js?v=13"></script>
 <script src="admin.js"></script>
 </body>
 </html>

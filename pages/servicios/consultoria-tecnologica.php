@@ -20,7 +20,7 @@
   <?php $base = '../../'; $navVariant = 'simple'; include __DIR__ . '/../../includes/nav.php'; ?>
 <main id="service-detail-shell" data-service-slug="consultoria-tecnologica"></main>
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="../../js/main.js?v=12"></script>
+  <script src="../../js/main.js?v=13"></script>
   <script>renderServiceDetailPage('consultoria-tecnologica'); renderFooter();</script>
 </body>
 </html>

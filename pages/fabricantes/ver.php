@@ -256,7 +256,7 @@ function renderPlataformaItem($pl) {
   </div>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="../../js/main.js?v=12"></script>
+  <script src="../../js/main.js?v=13"></script>
   <script>
     <?php if ($tieneRecursos): ?>
     document.getElementById('fabricante-recursos').innerHTML = renderFabricanteRecursosHtml('<?= htmlspecialchars($fabricante['slug'], ENT_QUOTES) ?>');

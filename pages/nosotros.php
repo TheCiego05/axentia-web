@@ -74,7 +74,7 @@
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="../js/main.js?v=12"></script>
+  <script src="../js/main.js?v=13"></script>
   <script>
     document.getElementById('about-desc').textContent    = DATA.nosotros.descripcion;
     document.getElementById('mision-text').textContent   = DATA.nosotros.mision;
