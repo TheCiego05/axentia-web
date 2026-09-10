@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="service-detail-page interactive-site">
-  <?php $base = '../../'; $navVariant = 'simple'; include __DIR__ . '/../../includes/nav.php'; ?>
+  <?php $base = '/'; $navVariant = 'simple'; include __DIR__ . '/../../includes/nav.php'; ?>
 <main id="service-detail-shell" data-service-slug="redes-cableado"></main>
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
   <script src="/js/main.js?v=14"></script>

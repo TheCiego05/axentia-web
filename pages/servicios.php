@@ -10,13 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site services-interactive-page">
-  <?php $base = '../'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
+  <?php $base = '/'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
 <div class="page-header">
     <div class="motion-network" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span>
     </div>
     <div class="container">
-      <div class="breadcrumb"><a href="../index.php">Inicio</a> / Servicios</div>
+      <div class="breadcrumb"><a href="/index.php">Inicio</a> / Servicios</div>
       <div class="section-label">Lo que ofrecemos</div>
       <h1>Nuestros Servicios</h1>
       <p>Soluciones tecnológicas completas para proteger, modernizar y operar mejor tu organización. Cada servicio cuenta con una página de detalle para profundizar alcance, proceso y entregables.</p>
@@ -53,7 +53,7 @@
       <div class="section-label">Soluciones por marca</div>
       <h2 class="section-title">Explora por fabricante</h2>
       <p class="section-sub">Encuentra información de cada fabricante, sus soluciones principales y cómo Axentia puede ayudarte a implementarlas, integrarlas y soportarlas.</p>
-      <a href="fabricantes.php" class="btn-primary">Ver fabricantes</a>
+      <a href="/pages/fabricantes.php" class="btn-primary">Ver fabricantes</a>
     </div>
   </section>
 
@@ -61,7 +61,7 @@
     <div class="container" style="text-align:center">
       <h2 class="section-title">¿Necesitas una solución personalizada?</h2>
       <p class="section-sub" style="margin:0 auto 36px">Nuestro equipo analiza tus necesidades y diseña la solución tecnológica ideal para tu empresa.</p>
-      <a href="contacto.php" class="btn-primary">Solicitar Consultoría</a>
+      <a href="/pages/contacto.php" class="btn-primary">Solicitar Consultoría</a>
     </div>
   </section>
 

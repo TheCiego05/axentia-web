@@ -35,7 +35,7 @@ $ANALYTICS = $adminLoggedIn ? get_analytics() : ['totalViews'=>0,'pages'=>[],'ar
     </div>
     <div style="display:flex;gap:12px;margin-top:24px">
       <button class="btn-save" style="flex:1" onclick="doLogin()">Ingresar</button>
-      <a href="../index.php" class="btn-cancel" style="flex:1;text-align:center">Volver al sitio</a>
+      <a href="/index.php" class="btn-cancel" style="flex:1;text-align:center">Volver al sitio</a>
     </div>
   </div>
 </div>
@@ -64,7 +64,7 @@ $ANALYTICS = $adminLoggedIn ? get_analytics() : ['totalViews'=>0,'pages'=>[],'ar
       <li><a href="#" onclick="showPanel('panel-recursos',this)"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span> Recursos</a></li>
     </ul>
     <div style="margin-top:auto;padding:0 20px 24px">
-      <a href="../index.php" class="btn-outline" style="width:100%;justify-content:center;font-size:.78rem;padding:10px">
+      <a href="/index.php" class="btn-outline" style="width:100%;justify-content:center;font-size:.78rem;padding:10px">
         ← Ver sitio web
       </a>
       <button class="btn-danger" style="width:100%;margin-top:10px;justify-content:center" onclick="logout()">

@@ -13,7 +13,7 @@
 <body class="interactive-site">
 
   <!-- NAVBAR -->
-  <?php $base = ''; include __DIR__ . '/includes/nav.php'; ?>
+  <?php $base = '/'; include __DIR__ . '/includes/nav.php'; ?>
 
   <!-- HERO -->
   <section id="hero">
@@ -30,8 +30,8 @@
         <?= htmlspecialchars($DATA['hero']['desc']) ?>
       </p>
       <div class="hero-btns hero-btns-v3">
-        <a href="pages/servicios.php" class="btn-primary">Nuestros Servicios</a>
-        <a href="pages/contacto.php" class="btn-outline">Contáctanos</a>
+        <a href="/pages/servicios.php" class="btn-primary">Nuestros Servicios</a>
+        <a href="/pages/contacto.php" class="btn-outline">Contáctanos</a>
       </div>
     </div>
 
@@ -89,7 +89,7 @@
         <!-- Rendered by JS from server-side DATA -->
       </div>
       <div style="text-align:center;margin-top:40px">
-        <a href="pages/servicios.php" class="btn-primary">Ver todos los servicios</a>
+        <a href="/pages/servicios.php" class="btn-primary">Ver todos los servicios</a>
       </div>
     </div>
   </section>
@@ -104,7 +104,7 @@
           Integramos soluciones de ciberseguridad, nube, infraestructura, redes, continuidad y gestión empresarial con fabricantes líderes.
         </p>
         <div style="text-align:center">
-          <a href="pages/fabricantes.php" class="btn-primary">Ver fabricantes</a>
+          <a href="/pages/fabricantes.php" class="btn-primary">Ver fabricantes</a>
         </div>
       </div>
       <div class="stats-row">
@@ -194,8 +194,8 @@
       <h2 class="section-title">¿Listo para transformar tu empresa?</h2>
       <p class="section-sub" style="margin:0 auto 36px">Contáctanos y un especialista de Axentia te brindará la solución que necesitas.</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-        <a href="pages/contacto.php" class="btn-primary">Solicitar asesoría</a>
-        <a href="pages/servicios.php" class="btn-outline">Explorar servicios</a>
+        <a href="/pages/contacto.php" class="btn-primary">Solicitar asesoría</a>
+        <a href="/pages/servicios.php" class="btn-outline">Explorar servicios</a>
       </div>
     </div>
   </section>

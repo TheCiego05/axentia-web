@@ -64,19 +64,19 @@ function renderPlataformaItem($pl) {
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site fabricante-<?= htmlspecialchars($fabricante['slug']) ?>" style="--mp-accent: <?= htmlspecialchars($mpAccent) ?>;">
-  <?php $base = '../../'; $navVariant = 'full'; include __DIR__ . '/../../includes/nav.php'; ?>
+  <?php $base = '/'; $navVariant = 'full'; include __DIR__ . '/../../includes/nav.php'; ?>
 <header class="mp-hero">
     <canvas id="ax-particles-text" aria-hidden="true"></canvas>
     <div class="container mp-hero-grid">
       <div class="mp-copy">
-        <div class="breadcrumb"><a href="../../index.php">Inicio</a> / <a href="../fabricantes.php">Fabricantes</a> / <?= htmlspecialchars($fabricante['name']) ?></div>
+        <div class="breadcrumb"><a href="/index.php">Inicio</a> / <a href="/pages/fabricantes.php">Fabricantes</a> / <?= htmlspecialchars($fabricante['name']) ?></div>
         <div class="mp-eyebrow"><?= htmlspecialchars($fabricante['etiquetaRelacion'] ?? 'Distribuidor autorizado') ?> <?= htmlspecialchars($fabricante['name']) ?></div>
         <img src="../../<?= htmlspecialchars($fabricante['logo']) ?>" alt="<?= htmlspecialchars($fabricante['name']) ?>" class="mp-logo">
         <h1><?= htmlspecialchars($fabricante['name']) ?></h1>
         <p><?= htmlspecialchars($fabricante['descripcion']) ?></p>
         <div class="manufacturer-actions">
           <a href="../contacto.php" class="btn-primary mp-primary">Solicitar asesoría</a>
-          <a href="../fabricantes.php" class="btn-outline mp-outline">Ver fabricantes</a>
+          <a href="/pages/fabricantes.php" class="btn-outline mp-outline">Ver fabricantes</a>
           <?php if (!empty($fabricante['sitioOficial'])): ?>
           <a href="<?= htmlspecialchars($fabricante['sitioOficial']) ?>" class="btn-outline mp-outline" target="_blank" rel="noopener noreferrer">Sitio oficial de <?= htmlspecialchars($fabricante['name']) ?> ↗</a>
           <?php endif; ?>

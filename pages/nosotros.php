@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
-  <?php $base = '../'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
+  <?php $base = '/'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
 <div class="page-header">
     <div class="container">
-      <div class="breadcrumb"><a href="../index.php">Inicio</a> / Nosotros</div>
+      <div class="breadcrumb"><a href="/index.php">Inicio</a> / Nosotros</div>
       <div class="section-label">Quiénes Somos</div>
       <h1>Sobre Axentia SRL</h1>
       <p>Un aliado tecnológico para organizaciones que buscan seguridad, continuidad operativa y crecimiento digital sostenible.</p>

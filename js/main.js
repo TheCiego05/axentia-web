@@ -38,11 +38,13 @@ function toggleFaq(el) {
 }
 
 function sitePrefix() {
-  const path = window.location.pathname;
-  if (path.includes('/pages/fabricantes/')) return '../../';
-  if (path.includes('/pages/servicios/')) return '../../';
-  if (path.includes('/pages/') || path.includes('/admin/')) return '../';
-  return '';
+  // Siempre absoluto ("/"): antes calculaba "../", "../../" etc. según la
+  // profundidad de window.location.pathname, pero eso se rompe con
+  // cualquier variante de URL que no sea exactamente la esperada (ej. una
+  // barra final en /index.php/, que Google llegó a indexar) porque las
+  // rutas relativas se resuelven distinto. Con "/" siempre apunta a la raíz
+  // real del sitio sin importar la URL desde la que se cargó la página.
+  return '/';
 }
 
 function brandLogoUrl() {
@@ -809,7 +811,7 @@ function renderBlogCard(b) {
     ? `<img class="blog-cover-img" src="${resolveMediaUrl(b.mediaUrl)}" alt="${b.title}" loading="lazy">`
     : `<span class="blog-media-mark" aria-hidden="true"></span>`;
   return `
-    <a class="blog-card blog-type-${type}" data-type="${type}" href="blog-articulo.php?id=${b.id}">
+    <a class="blog-card blog-type-${type}" data-type="${type}" href="/pages/blog-articulo.php?id=${b.id}">
       <div class="blog-img">
         <span class="blog-type-badge">${label}</span>
         ${mediaPreview}

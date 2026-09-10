@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
-  <?php $base = '../'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
+  <?php $base = '/'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
 <div class="page-header">
     <div class="container">
-      <div class="breadcrumb"><a href="../index.php">Inicio</a> / Fabricantes</div>
+      <div class="breadcrumb"><a href="/index.php">Inicio</a> / Fabricantes</div>
       <div class="section-label">Soluciones por fabricante</div>
       <h1>Fabricantes y socios tecnológicos</h1>
       <p>Explora las soluciones que Axentia puede implementar, integrar y soportar para tu organización.</p>
@@ -29,8 +29,8 @@
           <h2>Zero Trust Endpoint Security</h2>
           <p>Axentia integra Xcitium para proteger endpoints, nube y operaciones críticas con tecnología ZeroDwell, contención de amenazas desconocidas y capacidades EDR, MDR y XDR.</p>
           <div class="manufacturer-actions">
-            <a href="fabricantes/xcitium.php" class="btn-primary">Ver Xcitium</a>
-            <a href="contacto.php" class="btn-outline light-outline">Cotizar solución</a>
+            <a href="/pages/fabricantes/xcitium.php" class="btn-primary">Ver Xcitium</a>
+            <a href="/pages/contacto.php" class="btn-outline light-outline">Cotizar solución</a>
           </div>
         </div>
         <div class="manufacturer-feature-metrics">

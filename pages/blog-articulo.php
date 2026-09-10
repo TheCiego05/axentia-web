@@ -41,11 +41,11 @@ $otros = array_slice($otros, 0, 3);
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
-  <?php $base = '../'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
+  <?php $base = '/'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
 
   <div class="page-header">
     <div class="container">
-      <div class="breadcrumb"><a href="../index.php">Inicio</a> / <a href="blog.php">Blog</a> / <?= htmlspecialchars($article['title']) ?></div>
+      <div class="breadcrumb"><a href="/index.php">Inicio</a> / <a href="/pages/blog.php">Blog</a> / <?= htmlspecialchars($article['title']) ?></div>
     </div>
   </div>
 
@@ -73,7 +73,7 @@ $otros = array_slice($otros, 0, 3);
         </div>
 
         <div class="blog-article-back">
-          <a href="blog.php" class="btn-secondary">← Volver al blog</a>
+          <a href="/pages/blog.php" class="btn-secondary">← Volver al blog</a>
         </div>
       </article>
 
@@ -86,7 +86,7 @@ $otros = array_slice($otros, 0, 3);
                 $oHasImage = !empty($o['mediaUrl']) && (preg_match('/^data:image\//i', $o['mediaUrl']) || preg_match('/\.(png|jpe?g|webp|gif)(\?.*)?$/i', $o['mediaUrl']));
                 $oCover = $oHasImage ? (preg_match('/^(data:|https?:\/\/)/i', $o['mediaUrl']) ? $o['mediaUrl'] : '../' . $o['mediaUrl']) : '';
               ?>
-              <a class="blog-card blog-type-<?= htmlspecialchars($o['type'] ?? 'noticia') ?>" href="blog-articulo.php?id=<?= (int) $o['id'] ?>">
+              <a class="blog-card blog-type-<?= htmlspecialchars($o['type'] ?? 'noticia') ?>" href="/pages/blog-articulo.php?id=<?= (int) $o['id'] ?>">
                 <div class="blog-img">
                   <span class="blog-type-badge"><?= htmlspecialchars($typeLabels[$o['type'] ?? 'noticia'] ?? 'Noticia') ?></span>
                   <?php if ($oCover): ?>

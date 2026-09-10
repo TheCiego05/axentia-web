@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
-  <?php $base = '../'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
+  <?php $base = '/'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
 <div class="page-header">
     <div class="container">
-      <div class="breadcrumb"><a href="../index.php">Inicio</a> / Soporte</div>
+      <div class="breadcrumb"><a href="/index.php">Inicio</a> / Soporte</div>
       <div class="section-label">Servicios Continuos</div>
       <h1>Soporte Gestionado</h1>
       <p>Planes de soporte IT gestionado diseñados para empresas dominicanas. Monitoreo, respuesta y visitas presenciales incluidas según tu nivel.</p>
@@ -33,7 +33,7 @@
             <li>Monitoreo operativo</li>
             <li>Soporte preventivo</li>
           </ul>
-          <a href="contacto.php" class="btn-outline" style="justify-content:center">Solicitar Cotización</a>
+          <a href="/pages/contacto.php" class="btn-outline" style="justify-content:center">Solicitar Cotización</a>
         </div>
         <div class="support-card popular">
           <h3>Business Plus</h3>
@@ -45,7 +45,7 @@
             <li>Seguimiento preventivo</li>
             <li>Acompañamiento onsite</li>
           </ul>
-          <a href="contacto.php" class="btn-primary" style="justify-content:center">Solicitar Cotización</a>
+          <a href="/pages/contacto.php" class="btn-primary" style="justify-content:center">Solicitar Cotización</a>
         </div>
         <div class="support-card">
           <h3>Corporate Managed</h3>
@@ -57,7 +57,7 @@
             <li>Coordinación técnica</li>
             <li>Reportes ejecutivos</li>
           </ul>
-          <a href="contacto.php" class="btn-outline" style="justify-content:center">Solicitar Cotización</a>
+          <a href="/pages/contacto.php" class="btn-outline" style="justify-content:center">Solicitar Cotización</a>
         </div>
         <div class="support-card">
           <h3>Enterprise</h3>
@@ -69,7 +69,7 @@
             <li>Acuerdo de nivel de servicio</li>
             <li>Gestor de cuenta asignado</li>
           </ul>
-          <a href="contacto.php" class="btn-outline" style="justify-content:center">Solicitar Cotización</a>
+          <a href="/pages/contacto.php" class="btn-outline" style="justify-content:center">Solicitar Cotización</a>
         </div>
       </div>
 
@@ -97,7 +97,7 @@
     <div class="container" style="text-align:center">
       <h2 class="section-title">¿Por qué Axentia SRL como su aliado operativo?</h2>
       <p class="section-sub" style="margin:0 auto 36px">Más de 4 años de experiencia, presencia en Santo Domingo y Santiago, y alianzas con las principales marcas tecnológicas del mundo.</p>
-      <a href="contacto.php" class="btn-primary">Solicitar Cotización</a>
+      <a href="/pages/contacto.php" class="btn-primary">Solicitar Cotización</a>
     </div>
   </section>
 

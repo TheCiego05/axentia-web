@@ -1212,35 +1212,35 @@ nav .nav-cta {
 
 <!-- NAV -->
 <nav>
-  <a href="../index.php" class="logo">A<span>X</span>ENTIA</a>
+  <a href="/index.php" class="logo">A<span>X</span>ENTIA</a>
   <ul class="nav-links">
-    <li><a href="xcitium.php" class="active">Xcitium</a></li>
-    <li><a href="nosotros.php">Nosotros</a></li>
+    <li><a href="/pages/xcitium.php" class="active">Xcitium</a></li>
+    <li><a href="/pages/nosotros.php">Nosotros</a></li>
     <li class="nav-item-dropdown">
-      <a href="servicios.php">Servicios</a>
+      <a href="/pages/servicios.php">Servicios</a>
       <div class="mega-menu">
         <div class="mega-col">
           <span class="mega-label">Servicios</span>
-          <a href="servicios.php">Todos los servicios</a>
-          <a href="soporte.php">Soporte gestionado</a>
-          <a href="servicios.php#ciberseguridad">Ciberseguridad</a>
-          <a href="servicios.php#infraestructura">Infraestructura IT</a>
-          <a href="servicios.php#nube">Nube y continuidad</a>
+          <a href="/pages/servicios.php">Todos los servicios</a>
+          <a href="/pages/soporte.php">Soporte gestionado</a>
+          <a href="/pages/servicios.php#ciberseguridad">Ciberseguridad</a>
+          <a href="/pages/servicios.php#infraestructura">Infraestructura IT</a>
+          <a href="/pages/servicios.php#nube">Nube y continuidad</a>
         </div>
         <div class="mega-col">
           <span class="mega-label">Fabricantes</span>
-          <a href="fabricantes.php">Ver todos</a>
-          <a href="fabricantes/microsoft.php">Microsoft</a>
-          <a href="fabricantes/fortinet.php">Fortinet</a>
-          <a href="fabricantes/xcitium.php">Xcitium</a>
-          <a href="fabricantes/veeam.php">Veeam</a>
+          <a href="/pages/fabricantes.php">Ver todos</a>
+          <a href="/pages/fabricantes/microsoft.php">Microsoft</a>
+          <a href="/pages/fabricantes/fortinet.php">Fortinet</a>
+          <a href="/pages/fabricantes/xcitium.php">Xcitium</a>
+          <a href="/pages/fabricantes/veeam.php">Veeam</a>
         </div>
       </div>
     </li>
-    <li><a href="soporte.php">Soporte</a></li>
-    <li><a href="socios.php">Socios</a></li>
-    <li><a href="blog.php">Blog</a></li>
-    <li><a href="contacto.php" class="nav-cta">Contáctanos</a></li>
+    <li><a href="/pages/soporte.php">Soporte</a></li>
+    <li><a href="/pages/socios.php">Socios</a></li>
+    <li><a href="/pages/blog.php">Blog</a></li>
+    <li><a href="/pages/contacto.php" class="nav-cta">Contáctanos</a></li>
   </ul>
 </nav>
 
@@ -1263,8 +1263,8 @@ nav .nav-cta {
       <span class="hi">Axentia es tu distribuidor autorizado en República Dominicana.</span>
     </p>
     <div class="hero-btns">
-      <a href="contacto.php" class="btn-p">🛡️ Solicitar Demo</a>
-      <a href="contacto.php" class="btn-o">Cotizar Licencias</a>
+      <a href="/pages/contacto.php" class="btn-p">🛡️ Solicitar Demo</a>
+      <a href="/pages/contacto.php" class="btn-o">Cotizar Licencias</a>
     </div>
   </div>
   <div class="hero-visual">
@@ -1405,7 +1405,7 @@ nav .nav-cta {
           <li><span class="chk">✓</span>Control de Aplicaciones</li>
           <li><span class="chk">✓</span>Visibilidad completa del endpoint</li>
         </ul>
-        <a href="contacto.php" class="btn-o" style="justify-content:center">Solicitar Cotización</a>
+        <a href="/pages/contacto.php" class="btn-o" style="justify-content:center">Solicitar Cotización</a>
       </div>
       <div class="plan feat">
         <div class="plan-badge">⭐ Más Popular</div>
@@ -1420,7 +1420,7 @@ nav .nav-cta {
           <li><span class="chk">✓</span>SLAs de respuesta garantizados</li>
           <li><span class="chk">✓</span>Servicios para MSPs y MSSPs</li>
         </ul>
-        <a href="contacto.php" class="btn-p" style="justify-content:center">Solicitar Cotización</a>
+        <a href="/pages/contacto.php" class="btn-p" style="justify-content:center">Solicitar Cotización</a>
       </div>
       <div class="plan">
         <div class="plan-tier">XDR</div>
@@ -1434,7 +1434,7 @@ nav .nav-cta {
           <li><span class="chk">✓</span>Zero Trust de endpoint a nube</li>
           <li><span class="chk">✓</span>Panel único de visibilidad</li>
         </ul>
-        <a href="contacto.php" class="btn-o" style="justify-content:center">Solicitar Cotización</a>
+        <a href="/pages/contacto.php" class="btn-o" style="justify-content:center">Solicitar Cotización</a>
       </div>
     </div>
   </div>
@@ -1505,8 +1505,8 @@ nav .nav-cta {
   <h2>¿Listo para eliminar el ransomware?</h2>
   <p>Axentia te ofrece licencias, implementación y soporte de Xcitium en República Dominicana. Agenda una demo sin costo.</p>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative">
-    <a href="contacto.php" class="btn-p">🛡️ Solicitar Demo Gratuita</a>
-    <a href="contacto.php" class="btn-o">Cotizar Licencias</a>
+    <a href="/pages/contacto.php" class="btn-p">🛡️ Solicitar Demo Gratuita</a>
+    <a href="/pages/contacto.php" class="btn-o">Cotizar Licencias</a>
   </div>
 </div>
 
@@ -1514,12 +1514,12 @@ nav .nav-cta {
 <footer>
   <div class="ft">
     <div class="ft-brand">
-      <a href="../index.php" class="logo">A<span>X</span>ENTIA</a>
+      <a href="/index.php" class="logo">A<span>X</span>ENTIA</a>
       <p>Conectando Ideas, Innovando el Futuro.<br>© 2025 Axentia SRL. Todos los derechos reservados.</p>
     </div>
-    <div class="ft-col"><h5>Empresa</h5><ul><li><a href="nosotros.php">Nosotros</a></li><li><a href="socios.php">Socios</a></li><li><a href="blog.php">Blog</a></li><li><a href="contacto.php">Contacto</a></li></ul></div>
-    <div class="ft-col"><h5>Servicios</h5><ul><li><a href="servicios.php">Ciberseguridad</a></li><li><a href="servicios.php">Infraestructura IT</a></li><li><a href="servicios.php">Gestión de Nube</a></li><li><a href="soporte.php">Soporte Gestionado</a></li></ul></div>
-    <div class="ft-col"><h5>Contacto</h5><ul><li><a href="contacto.php">contacto@axentia.com.do</a></li><li><a href="contacto.php">+1 (829) 407-5537</a></li><li><a href="contacto.php">+1 (809) 432-4778</a></li><li><a href="contacto.php">Santo Domingo & Santiago</a></li></ul></div>
+    <div class="ft-col"><h5>Empresa</h5><ul><li><a href="/pages/nosotros.php">Nosotros</a></li><li><a href="/pages/socios.php">Socios</a></li><li><a href="/pages/blog.php">Blog</a></li><li><a href="/pages/contacto.php">Contacto</a></li></ul></div>
+    <div class="ft-col"><h5>Servicios</h5><ul><li><a href="/pages/servicios.php">Ciberseguridad</a></li><li><a href="/pages/servicios.php">Infraestructura IT</a></li><li><a href="/pages/servicios.php">Gestión de Nube</a></li><li><a href="/pages/soporte.php">Soporte Gestionado</a></li></ul></div>
+    <div class="ft-col"><h5>Contacto</h5><ul><li><a href="/pages/contacto.php">contacto@axentia.com.do</a></li><li><a href="/pages/contacto.php">+1 (829) 407-5537</a></li><li><a href="/pages/contacto.php">+1 (809) 432-4778</a></li><li><a href="/pages/contacto.php">Santo Domingo & Santiago</a></li></ul></div>
   </div>
   <div class="ft-bot"><p>© 2025 Axentia SRL · República Dominicana</p><p>Distribuidor Autorizado Xcitium</p></div>
 </footer>

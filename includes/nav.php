@@ -3,7 +3,7 @@
 // Variables esperadas antes del include:
 //   $base        string  prefijo relativo a la raíz del sitio ('', '../', '../../')
 //   $navVariant  string  'full' (con mega-menú, por defecto) o 'simple' (lista plana, usado en pages/servicios/*)
-if (!isset($base)) $base = '';
+if (!isset($base)) $base = '/';
 if (!isset($navVariant)) $navVariant = 'full';
 $logo = $navVariant === 'simple' ? 'AXENTIA' : 'A<span>X</span>ENTIA';
 ?>

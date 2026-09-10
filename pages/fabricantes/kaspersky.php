@@ -10,11 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="kaspersky-page kaspersky-readable interactive-site">
-  <?php $base = '../../'; $navVariant = 'full'; include __DIR__ . '/../../includes/nav.php'; ?>
+  <?php $base = '/'; $navVariant = 'full'; include __DIR__ . '/../../includes/nav.php'; ?>
 <header class="kaspersky-hero kaspersky-readable-hero">
     <div class="container kaspersky-hero-grid">
       <div class="kaspersky-copy">
-        <div class="breadcrumb"><a href="../../index.php">Inicio</a> / <a href="../fabricantes.php">Fabricantes</a> / Kaspersky</div>
+        <div class="breadcrumb"><a href="/index.php">Inicio</a> / <a href="/pages/fabricantes.php">Fabricantes</a> / Kaspersky</div>
         <div class="kaspersky-eyebrow">Partner Kaspersky Nivel Gold</div>
         <img src="../../assets/logos/partners/kaspersky.png" alt="Kaspersky" class="kaspersky-logo">
         <h1>Kaspersky Next: seguridad a la medida de cada empresa</h1>
