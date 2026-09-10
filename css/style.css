@@ -1912,19 +1912,131 @@ body {
   box-shadow: 0 14px 34px rgba(31, 73, 125, 0.07);
 }
 .manufacturer-award-card .award-icon { font-size: 1.8rem; margin-bottom: 10px; }
-.manufacturer-platform-grid article span.icon-img {
-  background: none;
-  box-shadow: none;
-  width: 84px;
-  height: 84px;
-  border-radius: 16px;
+.manufacturer-platform-grid article:has(span.icon-img) {
+  padding: 0 0 20px;
   overflow: hidden;
+}
+.manufacturer-platform-grid article span.icon-img {
+  background: #F5F8FC;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 190px;
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 16px;
 }
 .manufacturer-platform-grid article span.icon-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 18px;
+  border-radius: 0;
+}
+.manufacturer-platform-grid article:has(span.icon-img) h3,
+.manufacturer-platform-grid article:has(span.icon-img) p {
+  margin-left: 22px;
+  margin-right: 22px;
+}
+.manufacturer-platform-grid article.mp-has-specs,
+.mp-tier-card.mp-has-specs {
+  cursor: pointer;
+}
+.manufacturer-platform-grid article.mp-has-specs:focus-visible,
+.mp-tier-card.mp-has-specs:focus-visible {
+  outline: 2px solid #4F81BD;
+  outline-offset: 2px;
+}
+.manufacturer-platform-grid article.mp-has-specs::after {
+  content: 'Ver especificaciones →';
+  display: block;
+  margin: 10px 22px 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #4F81BD;
+}
+
+/* ===== Modal de especificaciones de producto ===== */
+.ps-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.ps-modal.is-open { display: flex; }
+.ps-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.6);
+  backdrop-filter: blur(2px);
+}
+.ps-modal-panel {
+  position: relative;
+  background: #FFFFFF;
   border-radius: 16px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 86vh;
+  overflow-y: auto;
+  box-shadow: 0 30px 70px rgba(10, 20, 40, 0.35);
+  animation: ps-modal-in 0.2s ease;
+}
+@keyframes ps-modal-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.ps-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #F0F4FA;
+  color: #182334;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+.ps-modal-close:hover { background: #E1E9F5; }
+.ps-modal-media {
+  width: 100%;
+  height: 260px;
+  background: #F5F8FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px 16px 0 0;
+}
+.ps-modal-media img { max-width: 80%; max-height: 80%; object-fit: contain; }
+.ps-modal-info { padding: 26px 28px 30px; }
+.ps-modal-info h3 { color: #182334; font-size: 1.4rem; margin-bottom: 8px; }
+.ps-modal-desc { color: #637083; font-size: 0.95rem; line-height: 1.6; margin-bottom: 18px; }
+.ps-modal-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(31, 73, 125, 0.12);
+  border-bottom: 1px solid rgba(31, 73, 125, 0.12);
+  margin-bottom: 18px;
+}
+.ps-spec-row { display: flex; flex-direction: column; gap: 2px; }
+.ps-spec-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: #8B96A8; }
+.ps-spec-value { font-size: 0.88rem; color: #182334; font-weight: 500; }
+.ps-modal-features h4 { font-size: 0.95rem; color: #182334; margin-bottom: 10px; }
+.ps-modal-features ul { margin: 0; padding-left: 20px; color: #4A5568; font-size: 0.88rem; line-height: 1.7; }
+@media (max-width: 560px) {
+  .ps-modal-specs { grid-template-columns: 1fr; }
+  .ps-modal-media { height: 200px; }
+  .manufacturer-platform-grid article span.icon-img { height: 160px; }
 }
 .manufacturer-award-card .award-icon img {
   width: 64px;

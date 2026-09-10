@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contáctanos para una asesoría tecnológica: diagnóstico, propuesta e implementación con el respaldo de Axentia SRL en Santo Domingo y Santiago.">
   <title>Contacto – Axentia SRL</title>
-  <link rel="stylesheet" href="../css/style.css?v=35">
+  <link rel="stylesheet" href="../css/style.css?v=36">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -80,7 +80,7 @@
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="../js/main.js?v=11"></script>
+  <script src="../js/main.js?v=12"></script>
   <script>
     function showFormError(msg) {
       const errEl = document.getElementById('form-error');

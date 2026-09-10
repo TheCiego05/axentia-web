@@ -36,10 +36,19 @@ function xcIconIsImage($icono) {
 
 function renderPlataformaItem($pl) {
     $esImagen = xcIconIsImage($pl['icono'] ?? '');
+    $specs = $pl['specs'] ?? null;
+    $attrs = '';
+    if ($specs) {
+        $attrs .= ' class="mp-has-specs" tabindex="0" role="button"';
+        $attrs .= ' data-titulo="' . htmlspecialchars($pl['titulo'], ENT_QUOTES) . '"';
+        $attrs .= ' data-desc="' . htmlspecialchars($pl['texto'], ENT_QUOTES) . '"';
+        $attrs .= ' data-img="' . htmlspecialchars($pl['icono'] ?? '', ENT_QUOTES) . '"';
+        $attrs .= ' data-specs="' . htmlspecialchars(json_encode($specs, JSON_UNESCAPED_UNICODE), ENT_QUOTES) . '"';
+    }
     if ($esImagen) {
-        echo '<article><span class="icon-img" aria-hidden="true"><img src="../../' . htmlspecialchars($pl['icono']) . '" alt="" loading="lazy"></span><h3>' . htmlspecialchars($pl['titulo']) . '</h3><p>' . htmlspecialchars($pl['texto']) . '</p></article>';
+        echo '<article' . $attrs . '><span class="icon-img" aria-hidden="true"><img src="../../' . htmlspecialchars($pl['icono']) . '" alt="' . htmlspecialchars($pl['titulo']) . '" loading="lazy"></span><h3>' . htmlspecialchars($pl['titulo']) . '</h3><p>' . htmlspecialchars($pl['texto']) . '</p></article>';
     } else {
-        echo '<div class="mp-tier-card"><h3>' . htmlspecialchars($pl['titulo']) . '</h3><p>' . htmlspecialchars($pl['texto']) . '</p></div>';
+        echo '<div' . ($attrs !== '' ? str_replace('class="mp-has-specs"', 'class="mp-tier-card mp-has-specs"', $attrs) : ' class="mp-tier-card"') . '><h3>' . htmlspecialchars($pl['titulo']) . '</h3><p>' . htmlspecialchars($pl['texto']) . '</p></div>';
     }
 }
 
@@ -51,7 +60,7 @@ function renderPlataformaItem($pl) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($fabricante['name']) ?> – Axentia SRL</title>
   <meta name="description" content="<?= htmlspecialchars($fabricante['descripcion']) ?>">
-  <link rel="stylesheet" href="../../css/style.css?v=35">
+  <link rel="stylesheet" href="../../css/style.css?v=36">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site fabricante-<?= htmlspecialchars($fabricante['slug']) ?>" style="--mp-accent: <?= htmlspecialchars($mpAccent) ?>;">
@@ -238,14 +247,23 @@ function renderPlataformaItem($pl) {
   </section>
   <?php endif; ?>
 
+  <div id="product-spec-modal" class="ps-modal" aria-hidden="true">
+    <div class="ps-modal-backdrop" data-ps-close></div>
+    <div class="ps-modal-panel" role="dialog" aria-modal="true" aria-labelledby="ps-modal-title">
+      <button type="button" class="ps-modal-close" data-ps-close aria-label="Cerrar">&times;</button>
+      <div class="ps-modal-body"></div>
+    </div>
+  </div>
+
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="../../js/main.js?v=11"></script>
+  <script src="../../js/main.js?v=12"></script>
   <script>
     <?php if ($tieneRecursos): ?>
     document.getElementById('fabricante-recursos').innerHTML = renderFabricanteRecursosHtml('<?= htmlspecialchars($fabricante['slug'], ENT_QUOTES) ?>');
     <?php endif; ?>
     initAxParticlesText('ax-particles-text', <?= json_encode($fabricante['name'], JSON_UNESCAPED_UNICODE) ?>, '.mp-hero-grid');
     renderFooter();
+    initProductSpecModal();
   </script>
 </body>
 </html>

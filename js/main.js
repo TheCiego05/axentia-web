@@ -1302,3 +1302,72 @@ if (document.readyState === 'loading') {
   initAxParticlesBg();
   initHeroParallax();
 }
+
+function initProductSpecModal() {
+  const modal = document.getElementById('product-spec-modal');
+  if (!modal) return;
+  const body = modal.querySelector('.ps-modal-body');
+  const specLabels = {
+    resolution: 'Resolución',
+    power: 'Alimentación',
+    connectivity: 'Conectividad',
+    storage: 'Almacenamiento',
+    nightVision: 'Visión nocturna',
+    detection: 'Detección inteligente',
+    ipRating: 'Resistencia'
+  };
+
+  function openModal(el) {
+    const titulo = el.getAttribute('data-titulo') || '';
+    const desc = el.getAttribute('data-desc') || '';
+    const img = el.getAttribute('data-img') || '';
+    let specs = {};
+    try { specs = JSON.parse(el.getAttribute('data-specs') || '{}'); } catch (e) { specs = {}; }
+
+    const imgHtml = img
+      ? `<div class="ps-modal-media"><img src="../../${img}" alt="${titulo}" loading="lazy"></div>`
+      : '';
+
+    const rows = Object.keys(specLabels)
+      .filter(k => specs[k] && specs[k] !== 'N/D')
+      .map(k => `<div class="ps-spec-row"><span class="ps-spec-label">${specLabels[k]}</span><span class="ps-spec-value">${specs[k]}</span></div>`)
+      .join('');
+
+    const features = Array.isArray(specs.keyFeatures) && specs.keyFeatures.length
+      ? `<div class="ps-modal-features"><h4>Características destacadas</h4><ul>${specs.keyFeatures.map(f => `<li>${f}</li>`).join('')}</ul></div>`
+      : '';
+
+    body.innerHTML = `
+      ${imgHtml}
+      <div class="ps-modal-info">
+        <h3 id="ps-modal-title">${titulo}</h3>
+        <p class="ps-modal-desc">${desc}</p>
+        ${rows ? `<div class="ps-modal-specs">${rows}</div>` : ''}
+        ${features}
+      </div>
+    `;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.mp-has-specs');
+    if (card) { openModal(card); return; }
+    if (e.target.closest('[data-ps-close]')) { closeModal(); }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    const card = document.activeElement;
+    if (e.key === 'Enter' && card && card.classList && card.classList.contains('mp-has-specs')) {
+      openModal(card);
+    }
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) { closeModal(); }
+  });
+}

@@ -703,22 +703,81 @@
             {
               "icono": "assets/logos/ezviz-productos/h3c.jpg",
               "titulo": "H3c",
-              "texto": "Cámara 1080p con detección humana por IA, visión nocturna hasta 30m y diseño resistente IP67."
+              "texto": "Cámara 1080p con detección humana por IA, visión nocturna hasta 30m y diseño resistente IP67.",
+              "specs": {
+                "resolution": "1080p (1920 × 1080)",
+                "power": "Cableada, DC 12V/1A",
+                "connectivity": "Wi-Fi 2.4GHz + Ethernet",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "IR hasta 30m",
+                "detection": "Detección humana por IA + zonas personalizables",
+                "ipRating": "IP67",
+                "keyFeatures": [
+                  "Compresión H.265/H.264",
+                  "Audio bidireccional con cancelación de ruido",
+                  "3D DNR y WDR digital",
+                  "Compatible con Alexa, Google Assistant, IFTTT"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/h3c-2k.jpg",
               "titulo": "H3c 2K",
-              "texto": "Resolución 2K, defensa activa con sirena y luz estroboscópica, y detección de zona personalizable."
+              "texto": "Resolución 2K, defensa activa con sirena y luz estroboscópica, y detección de zona personalizable.",
+              "specs": {
+                "resolution": "2K (3MP, 2304 × 1296)",
+                "power": "Cableada, DC 12V/1A",
+                "connectivity": "Wi-Fi 2.4GHz + Ethernet",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "Visión nocturna a color hasta 30m",
+                "detection": "Detección de forma humana por IA + zonas personalizables",
+                "ipRating": "IP67",
+                "keyFeatures": [
+                  "Defensa activa: sirena y luz estroboscópica",
+                  "Audio bidireccional",
+                  "Zoom 8x vía app",
+                  "Compatible con Alexa, Google Assistant, IFTTT"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/h3-3k.jpg",
               "titulo": "H3 3K",
-              "texto": "3K con detección de personas y vehículos, reconocimiento de gestos y carcasa de aluminio de alta resistencia."
+              "texto": "3K con detección de personas y vehículos, reconocimiento de gestos y carcasa de aluminio de alta resistencia.",
+              "specs": {
+                "resolution": "3K (2880 × 1620)",
+                "power": "Cableada, DC 12V/1A",
+                "connectivity": "Wi-Fi 2.4GHz + Ethernet",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "Visión nocturna a color hasta 30m con filtro IR-cut",
+                "detection": "Detección de personas y vehículos por IA + reconocimiento de gestos",
+                "ipRating": "IP67 (carcasa de aluminio)",
+                "keyFeatures": [
+                  "Defensa activa: sirena y luz estroboscópica",
+                  "Audio bidireccional",
+                  "Hasta 4 zonas de privacidad personalizables"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/h4-2k.jpg",
               "titulo": "H4 2K",
-              "texto": "Cámara domo 2K para espacios interiores más amplios, con audio bidireccional y visión nocturna a color."
+              "texto": "Cámara domo 2K para espacios interiores más amplios, con audio bidireccional y visión nocturna a color.",
+              "specs": {
+                "resolution": "2K (2304 × 1296)",
+                "power": "Cableada, DC 12V/1A",
+                "connectivity": "Wi-Fi 2.4GHz + Ethernet",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "Visión nocturna a color hasta 30m",
+                "detection": "Detección de personas y vehículos por IA con áreas de alerta",
+                "ipRating": "IP67",
+                "keyFeatures": [
+                  "Audio bidireccional con doble micrófono (hasta 15m)",
+                  "Defensa activa: sirena y luz estroboscópica",
+                  "Hasta 4 zonas de privacidad",
+                  "Compatible con Google Assistant / Alexa"
+                ]
+              }
             }
           ]
         },
@@ -728,37 +787,140 @@
             {
               "icono": "",
               "titulo": "CB2 Type-C",
-              "texto": "Cámara compacta con base magnética, hasta 50 días de batería — ideal como monitor de bebés o mascotas."
+              "texto": "Cámara compacta con base magnética, hasta 50 días de batería — ideal como monitor de bebés o mascotas.",
+              "specs": {
+                "resolution": "1080p (1920 × 1080)",
+                "power": "Batería recargable 2000 mAh, hasta 50 días",
+                "connectivity": "Wi-Fi 2.4GHz",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "IR hasta 5m",
+                "detection": "Detección inteligente de movimiento humano (PIR + IA)",
+                "ipRating": "N/D",
+                "keyFeatures": [
+                  "Diseño cúbico de bolsillo",
+                  "Base magnética desmontable",
+                  "Audio bidireccional",
+                  "Compatible con Google Assistant y Amazon Alexa"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/cb2-4g.png",
               "titulo": "CB2 4G 2K",
-              "texto": "Conectividad 4G integrada para instalarse en sitios sin Wi-Fi ni electricidad disponible."
+              "texto": "Conectividad 4G integrada para instalarse en sitios sin Wi-Fi ni electricidad disponible.",
+              "specs": {
+                "resolution": "2K (2304 × 1296)",
+                "power": "4G + batería recargable 2000 mAh",
+                "connectivity": "4G LTE (sin Wi-Fi), requiere SIM nano",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "IR hasta 8m",
+                "detection": "Detección de forma humana por IA + sensor PIR",
+                "ipRating": "N/D",
+                "keyFeatures": [
+                  "Modo Always-On Video (AOV) con time-lapse",
+                  "Audio bidireccional",
+                  "Base magnética con soporte ajustable 360°"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/eb3-2k.jpg",
               "titulo": "EB3 2K",
-              "texto": "Hasta 120 días de batería, modo de protección permanente y compatible con panel solar EZVIZ."
+              "texto": "Hasta 120 días de batería, modo de protección permanente y compatible con panel solar EZVIZ.",
+              "specs": {
+                "resolution": "2K (2304 × 1296)",
+                "power": "Batería recargable 5200 mAh, hasta 120 días",
+                "connectivity": "Wi-Fi 2.4GHz",
+                "storage": "microSD hasta 256GB + nube EZVIZ CloudPlay",
+                "nightVision": "Visión nocturna a color 15m (doble foco)",
+                "detection": "Detección inteligente de movimiento humano, distingue mascotas",
+                "ipRating": "Resistente a la intemperie (-20°C a 50°C)",
+                "keyFeatures": [
+                  "Visión nocturna a color a distancia completa",
+                  "Audio bidireccional con alertas de voz",
+                  "Defensa activa: sirena y luz estroboscópica",
+                  "Compatible con panel solar EZVIZ opcional"
+                ]
+              }
             },
             {
               "icono": "",
               "titulo": "BC1c 4K Type-C",
-              "texto": "4K con hasta 180 días de autonomía y detección de personas y vehículos por IA."
+              "texto": "4K con hasta 180 días de autonomía y detección de personas y vehículos por IA.",
+              "specs": {
+                "resolution": "4K (8MP, 3840 × 2160)",
+                "power": "Batería recargable 10400 mAh, hasta 180 días",
+                "connectivity": "Wi-Fi 2.4GHz/5GHz + Bluetooth",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "Visión nocturna a color 15m (2 luces IR + 2 focos)",
+                "detection": "Detección de personas y vehículos por IA",
+                "ipRating": "IP65",
+                "keyFeatures": [
+                  "Modo Always-On Video (AOV)",
+                  "Audio bidireccional",
+                  "Defensa activa: sirena y foco disuasorio",
+                  "Cifrado de datos AES-128"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/cb8-2k.jpg",
               "titulo": "CB8 2K Pan & Tilt",
-              "texto": "Cobertura panorámica de 360°, auto-seguimiento y hasta 210 días de batería."
+              "texto": "Cobertura panorámica de 360°, auto-seguimiento y hasta 210 días de batería.",
+              "specs": {
+                "resolution": "2K (2304 × 1296)",
+                "power": "Batería recargable 10400 mAh, hasta 210 días",
+                "connectivity": "Wi-Fi 2.4GHz",
+                "storage": "microSD hasta 256GB + nube EZVIZ CloudPlay",
+                "nightVision": "IR hasta 15m con doble foco",
+                "detection": "Detección inteligente de movimiento humano + auto-seguimiento",
+                "ipRating": "Resistente a la intemperie (-20°C a 50°C)",
+                "keyFeatures": [
+                  "Pan & Tilt: 340° horizontal / 65° vertical",
+                  "Defensa activa: sirena y destello de foco",
+                  "Auto-seguimiento de objetos en movimiento"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/eb8-4g.jpg",
               "titulo": "EB8 4G 2K Pan & Tilt",
-              "texto": "Pan & tilt con conectividad 4G y ubicación GPS del dispositivo, sin depender de Wi-Fi."
+              "texto": "Pan & tilt con conectividad 4G y ubicación GPS del dispositivo, sin depender de Wi-Fi.",
+              "specs": {
+                "resolution": "2K (2304 × 1296)",
+                "power": "4G + batería recargable 10400 mAh",
+                "connectivity": "4G LTE únicamente, requiere SIM micro",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "Visión nocturna a color 15m",
+                "detection": "Detección inteligente de movimiento humano + auto-seguimiento",
+                "ipRating": "IP65",
+                "keyFeatures": [
+                  "Pan & Tilt: 340° horizontal / 65° vertical, 12 posiciones preestablecidas",
+                  "GPS incorporado para localización del dispositivo",
+                  "Audio bidireccional",
+                  "Zoom 8x vía app"
+                ]
+              }
             },
             {
               "icono": "",
               "titulo": "EB5 4K Solar",
-              "texto": "Panel solar integrado de 1.4W, hasta 180 días sin necesidad de carga solar."
+              "texto": "Panel solar integrado de 1.4W, hasta 180 días sin necesidad de carga solar.",
+              "specs": {
+                "resolution": "4K (8MP, 3840 × 2160)",
+                "power": "Batería 10400 mAh + panel solar integrado 1.4W",
+                "connectivity": "Wi-Fi 2.4GHz/5GHz + Bluetooth",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "Visión nocturna a color 15m",
+                "detection": "Detección de personas y vehículos por IA",
+                "ipRating": "IP65",
+                "keyFeatures": [
+                  "Modo Always-On Video (AOV)",
+                  "Audio bidireccional",
+                  "Defensa activa: sirena y destello de foco",
+                  "Sin necesidad de carga manual con luz solar suficiente"
+                ]
+              }
             }
           ]
         },
@@ -768,17 +930,62 @@
             {
               "icono": "assets/logos/ezviz-productos/hp7-2k.jpg",
               "titulo": "HP7 2K",
-              "texto": "Pantalla táctil interior de 7 pulgadas, desbloqueo remoto y acceso por tarjeta RFID."
+              "texto": "Pantalla táctil interior de 7 pulgadas, desbloqueo remoto y acceso por tarjeta RFID.",
+              "specs": {
+                "resolution": "2K (2048 × 1296)",
+                "power": "Cableada, DC 24V/1A",
+                "connectivity": "Instalación 2/4 hilos; Wi-Fi dual band 2.4G/5G",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "IR hasta 6m",
+                "detection": "Detección inteligente de movimiento + detección de permanencia",
+                "ipRating": "Resistente al agua (cubierta protectora)",
+                "keyFeatures": [
+                  "Pantalla táctil interior de 7\" (1024×600)",
+                  "Audio bidireccional con cambio de voz",
+                  "Desbloqueo por RFID (3 tarjetas incluidas)",
+                  "Apertura remota de puerta/portón vía app"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/hp5.png",
               "titulo": "HP5",
-              "texto": "Diseño ultra delgado, control desde la app EZVIZ y timbre con múltiples tonos."
+              "texto": "Diseño ultra delgado, control desde la app EZVIZ y timbre con múltiples tonos.",
+              "specs": {
+                "resolution": "1080p (1920 × 1080)",
+                "power": "Cableada, DC 24V/1.5A",
+                "connectivity": "Instalación 2 hilos (hasta 50m); Wi-Fi dual band 2.4G/5G",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "IR hasta 6m con filtro IR-cut",
+                "detection": "N/D",
+                "ipRating": "Resistente al agua (cubierta protectora)",
+                "keyFeatures": [
+                  "Pantalla táctil interior de 7\" (1024×600)",
+                  "Diseño ultradelgado",
+                  "Audio bidireccional con cambio de voz",
+                  "Desbloqueo por RFID (2 tarjetas incluidas)"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/ep7-2k.png",
               "titulo": "EP7 2K Solar",
-              "texto": "Sin cableado entre el panel exterior y la pantalla interior, alimentado por panel solar incluido."
+              "texto": "Sin cableado entre el panel exterior y la pantalla interior, alimentado por panel solar incluido.",
+              "specs": {
+                "resolution": "2K (2048 × 1296)",
+                "power": "Batería recargable + panel solar 1.2W, autonomía aprox. 85 días",
+                "connectivity": "Wi-Fi HaLow (alcance hasta 350m exterior)",
+                "storage": "microSD hasta 512GB + nube EZVIZ CloudPlay",
+                "nightVision": "IR hasta 6m",
+                "detection": "N/D",
+                "ipRating": "IP65",
+                "keyFeatures": [
+                  "Sin cableado entre unidad interior y exterior",
+                  "Pantalla táctil interior de 7\" (1024×600)",
+                  "Teclado numérico integrado + desbloqueo RFID",
+                  "Audio bidireccional con cambio de voz"
+                ]
+              }
             }
           ]
         },
@@ -788,22 +995,80 @@
             {
               "icono": "",
               "titulo": "EZVIZ L2S",
-              "texto": "Cerradura con huella digital, cuatro métodos de desbloqueo y alertas en tiempo real."
+              "texto": "Cerradura con huella digital, cuatro métodos de desbloqueo y alertas en tiempo real.",
+              "specs": {
+                "resolution": "N/D",
+                "power": "4 pilas AA alcalinas, hasta 1 año",
+                "connectivity": "Zigbee 3.0",
+                "storage": "N/D",
+                "nightVision": "N/D",
+                "detection": "N/D",
+                "ipRating": "N/D",
+                "keyFeatures": [
+                  "Desbloqueo: huella (50), contraseña (50), tarjeta EZVIZ (50), llave mecánica y códigos temporales vía app",
+                  "Cilindro de cerradura grado C anti-robo",
+                  "Alarma anti-manipulación con sirena",
+                  "Bloqueo automático 3 min. tras 5 intentos fallidos"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/dl05.jpg",
               "titulo": "EZVIZ DL05",
-              "texto": "Desbloqueo por huella, Bluetooth o Wi-Fi, con códigos temporales para visitas."
+              "texto": "Desbloqueo por huella, Bluetooth o Wi-Fi, con códigos temporales para visitas.",
+              "specs": {
+                "resolution": "N/D",
+                "power": "8 pilas AA alcalinas, hasta 1 año; carga de emergencia Type-C",
+                "connectivity": "Wi-Fi 2.4GHz + Bluetooth",
+                "storage": "N/D",
+                "nightVision": "N/D",
+                "detection": "N/D",
+                "ipRating": "IP65 (panel frontal)",
+                "keyFeatures": [
+                  "Desbloqueo: huella (50), contraseña (50), tarjeta de proximidad (50), llave Bluetooth vía app y códigos temporales",
+                  "Modo privacidad y bloqueo de seguridad infantil",
+                  "Integración con cámaras EZVIZ para grabación automática"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/dl03.png",
               "titulo": "EZVIZ DL03",
-              "texto": "Cerradura de sobreponer sin necesidad de hub, integrable con cámaras EZVIZ."
+              "texto": "Cerradura de sobreponer sin necesidad de hub, integrable con cámaras EZVIZ.",
+              "specs": {
+                "resolution": "N/D",
+                "power": "4 pilas AA alcalinas; carga de emergencia Type-C",
+                "connectivity": "EZVIZ Connect Wi-Fi 2.4GHz (sin hub)",
+                "storage": "N/D",
+                "nightVision": "N/D",
+                "detection": "N/D",
+                "ipRating": "N/D",
+                "keyFeatures": [
+                  "Desbloqueo por contraseña (hasta 50 grupos), app remota y códigos temporales de visitante",
+                  "Auto-bloqueo al cerrar la puerta",
+                  "Alarma anti-manipulación y alerta de puerta abierta",
+                  "Integración con cámaras EZVIZ"
+                ]
+              }
             },
             {
               "icono": "assets/logos/ezviz-productos/dl04.png",
               "titulo": "EZVIZ DL04 Pro",
-              "texto": "Cerradura de embutir con huella digital y desbloqueo remoto vía la app."
+              "texto": "Cerradura de embutir con huella digital y desbloqueo remoto vía la app.",
+              "specs": {
+                "resolution": "N/D",
+                "power": "4 pilas AA alcalinas; carga de emergencia Type-C",
+                "connectivity": "EZVIZ Connect Wi-Fi 2.4GHz (sin hub)",
+                "storage": "N/D",
+                "nightVision": "N/D",
+                "detection": "N/D",
+                "ipRating": "IP55 (panel exterior)",
+                "keyFeatures": [
+                  "Desbloqueo: huella (50 grupos), contraseña (50), tarjetas de proximidad (50), app remota y llave mecánica de emergencia",
+                  "Bloqueo de seguridad: 3 min. tras 5 errores en 5 min.",
+                  "Alarma anti-manipulación con sirena e integración con cámaras EZVIZ"
+                ]
+              }
             }
           ]
         }
