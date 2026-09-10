@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="fhybFpk54ML04QMdtH-nwHpP20dfgvASeFx3rwgxE9I" />
   <title>Axentia SRL – Conectando Ideas, Innovando el Futuro</title>
   <meta name="description" content="Soluciones tecnológicas y de ciberseguridad para cualquier tipo de organización en República Dominicana — pequeña, mediana, grande o gobierno.">
   <link rel="stylesheet" href="css/style.css?v=38">
