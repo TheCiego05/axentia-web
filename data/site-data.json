@@ -242,6 +242,28 @@
       "desc": "Identifica los síntomas que indican que es hora de modernizar la tecnología de tu empresa dominicana.",
       "content": "La infraestructura tecnológica suele avisar antes de fallar: lentitud recurrente, equipos sin soporte, respaldos inconsistentes, incidentes frecuentes y poca visibilidad operativa son señales claras de riesgo.\n\nActualizar no siempre significa reemplazarlo todo. En muchos casos basta con priorizar componentes críticos, mejorar seguridad, documentar activos, fortalecer monitoreo y establecer mantenimiento preventivo.\n\nUna evaluación técnica permite definir qué debe modernizarse primero para reducir interrupciones y mejorar la experiencia de usuarios y clientes.",
       "date": "Enero 2025"
+    },
+    {
+      "id": 4,
+      "type": "noticia",
+      "tag": "Ciberseguridad",
+      "emoji": "🚨",
+      "mediaUrl": "",
+      "title": "Microsoft rompe su propio récord: 973 vulnerabilidades en un solo Patch Tuesday",
+      "desc": "El boletín de seguridad de septiembre de 2026 de Microsoft es el más grande de su historia, con fallos críticos ya explotados y vulnerabilidades \"wormables\" que exigen actuar de inmediato.",
+      "content": "El Patch Tuesday de septiembre de 2026 marcó un nuevo récord para Microsoft: 973 vulnerabilidades corregidas en una sola actualización, superando el máximo anterior de 576 fijado apenas en julio. De ese total, 113 están calificadas como críticas, y al menos dos ya están siendo explotadas activamente en ataques reales.\n\nLo más urgente es una falla de escalamiento de privilegios en Windows Update Stack (CVE-2026-81963), que atacantes ya están combinando con otras técnicas para distribuir malware. A esto se suma un grupo de 20 vulnerabilidades descritas como \"wormables\" — es decir, que permiten ejecución remota de código sin autenticación ni interacción del usuario, el mismo tipo de fallo que históricamente ha dado origen a los peores brotes de ransomware a nivel global.\n\nEntre los casos más delicados están una vulnerabilidad crítica en DNS Server que afecta directamente a los controladores de dominio, un fallo de ejecución remota en Remote Desktop Services con una puntuación CVSS de 9.8, y una falla en Exchange Server que se activa con solo abrir un archivo adjunto malicioso en Visio, sin que la víctima haga nada más.\n\nPara cualquier empresa que dependa de Windows Server, Active Directory o Exchange — es decir, la gran mayoría de las organizaciones en República Dominicana — este boletín no es una actualización más: es una ventana de exposición real mientras los parches no se apliquen. Axentia recomienda priorizar el parcheo de controladores de dominio y servidores expuestos a RDP en las próximas 48 horas, y evaluar si los sistemas de detección actuales cubren estos vectores específicos.\n\nSi tu equipo de IT necesita apoyo para priorizar y aplicar estos parches sin afectar la operación, en Axentia podemos ayudarte a evaluar el impacto real en tu infraestructura y ejecutar el plan de remediación.",
+      "date": "Septiembre 2026"
+    },
+    {
+      "id": 5,
+      "type": "noticia",
+      "tag": "Ciberseguridad",
+      "emoji": "🚨",
+      "mediaUrl": "",
+      "title": "CISA confirma explotación activa de fallas críticas en Cisco, Citrix y Fortinet",
+      "desc": "Tres vulnerabilidades ya explotadas activamente por atacantes —en Cisco Secure Firewall, Citrix NetScaler y Fortinet FortiOS— fueron incorporadas al catálogo de amenazas conocidas de CISA, que exige a las agencias federales de EE.UU. parchearlas antes del 12 de septiembre.",
+      "content": "La Agencia de Ciberseguridad e Infraestructura de EE.UU. (CISA) agregó esta semana tres vulnerabilidades críticas a su catálogo de Vulnerabilidades Explotadas Conocidas (KEV), confirmando que ya están siendo aprovechadas activamente por atacantes en dispositivos que forman parte del perímetro de seguridad de miles de organizaciones alrededor del mundo. Las tres fallas afectan productos de altísima adopción empresarial: Cisco Secure Firewall Management Center, Citrix NetScaler ADC/Gateway y FortiOS de Fortinet.\n\nLa más severa es CVE-2026-20079, con puntaje CVSS de 10 sobre 10, que permite a un atacante sin autenticación ejecutar scripts en Cisco Secure Firewall Management Center y obtener acceso como root al dispositivo. En Citrix, CVE-2026-19490 (CVSS 9.3) permite evadir la autenticación en NetScaler ADC y NetScaler Gateway cuando actúan como servidores virtuales AAA; solo el 8 de septiembre se registraron 36 intentos de explotación, dentro de una ola de 56 desde inicios de mes. En Fortinet, CVE-2025-25249 (CVSS 7.3) es un desbordamiento de búfer en montículo (heap buffer overflow) en FortiOS, FortiSwitchManager y FortiSASE que permite ejecución remota de código, y ya fue utilizado para distribuir el malware PivotC2: se identificaron más de 3,000 direcciones IP como objetivo y 178 compromisos confirmados.\n\nLo relevante para cualquier empresa —no solo para el gobierno estadounidense— es que estas tres soluciones son precisamente las que muchas organizaciones usan para protegerse: firewalls, balanceadores de acceso remoto y gateways VPN. Cuando el propio perímetro de seguridad tiene una falla explotable, el riesgo no es teórico: los atacantes ya están escaneando internet en busca de equipos vulnerables. El plazo del 12 de septiembre que fijó CISA para las agencias federales es una señal clara de la urgencia, aunque la recomendación aplica igual para el sector privado en cualquier país.\n\nLas acciones inmediatas recomendadas son parchar sin demora los equipos afectados, restringir el acceso a las interfaces de administración desde internet, revisar logs en busca de indicadores de compromiso, y rotar credenciales si el dispositivo estuvo expuesto. Muchas organizaciones postergan estas actualizaciones por temor a interrumpir operaciones, pero en este caso el costo de esperar supera con creces el de una ventana de mantenimiento planificada.\n\nEn Axentia damos seguimiento constante a este tipo de alertas para las marcas que representamos —incluyendo Fortinet— y acompañamos a nuestros clientes en la gestión de parches y el monitoreo de sus equipos de seguridad perimetral, precisamente para que este tipo de noticias no se conviertan en un incidente real dentro de su infraestructura.",
+      "date": "Septiembre 2026"
     }
   ],
   "partners": [
@@ -5136,7 +5158,7 @@
   "nextId": {
     "services": 11,
     "clients": 8,
-    "blog": 4,
+    "blog": 6,
     "partners": 21,
     "faq": 7,
     "fabricantesInfo": 21,
