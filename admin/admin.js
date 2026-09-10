@@ -70,6 +70,7 @@ function initAdmin() {
   populateHeroForm();
   populateNosotrosForm();
   populateContactoForm();
+  renderStatsPanel();
 }
 
 // ── Persistencia en el servidor (admin/api.php -> data/site-data.json) ──
@@ -90,6 +91,84 @@ function updateStats() {
   document.getElementById('ds-cli').textContent = DATA.clients.length;
   document.getElementById('ds-blg').textContent = DATA.blog.length;
   document.getElementById('ds-soc').textContent = DATA.partners.length;
+}
+
+// ── Estadísticas de visitas (data/analytics.json vía includes/analytics.php) ──
+function statsRankRow(label, count, total) {
+  const pct = total > 0 ? Math.round((count / total) * 100) : 0;
+  return `
+    <div class="stats-rank-row">
+      <div class="stats-rank-label">${label}</div>
+      <div class="stats-rank-bar"><div class="stats-rank-bar-fill" style="width:${pct}%"></div></div>
+      <div class="stats-rank-count">${count}</div>
+    </div>`;
+}
+
+function renderRankList(containerId, entries, total, emptyMsg) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  if (!entries.length) {
+    el.innerHTML = `<p style="color:var(--white-40);font-size:.85rem;padding:8px 0">${emptyMsg}</p>`;
+    return;
+  }
+  el.innerHTML = entries.map(([label, count]) => statsRankRow(label, count, total)).join('');
+}
+
+function renderStatsPanel() {
+  if (typeof ANALYTICS === 'undefined') return;
+  const a = ANALYTICS;
+  const daily = a.daily || {};
+  const days = Object.keys(daily).sort();
+
+  const sumLastNDays = n => {
+    const cutoff = days.slice(-n);
+    return cutoff.reduce((sum, d) => sum + (daily[d] || 0), 0);
+  };
+
+  document.getElementById('st-total').textContent = a.totalViews || 0;
+  document.getElementById('st-today').textContent = days.length ? (daily[days[days.length - 1]] || 0) : 0;
+  document.getElementById('st-week').textContent = sumLastNDays(7);
+  document.getElementById('st-month').textContent = sumLastNDays(30);
+
+  // Gráfico simple de barras: últimos 14 días
+  const last14 = days.slice(-14);
+  const maxDay = Math.max(1, ...last14.map(d => daily[d] || 0));
+  const chartEl = document.getElementById('st-daily-chart');
+  if (chartEl) {
+    if (!last14.length) {
+      chartEl.innerHTML = '<p style="color:var(--white-40);font-size:.85rem">Todavía no hay datos suficientes.</p>';
+    } else {
+      chartEl.innerHTML = last14.map(d => {
+        const v = daily[d] || 0;
+        const h = Math.max(4, Math.round((v / maxDay) * 100));
+        const label = d.slice(5).replace('-', '/');
+        return `<div class="stats-bar" title="${d}: ${v} vistas"><div class="stats-bar-fill" style="height:${h}%"></div><span class="stats-bar-label">${label}</span></div>`;
+      }).join('');
+    }
+  }
+
+  // Páginas más vistas
+  const pagesTotal = Object.values(a.pages || {}).reduce((s, n) => s + n, 0);
+  const pagesSorted = Object.entries(a.pages || {}).sort((x, y) => y[1] - x[1]).slice(0, 8);
+  renderRankList('st-pages-list', pagesSorted, pagesTotal, 'Todavía no hay vistas registradas.');
+
+  // Referrers
+  const refTotal = Object.values(a.referrers || {}).reduce((s, n) => s + n, 0);
+  const refSorted = Object.entries(a.referrers || {}).sort((x, y) => y[1] - x[1]).slice(0, 8);
+  renderRankList('st-referrers-list', refSorted, refTotal, 'Todavía no hay datos de origen.');
+
+  // Artículos del blog más leídos (cruzando con DATA.blog para mostrar el título)
+  const articleEntries = Object.entries(a.articles || {}).map(([id, count]) => {
+    const post = (DATA.blog || []).find(b => String(b.id) === String(id));
+    return [post ? post.title : `Artículo #${id}`, count];
+  }).sort((x, y) => y[1] - x[1]).slice(0, 8);
+  const articlesTotal = articleEntries.reduce((s, [, n]) => s + n, 0);
+  renderRankList('st-articles-list', articleEntries, articlesTotal, 'Todavía no hay lecturas de artículos.');
+
+  // Dispositivos
+  const devTotal = Object.values(a.devices || {}).reduce((s, n) => s + n, 0);
+  const devSorted = Object.entries(a.devices || {}).sort((x, y) => y[1] - x[1]);
+  renderRankList('st-devices-list', devSorted, devTotal, 'Todavía no hay datos de dispositivo.');
 }
 
 // ── Render admin lists ────────────────────

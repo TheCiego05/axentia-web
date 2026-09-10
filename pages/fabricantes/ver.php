@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../../includes/data-loader.php';
+require_once __DIR__ . '/../../includes/data-loader.php'; require_once __DIR__ . '/../../includes/analytics.php'; track_pageview('fabricantes/ver.php');
 
 $slug = isset($_GET['slug']) ? preg_replace('/[^a-z0-9\-]/', '', strtolower($_GET['slug'])) : '';
 $fabricante = null;

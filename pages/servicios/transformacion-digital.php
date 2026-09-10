@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../includes/data-loader.php'; ?>
+<?php require_once __DIR__ . '/../../includes/data-loader.php'; require_once __DIR__ . '/../../includes/analytics.php'; track_pageview('servicios/transformacion-digital.php'); ?>
 <?php
   $svcSlug = 'transformacion-digital';
   $svcInfo = null;

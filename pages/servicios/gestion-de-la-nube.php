@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../includes/data-loader.php'; ?>
+<?php require_once __DIR__ . '/../../includes/data-loader.php'; require_once __DIR__ . '/../../includes/analytics.php'; track_pageview('servicios/gestion-de-la-nube.php'); ?>
 <?php
   $svcSlug = 'gestion-de-la-nube';
   $svcInfo = null;

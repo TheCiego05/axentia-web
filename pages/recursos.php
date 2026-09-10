@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../includes/data-loader.php'; ?>
+<?php require_once __DIR__ . '/../includes/data-loader.php'; require_once __DIR__ . '/../includes/analytics.php'; track_pageview('recursos.php'); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

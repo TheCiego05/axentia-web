@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__ . '/../config.php';
 require_once __DIR__ . '/../includes/data-loader.php';
+require_once __DIR__ . '/../includes/analytics.php';
 $adminLoggedIn = !empty($_SESSION['admin_logged_in']);
+$ANALYTICS = $adminLoggedIn ? get_analytics() : ['totalViews'=>0,'pages'=>[],'articles'=>[],'referrers'=>[],'daily'=>[],'devices'=>[]];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -48,6 +50,7 @@ $adminLoggedIn = !empty($_SESSION['admin_logged_in']);
     </div>
     <ul class="admin-nav">
       <li><a href="#" class="active" onclick="showPanel('panel-dash',this)"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="12" width="8" height="9" rx="1.5"/><rect x="3" y="14" width="8" height="7" rx="1.5"/></svg></span> Dashboard</a></li>
+      <li><a href="#" onclick="showPanel('panel-stats',this)"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span> Estadísticas</a></li>
       <li><a href="#" onclick="showPanel('panel-hero',this)"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg></span> Hero / Inicio</a></li>
       <li><a href="#" onclick="showPanel('panel-servicios',this)"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V19a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H4a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.5V4a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.5 1H20a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span> Servicios</a></li>
       <li><a href="#" onclick="showPanel('panel-clientes',this)"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="7" height="11"/><path d="M10 21V6l7-3v18"/><path d="M17 21V11l4 2v8z"/></svg></span> Clientes</a></li>
@@ -92,6 +95,54 @@ $adminLoggedIn = !empty($_SESSION['admin_logged_in']);
           • Se ven de inmediato para todos los visitantes del sitio, no solo en tu navegador.<br>
           • Usa el menú lateral para navegar entre secciones.<br>
           • Haz clic en "Ver sitio web" para ver los cambios en vivo.
+        </p>
+      </div>
+    </div>
+
+    <!-- ESTADISTICAS -->
+    <div id="panel-stats" class="admin-panel">
+      <div class="admin-header">
+        <div><h1>Estadísticas</h1><p>Vistas del sitio, de dónde vienen los visitantes y qué páginas/artículos leen más</p></div>
+      </div>
+      <div class="dash-stats">
+        <div class="dash-stat"><div class="ds-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="ds-val" id="st-total">0</div><div class="ds-label">Vistas totales</div></div>
+        <div class="dash-stat"><div class="ds-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><div class="ds-val" id="st-today">0</div><div class="ds-label">Hoy</div></div>
+        <div class="dash-stat"><div class="ds-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div><div class="ds-val" id="st-week">0</div><div class="ds-label">Últimos 7 días</div></div>
+        <div class="dash-stat"><div class="ds-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><div class="ds-val" id="st-month">0</div><div class="ds-label">Últimos 30 días</div></div>
+      </div>
+
+      <div class="admin-card">
+        <h3>Vistas por día (últimos 14 días)</h3>
+        <div id="st-daily-chart" class="stats-bar-chart"></div>
+      </div>
+
+      <div class="admin-form-grid" style="margin-top:20px">
+        <div class="admin-card">
+          <h3>Páginas más vistas</h3>
+          <div id="st-pages-list" class="stats-rank-list"></div>
+        </div>
+        <div class="admin-card">
+          <h3>¿De dónde vienen?</h3>
+          <div id="st-referrers-list" class="stats-rank-list"></div>
+        </div>
+      </div>
+
+      <div class="admin-form-grid" style="margin-top:20px">
+        <div class="admin-card">
+          <h3>Artículos del blog más leídos</h3>
+          <div id="st-articles-list" class="stats-rank-list"></div>
+        </div>
+        <div class="admin-card">
+          <h3>Dispositivos</h3>
+          <div id="st-devices-list" class="stats-rank-list"></div>
+        </div>
+      </div>
+
+      <div class="admin-card">
+        <p style="color:var(--white-40);font-size:.8rem;line-height:1.6">
+          Estas estadísticas se cuentan directamente en el servidor con cada carga de página (sin cookies).
+          "Directo / interno" agrupa las visitas sin referencia externa o que vienen del propio sitio.
+          El conteo empieza desde que se activó esta función — no incluye visitas anteriores.
         </p>
       </div>
     </div>
@@ -233,6 +284,7 @@ $adminLoggedIn = !empty($_SESSION['admin_logged_in']);
 
 <?php render_data_script($DATA, $NEXT_ID); ?>
 <script>const ADMIN_LOGGED_IN = <?= $adminLoggedIn ? 'true' : 'false' ?>;</script>
+<script>const ANALYTICS = <?= json_encode($ANALYTICS, JSON_UNESCAPED_UNICODE) ?>;</script>
 <script src="../js/main.js?v=14"></script>
 <script src="admin.js"></script>
 </body>

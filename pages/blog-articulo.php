@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../includes/data-loader.php';
+require_once __DIR__ . '/../includes/analytics.php';
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $article = null;
@@ -11,6 +12,8 @@ if (!$article) {
     header('Location: blog.php');
     exit;
 }
+
+track_pageview('blog-articulo.php', $article['id']);
 
 $typeLabels = ['noticia' => 'Noticia', 'articulo' => 'Artículo', 'video' => 'Video', 'webinar' => 'Webinar'];
 $typeLabel = $typeLabels[$article['type'] ?? 'noticia'] ?? 'Noticia';
