@@ -37,7 +37,7 @@ $otros = array_slice($otros, 0, 3);
   <meta property="og:title" content="<?= htmlspecialchars($article['title']) ?>">
   <meta property="og:description" content="<?= htmlspecialchars($article['desc']) ?>">
   <?php if ($coverSrc): ?><meta property="og:image" content="<?= htmlspecialchars($coverSrc) ?>"><?php endif; ?>
-  <link rel="stylesheet" href="../css/style.css?v=38">
+  <link rel="stylesheet" href="/css/style.css?v=38">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -110,7 +110,7 @@ $otros = array_slice($otros, 0, 3);
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="../js/main.js?v=14"></script>
+  <script src="/js/main.js?v=14"></script>
   <script>
     renderFooter();
   </script>
