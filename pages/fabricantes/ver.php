@@ -51,7 +51,7 @@ function renderPlataformaItem($pl) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($fabricante['name']) ?> – Axentia SRL</title>
   <meta name="description" content="<?= htmlspecialchars($fabricante['descripcion']) ?>">
-  <link rel="stylesheet" href="../../css/style.css?v=33">
+  <link rel="stylesheet" href="../../css/style.css?v=35">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site fabricante-<?= htmlspecialchars($fabricante['slug']) ?>" style="--mp-accent: <?= htmlspecialchars($mpAccent) ?>;">
@@ -239,7 +239,7 @@ function renderPlataformaItem($pl) {
   <?php endif; ?>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="../../js/main.js?v=10"></script>
+  <script src="../../js/main.js?v=11"></script>
   <script>
     <?php if ($tieneRecursos): ?>
     document.getElementById('fabricante-recursos').innerHTML = renderFabricanteRecursosHtml('<?= htmlspecialchars($fabricante['slug'], ENT_QUOTES) ?>');

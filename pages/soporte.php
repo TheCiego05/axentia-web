@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Planes de soporte IT gestionado para empresas dominicanas: monitoreo, respuesta y visitas presenciales según el nivel de tu operación.">
   <title>Soporte – Axentia SRL</title>
-  <link rel="stylesheet" href="../css/style.css?v=33">
+  <link rel="stylesheet" href="../css/style.css?v=35">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -102,7 +102,7 @@
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="../js/main.js?v=10"></script>
+  <script src="../js/main.js?v=11"></script>
   <script>renderFooter();</script>
 </body>
 </html>

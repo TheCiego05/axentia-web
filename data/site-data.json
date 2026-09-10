@@ -332,7 +332,7 @@
     },
     {
       "id": 18,
-      "name": "EZVIZ Partner",
+      "name": "EZVIZ",
       "logo": "assets/logos/partners/ezviz.png"
     },
     {
@@ -695,28 +695,28 @@
           "label": "Resistencia climática en toda la línea outdoor"
         }
       ],
-      "plataformaIntro": "Axentia comercializa e instala productos EZVIZ en República Dominicana. El catálogo cubre cámaras Wi-Fi fijas, cámaras con batería para zonas sin cableado eléctrico, videoporteros inteligentes y cerraduras con huella digital — todo controlable desde una sola app.",
+      "plataformaIntro": "Axentia distribuye, instala y da soporte a productos EZVIZ en República Dominicana. El catálogo cubre cámaras Wi-Fi fijas, cámaras con batería para zonas sin cableado eléctrico, videoporteros inteligentes y cerraduras con huella digital — todo controlable desde una sola app.",
       "plataforma": [
         {
           "categoria": "Cámaras Wi-Fi para interior y exterior",
           "items": [
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/h3c.jpg",
               "titulo": "H3c",
               "texto": "Cámara 1080p con detección humana por IA, visión nocturna hasta 30m y diseño resistente IP67."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/h3c-2k.jpg",
               "titulo": "H3c 2K",
               "texto": "Resolución 2K, defensa activa con sirena y luz estroboscópica, y detección de zona personalizable."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/h3-3k.jpg",
               "titulo": "H3 3K",
               "texto": "3K con detección de personas y vehículos, reconocimiento de gestos y carcasa de aluminio de alta resistencia."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/h4-2k.jpg",
               "titulo": "H4 2K",
               "texto": "Cámara domo 2K para espacios interiores más amplios, con audio bidireccional y visión nocturna a color."
             }
@@ -731,12 +731,12 @@
               "texto": "Cámara compacta con base magnética, hasta 50 días de batería — ideal como monitor de bebés o mascotas."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/cb2-4g.png",
               "titulo": "CB2 4G 2K",
               "texto": "Conectividad 4G integrada para instalarse en sitios sin Wi-Fi ni electricidad disponible."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/eb3-2k.jpg",
               "titulo": "EB3 2K",
               "texto": "Hasta 120 días de batería, modo de protección permanente y compatible con panel solar EZVIZ."
             },
@@ -746,12 +746,12 @@
               "texto": "4K con hasta 180 días de autonomía y detección de personas y vehículos por IA."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/cb8-2k.jpg",
               "titulo": "CB8 2K Pan & Tilt",
               "texto": "Cobertura panorámica de 360°, auto-seguimiento y hasta 210 días de batería."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/eb8-4g.jpg",
               "titulo": "EB8 4G 2K Pan & Tilt",
               "texto": "Pan & tilt con conectividad 4G y ubicación GPS del dispositivo, sin depender de Wi-Fi."
             },
@@ -766,17 +766,17 @@
           "categoria": "Videoporteros inteligentes",
           "items": [
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/hp7-2k.jpg",
               "titulo": "HP7 2K",
               "texto": "Pantalla táctil interior de 7 pulgadas, desbloqueo remoto y acceso por tarjeta RFID."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/hp5.png",
               "titulo": "HP5",
               "texto": "Diseño ultra delgado, control desde la app EZVIZ y timbre con múltiples tonos."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/ep7-2k.png",
               "titulo": "EP7 2K Solar",
               "texto": "Sin cableado entre el panel exterior y la pantalla interior, alimentado por panel solar incluido."
             }
@@ -791,17 +791,17 @@
               "texto": "Cerradura con huella digital, cuatro métodos de desbloqueo y alertas en tiempo real."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/dl05.jpg",
               "titulo": "EZVIZ DL05",
               "texto": "Desbloqueo por huella, Bluetooth o Wi-Fi, con códigos temporales para visitas."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/dl03.png",
               "titulo": "EZVIZ DL03",
               "texto": "Cerradura de sobreponer sin necesidad de hub, integrable con cámaras EZVIZ."
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/dl04.png",
               "titulo": "EZVIZ DL04 Pro",
               "texto": "Cerradura de embutir con huella digital y desbloqueo remoto vía la app."
             }
@@ -892,7 +892,7 @@
         }
       ],
       "sitioOficial": "https://www.ezviz.com",
-      "etiquetaRelacion": "Vendedores de productos"
+      "etiquetaRelacion": "Distribuidor de equipos"
     },
     {
       "id": 3,
