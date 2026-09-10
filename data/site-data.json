@@ -701,7 +701,7 @@
           "categoria": "Cámaras Wi-Fi para interior y exterior",
           "items": [
             {
-              "icono": "assets/logos/ezviz-productos/h3c.jpg",
+              "icono": "assets/logos/ezviz-productos/h3c.png",
               "titulo": "H3c",
               "texto": "Cámara 1080p con detección humana por IA, visión nocturna hasta 30m y diseño resistente IP67.",
               "specs": {
@@ -721,7 +721,7 @@
               }
             },
             {
-              "icono": "assets/logos/ezviz-productos/h3c-2k.jpg",
+              "icono": "assets/logos/ezviz-productos/h3c-2k.png",
               "titulo": "H3c 2K",
               "texto": "Resolución 2K, defensa activa con sirena y luz estroboscópica, y detección de zona personalizable.",
               "specs": {
@@ -741,7 +741,7 @@
               }
             },
             {
-              "icono": "assets/logos/ezviz-productos/h3-3k.jpg",
+              "icono": "assets/logos/ezviz-productos/h3-3k.png",
               "titulo": "H3 3K",
               "texto": "3K con detección de personas y vehículos, reconocimiento de gestos y carcasa de aluminio de alta resistencia.",
               "specs": {
@@ -760,7 +760,7 @@
               }
             },
             {
-              "icono": "assets/logos/ezviz-productos/h4-2k.jpg",
+              "icono": "assets/logos/ezviz-productos/h4-2k.png",
               "titulo": "H4 2K",
               "texto": "Cámara domo 2K para espacios interiores más amplios, con audio bidireccional y visión nocturna a color.",
               "specs": {
@@ -785,7 +785,7 @@
           "categoria": "Cámaras con batería recargable",
           "items": [
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/cb2-typec.png",
               "titulo": "CB2 Type-C",
               "texto": "Cámara compacta con base magnética, hasta 50 días de batería — ideal como monitor de bebés o mascotas.",
               "specs": {
@@ -824,7 +824,7 @@
               }
             },
             {
-              "icono": "assets/logos/ezviz-productos/eb3-2k.jpg",
+              "icono": "assets/logos/ezviz-productos/eb3-2k.png",
               "titulo": "EB3 2K",
               "texto": "Hasta 120 días de batería, modo de protección permanente y compatible con panel solar EZVIZ.",
               "specs": {
@@ -844,7 +844,7 @@
               }
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/bc1c-4k.png",
               "titulo": "BC1c 4K Type-C",
               "texto": "4K con hasta 180 días de autonomía y detección de personas y vehículos por IA.",
               "specs": {
@@ -864,7 +864,7 @@
               }
             },
             {
-              "icono": "assets/logos/ezviz-productos/cb8-2k.jpg",
+              "icono": "assets/logos/ezviz-productos/cb8-2k.png",
               "titulo": "CB8 2K Pan & Tilt",
               "texto": "Cobertura panorámica de 360°, auto-seguimiento y hasta 210 días de batería.",
               "specs": {
@@ -883,7 +883,7 @@
               }
             },
             {
-              "icono": "assets/logos/ezviz-productos/eb8-4g.jpg",
+              "icono": "assets/logos/ezviz-productos/eb8-4g.png",
               "titulo": "EB8 4G 2K Pan & Tilt",
               "texto": "Pan & tilt con conectividad 4G y ubicación GPS del dispositivo, sin depender de Wi-Fi.",
               "specs": {
@@ -903,7 +903,7 @@
               }
             },
             {
-              "icono": "",
+              "icono": "assets/logos/ezviz-productos/eb5-4k.png",
               "titulo": "EB5 4K Solar",
               "texto": "Panel solar integrado de 1.4W, hasta 180 días sin necesidad de carga solar.",
               "specs": {
@@ -928,7 +928,7 @@
           "categoria": "Videoporteros inteligentes",
           "items": [
             {
-              "icono": "assets/logos/ezviz-productos/hp7-2k.jpg",
+              "icono": "assets/logos/ezviz-productos/hp7-2k.png",
               "titulo": "HP7 2K",
               "texto": "Pantalla táctil interior de 7 pulgadas, desbloqueo remoto y acceso por tarjeta RFID.",
               "specs": {
@@ -1013,7 +1013,7 @@
               }
             },
             {
-              "icono": "assets/logos/ezviz-productos/dl05.jpg",
+              "icono": "assets/logos/ezviz-productos/dl05.png",
               "titulo": "EZVIZ DL05",
               "texto": "Desbloqueo por huella, Bluetooth o Wi-Fi, con códigos temporales para visitas.",
               "specs": {

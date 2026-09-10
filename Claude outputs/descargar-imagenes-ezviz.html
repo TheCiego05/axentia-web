@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Descargar imágenes EZVIZ</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background: #f4f6fa; margin: 0; padding: 32px 20px; color: #182334; }
+  h1 { font-size: 1.4rem; margin-bottom: 6px; }
+  p.sub { color: #637083; margin-top: 0; margin-bottom: 24px; }
+  #btn { background: #4F81BD; color: #fff; border: none; padding: 14px 28px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-bottom: 24px; }
+  #btn:disabled { opacity: 0.6; cursor: default; }
+  #status { margin-bottom: 20px; font-size: 0.9rem; color: #4F81BD; min-height: 20px; }
+  table { border-collapse: collapse; width: 100%; max-width: 780px; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid #eef1f6; font-size: 0.9rem; }
+  th { background: #F5F8FC; color: #637083; font-size: 0.78rem; text-transform: uppercase; letter-spacing: .03em; }
+  img.thumb { width: 48px; height: 48px; object-fit: contain; background: #F5F8FC; border-radius: 6px; }
+  .ok { color: #1B7F4C; }
+  .fail { color: #B3261E; }
+  .fail a { color: #B3261E; }
+</style>
+</head>
+<body>
+<h1>Imágenes de productos EZVIZ (versión limpia)</h1>
+<p class="sub">Presiona el botón para descargar las 17 imágenes en un solo archivo ZIP. Luego descomprímelo dentro de <code>assets\logos\ezviz-productos</code> reemplazando los archivos existentes.</p>
+<button id="btn">Descargar todo como ZIP</button>
+<div id="status"></div>
+<table>
+  <thead><tr><th></th><th>Modelo</th><th>Archivo</th><th>Estado</th></tr></thead>
+  <tbody id="rows"></tbody>
+</table>
+
+<script>
+const files = [
+  { model: "H3c", filename: "h3c.png", url: "https://mfs.ezvizlife.com/fb49f00a7114be896237e7decd8e01ed_middle.png" },
+  { model: "H3c 2K", filename: "h3c-2k.png", url: "https://mfs.ezvizlife.com/666fb8042746f72c2fb19c948a107b59_middle.png" },
+  { model: "H3 3K", filename: "h3-3k.png", url: "https://mfs.ezvizlife.com/8ceae9cb41fbcd7ad070d4d46fb78872_middle.png" },
+  { model: "H4 2K", filename: "h4-2k.png", url: "https://mfs.ezvizlife.com/bd3a0f89476539a78adf6bf7fbabb566_middle.png" },
+  { model: "CB2 Type-C", filename: "cb2-typec.png", url: "https://mfs.ezvizlife.com/989b85be6e446431cebec4ed9c59a2e4_middle.png" },
+  { model: "CB2 4G 2K", filename: "cb2-4g.png", url: "https://mfs.ezvizlife.com/158d9f108da46accf489373b2aa8c146_middle.png" },
+  { model: "EB3 2K", filename: "eb3-2k.png", url: "https://mfs.ezvizlife.com/69213b496f94f41ae52d93d75bf3d2a2_middle.png" },
+  { model: "BC1c 4K", filename: "bc1c-4k.png", url: "https://mfs.ezvizlife.com/32e32fdd51ca113512d66557d257bf67_middle.png" },
+  { model: "CB8 2K Pan & Tilt", filename: "cb8-2k.png", url: "https://mfs.ezvizlife.com/badeb972d9d053a01659c0c4043816ab_middle.png" },
+  { model: "EB8 4G 2K Pan & Tilt", filename: "eb8-4g.png", url: "https://mfs.ezvizlife.com/f4271cddb1247cd300ef3b964b3f8685_middle.png" },
+  { model: "EB5 4K Solar", filename: "eb5-4k.png", url: "https://mfs.ezvizlife.com/73cd2e58d54ca81d24f940e9dd2c3acd_middle.png" },
+  { model: "HP7 2K", filename: "hp7-2k.png", url: "https://mfs.ezvizlife.com/32739253cc9a69eb4363255e75773f40_middle.png" },
+  { model: "HP5", filename: "hp5.png", url: "https://mfs.ezvizlife.com/94cdf7e64752c2a4575fb1d8c0f5c539_middle.png" },
+  { model: "EP7 2K Solar", filename: "ep7-2k.png", url: "https://mfs.ezvizlife.com/93e42bb00e804b6a329f6997f591b5ad_middle.png" },
+  { model: "EZVIZ DL05", filename: "dl05.png", url: "https://mfs.ezvizlife.com/0053221ca147b13f325dcc8cc6250828_middle.png" },
+  { model: "EZVIZ DL03", filename: "dl03.png", url: "https://mfs.ezvizlife.com/ba1ab2f6f4bd3410463a3d9e6b4e9e19_middle.png" },
+  { model: "EZVIZ DL04 Pro", filename: "dl04.png", url: "https://mfs.ezvizlife.com/2e5797c00f30d4c4dca2a4ba1864d5b5_middle.png" }
+];
+
+const rowsEl = document.getElementById('rows');
+files.forEach((f, i) => {
+  const tr = document.createElement('tr');
+  tr.id = 'row-' + i;
+  tr.innerHTML = `<td><img class="thumb" src="${f.url}" loading="lazy"></td><td>${f.model}</td><td>${f.filename}</td><td class="state">pendiente</td>`;
+  rowsEl.appendChild(tr);
+});
+
+document.getElementById('btn').addEventListener('click', async () => {
+  const btn = document.getElementById('btn');
+  const statusEl = document.getElementById('status');
+  btn.disabled = true;
+  const zip = new JSZip();
+  let okCount = 0, failCount = 0;
+
+  for (let i = 0; i < files.length; i++) {
+    const f = files[i];
+    const stateEl = document.querySelector('#row-' + i + ' .state');
+    statusEl.textContent = `Descargando ${i + 1} de ${files.length}: ${f.model}...`;
+    try {
+      const res = await fetch(f.url, { mode: 'cors' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const blob = await res.blob();
+      zip.file(f.filename, blob);
+      stateEl.textContent = 'OK';
+      stateEl.className = 'state ok';
+      okCount++;
+    } catch (err) {
+      stateEl.innerHTML = `Error — <a href="${f.url}" target="_blank">abrir imagen</a>`;
+      stateEl.className = 'state fail';
+      failCount++;
+    }
+  }
+
+  if (okCount > 0) {
+    statusEl.textContent = `Generando ZIP (${okCount} imágenes incluidas${failCount ? ', ' + failCount + ' fallaron' : ''})...`;
+    const content = await zip.generateAsync({ type: 'blob' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(content);
+    a.download = 'ezviz-productos.zip';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    statusEl.textContent = `Listo. Se descargó ezviz-productos.zip con ${okCount} imágenes.` + (failCount ? ` ${failCount} no se pudieron incluir — usa el enlace "abrir imagen" de esa fila para guardarlas manualmente.` : '');
+  } else {
+    statusEl.textContent = 'No se pudo descargar ninguna imagen automáticamente. Usa los enlaces "abrir imagen" de cada fila para guardarlas manualmente (clic derecho → Guardar imagen como).';
+  }
+  btn.disabled = false;
+});
+</script>
+</body>
+</html>
