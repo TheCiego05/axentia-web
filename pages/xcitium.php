@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xcitium – Axentia SRL</title>
+<meta name="description" content="Xcitium ZeroDwell: tecnologia de contencion que bloquea ransomware y amenazas desconocidas antes de que se ejecuten. Implementado por Axentia SRL en Republica Dominicana.">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
