@@ -809,7 +809,7 @@ function renderBlogCard(b) {
     ? `<img class="blog-cover-img" src="${resolveMediaUrl(b.mediaUrl)}" alt="${b.title}" loading="lazy">`
     : `<span class="blog-media-mark" aria-hidden="true"></span>`;
   return `
-    <article class="blog-card blog-type-${type}" data-type="${type}" onclick="openBlogArticle(${b.id})" tabindex="0" onkeydown="if(event.key==='Enter')openBlogArticle(${b.id})">
+    <a class="blog-card blog-type-${type}" data-type="${type}" href="blog-articulo.php?id=${b.id}">
       <div class="blog-img">
         <span class="blog-type-badge">${label}</span>
         ${mediaPreview}
@@ -820,7 +820,7 @@ function renderBlogCard(b) {
         <p>${b.desc}</p>
         <div class="blog-meta">${b.date}${b.eventDate ? ' · ' + b.eventDate : ''} · ${action}</div>
       </div>
-    </article>`;
+    </a>`;
 }
 
 function initBlogFilter() {

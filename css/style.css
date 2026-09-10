@@ -1193,6 +1193,9 @@ body {
 /* ===== Blog article reader ===== */
 .blog-card {
   cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .blog-card:focus {
@@ -1525,6 +1528,64 @@ body {
 
 @media (max-width: 680px) {
   .blog-article-dialog {
+    padding: 26px 20px;
+  }
+}
+
+/* ===== Blog article — full page ===== */
+.blog-article-page {
+  max-width: 800px;
+}
+
+.blog-article-full {
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 73, 125, 0.14);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(13, 31, 55, 0.10);
+  padding: 40px;
+}
+
+.blog-article-full h1 {
+  margin: 14px 0 10px;
+  color: #182334;
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.blog-article-cover {
+  margin: 24px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.blog-article-cover img {
+  width: 100%;
+  display: block;
+}
+
+.blog-article-back {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(31, 73, 125, 0.12);
+}
+
+.blog-article-related {
+  max-width: 100%;
+  margin: 56px 0 20px;
+}
+
+.blog-article-related h3 {
+  color: #182334;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.blog-article-related .blog-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+@media (max-width: 680px) {
+  .blog-article-full {
     padding: 26px 20px;
   }
 }
