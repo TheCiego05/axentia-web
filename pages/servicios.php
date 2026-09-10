@@ -66,7 +66,7 @@
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="/js/main.js?v=14"></script>
+  <script src="/js/main.js?v=15"></script>
   <script>
     document.getElementById('services-grid').innerHTML = DATA.services.map(renderServiceCard).join('');
     var servicesCountEl = document.getElementById('services-count');

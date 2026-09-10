@@ -40,7 +40,7 @@
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="/js/main.js?v=14"></script>
+  <script src="/js/main.js?v=15"></script>
   <script>
     document.getElementById('blog-grid').innerHTML = [...DATA.blog].sort((a, b) => b.id - a.id).map(renderBlogCard).join('');
     initBlogFilter();

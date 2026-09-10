@@ -20,7 +20,7 @@
   <?php $base = '/'; $navVariant = 'simple'; include __DIR__ . '/../../includes/nav.php'; ?>
 <main id="service-detail-shell" data-service-slug="gestion-de-la-nube"></main>
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="/js/main.js?v=14"></script>
+  <script src="/js/main.js?v=15"></script>
   <script>renderServiceDetailPage('gestion-de-la-nube'); renderFooter();</script>
 </body>
 </html>

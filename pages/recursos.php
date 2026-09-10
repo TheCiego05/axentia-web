@@ -27,7 +27,7 @@
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="/js/main.js?v=14"></script>
+  <script src="/js/main.js?v=15"></script>
   <script>
     const grid = document.getElementById('resources-grid');
     grid.innerHTML = (DATA.resources || []).length

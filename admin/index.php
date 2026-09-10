@@ -285,7 +285,7 @@ $ANALYTICS = $adminLoggedIn ? get_analytics() : ['totalViews'=>0,'pages'=>[],'ar
 <?php render_data_script($DATA, $NEXT_ID); ?>
 <script>const ADMIN_LOGGED_IN = <?= $adminLoggedIn ? 'true' : 'false' ?>;</script>
 <script>const ANALYTICS = <?= json_encode($ANALYTICS, JSON_UNESCAPED_UNICODE) ?>;</script>
-<script src="/js/main.js?v=14"></script>
+<script src="/js/main.js?v=15"></script>
 <script src="admin.js"></script>
 </body>
 </html>
