@@ -1569,6 +1569,39 @@ body {
   border-top: 1px solid rgba(31, 73, 125, 0.12);
 }
 
+.blog-article-share {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.blog-article-share-label {
+  font-size: .85rem;
+  font-weight: 700;
+  color: #57626F;
+  margin-right: 4px;
+}
+.blog-share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 73, 125, 0.16);
+  background: #F5F8FC;
+  color: #1F497D;
+  cursor: pointer;
+  transition: all .2s;
+}
+.blog-share-btn:hover { transform: translateY(-2px); border-color: transparent; }
+.blog-share-btn.share-whatsapp:hover { background: #25D366; color: #fff; }
+.blog-share-btn.share-facebook:hover { background: #1877F2; color: #fff; }
+.blog-share-btn.share-linkedin:hover { background: #0A66C2; color: #fff; }
+.blog-share-btn.share-x:hover { background: #000; color: #fff; }
+.blog-share-btn.share-copy:hover { background: #2b7fff; color: #fff; }
+
 .blog-article-related {
   max-width: 100%;
   margin: 56px 0 20px;
