@@ -1215,6 +1215,13 @@ body {
   margin-bottom: 34px;
 }
 
+@media (max-width: 680px) {
+  .blog-resource-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
 .blog-resource-strip article {
   padding: 22px;
   border: 1px solid rgba(31, 73, 125, 0.14);
