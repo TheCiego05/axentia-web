@@ -7,7 +7,7 @@
   <meta name="google-site-verification" content="fhybFpk54ML04QMdtH-nwHpP20dfgvASeFx3rwgxE9I" />
   <title>Axentia SRL – Conectando Ideas, Innovando el Futuro</title>
   <meta name="description" content="Soluciones tecnológicas y de ciberseguridad para cualquier tipo de organización en República Dominicana — pequeña, mediana, grande o gobierno.">
-  <link rel="stylesheet" href="/css/style.css?v=40">
+  <link rel="stylesheet" href="/css/style.css?v=41">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -177,7 +177,7 @@
   </section>
 
   <!-- SOCIOS PREVIEW -->
-  <section id="socios-preview" class="section-blue">
+  <section id="socios-preview" class="section-blue partners-showcase">
     <div class="container">
       <div class="section-label">Alianzas estratégicas</div>
       <h2 class="section-title">Trabajamos Con</h2>

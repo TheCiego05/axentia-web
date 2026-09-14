@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Axentia SRL es partner y revendedor certificado de Microsoft, Fortinet, Kaspersky, Veeam y otras marcas tecnológicas líderes.">
   <title>Socios – Axentia SRL</title>
-  <link rel="stylesheet" href="/css/style.css?v=40">
+  <link rel="stylesheet" href="/css/style.css?v=41">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <section class="section-dark">
+  <section class="section-dark partners-showcase">
     <div class="container">
       <div class="partners-grid" id="partners-grid"></div>
     </div>
