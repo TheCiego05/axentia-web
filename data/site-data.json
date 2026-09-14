@@ -432,6 +432,17 @@
       "desc": "Un caso práctico de cómo Microsoft Copilot se integra en las herramientas de Microsoft 365 para ayudar a los equipos a ser más productivos y creativos.",
       "content": "Microsoft Copilot se ha convertido en uno de los ejemplos más visibles de cómo la inteligencia artificial generativa se integra directamente en las herramientas de oficina que ya usan millones de empresas: Word, Excel, Outlook y Teams.\n\nEste video muestra de forma práctica cómo Copilot ayuda a redactar documentos más rápido, resumir correos y reuniones, y automatizar tareas repetitivas dentro del ecosistema de Microsoft 365, algo especialmente útil para equipos pequeños que necesitan hacer más con los mismos recursos.\n\nPara las empresas que ya trabajan con licencias de Microsoft 365, evaluar la incorporación de Copilot puede ser un paso natural para ganar productividad, siempre acompañado de una buena política de uso de datos y de IA dentro de la organización.",
       "date": "Septiembre 2026"
+    },
+    {
+      "id": 21,
+      "type": "noticia",
+      "tag": "Hardware",
+      "emoji": "📱",
+      "mediaUrl": "assets/blog/iphone-18-pro-max-cover.png",
+      "title": "Apple presenta el iPhone 18 Pro y el iPhone 18 Pro Max, con el nuevo chip A20 Pro",
+      "desc": "En el evento \"Surprise and Shine\" del 9 de septiembre, Apple presentó los iPhone 18 Pro y Pro Max con chip A20 Pro de 2 nanómetros, mejor batería y nuevas herramientas de cámara. Llegan a la venta el 18 de septiembre.",
+      "content": "Apple presentó el 9 de septiembre de 2026, en el evento \"Surprise and Shine\" liderado por el nuevo CEO John Ternus, la nueva generación de sus teléfonos insignia: el iPhone 18 Pro y el iPhone 18 Pro Max. Ambos modelos estarán disponibles a partir del 18 de septiembre, con precios que arrancan en $1,199 para el Pro (256GB) y $1,299 para el Pro Max (256GB).\n\nEl salto más importante está en el procesador: el nuevo chip A20 Pro, fabricado con un proceso de 2 nanómetros y acompañado de 12GB de RAM, promete mejoras de rendimiento y eficiencia energética que se traducen en hasta 45 horas de reproducción de video continua, según Apple. La Isla Dinámica también fue rediseñada con un tamaño menor, y el Pro Max estrena una cámara con apertura variable, una función que hasta ahora no habían incorporado los iPhone. Apple también agregó \"Pro Controls\", una herramienta pensada para quienes graban video de forma profesional y necesitan ajustar color y velocidad directamente desde el teléfono.\n\nEn software, los nuevos equipos vienen con iOS 27 y una versión ampliada de Apple Intelligence, el sistema de inteligencia artificial generativa de Apple, que suma herramientas de escritura mejoradas y generación de imágenes a través de un modelo que corre en la nube privada de Apple, con límites de uso diario para los usuarios.\n\nEste anuncio llega apenas días después de que Apple presentara también el iPhone Duo, su primer teléfono plegable, del que ya hablamos en el blog. Entre ambos lanzamientos, queda claro que 2026 es un año de renovación de imagen para la línea iPhone, con Apple compitiendo de forma más directa con los plegables que Samsung y otros fabricantes llevan años perfeccionando.\n\nPara quienes gestionan flotas de dispositivos corporativos, cada nueva generación de iPhone trae también el reto habitual de planificar la renovación de equipos, evaluar compatibilidad con las políticas de MDM (gestión de dispositivos móviles) de la empresa, y asegurarse de que el proceso de migración de datos y configuración se haga sin fricción para los usuarios finales — algo que conviene planificar con tiempo antes de que lleguen los equipos nuevos.",
+      "date": "Septiembre 2026"
     }
   ],
   "partners": [
@@ -5326,7 +5337,7 @@
   "nextId": {
     "services": 11,
     "clients": 8,
-    "blog": 21,
+    "blog": 22,
     "partners": 21,
     "faq": 7,
     "fabricantesInfo": 21,
