@@ -1519,6 +1519,19 @@ body {
   margin-top: 24px;
 }
 
+.blog-article-body-image {
+  max-width: 420px;
+  margin: 8px auto 28px;
+  text-align: center;
+}
+
+.blog-article-body-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 34px rgba(13, 31, 55, 0.14);
+}
+
 .blog-article-content p {
   color: #475569;
   font-size: 1rem;

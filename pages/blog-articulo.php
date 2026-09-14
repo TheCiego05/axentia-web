@@ -87,6 +87,11 @@ $shareUrl = rawurlencode($articleUrl);
         <?php endif; ?>
 
         <div class="blog-article-content">
+          <?php if (!empty($article['bodyImage'])): ?>
+            <div class="blog-article-body-image">
+              <img src="<?= htmlspecialchars(preg_match('/^(data:|https?:\/\/)/i', $article['bodyImage']) ? $article['bodyImage'] : '/' . $article['bodyImage']) ?>" alt="<?= htmlspecialchars($article['title']) ?>" loading="lazy">
+            </div>
+          <?php endif; ?>
           <?php foreach (preg_split('/\n{2,}/', trim($article['content'] ?? $article['desc'])) as $p): ?>
             <p><?= nl2br(htmlspecialchars(trim($p))) ?></p>
           <?php endforeach; ?>
