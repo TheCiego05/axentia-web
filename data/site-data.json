@@ -396,6 +396,42 @@
       "desc": "Un usuario publicó en redes sociales y en un foro muestras de una base de datos que, según afirma, pertenece a casi 2.9 millones de clientes de Claro RD. La empresa aún no ha confirmado ni desmentido el incidente.",
       "content": "Esta semana circuló en redes sociales y en un foro especializado la alegación de que un usuario identificado como \"jarol1488\" logró acceder a sistemas de Claro República Dominicana y obtener una base de datos con información de clientes. Según la publicación, difundida el 13 de septiembre por la cuenta @DarkWebInformer en X, el conjunto de datos incluiría aproximadamente 2,889,256 registros.\n\nEntre los datos que supuestamente se habrían expuesto figuran números de cédula, números telefónicos, identificadores ICCID de tarjetas SIM, información de suscripciones y estado de cuenta, categorías de plan, fechas de activación, ciclos de facturación y códigos internos de la empresa. Es importante subrayar que, hasta el momento, ni Claro ni las autoridades dominicanas han emitido un pronunciamiento oficial confirmando o desmintiendo la autenticidad de estos datos, por lo que el incidente debe tratarse todavía como una alegación no verificada de forma independiente.\n\nAun así, este tipo de casos merece atención por el tipo de información involucrada. Datos como la cédula, el teléfono y sobre todo el ICCID de la SIM son particularmente sensibles porque pueden facilitar fraudes de SIM swapping —la técnica con la que un atacante duplica o transfiere una línea telefónica para interceptar códigos de verificación (2FA) y tomar control de cuentas bancarias, correos o redes sociales asociadas a ese número—. También abren la puerta a campañas de phishing y vishing (fraude telefónico) más creíbles, ya que el atacante puede citar datos reales de la cuenta de la víctima para ganarse su confianza.\n\nMientras se aclara el origen y el alcance real de esta filtración, la recomendación para cualquier persona en República Dominicana es la misma que ante cualquier posible exposición de datos: activar la verificación en dos pasos con una app autenticadora en lugar de SMS cuando sea posible, estar alerta ante llamadas o mensajes que citen datos personales como supuesta \"prueba\" de identidad, y contactar directamente a su operador ante cualquier cambio inesperado en el servicio de su línea (por ejemplo, quedarse sin señal sin motivo aparente, señal de un posible SIM swap en curso).\n\nPara las empresas, el episodio es un recordatorio de que la exposición de datos de terceros —proveedores, operadoras, plataformas con las que se integra el negocio— también es un riesgo propio: la información de empleados y clientes que una empresa comparte con sus proveedores de telecomunicaciones, nómina o facturación depende de los controles de seguridad de ese tercero. Evaluar el riesgo de la cadena de proveedores y contar con un plan de respuesta a incidentes que contemple también estos escenarios es parte de una estrategia de ciberseguridad empresarial completa.",
       "date": "Septiembre 2026"
+    },
+    {
+      "id": 18,
+      "type": "video",
+      "tag": "Inteligencia Artificial",
+      "emoji": "🎬",
+      "mediaUrl": "assets/blog/video-fortiai-en-accion-cover.png",
+      "videoUrl": "https://www.youtube.com/watch?v=oqu5Hg7KIJo",
+      "title": "FortiAI en acción: la IA que ayuda a detener ataques en tiempo récord",
+      "desc": "Un vistazo a cómo FortiAI, la inteligencia artificial integrada en el ecosistema de Fortinet, acelera la detección y contención de amenazas en la red.",
+      "content": "Fortinet, una de las marcas que Axentia representa en República Dominicana, presenta en este video cómo FortiAI se integra en su plataforma de seguridad para detectar y responder a ataques de forma mucho más rápida que los métodos tradicionales basados solo en reglas y firmas.\n\nEl video explica de forma práctica el valor de la IA aplicada a la ciberseguridad empresarial: reducir el tiempo entre que ocurre un ataque y que el equipo de seguridad lo detecta y contiene, algo crítico cuando cada minuto de exposición puede significar más daño.\n\nSi tu empresa ya usa soluciones Fortinet o está evaluando modernizar su infraestructura de seguridad, este video es un buen punto de partida para entender hacia dónde va la protección perimetral y de red.",
+      "date": "Septiembre 2026"
+    },
+    {
+      "id": 19,
+      "type": "video",
+      "tag": "Ciberseguridad",
+      "emoji": "🎬",
+      "mediaUrl": "assets/blog/video-ia-riesgos-privacidad-eset-cover.png",
+      "videoUrl": "https://www.youtube.com/watch?v=8qwBhKL_21k",
+      "title": "El uso de la inteligencia artificial en las empresas: riesgos de privacidad y seguridad",
+      "desc": "Episodio de Conexión Segura, el podcast de ESET Latinoamérica, sobre los riesgos de privacidad y seguridad que trae adoptar IA en el entorno laboral.",
+      "content": "Cada vez más empresas dominicanas están incorporando herramientas de inteligencia artificial en su día a día —desde asistentes de escritura hasta chatbots de atención al cliente—, pero pocas se detienen a evaluar qué información están compartiendo con esas herramientas y qué pasa con esos datos después.\n\nEste episodio de Conexión Segura, el podcast de ESET Latinoamérica, aborda justamente eso: los riesgos de privacidad y seguridad que trae adoptar IA sin una política clara de uso, y qué deben considerar las empresas antes de dar acceso a estas herramientas a su información sensible.\n\nEs un buen recordatorio de que adoptar IA en la empresa no es solo una decisión de productividad, sino también de seguridad de la información — algo que conviene evaluar con el mismo cuidado que cualquier otro cambio en la infraestructura tecnológica del negocio.",
+      "date": "Septiembre 2026"
+    },
+    {
+      "id": 20,
+      "type": "video",
+      "tag": "Inteligencia Artificial",
+      "emoji": "🎬",
+      "mediaUrl": "assets/blog/video-microsoft-copilot-productividad-cover.png",
+      "videoUrl": "https://www.youtube.com/watch?v=oEkmPIWcFZ0",
+      "title": "Copilot: el asistente de Microsoft que impulsa la productividad",
+      "desc": "Un caso práctico de cómo Microsoft Copilot se integra en las herramientas de Microsoft 365 para ayudar a los equipos a ser más productivos y creativos.",
+      "content": "Microsoft Copilot se ha convertido en uno de los ejemplos más visibles de cómo la inteligencia artificial generativa se integra directamente en las herramientas de oficina que ya usan millones de empresas: Word, Excel, Outlook y Teams.\n\nEste video muestra de forma práctica cómo Copilot ayuda a redactar documentos más rápido, resumir correos y reuniones, y automatizar tareas repetitivas dentro del ecosistema de Microsoft 365, algo especialmente útil para equipos pequeños que necesitan hacer más con los mismos recursos.\n\nPara las empresas que ya trabajan con licencias de Microsoft 365, evaluar la incorporación de Copilot puede ser un paso natural para ganar productividad, siempre acompañado de una buena política de uso de datos y de IA dentro de la organización.",
+      "date": "Septiembre 2026"
     }
   ],
   "partners": [
@@ -5290,7 +5326,7 @@
   "nextId": {
     "services": 11,
     "clients": 8,
-    "blog": 18,
+    "blog": 21,
     "partners": 21,
     "faq": 7,
     "fabricantesInfo": 21,

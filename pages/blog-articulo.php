@@ -64,7 +64,19 @@ $shareUrl = rawurlencode($articleUrl);
         <h1><?= htmlspecialchars($article['title']) ?></h1>
         <div class="blog-meta"><?= htmlspecialchars($article['date']) ?><?= !empty($article['eventDate']) ? ' · ' . htmlspecialchars($article['eventDate']) : '' ?> · <?= htmlspecialchars($typeLabel) ?></div>
 
-        <?php if ($coverSrc): ?>
+        <?php
+          $youtubeId = null;
+          if (!empty($article['videoUrl'])) {
+              if (preg_match('/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]+)/', $article['videoUrl'], $m)) {
+                  $youtubeId = $m[1];
+              }
+          }
+        ?>
+        <?php if ($youtubeId): ?>
+          <div class="blog-media-embed">
+            <iframe src="https://www.youtube.com/embed/<?= htmlspecialchars($youtubeId) ?>" title="<?= htmlspecialchars($article['title']) ?>" loading="lazy" allowfullscreen></iframe>
+          </div>
+        <?php elseif ($coverSrc): ?>
           <div class="blog-article-cover">
             <img src="<?= htmlspecialchars($coverSrc) ?>" alt="<?= htmlspecialchars($article['title']) ?>" loading="lazy">
           </div>
