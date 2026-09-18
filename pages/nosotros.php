@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conoce a Axentia SRL: nuestra historia, misión, visión y el equipo que respalda soluciones de tecnología y ciberseguridad en República Dominicana.">
   <title>Nosotros – Axentia SRL</title>
-  <link rel="stylesheet" href="/css/style.css?v=50">
+  <link rel="stylesheet" href="/css/style.css?v=51">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -46,10 +46,12 @@
           </div>
           <div class="about-values">
             <div class="value-card">
+              <span class="value-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.2"/><circle cx="12" cy="12" r=".6" fill="currentColor" stroke="none"/></svg></span>
               <h3>Misión</h3>
               <p><?= htmlspecialchars($DATA['nosotros']['mision'] ?? '') ?></p>
             </div>
             <div class="value-card">
+              <span class="value-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
               <h3>Visión</h3>
               <p><?= htmlspecialchars($DATA['nosotros']['vision'] ?? '') ?></p>
             </div>
@@ -79,7 +81,7 @@
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="/js/main.js?v=21"></script>
+  <script src="/js/main.js?v=22"></script>
   <script>
     document.getElementById('clients-grid').innerHTML = DATA.clients.map(renderClientCard).join('');
     initAxGlobe('ax-globe');

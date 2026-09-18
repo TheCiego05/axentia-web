@@ -436,9 +436,9 @@ section, .section-block { padding:100px 60px; }
 .about-stats { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
 .about-globe-wrap {
   display:flex; align-items:center; justify-content:center;
-  min-height:260px; margin-top:32px;
+  min-height:340px; margin-top:32px;
 }
-#ax-globe { width:100%; max-width:300px; aspect-ratio:1/1; }
+#ax-globe { width:100%; max-width:400px; aspect-ratio:1/1; }
 @media (prefers-reduced-motion: reduce) { .about-globe-wrap { display:none; } }
 .about-stat  { background:var(--white-04); border:1px solid var(--border); border-radius:12px; padding:24px; text-align:center; }
 .about-stat .num   { font-family:'Rajdhani',sans-serif; font-size:2.5rem; font-weight:700; color:var(--blue-accent); }
@@ -1130,6 +1130,12 @@ body {
   border-radius: 8px;
   padding: 18px;
   box-shadow: 0 12px 28px rgba(31, 73, 125, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.pillar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 44px rgba(31, 73, 125, 0.14);
+  border-color: rgba(47, 128, 209, 0.4);
 }
 
 .pillar-card span {
@@ -1144,6 +1150,12 @@ body {
   color: #1F497D;
   font-size: 0.78rem;
   font-weight: 800;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+.pillar-card:hover span {
+  transform: scale(1.08);
+  background: #1F497D;
+  color: #fff;
 }
 
 .pillar-card h3 {
@@ -1165,7 +1177,26 @@ body {
   border-radius: 8px !important;
   padding: 22px !important;
   box-shadow: 0 12px 30px rgba(31, 73, 125, 0.07) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 46px rgba(31, 73, 125, 0.15) !important;
+  border-color: rgba(47, 128, 209, 0.4) !important;
+}
+
+.value-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: linear-gradient(155deg, #4F81BD 0%, #1F497D 100%);
+  color: #fff;
+}
+.value-card-icon svg { width: 18px; height: 18px; }
 
 .value-card h3 {
   color: #1F497D !important;

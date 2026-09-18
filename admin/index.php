@@ -11,7 +11,7 @@ $ANALYTICS = $adminLoggedIn ? get_analytics() : ['totalViews'=>0,'pages'=>[],'ar
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin – Axentia SRL</title>
-  <link rel="stylesheet" href="/css/style.css?v=50">
+  <link rel="stylesheet" href="/css/style.css?v=51">
   <link rel="stylesheet" href="/admin/admin.css">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -285,7 +285,7 @@ $ANALYTICS = $adminLoggedIn ? get_analytics() : ['totalViews'=>0,'pages'=>[],'ar
 <?php render_data_script($DATA, $NEXT_ID); ?>
 <script>const ADMIN_LOGGED_IN = <?= $adminLoggedIn ? 'true' : 'false' ?>;</script>
 <script>const ANALYTICS = <?= json_encode($ANALYTICS, JSON_UNESCAPED_UNICODE) ?>;</script>
-<script src="/js/main.js?v=21"></script>
+<script src="/js/main.js?v=22"></script>
 <script src="admin.js"></script>
 </body>
 </html>
