@@ -84,8 +84,13 @@ function renderPlataformaItem($pl) {
       </div>
       <aside class="mp-status-card">
         <span>Axentia SRL</span>
+        <?php if (!empty($fabricante['personalCertificado'])): ?>
         <h2>Equipo certificado</h2>
-        <p>Especialistas de Axentia preparados para evaluar, dimensionar e implementar soluciones <?= htmlspecialchars($fabricante['name']) ?> en ambientes empresariales, con soporte local en República Dominicana.</p>
+        <p>Especialistas de Axentia certificados en <?= htmlspecialchars($fabricante['name']) ?>, preparados para evaluar, dimensionar e implementar soluciones en ambientes empresariales, con soporte local en República Dominicana.</p>
+        <?php else: ?>
+        <h2>Distribuidor autorizado</h2>
+        <p>Axentia distribuye e integra soluciones <?= htmlspecialchars($fabricante['name']) ?> en ambientes empresariales, con acompañamiento local en República Dominicana.</p>
+        <?php endif; ?>
       </aside>
     </div>
   </header>

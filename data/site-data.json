@@ -1488,6 +1488,7 @@
     {
       "id": 3,
       "slug": "fortinet",
+      "personalCertificado": true,
       "name": "Fortinet",
       "logo": "assets/logos/partners/fortinet-authorized-partner.png",
       "categoria": "Seguridad perimetral y redes",
@@ -2928,6 +2929,7 @@
     {
       "id": 10,
       "slug": "microsoft",
+      "personalCertificado": true,
       "name": "Microsoft",
       "logo": "assets/logos/partners/microsoft-partner.png",
       "categoria": "Nube, productividad y seguridad",
@@ -4833,6 +4835,7 @@
     {
       "id": 18,
       "slug": "xcitium",
+      "personalCertificado": true,
       "name": "Xcitium",
       "logo": "assets/logos/partners/xcitium.png",
       "categoria": "Zero Trust Endpoint Security",
@@ -5328,6 +5331,7 @@
     {
       "id": 20,
       "slug": "calculai",
+      "personalCertificado": true,
       "name": "CalculAI",
       "logo": "assets/logos/calculai.png",
       "categoria": "Aliado tecnológico · RinIntelligence",
