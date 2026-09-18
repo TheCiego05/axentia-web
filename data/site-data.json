@@ -670,6 +670,11 @@
       "id": 20,
       "name": "Xcitium Partner",
       "logo": "assets/logos/partners/xcitium.png"
+    },
+    {
+      "id": 21,
+      "name": "Strike Partner",
+      "logo": "assets/logos/partners/strike.svg"
     }
   ],
   "faq": [
@@ -5417,6 +5422,79 @@
       "customPage": "https://medigestion.axentia.com.do/",
       "destacado": true,
       "colorAccent": "#00A88E"
+    },
+    {
+      "id": 22,
+      "slug": "strike",
+      "name": "Strike",
+      "logo": "assets/logos/partners/strike.svg",
+      "categoria": "Ciberseguridad ofensiva · Pentesting como Servicio (PTaaS)",
+      "descripcion": "Strike es una plataforma de Validación Híbrida Continua (Pentesting as a Service) que combina inteligencia artificial con expertos en seguridad ofensiva certificados. Descubre y monitorea activos en tiempo real, ejecuta emulaciones de ataque continuas sobre cada cambio en el entorno y valida manualmente el impacto real de cada hallazgo antes de reportarlo, alcanzando un 97% de precisión con solo 3% de falsos positivos. Axentia SRL distribuye Strike en República Dominicana para llevar pruebas de penetración continuas, y no solo puntuales, a empresas que necesitan reducir su exposición real al riesgo.",
+      "capacidades": [
+        {
+          "titulo": "Evaluación",
+          "texto": "Mapeo de activos expuestos (web, infraestructura, repositorios) y definición del alcance de las pruebas."
+        },
+        {
+          "titulo": "Diseño",
+          "texto": "Definición de objetivos, criticidad de activos y frecuencia de validación según el contexto del negocio."
+        },
+        {
+          "titulo": "Implementación",
+          "texto": "Conexión de Strike a la infraestructura, DNS y repositorios para iniciar el monitoreo y las emulaciones de ataque."
+        },
+        {
+          "titulo": "Soporte",
+          "texto": "Acompañamiento de Axentia en la lectura de hallazgos, priorización de remediación y seguimiento de retests."
+        }
+      ],
+      "productos": [
+        "Live Asset Radar (inventario de activos en tiempo real)",
+        "Threat Emulation Engine (emulación de ataques con IA)",
+        "Remediation Support Hub (soporte de remediación con contexto ofensivo)",
+        "Validación híbrida (IA + expertos en seguridad ofensiva)",
+        "Detección de vulnerabilidades de lógica de negocio",
+        "Retest de vulnerabilidades específicas en minutos",
+        "Trazabilidad completa del tráfico de pruebas vía VPN propietaria"
+      ],
+      "brochureUrl": "",
+      "videoUrl": "",
+      "customPage": "",
+      "destacado": false,
+      "colorAccent": "#1F1F2E",
+      "sitioOficial": "https://strike.sh/es",
+      "stats": [
+        {
+          "num": "97%",
+          "label": "Precisión reportada en los hallazgos"
+        },
+        {
+          "num": "3%",
+          "label": "Falsos positivos"
+        },
+        {
+          "num": "Always-on",
+          "label": "Validación continua, no solo puntual"
+        },
+        {
+          "num": "PTaaS",
+          "label": "Pentesting como Servicio"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿En qué se diferencia Strike de un pentest tradicional?",
+          "a": "Un pentest tradicional es una foto puntual del riesgo. Strike ofrece validación continua (\"always-on\"): monitorea activos y ejecuta emulaciones de ataque cada vez que hay cambios en tu entorno, en vez de esperar a la próxima evaluación anual."
+        },
+        {
+          "q": "¿Solo usa inteligencia artificial o también hay personas involucradas?",
+          "a": "Ambos. La IA amplía la cobertura y la velocidad de detección, pero cada hallazgo pasa por validación manual de expertos en seguridad ofensiva antes de llegar a tu equipo, lo que reduce los falsos positivos a un 3%."
+        },
+        {
+          "q": "¿Qué rol tiene Axentia en este servicio?",
+          "a": "Axentia SRL distribuye Strike en República Dominicana: acompaña la implementación, define el alcance junto al cliente y ayuda a priorizar la remediación de los hallazgos reportados por la plataforma."
+        }
+      ]
     }
   ],
   "testimonials": [
@@ -5467,9 +5545,9 @@
     "services": 11,
     "clients": 8,
     "blog": 33,
-    "partners": 21,
+    "partners": 22,
     "faq": 7,
-    "fabricantesInfo": 21,
+    "fabricantesInfo": 23,
     "testimonials": 3,
     "resources": 2
   }
