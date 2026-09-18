@@ -67,7 +67,7 @@ function initInteractiveSite() {
     document.documentElement.style.setProperty('--my', `${y}%`);
   }, { passive: true });
 
-  const items = document.querySelectorAll('.service-card, .hero-card, .service-values-grid article, .stats-row .stat-item, .manufacturer-card, .blog-card, .pillar-card, .testimonial-card, .fabricante-mini-card, .hero-v3-copy, .hero-showcase, .hero-notif-wrap, .client-card, .partner-badge, .section-label, .section-title, .manufacturer-hero-card, .manufacturer-capabilities > div, .manufacturer-products');
+  const items = document.querySelectorAll('.service-card, .hero-card, .service-values-grid article, .stats-row .stat-item, .manufacturer-card, .blog-card, .pillar-card, .testimonial-card, .fabricante-mini-card, .hero-v3-copy, .hero-showcase, .hero-notif-wrap, .client-card, .partner-badge, .section-label, .section-title, .manufacturer-hero-card, .manufacturer-capabilities > div, .manufacturer-products, .mp-textcard');
   if (!('IntersectionObserver' in window)) {
     items.forEach(item => item.classList.add('is-visible'));
     return;

@@ -2308,6 +2308,7 @@ body {
   background: #FFFFFF;
   border: 1px solid rgba(31, 73, 125, 0.14);
   box-shadow: 0 14px 34px rgba(31, 73, 125, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .mp-textcard::before {
   content: "";
@@ -2315,10 +2316,46 @@ body {
   left: 0; top: 22px; bottom: 22px;
   width: 3px;
   border-radius: 2px;
-  background: var(--mp-accent);
+  background: var(--mp-accent, #4F81BD);
+  transition: bottom 0.25s ease;
 }
+.mp-textcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 50px rgba(31, 73, 125, 0.14);
+  border-color: color-mix(in srgb, var(--mp-accent, #4F81BD) 45%, transparent);
+}
+.mp-textcard:hover::before { bottom: 12px; }
 .mp-textcard h3 { color: #182334; margin-bottom: 8px; font-size: 1.05rem; }
 .mp-textcard p { color: #637083; font-size: 0.9rem; line-height: 1.6; }
+
+.mp-textcard-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  background: linear-gradient(155deg, color-mix(in srgb, var(--mp-accent, #4F81BD) 75%, white) 0%, var(--mp-accent, #4F81BD) 100%);
+  color: #fff;
+  transition: transform 0.25s ease;
+}
+.mp-textcard-icon svg { width: 20px; height: 20px; }
+.mp-textcard:hover .mp-textcard-icon { transform: scale(1.08) rotate(-4deg); }
+
+.mp-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--mp-accent, #4F81BD) 12%, white);
+  color: var(--mp-accent, #4F81BD);
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
 .mp-platform-category { margin-bottom: 30px; }
 .mp-platform-category:last-child { margin-bottom: 0; }
 .mp-platform-category-title { color: color-mix(in srgb, var(--mp-accent) 70%, white); font-size: 0.98rem; font-weight: 700; letter-spacing: .03em; margin-bottom: 16px; padding-left: 14px; border-left: 3px solid var(--mp-accent); text-transform: uppercase; }
@@ -3321,6 +3358,9 @@ body {
 .partners-grid .reveal-on-scroll:nth-child(4n+4) { transition-delay: .24s; }
 .services-grid .reveal-on-scroll:nth-child(6n+5) { transition-delay: .32s; }
 .services-grid .reveal-on-scroll:nth-child(6n+6) { transition-delay: .4s; }
+.mp-textcard-grid .reveal-on-scroll:nth-child(3n+2) { transition-delay: .08s; }
+.mp-textcard-grid .reveal-on-scroll:nth-child(3n+3) { transition-delay: .16s; }
+.mp-textcard-grid.two .reveal-on-scroll:nth-child(2n+2) { transition-delay: .1s; }
 
 /* ═══════════════ HERO v3 — centrado, tipo showcase (Axentia) ═══════════════ */
 #hero {

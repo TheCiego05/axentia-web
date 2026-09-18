@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Planes de soporte IT gestionado para empresas dominicanas: monitoreo, respuesta y visitas presenciales según el nivel de tu operación.">
   <title>Soporte – Axentia SRL</title>
-  <link rel="stylesheet" href="/css/style.css?v=45">
+  <link rel="stylesheet" href="/css/style.css?v=46">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="interactive-site">
+<body class="interactive-site" style="--mp-accent: #2F80D1;">
   <?php $base = '/'; $navVariant = 'full'; include __DIR__ . '/../includes/nav.php'; ?>
 <div class="page-header">
     <div class="container">
@@ -27,26 +27,32 @@
       <p class="section-sub">Más allá de "atender tickets": así protegemos tu operación día a día.</p>
       <div class="mp-textcard-grid">
         <div class="mp-textcard">
+          <span class="mp-textcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 9 9"/><circle cx="12" cy="12" r="2.5"/></svg></span>
           <h3>Monitoreo 24/7</h3>
           <p>Vigilancia continua de servidores, equipos y conectividad para detectar fallas antes de que afecten tu operación.</p>
         </div>
         <div class="mp-textcard">
+          <span class="mp-textcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19v1a2 2 0 0 1-2 2h-4"/></svg></span>
           <h3>Mesa de ayuda y tickets</h3>
           <p>Canal directo para reportar incidencias, con seguimiento y prioridad de atención según el plan contratado.</p>
         </div>
         <div class="mp-textcard">
+          <span class="mp-textcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10.2"/></svg></span>
           <h3>Gestión de parches y actualizaciones</h3>
           <p>Mantenimiento preventivo de sistemas operativos y software crítico para reducir vulnerabilidades.</p>
         </div>
         <div class="mp-textcard">
+          <span class="mp-textcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.5-8.97A5.5 5.5 0 0 1 17.2 8.1 4 4 0 0 1 17 18H7z"/><path d="M12 11v6M9.5 14.5 12 12l2.5 2.5"/></svg></span>
           <h3>Respaldo y continuidad</h3>
           <p>Verificación de que tus copias de seguridad se ejecuten correctamente y estén disponibles ante una eventualidad.</p>
         </div>
         <div class="mp-textcard">
+          <span class="mp-textcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></span>
           <h3>Visitas técnicas presenciales</h3>
           <p>Soporte en sitio según tu plan, con atención directa en Santo Domingo y Santiago.</p>
         </div>
         <div class="mp-textcard">
+          <span class="mp-textcard-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
           <h3>Reportes de operación</h3>
           <p>Visibilidad periódica del estado de tu infraestructura y las incidencias atendidas en el período.</p>
         </div>
@@ -64,18 +70,22 @@
       </div>
       <div class="mp-textcard-grid two">
         <div class="mp-textcard">
+          <span class="mp-step-num">01</span>
           <h3>Diagnóstico</h3>
           <p>Evaluamos tu infraestructura actual, cantidad de dispositivos y necesidades operativas.</p>
         </div>
         <div class="mp-textcard">
+          <span class="mp-step-num">02</span>
           <h3>Propuesta</h3>
           <p>Recomendamos el plan que mejor se ajusta a tu operación y presupuesto.</p>
         </div>
         <div class="mp-textcard">
+          <span class="mp-step-num">03</span>
           <h3>Onboarding</h3>
           <p>Instalamos las herramientas de monitoreo y dejamos documentados tus equipos y accesos.</p>
         </div>
         <div class="mp-textcard">
+          <span class="mp-step-num">04</span>
           <h3>Operación continua</h3>
           <p>Damos seguimiento diario con visitas, monitoreo y mesa de ayuda según tu plan.</p>
         </div>
@@ -246,7 +256,7 @@
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="/js/main.js?v=17"></script>
+  <script src="/js/main.js?v=18"></script>
   <script>renderFooter();</script>
 </body>
 </html>

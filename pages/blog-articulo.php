@@ -45,7 +45,7 @@ $shareUrl = rawurlencode($articleUrl);
   <?php if ($coverSrc): ?><meta property="og:image" content="<?= htmlspecialchars($coverSrc) ?>"><?php endif; ?>
   <meta property="og:url" content="<?= htmlspecialchars($articleUrl) ?>">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/css/style.css?v=45">
+  <link rel="stylesheet" href="/css/style.css?v=46">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -158,7 +158,7 @@ $shareUrl = rawurlencode($articleUrl);
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="/js/main.js?v=17"></script>
+  <script src="/js/main.js?v=18"></script>
   <script>
     renderFooter();
     function copyArticleLink(btn) {
