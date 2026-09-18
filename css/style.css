@@ -1527,7 +1527,7 @@ body {
 }
 
 .blog-article-body-image {
-  max-width: 420px;
+  max-width: 640px;
   margin: 8px auto 28px;
   text-align: center;
 }
