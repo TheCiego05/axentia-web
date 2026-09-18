@@ -480,7 +480,11 @@ function resolveMediaUrl(url) {
 
 
 function renderServiceCard(s) {
-  const items = s.items.map(i => `<li>${i}</li>`).join('');
+  const MAX_ITEMS = 4;
+  const visible = s.items.slice(0, MAX_ITEMS);
+  const remaining = s.items.length - visible.length;
+  const items = visible.map(i => `<li>${i}</li>`).join('')
+    + (remaining > 0 ? `<li class="service-card-more">+ ${remaining} m\u00e1s</li>` : '');
   const slug = s.slug || String(s.title).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const href = `${sitePrefix()}pages/servicios/${slug}.php`;
   return `

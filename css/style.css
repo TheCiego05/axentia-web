@@ -295,6 +295,8 @@ section, .section-block { padding:100px 60px; }
 .service-card ul { list-style:none; }
 .service-card ul li { font-size:.85rem; color:var(--white-70); padding:5px 0 5px 16px; position:relative; }
 .service-card ul li::before { content:'›'; position:absolute; left:0; color:var(--blue-accent); }
+.service-card ul li.service-card-more { font-weight:600; color:var(--blue-accent); }
+.service-card ul li.service-card-more::before { content:'+'; }
 
 /* ══════════════════ CLIENTS ══════════════════ */
 .clients-grid { display:flex; flex-wrap:wrap; gap:16px; }
@@ -1650,6 +1652,10 @@ body {
      si no, el mouse pierde el :hover al cruzar ese espacio y el menú se cierra antes de poder hacer clic. */
   padding-bottom: 18px;
   margin-bottom: -18px;
+}
+
+.nav-item-dropdown-toggle {
+  display: none;
 }
 
 .mega-menu {
@@ -3205,6 +3211,34 @@ body {
 @media (max-width: 768px) {
   .nav-item-dropdown {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .nav-item-dropdown > a {
+    flex: 1;
+  }
+
+  .nav-item-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.18s ease;
+  }
+
+  .nav-item-dropdown.mobile-open .nav-item-dropdown-toggle {
+    transform: rotate(180deg);
   }
 
   .mega-menu {
@@ -3212,11 +3246,18 @@ body {
     min-width: 0;
     width: 100%;
     grid-template-columns: 1fr;
-    margin-top: 10px;
+    margin-top: 0;
     opacity: 1;
     pointer-events: auto;
     transform: none;
     box-shadow: none;
+    display: none;
+    max-height: none;
+  }
+
+  .nav-item-dropdown.mobile-open .mega-menu {
+    display: grid;
+    margin-top: 10px;
   }
 
   .manufacturer-capabilities {

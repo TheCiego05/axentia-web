@@ -19,6 +19,7 @@ $logo = $navVariant === 'simple' ? 'AXENTIA' : 'A<span>X</span>ENTIA';
 <?php else: ?>
         <li class="nav-item-dropdown">
           <a href="<?= $base ?>pages/servicios.php">Servicios</a>
+          <button type="button" class="nav-item-dropdown-toggle" onclick="toggleNavDropdown(this)" aria-expanded="false" aria-label="Mostrar submenú de Servicios">▾</button>
           <div class="mega-menu">
             <div class="mega-col">
               <span class="mega-label">Servicios</span>
@@ -72,4 +73,10 @@ $logo = $navVariant === 'simple' ? 'AXENTIA' : 'A<span>X</span>ENTIA';
       };
       syncBtn();
     })();
+
+    window.toggleNavDropdown = function (btn) {
+      var li = btn.closest('.nav-item-dropdown');
+      var open = li.classList.toggle('mobile-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
   </script>
