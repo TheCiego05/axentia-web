@@ -5463,6 +5463,48 @@
       "destacado": false,
       "colorAccent": "#1F1F2E",
       "sitioOficial": "https://strike.sh/es",
+      "plataformaIntro": "La plataforma de Strike se organiza en tres módulos que cubren todo el ciclo de la validación ofensiva: descubrir activos, ponerlos a prueba de forma continua y acelerar la remediación con contexto real de ataque.",
+      "plataforma": [
+        {
+          "categoria": "Live Asset Radar",
+          "items": [
+            {
+              "titulo": "Visibilidad en tiempo real",
+              "texto": "Descubre y monitorea todos los activos de la organización conectando Strike con infraestructura, DNS y repositorios de código."
+            },
+            {
+              "titulo": "Priorización por criticidad",
+              "texto": "Clasifica cada activo por criticidad y prioriza según su nivel de exposición real."
+            }
+          ]
+        },
+        {
+          "categoria": "Threat Emulation Engine",
+          "items": [
+            {
+              "titulo": "Descubrimiento con IA",
+              "texto": "Detección continua y emulación de amenazas reales, con hallazgos enriquecidos por explotabilidad verificada."
+            },
+            {
+              "titulo": "Triage experto",
+              "texto": "Validación manual del impacto real en el 100% de los hallazgos, evitando que los falsos positivos lleguen al equipo."
+            }
+          ]
+        },
+        {
+          "categoria": "Remediation Support Hub",
+          "items": [
+            {
+              "titulo": "Contexto ofensivo accionable",
+              "texto": "Sugerencias de remediación directamente ligadas a cómo fue explotada cada vulnerabilidad."
+            },
+            {
+              "titulo": "Retest en minutos",
+              "texto": "Ejecuta un retest impulsado por IA sobre una vulnerabilidad específica en menos de 10 minutos."
+            }
+          ]
+        }
+      ],
       "stats": [
         {
           "num": "97%",
