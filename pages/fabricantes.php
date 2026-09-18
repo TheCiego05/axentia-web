@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fabricantes – Axentia SRL</title>
   <meta name="description" content="Fabricantes y socios tecnológicos de Axentia SRL: certificados en Microsoft, Fortinet, Kaspersky, Xcitium y CalculAI, y distribuidores de Veeam y más marcas líderes.">
-  <link rel="stylesheet" href="/css/style.css?v=46">
+  <link rel="stylesheet" href="/css/style.css?v=47">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
