@@ -3804,7 +3804,7 @@ html.dark-mode textarea {
 .cert-strip { padding: 32px 60px; text-align: center; border-bottom: 1px solid var(--white-08); }
 .cert-strip-label { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--white-40); margin-bottom: 16px; }
 .cert-strip-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 28px; }
-.cert-strip-logos img { height: 26px; width: auto; opacity: .7; filter: grayscale(1); transition: opacity .25s, filter .25s; }
+.cert-strip-logos img { height: auto; width: auto; max-height: 28px; max-width: 86px; opacity: .7; filter: grayscale(1); transition: opacity .25s, filter .25s; }
 .cert-strip-logos img:hover { opacity: 1; filter: grayscale(0); }
 @media (max-width: 700px) { .cert-strip { padding: 24px 20px; } }
 
