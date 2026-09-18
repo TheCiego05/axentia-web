@@ -250,7 +250,7 @@ section, .section-block { padding:100px 60px; }
   position: relative;
   display: flex; align-items: center; justify-content: center;
   width: 64px; height: 64px; margin-bottom: 20px;
-  border-radius: 20px; font-size: 1.9rem;
+  border-radius: 16px; font-size: 1.9rem;
   background: linear-gradient(155deg, #5B9BE0 0%, #1F497D 100%);
   box-shadow:
     0 14px 26px rgba(31, 73, 125, 0.28),
@@ -1192,7 +1192,7 @@ body {
   width: 36px;
   height: 36px;
   margin-bottom: 12px;
-  border-radius: 8px;
+  border-radius: 9px;
   background: linear-gradient(155deg, #4F81BD 0%, #1F497D 100%);
   color: #fff;
 }
@@ -2386,7 +2386,7 @@ body {
   justify-content: center;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 8px;
   background: color-mix(in srgb, var(--mp-accent, #4F81BD) 12%, white);
   color: var(--mp-accent, #4F81BD);
   font-weight: 800;
@@ -2856,11 +2856,27 @@ body {
   padding-top: 18px;
   color: #1F497D;
   font-weight: 800;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  transition: text-decoration-color 0.25s ease;
+}
+.service-card-link:hover,
+.service-card:hover .service-card-link {
+  text-decoration-color: currentColor;
 }
 
 .service-card-link::after {
   content: " \2192";
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+.service-card-link:hover::after,
+.service-card:hover .service-card-link::after {
+  transform: translateX(4px);
 }
 
 /* ---- Servicios: mejoras puntuales a las tarjetas (grilla /pages/servicios.php) ---- */
@@ -3110,7 +3126,7 @@ body {
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: 11px;
   background: rgba(79, 129, 189, 0.12);
   color: var(--brand-navy, #1F497D);
   margin-bottom: 16px;
