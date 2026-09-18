@@ -20,6 +20,80 @@
     </div>
   </div>
 
+  <section class="mp-section">
+    <div class="container">
+      <div class="section-label">Qué incluye</div>
+      <h2 class="section-title">Todo lo que cubre tu soporte gestionado</h2>
+      <p class="section-sub">Más allá de "atender tickets": así protegemos tu operación día a día.</p>
+      <div class="mp-textcard-grid">
+        <div class="mp-textcard">
+          <h3>Monitoreo 24/7</h3>
+          <p>Vigilancia continua de servidores, equipos y conectividad para detectar fallas antes de que afecten tu operación.</p>
+        </div>
+        <div class="mp-textcard">
+          <h3>Mesa de ayuda y tickets</h3>
+          <p>Canal directo para reportar incidencias, con seguimiento y prioridad de atención según el plan contratado.</p>
+        </div>
+        <div class="mp-textcard">
+          <h3>Gestión de parches y actualizaciones</h3>
+          <p>Mantenimiento preventivo de sistemas operativos y software crítico para reducir vulnerabilidades.</p>
+        </div>
+        <div class="mp-textcard">
+          <h3>Respaldo y continuidad</h3>
+          <p>Verificación de que tus copias de seguridad se ejecuten correctamente y estén disponibles ante una eventualidad.</p>
+        </div>
+        <div class="mp-textcard">
+          <h3>Visitas técnicas presenciales</h3>
+          <p>Soporte en sitio según tu plan, con atención directa en Santo Domingo y Santiago.</p>
+        </div>
+        <div class="mp-textcard">
+          <h3>Reportes de operación</h3>
+          <p>Visibilidad periódica del estado de tu infraestructura y las incidencias atendidas en el período.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mp-section">
+    <div class="container mp-two-col">
+      <div>
+        <div class="section-label">Cómo trabajamos</div>
+        <h2 class="section-title">De la evaluación a la operación diaria</h2>
+        <p class="section-sub">Así arrancamos cuando contratas un plan de soporte gestionado con Axentia.</p>
+        <a href="/pages/contacto.php" class="btn-primary" style="margin-top:10px">Solicitar asesoría</a>
+      </div>
+      <div class="mp-textcard-grid two">
+        <div class="mp-textcard">
+          <h3>Diagnóstico</h3>
+          <p>Evaluamos tu infraestructura actual, cantidad de dispositivos y necesidades operativas.</p>
+        </div>
+        <div class="mp-textcard">
+          <h3>Propuesta</h3>
+          <p>Recomendamos el plan que mejor se ajusta a tu operación y presupuesto.</p>
+        </div>
+        <div class="mp-textcard">
+          <h3>Onboarding</h3>
+          <p>Instalamos las herramientas de monitoreo y dejamos documentados tus equipos y accesos.</p>
+        </div>
+        <div class="mp-textcard">
+          <h3>Operación continua</h3>
+          <p>Damos seguimiento diario con visitas, monitoreo y mesa de ayuda según tu plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-blue">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item"><span class="stat-num">+4 años</span><span class="stat-label">De experiencia en soporte IT gestionado</span></div>
+        <div class="stat-item"><span class="stat-num">2 sedes</span><span class="stat-label">Santo Domingo y Santiago, RD</span></div>
+        <div class="stat-item"><span class="stat-num">Desde 1h</span><span class="stat-label">Tiempo de respuesta en el plan más alto</span></div>
+        <div class="stat-item"><span class="stat-num">4 planes</span><span class="stat-label">Escalables según el tamaño de tu operación</span></div>
+      </div>
+    </div>
+  </section>
+
   <section class="section-dark">
     <div class="container">
       <div class="support-plans">
@@ -88,6 +162,76 @@
               <tr><td>Enterprise</td><td>SLA dedicado</td><td>Según acuerdo</td><td>Dedicado</td><td>Personalizado</td></tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label">Por qué importa</div>
+      <h2 class="section-title">Con soporte gestionado vs. sin él</h2>
+      <div style="overflow-x:auto">
+        <table class="sla-table manufacturer-compare-table">
+          <thead>
+            <tr><th>Aspecto</th><th>Sin soporte gestionado</th><th>Con Axentia</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Detección de fallas</strong></td>
+              <td class="cell-bad">Reactiva: te enteras cuando ya afecta la operación</td>
+              <td class="cell-good">Monitoreo continuo, antes de que escale</td>
+            </tr>
+            <tr>
+              <td><strong>Costo</strong></td>
+              <td class="cell-bad">Imprevisible, factura por incidente</td>
+              <td class="cell-good">Predecible, cuota mensual fija</td>
+            </tr>
+            <tr>
+              <td><strong>Actualizaciones y parches</strong></td>
+              <td class="cell-bad">Dependen de que alguien se acuerde</td>
+              <td class="cell-good">Gestión programada y verificada</td>
+            </tr>
+            <tr>
+              <td><strong>Respaldo de datos</strong></td>
+              <td class="cell-bad">Sin verificación regular</td>
+              <td class="cell-good">Revisado como parte del servicio</td>
+            </tr>
+            <tr>
+              <td><strong>Visitas técnicas</strong></td>
+              <td class="cell-bad">Se coordinan caso por caso</td>
+              <td class="cell-good">Incluidas según el plan contratado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-label" style="justify-content:center">Preguntas frecuentes</div>
+      <h2 class="section-title" style="text-align:center">FAQ — Soporte Gestionado</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">¿Qué pasa si necesito más visitas de las incluidas en mi plan?</div>
+          <div class="faq-a">Puedes solicitar visitas adicionales, que se cotizan aparte, o conversar con tu gestor sobre subir de plan si la necesidad es recurrente.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">¿El soporte cubre emergencias fuera de horario laboral?</div>
+          <div class="faq-a">El soporte remoto y el monitoreo están definidos según el plan contratado. Para cobertura extendida o un SLA fuera de horario, el plan Enterprise se ajusta a un acuerdo específico con tu operación.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">¿Qué herramientas usan para el monitoreo?</div>
+          <div class="faq-a">Usamos plataformas de monitoreo remoto y gestión (RMM) para supervisar equipos, servidores y conectividad, complementadas con las herramientas de ciberseguridad de nuestros fabricantes aliados.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">¿Puedo cambiar de plan más adelante?</div>
+          <div class="faq-a">Sí. El plan se ajusta según cómo crece tu operación o cambia tu cantidad de dispositivos.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">¿El soporte incluye antivirus o backup?</div>
+          <div class="faq-a">El soporte gestionado cubre la gestión y el monitoreo operativo. Soluciones de antivirus/EDR y backup se implementan como servicios de ciberseguridad y nube complementarios — <a href="/pages/servicios.php">ver todos los servicios</a>.</div>
         </div>
       </div>
     </div>
