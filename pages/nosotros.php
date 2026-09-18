@@ -26,32 +26,32 @@
         <div>
           <div class="section-label">Nuestra Historia</div>
           <h2 class="section-title">Tecnología con enfoque estratégico</h2>
-          <p class="section-sub" id="about-desc"></p>
+          <p class="section-sub"><?= htmlspecialchars($DATA['nosotros']['descripcion'] ?? '') ?></p>
           <div class="about-pillars">
             <div class="pillar-card">
-              <span>01</span>
-              <h4>Infraestructura confiable</h4>
+              <span aria-hidden="true">01</span>
+              <h3>Infraestructura confiable</h3>
               <p>Diseño, implementación y soporte para entornos físicos, virtuales, híbridos y en la nube.</p>
             </div>
             <div class="pillar-card">
-              <span>02</span>
-              <h4>Seguridad como base</h4>
+              <span aria-hidden="true">02</span>
+              <h3>Seguridad como base</h3>
               <p>Ciberseguridad, protección de endpoints, continuidad y gestión de riesgos tecnológicos.</p>
             </div>
             <div class="pillar-card">
-              <span>03</span>
-              <h4>Acompañamiento cercano</h4>
+              <span aria-hidden="true">03</span>
+              <h3>Acompañamiento cercano</h3>
               <p>Soporte local, asesoría técnica y ejecución alineada a los objetivos de cada cliente.</p>
             </div>
           </div>
           <div class="about-values">
             <div class="value-card">
-              <h4>Misión</h4>
-              <p id="mision-text"></p>
+              <h3>Misión</h3>
+              <p><?= htmlspecialchars($DATA['nosotros']['mision'] ?? '') ?></p>
             </div>
             <div class="value-card">
-              <h4>Visión</h4>
-              <p id="vision-text"></p>
+              <h3>Visión</h3>
+              <p><?= htmlspecialchars($DATA['nosotros']['vision'] ?? '') ?></p>
             </div>
           </div>
         </div>
@@ -76,10 +76,7 @@
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
   <script src="/js/main.js?v=18"></script>
   <script>
-    document.getElementById('about-desc').textContent    = DATA.nosotros.descripcion;
-    document.getElementById('mision-text').textContent   = DATA.nosotros.mision;
-    document.getElementById('vision-text').textContent   = DATA.nosotros.vision;
-    document.getElementById('clients-grid').innerHTML    = DATA.clients.map(renderClientCard).join('');
+    document.getElementById('clients-grid').innerHTML = DATA.clients.map(renderClientCard).join('');
     renderFooter();
   </script>
 </body>

@@ -428,10 +428,10 @@ section, .section-block { padding:100px 60px; }
 .form-group select option { background:var(--blue-mid); }
 
 /* ══════════════════ ABOUT ══════════════════ */
-.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
 .about-values { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:32px; }
 .value-card { background:var(--white-04); border:1px solid var(--border); border-radius:12px; padding:20px; }
-.value-card h4 { font-weight:700; margin-bottom:8px; font-size:.95rem; }
+.value-card h3 { font-weight:700; margin-bottom:8px; font-size:.95rem; }
 .value-card p  { font-size:.82rem; color:var(--white-70); line-height:1.5; }
 .about-stats { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
 .about-stat  { background:var(--white-04); border:1px solid var(--border); border-radius:12px; padding:24px; text-align:center; }
@@ -1140,7 +1140,7 @@ body {
   font-weight: 800;
 }
 
-.pillar-card h4 {
+.pillar-card h3 {
   color: #182334;
   font-size: 0.92rem;
   line-height: 1.25;
@@ -1161,7 +1161,7 @@ body {
   box-shadow: 0 12px 30px rgba(31, 73, 125, 0.07) !important;
 }
 
-.value-card h4 {
+.value-card h3 {
   color: #1F497D !important;
   font-size: 0.95rem !important;
   font-weight: 800 !important;
