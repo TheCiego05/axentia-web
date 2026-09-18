@@ -165,16 +165,7 @@
     </div>
   </section>
 
-  <!-- TESTIMONIOS -->
-  <section id="testimonios" class="section-gradient">
-    <div class="container">
-      <div class="section-label">Casos de éxito</div>
-      <h2 class="section-title">Lo que dicen quienes ya trabajan con nosotros</h2>
-      <div class="testimonials-grid" id="home-testimonials-grid">
-        <!-- Rendered by JS -->
-      </div>
-    </div>
-  </section>
+  <!-- TESTIMONIOS: oculto hasta tener citas reales de clientes (no publicar contenido de relleno) -->
 
   <!-- SOCIOS PREVIEW -->
   <section id="socios-preview" class="section-blue partners-showcase">
@@ -213,8 +204,6 @@
       DATA.clients.map(renderClientCard).join('');
     document.getElementById('home-partners-grid').innerHTML =
       DATA.partners.map(renderPartnerBadge).join('');
-    document.getElementById('home-testimonials-grid').innerHTML =
-      (DATA.testimonials || []).map(renderTestimonialCard).join('');
     renderFooterRoot();
   </script>
 </body>
