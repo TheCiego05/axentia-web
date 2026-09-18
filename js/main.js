@@ -168,6 +168,157 @@ function initAxParticlesBg() {
   requestAnimationFrame(step);
 }
 
+// ── Globo giratorio tipo red tecnológica (wireframe + nodos), decorativo ──
+function initAxGlobe(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const ctx = canvas.getContext('2d');
+  const TILT = -0.35; // inclinación fija del eje, como el globo terráqueo
+  const LAT_RINGS = 5;
+  const LON_MERIDIANS = 8;
+  const SEGMENTS = 56;
+  const NODE_COUNT = 34;
+
+  function buildRing(latDeg, segments) {
+    const lat = (latDeg * Math.PI) / 180;
+    const pts = [];
+    for (let i = 0; i <= segments; i++) {
+      const lon = (i / segments) * Math.PI * 2;
+      pts.push([Math.cos(lat) * Math.cos(lon), Math.sin(lat), Math.cos(lat) * Math.sin(lon)]);
+    }
+    return pts;
+  }
+  function buildMeridian(lonDeg, segments) {
+    const lon = (lonDeg * Math.PI) / 180;
+    const pts = [];
+    for (let i = 0; i <= segments; i++) {
+      const lat = (i / segments) * Math.PI - Math.PI / 2;
+      pts.push([Math.cos(lat) * Math.cos(lon), Math.sin(lat), Math.cos(lat) * Math.sin(lon)]);
+    }
+    return pts;
+  }
+
+  const rings = [];
+  for (let i = 1; i < LAT_RINGS; i++) {
+    rings.push(buildRing(-80 + (i * 160) / LAT_RINGS, SEGMENTS));
+  }
+  const meridians = [];
+  for (let i = 0; i < LON_MERIDIANS; i++) {
+    meridians.push(buildMeridian((i * 360) / LON_MERIDIANS, SEGMENTS));
+  }
+  const nodes = Array.from({ length: NODE_COUNT }, () => {
+    const u = Math.random(), v = Math.random();
+    const lon = u * Math.PI * 2;
+    const lat = Math.acos(2 * v - 1) - Math.PI / 2;
+    return { p: [Math.cos(lat) * Math.cos(lon), Math.sin(lat), Math.cos(lat) * Math.sin(lon)], pulse: Math.random() * Math.PI * 2 };
+  });
+  const arcs = [0, 1, 2].map(() => [nodes[(Math.random() * NODE_COUNT) | 0], nodes[(Math.random() * NODE_COUNT) | 0]]);
+
+  let w, h, dpr, R, cx, cy;
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const rect = canvas.getBoundingClientRect();
+    w = canvas.width = rect.width * dpr;
+    h = canvas.height = rect.height * dpr;
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+    R = Math.min(w, h) * 0.42;
+    cx = w / 2; cy = h / 2;
+  }
+
+  function project(p, yaw) {
+    let [x, y, z] = p;
+    let y1 = y * Math.cos(TILT) - z * Math.sin(TILT);
+    let z1 = y * Math.sin(TILT) + z * Math.cos(TILT);
+    let x1 = x;
+    let x2 = x1 * Math.cos(yaw) + z1 * Math.sin(yaw);
+    let z2 = -x1 * Math.sin(yaw) + z1 * Math.cos(yaw);
+    return { x: cx + x2 * R, y: cy + y1 * R, z: z2 };
+  }
+
+  // Agrupa el trazo en pocos buckets de opacidad (según profundidad z) en vez de
+  // un stroke() por segmento — mismo efecto de "desvanecido al fondo" con muchas
+  // menos llamadas de dibujo por frame.
+  function drawPath(pts, yaw, color) {
+    const projected = pts.map(p => project(p, yaw));
+    const BUCKETS = 6;
+    for (let b = 0; b < BUCKETS; b++) {
+      const lo = b / BUCKETS, hi = (b + 1) / BUCKETS;
+      const alpha = Math.max(0.04, (lo + hi) / 2 * 0.45);
+      ctx.beginPath();
+      ctx.strokeStyle = color.replace('ALPHA', alpha.toFixed(2));
+      let drawing = false;
+      for (let i = 1; i < projected.length; i++) {
+        const prev = projected[i - 1], proj = projected[i];
+        const depth = ((prev.z + proj.z) / 2 + 1) / 2;
+        if (depth >= lo && depth < hi) {
+          if (!drawing) { ctx.moveTo(prev.x, prev.y); drawing = true; }
+          ctx.lineTo(proj.x, proj.y);
+        } else {
+          drawing = false;
+        }
+      }
+      ctx.stroke();
+    }
+  }
+
+  let t = 0;
+  function step() {
+    ctx.clearRect(0, 0, w, h);
+    const yaw = t * 0.00025;
+
+    ctx.lineWidth = Math.max(1, dpr);
+    rings.forEach(r => drawPath(r, yaw, 'rgba(47,128,209,ALPHA)'));
+    meridians.forEach(m => drawPath(m, yaw, 'rgba(47,128,209,ALPHA)'));
+
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(31,73,125,0.35)';
+    ctx.lineWidth = Math.max(1.4, dpr * 1.4);
+    ctx.arc(cx, cy, R, 0, Math.PI * 2);
+    ctx.stroke();
+
+    arcs.forEach(([a, b], idx) => {
+      const steps = 40;
+      ctx.beginPath();
+      for (let i = 0; i <= steps; i++) {
+        const f = i / steps;
+        const mid = [
+          a.p[0] * (1 - f) + b.p[0] * f,
+          a.p[1] * (1 - f) + b.p[1] * f + Math.sin(f * Math.PI) * 0.3,
+          a.p[2] * (1 - f) + b.p[2] * f,
+        ];
+        const len = Math.hypot(mid[0], mid[1], mid[2]) || 1;
+        const proj = project([mid[0] / len, mid[1] / len, mid[2] / len], yaw);
+        if (i === 0) ctx.moveTo(proj.x, proj.y); else ctx.lineTo(proj.x, proj.y);
+      }
+      ctx.strokeStyle = `rgba(90,174,255,${0.25 + 0.15 * Math.sin(t * 0.002 + idx)})`;
+      ctx.lineWidth = Math.max(1, dpr);
+      ctx.stroke();
+    });
+
+    nodes.forEach(n => {
+      const proj = project(n.p, yaw);
+      if (proj.z < -0.15) return;
+      const depth = (proj.z + 1) / 2;
+      const pulse = 0.6 + 0.4 * Math.sin(t * 0.003 + n.pulse);
+      const r = (1.6 + depth * 2.4) * dpr * pulse;
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(90,174,255,${0.35 + depth * 0.55})`;
+      ctx.arc(proj.x, proj.y, r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    t += 16;
+    requestAnimationFrame(step);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+  requestAnimationFrame(step);
+}
+
 // ── Partículas que forman el nombre del fabricante (páginas de detalle) ──
 function initAxParticlesText(canvasId, text, avoidSelector) {
   const canvas = document.getElementById(canvasId);

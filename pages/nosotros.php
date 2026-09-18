@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conoce a Axentia SRL: nuestra historia, misión, visión y el equipo que respalda soluciones de tecnología y ciberseguridad en República Dominicana.">
   <title>Nosotros – Axentia SRL</title>
-  <link rel="stylesheet" href="/css/style.css?v=47">
+  <link rel="stylesheet" href="/css/style.css?v=49">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="interactive-site">
@@ -55,11 +55,16 @@
             </div>
           </div>
         </div>
-        <div class="about-stats">
-          <div class="about-stat"><div class="num">4+</div><div class="label">Profesionales</div></div>
-          <div class="about-stat"><div class="num">7+</div><div class="label">Clientes activos</div></div>
-          <div class="about-stat"><div class="num">2</div><div class="label">Ciudades en RD</div></div>
-          <div class="about-stat"><div class="num">20+</div><div class="label">Socios tecnológicos</div></div>
+        <div>
+          <div class="about-stats">
+            <div class="about-stat"><div class="num">4+</div><div class="label">Profesionales</div></div>
+            <div class="about-stat"><div class="num">7+</div><div class="label">Clientes activos</div></div>
+            <div class="about-stat"><div class="num">2</div><div class="label">Ciudades en RD</div></div>
+            <div class="about-stat"><div class="num">20+</div><div class="label">Socios tecnológicos</div></div>
+          </div>
+          <div class="about-globe-wrap">
+            <canvas id="ax-globe" aria-hidden="true"></canvas>
+          </div>
         </div>
       </div>
     </div>
@@ -74,9 +79,10 @@
   </section>
 
   <footer id="footer"></footer><?php render_data_script($DATA, $NEXT_ID); ?>
-  <script src="/js/main.js?v=18"></script>
+  <script src="/js/main.js?v=20"></script>
   <script>
     document.getElementById('clients-grid').innerHTML = DATA.clients.map(renderClientCard).join('');
+    initAxGlobe('ax-globe');
     renderFooter();
   </script>
 </body>
