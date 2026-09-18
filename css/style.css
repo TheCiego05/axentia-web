@@ -435,10 +435,25 @@ section, .section-block { padding:100px 60px; }
 .value-card p  { font-size:.82rem; color:var(--white-70); line-height:1.5; }
 .about-stats { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
 .about-globe-wrap {
+  position:relative;
   display:flex; align-items:center; justify-content:center;
   min-height:340px; margin-top:32px;
 }
 #ax-globe { width:100%; max-width:400px; aspect-ratio:1/1; }
+.about-globe-logo {
+  position:absolute;
+  top:50%; left:50%;
+  width:15%;
+  transform:translate(-50%,-50%) scale(1);
+  pointer-events:none;
+  filter:drop-shadow(0 0 10px rgba(47,128,209,.45));
+  animation:axGlobeLogoPulse 3.6s ease-in-out infinite;
+}
+@keyframes axGlobeLogoPulse {
+  0%, 100% { transform:translate(-50%,-50%) scale(1); opacity:.9; }
+  50% { transform:translate(-50%,-50%) scale(1.12); opacity:1; }
+}
+@media (prefers-reduced-motion: reduce) { .about-globe-logo { animation:none; } }
 @media (prefers-reduced-motion: reduce) { .about-globe-wrap { display:none; } }
 .about-stat  { background:var(--white-04); border:1px solid var(--border); border-radius:12px; padding:24px; text-align:center; }
 .about-stat .num   { font-family:'Rajdhani',sans-serif; font-size:2.5rem; font-weight:700; color:var(--blue-accent); }
