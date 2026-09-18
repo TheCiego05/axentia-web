@@ -246,7 +246,7 @@ function initAxGlobe(canvasId) {
     const BUCKETS = 6;
     for (let b = 0; b < BUCKETS; b++) {
       const lo = b / BUCKETS, hi = (b + 1) / BUCKETS;
-      const alpha = Math.max(0.04, (lo + hi) / 2 * 0.45);
+      const alpha = Math.max(0.08, (lo + hi) / 2 * 0.7);
       ctx.beginPath();
       ctx.strokeStyle = color.replace('ALPHA', alpha.toFixed(2));
       let drawing = false;
@@ -270,11 +270,11 @@ function initAxGlobe(canvasId) {
     const yaw = t * 0.00025;
 
     ctx.lineWidth = Math.max(1, dpr);
-    rings.forEach(r => drawPath(r, yaw, 'rgba(47,128,209,ALPHA)'));
-    meridians.forEach(m => drawPath(m, yaw, 'rgba(47,128,209,ALPHA)'));
+    rings.forEach(r => drawPath(r, yaw, 'rgba(31,73,125,ALPHA)'));
+    meridians.forEach(m => drawPath(m, yaw, 'rgba(31,73,125,ALPHA)'));
 
     ctx.beginPath();
-    ctx.strokeStyle = 'rgba(31,73,125,0.35)';
+    ctx.strokeStyle = 'rgba(31,73,125,0.55)';
     ctx.lineWidth = Math.max(1.4, dpr * 1.4);
     ctx.arc(cx, cy, R, 0, Math.PI * 2);
     ctx.stroke();
@@ -293,7 +293,7 @@ function initAxGlobe(canvasId) {
         const proj = project([mid[0] / len, mid[1] / len, mid[2] / len], yaw);
         if (i === 0) ctx.moveTo(proj.x, proj.y); else ctx.lineTo(proj.x, proj.y);
       }
-      ctx.strokeStyle = `rgba(90,174,255,${0.25 + 0.15 * Math.sin(t * 0.002 + idx)})`;
+      ctx.strokeStyle = `rgba(47,128,209,${0.35 + 0.2 * Math.sin(t * 0.002 + idx)})`;
       ctx.lineWidth = Math.max(1, dpr);
       ctx.stroke();
     });
@@ -305,7 +305,7 @@ function initAxGlobe(canvasId) {
       const pulse = 0.6 + 0.4 * Math.sin(t * 0.003 + n.pulse);
       const r = (1.6 + depth * 2.4) * dpr * pulse;
       ctx.beginPath();
-      ctx.fillStyle = `rgba(90,174,255,${0.35 + depth * 0.55})`;
+      ctx.fillStyle = `rgba(47,128,209,${0.55 + depth * 0.45})`;
       ctx.arc(proj.x, proj.y, r, 0, Math.PI * 2);
       ctx.fill();
     });
